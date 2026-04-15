@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+---
+
+<BaseLayout title="Not Found">
+  <SiteHeader />
+  <main class="not-found">
+    <div class="not-found__inner">
+      <p class="not-found__code">404</p>
+      <h1 class="not-found__heading">This page does not exist.</h1>
+      <p class="not-found__body">
+        This is, in many ways, consistent with the rest of the universe.
+        Most things that could exist do not.
+        The page you are looking for has exercised its right to remain undistinguished from the void.
+      </p>
+      <p class="not-found__footnote">
+        If you arrived here from a link, something has made a distinction it could not keep.
+        This too is a foundational duality.
+      </p>
+      <a href="/" class="not-found__home">Return to the beginning →</a>
+    </div>
+  </main>
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+  .not-found {
+    padding: var(--space-24) var(--space-6);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .not-found__inner {
+    max-width: var(--prose-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .not-found__code {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-ink-muted);
+  }
+
+  .not-found__heading {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 300;
+    color: var(--color-ink);
+    line-height: 1.1;
+  }
+
+  .not-found__body {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    color: var(--color-ink);
+    line-height: 1.7;
+    max-width: 48ch;
+  }
+
+  .not-found__footnote {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-style: italic;
+    color: var(--color-ink-muted);
+    padding-left: var(--space-4);
+    border-left: 2px solid var(--color-rule);
+    line-height: 1.6;
+  }
+
+  .not-found__home {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-ink);
+    text-decoration: none;
+    margin-top: var(--space-4);
+    display: inline-block;
+  }
+
+  .not-found__home:hover {
+    text-decoration: underline;
+  }
+</style>

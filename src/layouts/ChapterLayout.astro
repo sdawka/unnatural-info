@@ -1,0 +1,94 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import ActBadge from '../components/ActBadge.astro';
+import ChapterNav from '../components/ChapterNav.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+interface NavEntry {
+  slug: string;
+  title: string;
+  chapterNumber?: number;
+}
+
+interface Props {
+  chapter: CollectionEntry<'chapters'>;
+  prev?: NavEntry;
+  next?: NavEntry;
+}
+
+const { chapter, prev, next } = Astro.props;
+const { title, subtitle, act, actTitle, chapterNumber } = chapter.data;
+---
+
+<BaseLayout title={title} description={chapter.data.summary}>
+  <SiteHeader />
+  <main class="chapter-page">
+    <div class="chapter-page__container">
+      <header class="chapter-header">
+        {act !== 'prologue' && act !== 'epilogue' && (
+          <ActBadge act={act} actTitle={actTitle} />
+        )}
+        {chapterNumber && (
+          <span class="chapter-number">{String(chapterNumber).padStart(2, '0')}</span>
+        )}
+        <h1 class="chapter-title">{title}</h1>
+        {subtitle && <p class="chapter-subtitle">{subtitle}</p>}
+      </header>
+      <article class="prose">
+        <slot />
+      </article>
+      <ChapterNav prev={prev} next={next} />
+    </div>
+  </main>
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+  .chapter-page {
+    padding: var(--space-12) var(--space-6);
+  }
+
+  .chapter-page__container {
+    max-width: var(--page-max);
+    margin: 0 auto;
+  }
+
+  .chapter-header {
+    max-width: var(--prose-width);
+    margin-bottom: var(--space-12);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .chapter-number {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+    letter-spacing: 0.1em;
+  }
+
+  .chapter-title {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--color-ink);
+  }
+
+  .chapter-subtitle {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    font-style: italic;
+    color: var(--color-ink-muted);
+    margin-top: var(--space-2);
+  }
+
+  @media (max-width: 768px) {
+    .chapter-title {
+      font-size: var(--text-3xl);
+    }
+  }
+</style>

@@ -1,0 +1,102 @@
+---
+---
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="/" class="site-header__logo" aria-label="UNNATURAL — home">
+      UNNATURAL
+    </a>
+    <nav class="site-header__nav" aria-label="Main navigation">
+      <a href="/acts/volo-ergo-sum" class="site-header__act site-header__act--i">
+        Volo Ergo Sum
+      </a>
+      <a href="/acts/initd" class="site-header__act site-header__act--ii">
+        InitD
+      </a>
+      <a href="/acts/mmm" class="site-header__act site-header__act--iii">
+        MMM
+      </a>
+      <a href="/wiki/" class="site-header__wiki">
+        Wiki
+      </a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-ground);
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .site-header__inner {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: var(--space-4) var(--space-6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-8);
+  }
+
+  .site-header__logo {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-ink);
+    flex-shrink: 0;
+  }
+
+  .site-header__nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+    flex-wrap: wrap;
+  }
+
+  .site-header__act {
+    font-family: var(--font-display);
+    font-size: var(--text-sm);
+    font-weight: 300;
+    font-style: italic;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .site-header__act--i { color: var(--color-act-i); }
+  .site-header__act--ii { color: var(--color-act-ii); }
+  .site-header__act--iii { color: var(--color-act-iii); }
+
+  .site-header__act:hover {
+    opacity: 0.75;
+  }
+
+  .site-header__wiki {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    color: var(--color-wiki);
+    padding: var(--space-1) var(--space-3);
+    border: 1px solid currentColor;
+    transition: opacity 0.15s;
+  }
+
+  .site-header__wiki:hover {
+    opacity: 0.75;
+  }
+
+  @media (max-width: 640px) {
+    .site-header__inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-3);
+    }
+  }
+</style>

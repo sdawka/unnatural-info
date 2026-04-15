@@ -1,0 +1,35 @@
+---
+interface Props {
+  act: 'volo-ergo-sum' | 'initd' | 'mmm' | 'prologue' | 'epilogue';
+  actTitle?: string;
+}
+
+const { act, actTitle } = Astro.props;
+
+const ACT_META: Record<string, { roman: string; name: string; color: string }> = {
+  'volo-ergo-sum': { roman: 'I', name: 'Volo Ergo Sum', color: 'var(--color-act-i)' },
+  'initd':         { roman: 'II', name: 'InitD',         color: 'var(--color-act-ii)' },
+  'mmm':           { roman: 'III', name: 'MMM',           color: 'var(--color-act-iii)' },
+  'prologue':      { roman: '',   name: 'Prologue',       color: 'var(--color-ink-muted)' },
+  'epilogue':      { roman: '',   name: 'Epilogue',       color: 'var(--color-ink-muted)' },
+};
+
+const meta = ACT_META[act];
+const displayName = actTitle ?? meta.name;
+const label = meta.roman ? `Act ${meta.roman} — ${displayName}` : displayName;
+---
+
+<span class="act-badge" style={`--accent: ${meta.color}`}>
+  {label}
+</span>
+
+<style>
+  .act-badge {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: inline-block;
+  }
+</style>

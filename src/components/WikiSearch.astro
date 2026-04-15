@@ -1,0 +1,134 @@
+---
+interface WikiEntry {
+  slug: string;
+  title: string;
+  category?: string;
+}
+
+interface Props {
+  entries: WikiEntry[];
+}
+
+const { entries } = Astro.props;
+---
+
+<div class="wiki-search">
+  <input
+    type="search"
+    id="wiki-search-input"
+    class="wiki-search__input"
+    placeholder="Search concepts…"
+    aria-label="Search wiki concepts"
+    autocomplete="off"
+  />
+  <ul class="wiki-search__list" id="wiki-search-list" role="list">
+    {entries.map((entry) => (
+      <li class="wiki-search__item" data-title={entry.title.toLowerCase()} data-category={entry.category?.toLowerCase() ?? ''}>
+        <a href={`/wiki/${entry.slug}`} class="wiki-search__link">
+          {entry.category && (
+            <span class="wiki-search__category">{entry.category}</span>
+          )}
+          <span class="wiki-search__title">{entry.title}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+  {entries.length === 0 && (
+    <p class="wiki-search__empty">
+      No concepts yet. The wiki grows as the dump is compiled.
+    </p>
+  )}
+</div>
+
+<script>
+  const input = document.getElementById('wiki-search-input') as HTMLInputElement | null;
+  const list = document.getElementById('wiki-search-list');
+
+  if (input && list) {
+    input.addEventListener('input', () => {
+      const query = input.value.toLowerCase().trim();
+      const items = list.querySelectorAll<HTMLLIElement>('.wiki-search__item');
+      items.forEach((item) => {
+        const title = item.dataset.title ?? '';
+        const category = item.dataset.category ?? '';
+        const match = !query || title.includes(query) || category.includes(query);
+        item.style.display = match ? '' : 'none';
+      });
+    });
+  }
+</script>
+
+<style>
+  .wiki-search {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .wiki-search__input {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-rule);
+    padding: var(--space-3) 0;
+    color: var(--color-ink);
+    outline: none;
+    width: 100%;
+    max-width: 40ch;
+    transition: border-color 0.15s;
+  }
+
+  .wiki-search__input:focus {
+    border-color: var(--color-wiki);
+  }
+
+  .wiki-search__input::placeholder {
+    color: var(--color-ink-muted);
+    font-style: italic;
+  }
+
+  .wiki-search__list {
+    list-style: none;
+    padding: 0;
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .wiki-search__item {
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .wiki-search__link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: var(--space-3) 0;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+
+  .wiki-search__link:hover {
+    opacity: 0.65;
+  }
+
+  .wiki-search__category {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-wiki);
+  }
+
+  .wiki-search__title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 300;
+    color: var(--color-ink);
+  }
+
+  .wiki-search__empty {
+    font-family: var(--font-body);
+    font-style: italic;
+    color: var(--color-ink-muted);
+  }
+</style>

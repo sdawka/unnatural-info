@@ -1,0 +1,46 @@
+:root {
+  /* Palette */
+  --color-ground: #F4F1EB;
+  --color-ink: #1A1714;
+  --color-ink-muted: #6B6560;
+  --color-rule: #C8C3BB;
+
+  /* Act accents */
+  --color-act-i: #8B3A3A;       /* cinnabar — want, fire */
+  --color-act-ii: #2C4A6E;      /* prussian blue — distinction */
+  --color-act-iii: #3D5C3A;     /* forest — growth, recursion */
+  --color-wiki: #5C4A2E;        /* umber — archive */
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'EB Garamond', Georgia, serif;
+  --font-mono: 'Martian Mono', 'Courier New', monospace;
+
+  /* Type scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1.125rem;    /* 18px body */
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.75rem;
+  --text-4xl: 3.75rem;
+  --text-5xl: 5rem;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Layout */
+  --prose-width: 66ch;
+  --page-max: 1100px;
+  --sidenote-width: 220px;
+  --sidenote-gap: 2rem;
+}

@@ -1,0 +1,78 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import WikiSearch from '../../components/WikiSearch.astro';
+
+const wikiEntries = await getCollection('wiki');
+const sorted = wikiEntries.sort((a, b) => {
+  const titleA = (a.data.title ?? a.id).toLowerCase();
+  const titleB = (b.data.title ?? b.id).toLowerCase();
+  return titleA.localeCompare(titleB);
+});
+
+const entries = sorted.map((e) => ({
+  slug: e.id,
+  title: e.data.title ?? e.id.replace(/-/g, ' '),
+  category: e.data.category,
+}));
+---
+
+<BaseLayout title="Wiki" description="Compiled concepts from UNNATURAL. The LLM-owned layer of the knowledge base.">
+  <SiteHeader />
+  <main class="wiki-index">
+    <div class="wiki-index__container">
+      <header class="wiki-index__header">
+        <p class="wiki-index__eyebrow">Knowledge base</p>
+        <h1 class="wiki-index__title">Wiki</h1>
+        <p class="wiki-index__desc">
+          Concepts compiled from source material. The wiki grows as the dump is ingested.
+          It is not written — it is compiled.
+        </p>
+      </header>
+      <WikiSearch entries={entries} />
+    </div>
+  </main>
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+  .wiki-index {
+    padding: var(--space-16) var(--space-6);
+  }
+
+  .wiki-index__container {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+  }
+
+  .wiki-index__eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-wiki);
+    margin-bottom: var(--space-3);
+  }
+
+  .wiki-index__title {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 300;
+    color: var(--color-ink);
+    margin-bottom: var(--space-4);
+  }
+
+  .wiki-index__desc {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-style: italic;
+    color: var(--color-ink-muted);
+    max-width: 50ch;
+    line-height: 1.7;
+  }
+</style>
