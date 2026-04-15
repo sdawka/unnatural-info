@@ -1,0 +1,91 @@
+---
+interface NavEntry {
+  slug: string;
+  title: string;
+  chapterNumber?: number;
+}
+
+interface Props {
+  prev?: NavEntry;
+  next?: NavEntry;
+}
+
+const { prev, next } = Astro.props;
+---
+
+{(prev || next) && (
+  <nav class="chapter-nav" aria-label="Chapter navigation">
+    <div class="chapter-nav__inner">
+      {prev ? (
+        <a href={`/chapters/${prev.slug}`} class="chapter-nav__link chapter-nav__link--prev">
+          <span class="chapter-nav__arrow" aria-hidden="true">←</span>
+          <span class="chapter-nav__label">Previous</span>
+          <span class="chapter-nav__title">{prev.title}</span>
+        </a>
+      ) : <div />}
+      {next ? (
+        <a href={`/chapters/${next.slug}`} class="chapter-nav__link chapter-nav__link--next">
+          <span class="chapter-nav__arrow" aria-hidden="true">→</span>
+          <span class="chapter-nav__label">Next</span>
+          <span class="chapter-nav__title">{next.title}</span>
+        </a>
+      ) : <div />}
+    </div>
+  </nav>
+)}
+
+<style>
+  .chapter-nav {
+    margin-top: var(--space-16);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .chapter-nav__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+
+  .chapter-nav__link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    text-decoration: none;
+    padding: var(--space-4);
+    border: 1px solid var(--color-rule);
+    transition: border-color 0.15s;
+  }
+
+  .chapter-nav__link:hover {
+    border-color: var(--color-ink);
+  }
+
+  .chapter-nav__link--next {
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  .chapter-nav__arrow {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    line-height: 1;
+    color: var(--color-ink-muted);
+  }
+
+  .chapter-nav__label {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-ink-muted);
+  }
+
+  .chapter-nav__title {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 300;
+    color: var(--color-ink);
+    line-height: 1.3;
+  }
+</style>

@@ -1,0 +1,72 @@
+.prose {
+  max-width: var(--prose-width);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.75;
+  color: var(--color-ink);
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--color-ink);
+}
+
+.prose h1 { font-size: var(--text-4xl); margin-top: var(--space-16); margin-bottom: var(--space-6); }
+.prose h2 { font-size: var(--text-2xl); margin-top: var(--space-12); margin-bottom: var(--space-4); }
+.prose h3 { font-size: var(--text-xl); margin-top: var(--space-8); margin-bottom: var(--space-3); }
+.prose h4 { font-size: var(--text-lg); margin-top: var(--space-6); margin-bottom: var(--space-2); }
+
+.prose p {
+  margin-bottom: var(--space-6);
+}
+
+.prose p + p {
+  text-indent: 1.5em;
+  margin-top: calc(-1 * var(--space-2));
+}
+
+.prose blockquote {
+  border-left: 2px solid var(--color-rule);
+  padding-left: var(--space-6);
+  margin: var(--space-8) 0;
+  font-style: italic;
+  color: var(--color-ink-muted);
+}
+
+.prose ul, .prose ol {
+  padding-left: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.prose li {
+  margin-bottom: var(--space-2);
+}
+
+.prose strong {
+  font-weight: 600;
+}
+
+.prose em {
+  font-style: italic;
+}
+
+/* Footnotes rendered by Astro's markdown processor */
+.prose .footnotes {
+  margin-top: var(--space-16);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-rule);
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+}
+
+.prose sup {
+  font-family: var(--font-mono);
+  font-size: 0.65em;
+  vertical-align: super;
+  line-height: 0;
+}

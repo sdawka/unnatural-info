@@ -1,0 +1,261 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+
+const chapters = await getCollection('chapters', ({ data }) => !data.draft);
+---
+
+<BaseLayout title="UNNATURAL">
+  <SiteHeader />
+
+  <main class="home">
+
+    <!-- Hero / Manifesto -->
+    <section class="home__hero">
+      <div class="home__hero-inner">
+        <p class="home__eyebrow">An unscientific empirical theory of everything</p>
+        <h1 class="home__title">UNNATURAL</h1>
+        <p class="home__subtitle">A framework for how life moves, divides, knows, and grows.</p>
+        <p class="home__thesis">
+          Life begins in will and want.<br />
+          Will creates direction. Direction creates difference.<br />
+          Difference creates self, world, value, and distinction.<br />
+          Distinction creates models.<br />
+          Models guide manifestation.<br />
+          Manifestation alters both information and physical reality.<br />
+          Through this recursive loop, life learns, grows, and complexifies.
+        </p>
+        <p class="home__disclaimer">
+          "Unscientific" here does not mean anti-science.
+          It means: not reducible to one formal discipline,
+          not pretending to have lab-grade proof for every layer,
+          willing to begin from lived experience,
+          but still committed to reality, clarity, and honest uncertainty.
+          That gives the book its voice.
+        </p>
+      </div>
+    </section>
+
+    <!-- Three Acts -->
+    <section class="home__acts">
+      <div class="home__acts-inner">
+        <h2 class="home__acts-heading">Three Acts</h2>
+        <div class="home__acts-grid">
+
+          <a href="/acts/volo-ergo-sum" class="act-card act-card--i">
+            <span class="act-card__roman">I</span>
+            <div class="act-card__body">
+              <h3 class="act-card__name">Volo Ergo Sum</h3>
+              <p class="act-card__premise">Why anything happens at all.</p>
+              <p class="act-card__detail">Before thought, there is want. This act asks why there is any motion, any action, any value, any difference at all.</p>
+            </div>
+          </a>
+
+          <a href="/acts/initd" class="act-card act-card--ii">
+            <span class="act-card__roman">II</span>
+            <div class="act-card__body">
+              <h3 class="act-card__name">InitD</h3>
+              <p class="act-card__premise">What appears once distinction begins.</p>
+              <p class="act-card__detail">Finite beings do not meet reality whole. They carve it. The first process — init.d for the mind.</p>
+            </div>
+          </a>
+
+          <a href="/acts/mmm" class="act-card act-card--iii">
+            <span class="act-card__roman">III</span>
+            <div class="act-card__body">
+              <h3 class="act-card__name">MMM</h3>
+              <p class="act-card__premise">How life grows through recursive world-contact.</p>
+              <p class="act-card__detail">Measure, Model, Manifest. The most meta process. The loop that runs in a cell, a child, a civilisation.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="home__toc">
+      <div class="home__toc-inner">
+        <h2 class="home__toc-heading">Contents</h2>
+        <TableOfContents chapters={chapters} />
+      </div>
+    </section>
+
+  </main>
+
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .home__hero {
+    padding: var(--space-24) var(--space-6) var(--space-16);
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .home__hero-inner {
+    max-width: var(--page-max);
+    margin: 0 auto;
+  }
+
+  .home__eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-ink-muted);
+    margin-bottom: var(--space-4);
+  }
+
+  .home__title {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 12vw, 9rem);
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-ink);
+    line-height: 0.95;
+    margin-bottom: var(--space-6);
+  }
+
+  .home__subtitle {
+    font-family: var(--font-body);
+    font-size: var(--text-xl);
+    font-style: italic;
+    color: var(--color-ink-muted);
+    max-width: 50ch;
+    margin-bottom: var(--space-12);
+    line-height: 1.5;
+  }
+
+  .home__thesis {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--color-ink);
+    max-width: 44ch;
+    margin-bottom: var(--space-8);
+  }
+
+  .home__disclaimer {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-style: italic;
+    color: var(--color-ink-muted);
+    max-width: 55ch;
+    line-height: 1.7;
+    padding-left: var(--space-6);
+    border-left: 2px solid var(--color-rule);
+  }
+
+  /* Acts */
+  .home__acts {
+    padding: var(--space-16) var(--space-6);
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .home__acts-inner {
+    max-width: var(--page-max);
+    margin: 0 auto;
+  }
+
+  .home__acts-heading {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-ink-muted);
+    margin-bottom: var(--space-8);
+  }
+
+  .home__acts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+
+  @media (max-width: 900px) {
+    .home__acts-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .act-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-8);
+    border: 1px solid var(--color-rule);
+    text-decoration: none;
+    transition: border-color 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .act-card:hover {
+    border-color: var(--color-ink);
+  }
+
+  .act-card__roman {
+    font-family: var(--font-display);
+    font-size: var(--text-5xl);
+    font-weight: 300;
+    line-height: 0.9;
+    position: absolute;
+    bottom: var(--space-4);
+    right: var(--space-4);
+    opacity: 0.08;
+  }
+
+  .act-card--i .act-card__roman { color: var(--color-act-i); opacity: 0.12; }
+  .act-card--ii .act-card__roman { color: var(--color-act-ii); opacity: 0.12; }
+  .act-card--iii .act-card__roman { color: var(--color-act-iii); opacity: 0.12; }
+
+  .act-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 300;
+  }
+
+  .act-card--i .act-card__name { color: var(--color-act-i); }
+  .act-card--ii .act-card__name { color: var(--color-act-ii); }
+  .act-card--iii .act-card__name { color: var(--color-act-iii); }
+
+  .act-card__premise {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: var(--color-ink);
+  }
+
+  .act-card__detail {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-style: italic;
+    color: var(--color-ink-muted);
+    line-height: 1.6;
+  }
+
+  /* TOC */
+  .home__toc {
+    padding: var(--space-16) var(--space-6);
+  }
+
+  .home__toc-inner {
+    max-width: var(--page-max);
+    margin: 0 auto;
+  }
+
+  .home__toc-heading {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-ink-muted);
+    margin-bottom: var(--space-8);
+  }
+</style>

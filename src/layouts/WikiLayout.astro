@@ -1,0 +1,125 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+interface Props {
+  entry: CollectionEntry<'wiki'>;
+}
+
+const { entry } = Astro.props;
+const title = entry.data.title ?? entry.id.replace(/-/g, ' ');
+const category = entry.data.category;
+const updated = entry.data.updated;
+---
+
+<BaseLayout title={title}>
+  <SiteHeader />
+  <main class="wiki-page">
+    <div class="wiki-page__container">
+      <nav class="wiki-breadcrumb" aria-label="Breadcrumb">
+        <a href="/wiki/">Wiki</a>
+        <span aria-hidden="true"> / </span>
+        <span>{title}</span>
+      </nav>
+
+      <header class="wiki-header">
+        {category && <p class="wiki-category">{category}</p>}
+        <h1 class="wiki-title">{title}</h1>
+        {updated && <p class="wiki-updated">Updated {updated}</p>}
+      </header>
+
+      <article class="prose wiki-body">
+        <slot />
+      </article>
+
+      <footer class="wiki-footer">
+        <a href="/wiki/" class="wiki-footer__back">← All concepts</a>
+      </footer>
+    </div>
+  </main>
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+  .wiki-page {
+    padding: var(--space-12) var(--space-6);
+  }
+
+  .wiki-page__container {
+    max-width: var(--page-max);
+    margin: 0 auto;
+  }
+
+  .wiki-breadcrumb {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-wiki);
+    margin-bottom: var(--space-8);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .wiki-breadcrumb a {
+    color: var(--color-wiki);
+    text-decoration: none;
+  }
+
+  .wiki-breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .wiki-header {
+    max-width: var(--prose-width);
+    margin-bottom: var(--space-10);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .wiki-category {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-wiki);
+  }
+
+  .wiki-title {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 300;
+    color: var(--color-ink);
+    line-height: 1.15;
+  }
+
+  .wiki-updated {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+  }
+
+  .wiki-body {
+    max-width: var(--prose-width);
+  }
+
+  .wiki-footer {
+    margin-top: var(--space-16);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .wiki-footer__back {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-wiki);
+    text-decoration: none;
+  }
+
+  .wiki-footer__back:hover {
+    text-decoration: underline;
+  }
+</style>
