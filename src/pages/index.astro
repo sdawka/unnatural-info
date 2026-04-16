@@ -16,25 +16,24 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     <!-- Hero / Manifesto -->
     <section class="home__hero">
       <div class="home__hero-inner">
-        <p class="home__eyebrow">An unscientific empirical theory of everything</p>
+        <p class="home__eyebrow">An unscientific<a href="#unscientific-note" class="home__eyebrow-note" aria-label="What unscientific means">*</a> empirical theory of everything</p>
         <h1 class="home__title">UNNATURAL</h1>
         <p class="home__subtitle">A framework for how life moves, divides, knows, and grows.</p>
         <p class="home__thesis">
-          Life begins in will and want.<br />
+          Will and want come first.<br />
           Will creates direction. Direction creates difference.<br />
           Difference creates self, world, value, and distinction.<br />
-          Distinction creates models.<br />
-          Models guide manifestation.<br />
-          Manifestation alters both information and physical reality.<br />
-          Through this recursive loop, life learns, grows, and complexifies.
+          Distinction creates models. Models guide manifestation.<br />
+          Manifestation reshapes information and physical reality.<br />
+          The loop recurses. Life learns, grows, and complexifies.
         </p>
-        <p class="home__disclaimer">
-          "Unscientific" here does not mean anti-science.
+        <p class="home__disclaimer" id="unscientific-note">
+          <span class="home__disclaimer-marker">*</span>
+          "Unscientific" does not mean anti-science.
           It means: not reducible to one formal discipline,
-          not pretending to have lab-grade proof for every layer,
-          willing to begin from lived experience,
+          not claiming lab-grade proof at every layer,
+          willing to begin from lived experience —
           but still committed to reality, clarity, and honest uncertainty.
-          That gives the book its voice.
         </p>
       </div>
     </section>
@@ -141,6 +140,18 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     margin-bottom: var(--space-8);
   }
 
+  .home__eyebrow-note {
+    color: var(--color-ink-muted);
+    text-decoration: none;
+    font-size: 0.75em;
+    vertical-align: super;
+    margin-left: 1px;
+  }
+
+  .home__eyebrow-note:hover {
+    color: var(--color-ink);
+  }
+
   .home__disclaimer {
     font-family: var(--font-body);
     font-size: var(--text-base);
@@ -150,6 +161,11 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     line-height: 1.7;
     padding-left: var(--space-6);
     border-left: 2px solid var(--color-rule);
+  }
+
+  .home__disclaimer-marker {
+    font-style: normal;
+    margin-right: var(--space-1);
   }
 
   /* Acts */
