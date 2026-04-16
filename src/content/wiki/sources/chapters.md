@@ -16,9 +16,9 @@ Quick reference for all ingested chapter files and the wiki pages they primarily
 | 09-thingification.md | Ch. 9: Thingification | InitD | concepts/thingification.md |
 | 10-the-information-physical-duality.md | Ch. 10: The Information / Physical Duality | InitD | concepts/information-physical-duality.md, themes/wisdom-traditions.md |
 | 11-the-cost-of-the-blade.md | Ch. 11: The Cost of the Blade | InitD | themes/cost-of-distinction.md |
-| 12-measure.md | Ch. 12: Measure | MMM | concepts/the-mmm-loop.md |
-| 13-model.md | Ch. 13: Model | MMM | concepts/the-mmm-loop.md |
-| 14-manifest.md | Ch. 14: Manifest | MMM | concepts/the-mmm-loop.md |
+| 12-measure.md | Ch. 12: Measure and Map | MMM | concepts/the-mmm-loop.md |
+| 13-model.md | Ch. 13: Model and Manipulate | MMM | concepts/the-mmm-loop.md |
+| 14-manifest.md | Ch. 14: Manifest and Make | MMM | concepts/the-mmm-loop.md |
 | 15-mmm-as-lived-experience.md | Ch. 15: MMM as the Lived Experience of Growth | MMM | concepts/the-mmm-loop.md, themes/growth-and-learning.md |
 | 16-mmm-across-life-itself.md | Ch. 16: MMM Across Life Itself | MMM | concepts/the-mmm-loop.md, themes/growth-and-learning.md |
 | 17-what-the-mystics-were-tracking.md | Ch. 17: What the Mystics Were Tracking | MMM | themes/wisdom-traditions.md |

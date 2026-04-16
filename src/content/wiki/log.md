@@ -4,6 +4,20 @@ Append-only chronological record of all ingest, query, and lint operations.
 
 ---
 
+## 2026-04-16T14:00:00Z UPDATE: MMM chapter framing sharpened (editorial)
+
+Pages updated:
+- concepts/the-mmm-loop.md — chapter titles updated to Measure and Map / Model and Manipulate / Manifest and Make; each step rewritten to emphasise the ontological→relational→generative arc; Map/Manipulate/Make vocabulary introduced alongside Measure/Model/Manifest; scale table header updated; three new key claims added distinguishing measuring from modelling, manipulation as causal discovery, and making as genuine creation
+- acts/act-3-mmm.md — overview rewritten with new arc framing; chapter table rows 12–14 updated with new titles and sharper core-move descriptions; two new key claims added
+- sources/chapters.md — chapter title entries for 12–14 updated to reflect new titles
+
+Key framings added:
+- Measuring ≠ modelling: the map is a census before any causal account
+- Manipulate phase as the mechanism of causal discovery (not just hypothesis-holding)
+- Make as genuine creation from discovered components and relationships, distinct from action or wager
+
+---
+
 ## 2026-04-16T12:00:00Z INGEST: Becker — The Denial of Death (editorial addition)
 
 Pages created:

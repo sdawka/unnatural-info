@@ -1,32 +1,40 @@
 # The MMM Loop
 
-> The recursive three-step growth loop — Measure, Model, Manifest — that runs at every scale from single-cell life to human civilisation.
+> The recursive three-step growth loop — Measure and Map, Model and Manipulate, Manifest and Make — that runs at every scale from single-cell life to human civilisation.
 
 ## Overview
 
-MMM is the book's central answer to the question: how do wanting, distinguishing creatures actually grow? The loop names three moves that always appear together in any instance of genuine learning or development: becoming sensitive to a difference (Measure), compressing that difference into a working hypothesis (Model), and acting from the hypothesis in a way that generates new data (Manifest). The loop then turns again from that new data.
+MMM is the book's central answer to the question: how do wanting, distinguishing creatures actually grow? The loop names three moves that always appear together in any instance of genuine learning or development: discriminating what pieces exist and charting the territory (Measure/Map), building a model of how those pieces connect and probing its behavior (Model/Manipulate), and synthesising something new from the discovered components and relationships (Manifest/Make). The loop then turns again from what the new thing reveals.
+
+The three steps follow an ontological → relational → generative arc. First you establish what exists. Then you learn how it works. Then you bring something new into being from that knowledge. Each step has a distinct character and cannot substitute for the others: measuring is not modelling; modelling is not making.
 
 The key argument is that this is not a heuristic borrowed from one field and applied to others as metaphor. It is the same underlying shape, running at different speeds and on different substrates. A bacterium running chemotaxis is running MMM at the molecular level. An organism with a nervous system compresses and accelerates the loop within a single lifetime. A human adds symbolic acceleration: language and culture allow measurements, models, and manifestations to be stored and reused across generations. A civilisation is recursive MMM loops stacked on top of biological ones.
 
 Growth, experienced from the inside, is the felt sense of this loop turning: better measurement, richer models, more effective manifestation. Suffering that has no acute physical cause is usually a stalled loop — one of the three moves has seized up.
 
-## Measure (Chapter 12)
+## Measure and Map (Chapter 12)
 
-To grow, a system must become sensitive to a difference it could not previously detect. Measure is the act of becoming that sensitive. It runs at every scale: a microbe sensing a chemical gradient; an MRI; a friend asking "how are you, really." Every instrument carries a theory of what matters — there is no neutral measurement, only better or worse choices about what to attend to.
+The ontological first step. Before you can understand a territory you must establish what pieces are in it — what exists, what qualities and dimensions are present, what varies and what stays the same. Measure is the act of becoming sensitive to difference; Map is the deliverable: a census of what is there before you know anything about how it works.
 
-Two costs are symmetrical: ignoring something leaves you subject to its surprises; measuring it starts shaping you toward it. Pick what you look at carefully.
+This distinction matters. Measuring is not modelling. The map is not yet a theory of causal relationships; it is a principled inventory of the territory. Every instrument carries a theory of what matters — there is no neutral measurement, only better or worse choices about what to attend to. But the choice to attend is still prior to the choice to explain.
 
-## Model (Chapter 13)
+Two costs are symmetrical: ignoring something leaves you subject to its surprises; measuring it starts shaping you toward it. Pick what you look at carefully. The map is the precondition for everything that follows.
 
-Measured difference, by itself, gives you a pile of data points. Model is the move where that pile is compressed into a hypothesis worth acting from — a guess about what is going on under the noise. A model can live in a nervous system, in language, in code, in a building, in a ritual. The substrate does not change the function.
+## Model and Manipulate (Chapter 13)
+
+The relational/causal step. Once pieces have been mapped, the next move is to build a working account of how they connect and affect each other — and then to manipulate the model: run what-ifs, move pieces, probe behavior at the edge of its range. The manipulation is exploratory, not destructive. This is how you discover causal structure rather than mere correlation.
+
+A model can live in a nervous system, in language, in code, in a building, in a ritual. The substrate does not change the function. But the manipulate phase is what converts a static hypothesis into a tool for understanding. You know you have a real model when you can move its parts and predict what changes.
 
 Self-models are the most consequential models, because they govern what all other modelling is for. Better living often means better modelling rather than more effort; effort inside a wrong model is fuel for the wrong direction.
 
-## Manifest (Chapter 14)
+## Manifest and Make (Chapter 14)
 
-A model that never returns to the world is a hobby. Manifest is the loop closing: the model goes back out and meets the territory on the territory's terms. Every manifestation is a wager — a bet that the model is right enough to act from. The wager pays back as feedback into the next round of Measure.
+The generative step. Using the pieces from Map and the rules discovered through Manipulate, you synthesise something that did not exist before. This is genuine creation — not just action or wager, but bringing new things into the world from discovered components and relationships.
 
-Internal manifestation counts: a new habit, a redirected attention, a quietly altered identity are manifestations, often the most consequential ones. Without manifestation, the loop stalls.
+This step is qualitatively different from the first two. Measuring describes what is. Modelling and manipulating explains how it works. Making produces what has not yet been. The new thing is not derivable from the map or the model alone — it requires the creative act of synthesis.
+
+A model that never returns to the world is a hobby. Every manifestation is a wager that the model is right enough to build from — and the wager pays back as new material to measure in the next turn of the loop. Without making, the loop stalls; the knowledge remains inert.
 
 ## Theoretical scaffolding from the dump source
 
@@ -51,7 +59,7 @@ Stall points:
 
 ## The loop across life itself (Chapter 16)
 
-| Level | Measure | Model | Manifest |
+| Level | Measure / Map | Model / Manipulate | Manifest / Make |
 |-------|---------|-------|----------|
 | Single cell | Chemical gradient sensing | Regulatory networks | Gene expression, adaptation |
 | Multicellular | Coordinated sensors | Signalling networks | Movement, growth |
@@ -70,6 +78,9 @@ Contemplative traditions across cultures converge on a recognisable triad: a dis
 - The same loop runs in evolution, individual learning, relationships, and civilisation — not as metaphor but as the same underlying shape. — Source: `/src/content/chapters/16-mmm-across-life-itself.md`
 - Most felt suffering without acute physical cause is a stalled loop; movement returns when the missing move is identified. — Source: `/src/content/chapters/15-mmm-as-lived-experience.md`
 - Better living means better modelling, not more effort. — Source: `/src/content/chapters/13-model.md`
+- Measuring is not modelling; the map is a census of what exists before any causal account. — Source: `/src/content/chapters/12-measure.md`
+- The manipulate phase of Model is how causal structure is discovered — not observation, but active probing. — Source: `/src/content/chapters/13-model.md`
+- Manifest is genuine creation: bringing new things into the world from discovered components and relationships, not merely acting on an existing plan. — Source: `/src/content/chapters/14-manifest.md`
 - Every manifestation is a wager on the current model. — Source: `/src/content/chapters/14-manifest.md`
 - Humans add symbolic acceleration; civilisations are recursive loops stacked on biological loops. — Source: `/src/content/chapters/16-mmm-across-life-itself.md`
 
@@ -93,4 +104,4 @@ Contemplative traditions across cultures converge on a recognisable triad: a dis
 - The active inference framework (Friston) treats perception and action as continuous, not as separate phases of a loop. Whether the loop is a useful model or an artifact of decomposing what is really one motion is not resolved.
 
 ---
-*Last updated: 2026-04-16 | Sources: 9 (Ch. 12–19; /dump/overall.md)*
+*Last updated: 2026-04-16 | Sources: 9 (Ch. 12–19; /dump/overall.md) — framing sharpened 2026-04-16*
