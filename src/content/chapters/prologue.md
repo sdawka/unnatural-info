@@ -7,6 +7,31 @@ summary: "What does it mean to build a theory of everything that is unscientific
 themes: ["epistemology", "method", "empiricism", "framework"]
 status: draft
 draft: false
+furtherReading:
+  - author: "Merleau-Ponty"
+    title: "Phenomenology of Perception"
+    year: 1945
+    note: "Rigorous first-person method — pure description steering between reductionism and intellectualism without appealing to either."
+  - author: "Thomas Nagel"
+    title: "What Is It Like to Be a Bat?"
+    year: 1974
+    note: "Defends the irreducibility of the first-person viewpoint: factor it out and there is nothing left of the experience."
+  - author: "Kierkegaard"
+    title: "Concluding Unscientific Postscript"
+    year: 1846
+    note: "The title is deliberate — indirect communication from a situated, exploratory stance rather than a philosophical system."
+  - author: "William James"
+    title: "Essays in Radical Empiricism"
+    year: 1912
+    note: "Pre-conceptual pure experience as the one fundamental stuff; all claims revisable by their lived consequences."
+  - author: "Wittgenstein"
+    title: "Philosophical Investigations"
+    year: 1953
+    note: "Language-games embed meaning in lived practice; even the most intimate experience can only be marked through shared, revisable frameworks."
+  - author: "Dan Zahavi"
+    title: "Subjectivity and Selfhood"
+    year: 2005
+    note: "Contemporary synthesis of Husserl and Merleau-Ponty: pre-reflective self-awareness as the structural foundation of all experience."
 ---
 
 There is a long and slightly embarrassing history of people trying to explain everything. They mostly do it badly, and they almost always do it with too much confidence. This is another one of those attempts, and the only thing this prologue can honestly promise is that we have noticed.

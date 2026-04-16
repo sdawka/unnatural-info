@@ -19,7 +19,7 @@ interface Props {
 }
 
 const { chapter, prev, next } = Astro.props;
-const { title, subtitle, act, actTitle, chapterNumber } = chapter.data;
+const { title, subtitle, act, actTitle, chapterNumber, furtherReading } = chapter.data;
 ---
 
 <BaseLayout title={title} description={chapter.data.summary}>
@@ -39,6 +39,23 @@ const { title, subtitle, act, actTitle, chapterNumber } = chapter.data;
       <article class="prose">
         <slot />
       </article>
+      {furtherReading && furtherReading.length > 0 && (
+        <section class="further-reading">
+          <h2 class="further-reading__heading">Influences &amp; Further Reading</h2>
+          <ol class="further-reading__list">
+            {furtherReading.map((entry) => (
+              <li class="further-reading__item">
+                <span class="further-reading__author">{entry.author}</span>
+                {' — '}
+                <em class="further-reading__title">{entry.title}</em>
+                {' '}
+                <span class="further-reading__year">({entry.year})</span>
+                <span class="further-reading__note">{entry.note}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
       <ChapterNav prev={prev} next={next} />
     </div>
   </main>
@@ -84,6 +101,53 @@ const { title, subtitle, act, actTitle, chapterNumber } = chapter.data;
     font-style: italic;
     color: var(--color-ink-muted);
     margin-top: var(--space-2);
+  }
+
+  .further-reading {
+    max-width: var(--prose-width);
+    margin-top: var(--space-16);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .further-reading__heading {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-ink-muted);
+    margin-bottom: var(--space-6);
+  }
+
+  .further-reading__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .further-reading__item {
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    color: var(--color-ink);
+  }
+
+  .further-reading__author {
+    font-weight: 500;
+  }
+
+  .further-reading__year {
+    color: var(--color-ink-muted);
+    margin-right: var(--space-2);
+  }
+
+  .further-reading__note {
+    display: block;
+    color: var(--color-ink-muted);
+    margin-top: var(--space-1);
+    padding-left: 0;
   }
 
   @media (max-width: 768px) {

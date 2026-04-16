@@ -18,6 +18,9 @@
       <a href="/wiki/" class="site-header__wiki">
         Wiki
       </a>
+      <a href="/reading" class="site-header__reading">
+        Reading
+      </a>
     </nav>
   </div>
 </header>
@@ -89,6 +92,23 @@
   }
 
   .site-header__wiki:hover {
+    opacity: 0.75;
+  }
+
+  .site-header__reading {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    color: var(--color-ink);
+    opacity: 0.5;
+    padding: var(--space-1) var(--space-3);
+    border: 1px solid currentColor;
+    transition: opacity 0.15s;
+  }
+
+  .site-header__reading:hover {
     opacity: 0.75;
   }
 

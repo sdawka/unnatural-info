@@ -9,6 +9,43 @@ summary: "Self-esteem, trust, relationships, exercise, money, meaning — each e
 themes: ["self-esteem", "trust", "relationships", "money", "meaning", "application"]
 status: draft
 draft: false
+furtherReading:
+  - author: "Daniel Kahneman"
+    title: "Thinking, Fast and Slow"
+    year: 2011
+    note: "System 1 as the background model-layer — the chapter's project is making automatic, invisible models legible to the slower, deliberate mind."
+  - author: "Hayes, Strosahl & Wilson"
+    title: "Acceptance and Commitment Therapy"
+    year: 2012
+    note: "Six ACT processes map cleanly onto Measure/Model/Manifest; psychological flexibility is the operational version of living the MMM loop. Over 1,200 RCTs."
+  - author: "Viktor Frankl"
+    title: "Man's Search for Meaning"
+    year: 1946
+    note: "Logotherapy: meaning as the primary motivational force; the existential vacuum (emptiness) is the pathology the MMM framework is designed to address."
+  - author: "Epictetus"
+    title: "Enchiridion"
+    year: 135
+    note: "The dichotomy of control — what lies in our judgments and what does not. Prohairesis (the rational choice-faculty) is the Model-revision faculty applied to emotional response."
+  - author: "Irvin Yalom"
+    title: "Existential Psychotherapy"
+    year: 1980
+    note: "Four ultimate concerns (death, freedom, isolation, meaninglessness) — defective background models around each generate specific, recognisable pathologies."
+  - author: "Carl Rogers"
+    title: "The Necessary and Sufficient Conditions of Therapeutic Personality Change"
+    year: 1957
+    note: "Unconditional positive regard creates a relational scaffold in which the client's Measure step can function without distortion — trust enables accurate sensing."
+  - author: "Santideva"
+    title: "Bodhicaryavatara (The Way of the Bodhisattva)"
+    year: 700
+    note: "Patient attention to others' suffering as the foundation of how to live — the capability approach has roots here, before economics formalised it."
+  - author: "Martha Nussbaum"
+    title: "The Fragility of Goodness"
+    year: 1986
+    note: "Vulnerability as a condition for flourishing, not a defect — what it means to live well under genuine uncertainty rather than in spite of it."
+  - author: "Amartya Sen"
+    title: "Development as Freedom"
+    year: 1999
+    note: "Capabilities rather than utility: what matters is what people are able to do and be — the framework applied at civilisational scale."
 ---
 
 A theory that does not change a Tuesday is decoration. This chapter is the part where we stop describing the loop and start using it on the things people actually wake up worrying about: self-esteem, trust, relationships, exercise, money, meaning. Each one, taken through the three acts, looks different than it does on the cover of a self-help book — usually less dramatic, often more tractable.

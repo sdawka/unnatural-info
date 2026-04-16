@@ -9,6 +9,51 @@ summary: "Across cultures and centuries, contemplative traditions converged on p
 themes: ["wisdom", "tradition", "spirituality", "ritual", "information", "pattern", "MMM"]
 status: draft
 draft: false
+furtherReading:
+  - author: "William James"
+    title: "The Varieties of Religious Experience"
+    year: 1902
+    note: "Rigorous empirical taxonomy of mystical states across traditions; pragmatic criterion — evaluate by fruits, not by origins."
+  - author: "Varela, Thompson & Rosch"
+    title: "The Embodied Mind"
+    year: 1991
+    note: "The formal bridge between Buddhist phenomenology and cognitive science via enaction — the traditions were doing applied first-person neuroscience."
+  - author: "Evan Thompson"
+    title: "Waking, Dreaming, Being"
+    year: 2015
+    note: "The self as a process across states of consciousness; contemplative traditions as systematic investigations of what models the self runs in different states."
+  - author: "Antonio Damasio"
+    title: "The Strange Order of Things"
+    year: 2018
+    note: "Spiritual practices as high-level homeostatic regulation — biological grounding without reduction; the mystics were tracking deviations from optimal states."
+  - author: "Simone Weil"
+    title: "Waiting for God"
+    year: 1951
+    note: "Attention is the rarest and purest form of generosity — the Measure step of MMM described as a spiritual practice."
+  - author: "Richard Davidson et al."
+    title: "Long-term meditators self-induce high-amplitude gamma synchrony"
+    year: 2004
+    note: "Empirical: expert meditators show the highest gamma amplitudes recorded in a non-pathological context — attention training measurably changes the brain."
+  - author: "Zhuangzi (trans. Ziporyn)"
+    title: "Zhuangzi: The Essential Writings"
+    year: -300
+    note: "Wu-wei and the useless tree: skillful action emerges from presence rather than calculation. The Daoist version of the MMM loop without a program."
+  - author: "Nagarjuna"
+    title: "Mulamadhyamakakarika"
+    year: 150
+    note: "The most rigorous Buddhist argument that all phenomena lack inherent existence — even the blade has no handle of its own."
+  - author: "Bhagavad Gita"
+    title: "Bhagavad Gita"
+    year: -200
+    note: "Action without attachment to fruits — the Manifest step freed from the anxiety of outcome. The battlefield as a practical ontology of action-under-clarity."
+  - author: "Meister Eckhart"
+    title: "Selected Sermons"
+    year: 1310
+    note: "Abgeschiedenheit (detachment) as the ground of the soul: attention as dissolution of the self-model that stands between you and reality."
+  - author: "Al-Ghazali"
+    title: "Deliverance from Error"
+    year: 1109
+    note: "The spiritual crisis of over-modeling — the mystic as someone who has noticed their map is a map. The philosophical route to trust in direct experience."
 ---
 
 People have been doing this for a very long time, and they were not all idiots. That is the only methodological assumption this chapter requires.

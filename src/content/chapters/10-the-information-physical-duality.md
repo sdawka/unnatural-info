@@ -9,6 +9,39 @@ summary: "Human life is lived at the interface between the physical and informat
 themes: ["information", "physical", "duality", "causation", "belief", "institution"]
 status: draft
 draft: false
+furtherReading:
+  - author: "Norbert Wiener"
+    title: "Cybernetics"
+    year: 1948
+    note: "Information is information, not matter or energy — the irreducibility of the informational domain announced at the founding of cybernetics."
+  - author: "Claude Shannon"
+    title: "A Mathematical Theory of Communication"
+    year: 1948
+    note: "Information defined structurally and independently of physical substrate or semantic content — the same information can live in electrons, neurons, or ink."
+  - author: "Gregory Bateson"
+    title: "Form, Substance and Difference"
+    year: 1970
+    note: "A difference that makes a difference — organism-relative information: a difference only counts for a system it matters to."
+  - author: "John Archibald Wheeler"
+    title: "Information, Physics, Quantum: The Search for Links"
+    year: 1989
+    note: "It from Bit: every physical entity derives its existence from answers to yes-or-no questions — the most radical statement of informational primacy."
+  - author: "Terrence Deacon"
+    title: "Incomplete Nature"
+    year: 2011
+    note: "The causal power of information comes from constraints — absences — not from physical properties. The most philosophically rigorous recent argument."
+  - author: "Luciano Floridi"
+    title: "The Philosophy of Information"
+    year: 2011
+    note: "Informational structural realism: a bridge from Shannon's syntax to meaningful semantic information as a full research programme."
+  - author: "Howard Pattee & Joanna Raczaszek-Leonardi"
+    title: "Laws, Language and Life"
+    year: 2012
+    note: "The epistemic cut: where physical substrate and symbolic control separate. The most precise technical account of how information and matter interface."
+  - author: "Robert Rosen"
+    title: "Life Itself"
+    year: 1991
+    note: "Life as anticipatory system — the informational loop that distinguishes living from non-living matter runs on models of the future, not just responses to the past."
 ---
 
 Two stories compete for the role of fundamental. In one, the world is made of stuff — atoms, fields, energy — and everything else is decoration. In the other, the world is made of pattern — meaning, relation, structure — and the stuff is just where the pattern happens to be running. Both stories are partly right and entirely insufficient on their own.

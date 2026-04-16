@@ -17,6 +17,12 @@ const chapters = defineCollection({
     themes: z.array(z.string()).default([]),
     status: z.enum(['stub', 'draft', 'final']).default('stub'),
     draft: z.boolean().default(false),
+    furtherReading: z.array(z.object({
+      author: z.string(),
+      title: z.string(),
+      year: z.number(),
+      note: z.string(),
+    })).optional().default([]),
   }),
 });
 

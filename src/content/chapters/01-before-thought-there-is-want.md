@@ -9,6 +9,39 @@ summary: "A being does not first know. A being first leans. Before ideology, bef
 themes: ["want", "will", "desire", "attraction", "aversion", "motivation"]
 status: draft
 draft: false
+furtherReading:
+  - author: "Antonio Damasio"
+    title: "Descartes' Error"
+    year: 1994
+    note: "The somatic marker hypothesis: bodily feeling is first-order, deliberation is second-order. Without somatic markers, patients can reason but cannot decide."
+  - author: "Antonio Damasio"
+    title: "The Feeling of What Happens"
+    year: 1999
+    note: "Consciousness itself as the feeling of what happens — the organism's orientation precedes any conceptual self."
+  - author: "Schopenhauer"
+    title: "The World as Will and Representation"
+    year: 1818
+    note: "Will as the thing-in-itself; intellect subordinate to drive — the most direct philosophical ancestor of volo ergo sum."
+  - author: "Spinoza"
+    title: "Ethics, Part III"
+    year: 1677
+    note: "Conatus: we judge something good because we strive for it, not the other way around. Desire is ontologically prior to evaluation."
+  - author: "Varela, Thompson & Rosch"
+    title: "The Embodied Mind"
+    year: 1991
+    note: "Enactivism: orientation and wanting are the substrate of cognition, not an add-on to it."
+  - author: "Lisa Feldman Barrett"
+    title: "How Emotions Are Made"
+    year: 2017
+    note: "The brain as an allostatic predictor — wanting and orienting are its baseline mode, not reactions to the world."
+  - author: "Anil Seth"
+    title: "Being You"
+    year: 2021
+    note: "Consciousness as controlled hallucination — wanting has a first-person character that neuroscience is only beginning to model from the inside."
+  - author: "Kevin Mitchell"
+    title: "Free Agents"
+    year: 2023
+    note: "How nervous systems evolved to generate genuine agency rather than mere responsiveness — the biological story of why want precedes thought."
 ---
 
 Descartes started in the wrong place. Before there is a thinker noticing it is thinking, there is a creature leaning toward something. A bacterium does not contemplate the sugar gradient; it goes. A baby does not theorise about milk; it roots. Whatever else is true about being alive, the first thing that is true is *wanting*.

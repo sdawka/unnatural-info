@@ -9,6 +9,47 @@ summary: "Object formation, naming, categorisation, abstraction, identities, soc
 themes: ["thingification", "objects", "categories", "abstraction", "institutions", "language"]
 status: draft
 draft: false
+furtherReading:
+  - author: "John Searle"
+    title: "The Construction of Social Reality"
+    year: 1995
+    note: "X counts as Y in context C — the mechanism by which collective declarations create institutional things with genuine causal power."
+  - author: "Alfred North Whitehead"
+    title: "Science and the Modern World"
+    year: 1925
+    note: "The fallacy of misplaced concreteness: mistaking an abstraction for the concrete reality from which it was abstracted."
+  - author: "Gyorgy Lukacs"
+    title: "History and Class Consciousness"
+    year: 1923
+    note: "Reification (Verdinglichung): dynamic human relations harden into thing-like objects and forget they were ever relations."
+  - author: "Eleanor Rosch"
+    title: "Principles of Categorization"
+    year: 1978
+    note: "Empirical: categories are prototype-structured with graded membership, not defined by necessary and sufficient conditions."
+  - author: "Hofstadter & Sander"
+    title: "Surfaces and Essences"
+    year: 2013
+    note: "Categories as frozen analogies — fog becomes tax code via the crystallisation of once-active comparisons into habitual classifications."
+  - author: "Wittgenstein"
+    title: "Philosophical Investigations"
+    year: 1953
+    note: "Family resemblance: no single property is shared by all members of a natural category — a philosophical result Rosch later confirmed empirically."
+  - author: "Berger & Luckmann"
+    title: "The Social Construction of Reality"
+    year: 1966
+    note: "The foundational sociology of how shared thingifications become taken-for-granted reality — habitualisation, institutionalisation, legitimation."
+  - author: "Bowker & Star"
+    title: "Sorting Things Out"
+    year: 1999
+    note: "Classification systems as moral and political acts — the lived cost of being placed in the wrong category is distributed unequally."
+  - author: "James C. Scott"
+    title: "Seeing Like a State"
+    year: 1998
+    note: "State simplification of complex reality produces both power and catastrophic failure — legibility is a blade that cuts back."
+  - author: "David Graeber"
+    title: "The Utopia of Rules"
+    year: 2015
+    note: "Bureaucracy as crystallised thingification — how fog becomes not just a tax code but a structural instrument of control."
 ---
 
 Reality, considered honestly, is a fog. It is continuous, smeared, partly overlapping with itself, and refuses to come pre-packaged. *Things* are something we do to it. We name a region of fog, decide it has edges, give it a noun, and proceed to act as if the noun were the territory. This is *thingification*, and it is how a continuous world becomes a usable one.

@@ -9,6 +9,31 @@ summary: "Repeated contact. Resistance. Coordination. Shared constraints. Inters
 themes: ["objectivity", "intersubjectivity", "shared reality", "coordination", "constraint"]
 status: draft
 draft: false
+furtherReading:
+  - author: "Thomas Nagel"
+    title: "The View from Nowhere"
+    year: 1986
+    note: "Objectivity is a hard-won partial achievement, not a god's-eye view — and the attempt to approximate it is what science is."
+  - author: "Hannah Arendt"
+    title: "The Human Condition"
+    year: 1958
+    note: "Plurality: reality is guaranteed not by a common nature but by many distinct people being concerned with the same object."
+  - author: "Donald Davidson"
+    title: "Subjective, Intersubjective, Objective"
+    year: 2001
+    note: "Triangulation: objective truth requires two agents responding to shared causes in the world — objectivity emerges from intersubjectivity."
+  - author: "Wilfrid Sellars"
+    title: "Empiricism and the Philosophy of Mind"
+    year: 1956
+    note: "The myth of the given: perception is already conceptually structured. Nothing in experience is incorrigibly given as a foundation."
+  - author: "John Searle"
+    title: "The Construction of Social Reality"
+    year: 1995
+    note: "Institutional facts via collective intentionality — objectivity is constructed but not arbitrary; it requires ongoing collective recognition."
+  - author: "Michael Tomasello"
+    title: "The Cultural Origins of Human Cognition"
+    year: 1999
+    note: "Empirical: objectivity is developmentally downstream of shared intentionality, not prior to it."
 ---
 
 You are stuck inside your own head. So is everyone else. This is, on first look, a disaster for the entire project of knowing anything. It would be — if minds did not keep bumping into each other and into the same stubborn furniture.

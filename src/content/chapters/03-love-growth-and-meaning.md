@@ -9,6 +9,39 @@ summary: "Love as mutual orientation. Growth as expanded capacity. Meaning as du
 themes: ["love", "growth", "meaning", "orientation", "emptiness", "purpose"]
 status: draft
 draft: false
+furtherReading:
+  - author: "Martin Buber"
+    title: "I and Thou"
+    year: 1923
+    note: "Love as mutual orientation enacted between beings — not a feeling one has but a mode of relating one enacts together."
+  - author: "Iris Murdoch"
+    title: "The Sovereignty of Good"
+    year: 1970
+    note: "Love as just and loving attention — the method of all virtues; attention leads to growth leads to meaning."
+  - author: "Harry Frankfurt"
+    title: "The Importance of What We Care About"
+    year: 1988
+    note: "Caring integrates the self across time; love is the paradigm case of what it means to be a person with a volitional essence."
+  - author: "Viktor Frankl"
+    title: "Man's Search for Meaning"
+    year: 1946
+    note: "Will to meaning as the primary motivational force; emptiness is the existential vacuum produced by misaligned willing."
+  - author: "Aristotle"
+    title: "Nicomachean Ethics, Books VIII-IX"
+    year: -350
+    note: "Philia, eudaimonia, and growth through shared virtuous activity — love, meaning, and growth unified in one account from the start."
+  - author: "Deci & Ryan"
+    title: "Self-Determination Theory"
+    year: 1985
+    note: "Empirical: autonomy, competence, and relatedness are universal psychological needs; growth is indexed to their alignment."
+  - author: "Martha Nussbaum"
+    title: "Upheavals of Thought"
+    year: 2001
+    note: "Emotions as intelligent responses to value — love as a form of practical reasoning that constitutes rather than merely expresses the self."
+  - author: "Simone de Beauvoir"
+    title: "The Ethics of Ambiguity"
+    year: 1947
+    note: "Freedom requires others to be free — love and growth are not private achievements but ethical stakes in a shared world."
 ---
 
 If you take wanting seriously as the floor of life, three things that usually get separate chapters in different books turn out to be the same thing showing different faces. Love is what wanting looks like when it lines up with something else's wanting. Growth is what wanting looks like when it learns to do more. Meaning is what wanting looks like when it holds together over time.

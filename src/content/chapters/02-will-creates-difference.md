@@ -9,6 +9,31 @@ summary: "If beings want different things, or want the same things from differen
 themes: ["difference", "direction", "individuality", "variation", "subjectivity"]
 status: draft
 draft: false
+furtherReading:
+  - author: "William James"
+    title: "A Pluralistic Universe"
+    year: 1909
+    note: "Reality is irreducibly multiple — divergence between streams of experience is structural, not accidental."
+  - author: "Gilbert Simondon"
+    title: "Individuation in Light of Notions of Form and Information"
+    year: 1964
+    note: "The most rigorous account of individuation as process: disparation (incompatible tensions) is the engine of selfhood."
+  - author: "Hegel"
+    title: "Phenomenology of Spirit"
+    year: 1807
+    note: "Individuation through encounter with difference; determinate negation means every contradiction resolves into something new rather than nothing."
+  - author: "W. Brian Arthur"
+    title: "Increasing Returns and Path Dependence in the Economy"
+    year: 1994
+    note: "Small early differences lock in large outcomes through positive feedback — path dependence as a general consequence of divergent wanting."
+  - author: "Stuart Kauffman"
+    title: "At Home in the Universe"
+    year: 1995
+    note: "Stable structures emerge from the collision of many divergent elements without any top-down design — order for free."
+  - author: "Heraclitus"
+    title: "Fragments"
+    year: -500
+    note: "All things come into being by conflict of opposites. The oldest argument that difference and conflict are generative rather than merely destructive."
 ---
 
 If everything wanted exactly the same thing in exactly the same way, the universe would be a much more boring place and there would be considerably fewer arguments. As it happens, things want differently, or want the same things from different angles, and that is where most of reality comes from.

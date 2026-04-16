@@ -9,6 +9,31 @@ summary: "Simplification, reification, stereotype, ideology. Forgetting our cuts
 themes: ["cost", "simplification", "reification", "ideology", "stereotype", "shadow"]
 status: draft
 draft: false
+furtherReading:
+  - author: "Michel Foucault"
+    title: "The Order of Things"
+    year: 1966
+    note: "The episteme as a cut through possible thought — within it, certain questions become literally unaskable. His opening meditation on Borges' Chinese encyclopedia is directly on point."
+  - author: "Simone de Beauvoir"
+    title: "The Second Sex"
+    year: 1949
+    note: "One is not born, but becomes, a woman — the cost of a category is borne by those assigned to it."
+  - author: "Edward Said"
+    title: "Orientalism"
+    year: 1978
+    note: "Categorical systems as exercises of power — the cut that produces knowledge simultaneously forgets that it was made."
+  - author: "George Lakoff"
+    title: "Women, Fire, and Dangerous Things"
+    year: 1987
+    note: "Every categorical system reveals the categoriser's embodied, cultural situation — categories are not windows onto the world but portraits of the cutter."
+  - author: "Paul Ricoeur"
+    title: "The Rule of Metaphor"
+    year: 1975
+    note: "Living metaphors die into categories — the productive cut first shocks, then becomes invisible, then becomes a prison."
+  - author: "Richard Rorty"
+    title: "Contingency, Irony, and Solidarity"
+    year: 1989
+    note: "All categories are final vocabularies — forgetting their contingency is what produces fanaticism."
 ---
 
 Every cut gains leverage and loses nuance. That is the deal. The first blade let us be a self at the cost of pretending we knew where we ended. The second blade let us think about the world at the cost of mistaking the model for it. The third blade let us navigate at the cost of making "good" and "bad" sound like properties of things rather than relationships with them.

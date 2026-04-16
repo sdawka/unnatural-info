@@ -9,6 +9,31 @@ summary: "Organismic dualities: me/not-me, toward/away, can/cannot. Cognitive du
 themes: ["duality", "distinction", "binary", "cut", "layer", "cost"]
 status: draft
 draft: false
+furtherReading:
+  - author: "Claude Levi-Strauss"
+    title: "Structural Anthropology"
+    year: 1958
+    note: "The human mind universally operates by binary opposition; myths exist to manage irresolvable tensions rather than to resolve them."
+  - author: "Mark Johnson"
+    title: "The Body in the Mind"
+    year: 1987
+    note: "Image schemas (CONTAINMENT, FORCE, VERTICALITY) show that binary structure has a bodily ground floor — it comes from having a body."
+  - author: "Hegel"
+    title: "Science of Logic"
+    year: 1812
+    note: "Each concept contains its own negation; oppositions are generative engines, not stable resting points."
+  - author: "Gregory Bateson"
+    title: "Toward a Theory of Schizophrenia"
+    year: 1956
+    note: "Double bind: the pathology of a duality that cannot be held as a duality — what happens when the two poles must both be true."
+  - author: "Carl Jung"
+    title: "Aion"
+    year: 1951
+    note: "Shadow as structural: the ego maintains coherence by suppressing its opposite into the unconscious, not by eliminating it."
+  - author: "Xinyan Jiang"
+    title: "Chinese Dialectical Thinking: The Yin Yang Model"
+    year: 2014
+    note: "Key asymmetry: Western dialectics tends toward supersession; yin-yang holds the poles as mutually constitutive and containing each other."
 ---
 
 Three blades was a tidy beginning. It is also a lie of convenience. The truth is that finite minds are constantly cutting reality into pairs, and the pairs are nested inside each other like badly stacked tupperware. There are more dualities than you'd like. There are more than will fit in this chapter. The job here is to organise them by layer so that the rest of the book has somewhere to point.

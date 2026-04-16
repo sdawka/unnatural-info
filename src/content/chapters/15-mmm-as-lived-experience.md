@@ -9,6 +9,31 @@ summary: "Growth feels like better measurement, richer models, more effective ma
 themes: ["growth", "learning", "MMM", "recursion", "complexity", "synthesis"]
 status: draft
 draft: false
+furtherReading:
+  - author: "David Kolb"
+    title: "Experiential Learning"
+    year: 1984
+    note: "Four-stage cycle (Experience to Reflection to Conceptualisation to Experimentation) — MMM at pedagogical scale, drawing on Dewey, Piaget, and Lewin."
+  - author: "Argyris & Schon"
+    title: "Organizational Learning"
+    year: 1978
+    note: "Single-loop vs double-loop learning: optimising within a model vs replacing the model itself. Organizations systematically resist the second."
+  - author: "John Boyd"
+    title: "Destruction and Creation"
+    year: 1976
+    note: "OODA loop: Orient (the Model step) is where the real competitive advantage lives — speed through the loop beats better sensors or stronger action."
+  - author: "Gregory Bateson"
+    title: "Steps to an Ecology of Mind"
+    year: 1972
+    note: "Learning I/II/III hierarchy: Learning III is radical recontextualization, rare, difficult, and often accompanied by the dissolution of self."
+  - author: "Jean Piaget"
+    title: "The Psychology of Intelligence"
+    year: 1950
+    note: "Assimilation and accommodation: the organism fits experience to existing schema, or changes the schema to fit — equilibration drives development."
+  - author: "Lev Vygotsky"
+    title: "Thought and Language"
+    year: 1934
+    note: "Zone of proximal development: the MMM loop is most generative not at mastered skills or impossible tasks but at the edge of current competence."
 ---
 
 Three chapters ago we split the loop into pieces because that is how books work. From the inside, it is one motion. You notice something. The noticing rearranges what you think is going on. The rearrangement makes you do something slightly different. The slightly different thing teaches you what to notice next. Repeat.

@@ -9,6 +9,35 @@ summary: "The organism begins to separate what it is from what surrounds and aff
 themes: ["boundary", "self", "non-self", "inside", "outside", "organism"]
 status: draft
 draft: false
+furtherReading:
+  - author: "George Spencer-Brown"
+    title: "Laws of Form"
+    year: 1969
+    note: "The act of drawing a distinction is the primordial act — we cannot make an indication without drawing a distinction first."
+  - author: "Maturana & Varela"
+    title: "Autopoiesis and Cognition"
+    year: 1980
+    note: "Living systems produce the very boundary that defines them — identity and edge are co-constituted, not pre-given."
+  - author: "Merleau-Ponty"
+    title: "Phenomenology of Perception"
+    year: 1945
+    note: "The body schema enacts a pre-reflective self/not-self boundary; phantom limb cases show the cut is operational, not anatomical."
+  - author: "Jakob von Uexkull"
+    title: "A Foray Into the Worlds of Animals and Humans"
+    year: 1934
+    note: "Each organism's Umwelt is a distinct informational carving of reality — the cut is species-specific and task-specific."
+  - author: "Polly Matzinger"
+    title: "The Danger Model: A Renewed Sense of Self"
+    year: 2002
+    note: "Paradigm-shifting immunology: the immune boundary responds to damage signals, not mere foreignness — the cut is enacted, not fixed."
+  - author: "Aristotle"
+    title: "Categories"
+    year: -350
+    note: "The first systematic account of what kinds of things there are — the philosophical origin of the edge-drawing project."
+  - author: "Achille Varzi"
+    title: "Parts and Places"
+    year: 1999
+    note: "When do boundaries exist, and for whom? Fiat versus bona fide boundaries — the metaphysical backbone of what the chapter describes as catastrophic."
 ---
 
 On a Unix machine, when the box first powers on, almost nothing exists yet. There is hardware, there is a kernel, and then there is one process whose only job is to start every other process. It is, with admirable lack of poetry, called *init*. Everything you ever do on that machine is downstream of it. The systems folder where it lives, on older systems, was called `init.d`.

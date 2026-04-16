@@ -7,6 +7,35 @@ summary: "We cannot avoid willing, cannot avoid cutting, cannot avoid manifestin
 themes: ["ethics", "responsibility", "world-making", "conclusion"]
 status: draft
 draft: false
+furtherReading:
+  - author: "Hannah Arendt"
+    title: "The Human Condition"
+    year: 1958
+    note: "Natality, promising, and forgiving — the ethics of irreversible action in a plural world; every act sets off unpredictable chains and that is the risk we take."
+  - author: "Iris Murdoch"
+    title: "The Sovereignty of Good"
+    year: 1970
+    note: "The primary moral task is accurate perception — use the blade means cutting through self-deception; build the world means attending to what is actually there."
+  - author: "Albert Camus"
+    title: "The Myth of Sisyphus"
+    year: 1942
+    note: "Revolt against the absurd: the act of world-making is its own meaning, not a means to meaning. One must imagine Sisyphus happy."
+  - author: "Ruth Chang"
+    title: "Incommensurability, Incomparability, and Practical Reason"
+    year: 1997
+    note: "Hard choices are constitutive: by committing, we create reasons and make ourselves. The absence of a determinate best option is an invitation to self-authorship."
+  - author: "Emmanuel Levinas"
+    title: "Ethics as First Philosophy"
+    year: 1984
+    note: "Infinite responsibility to the face of the Other precedes ontology and epistemology — the world being built is always with and for others."
+  - author: "Derek Parfit"
+    title: "Reasons and Persons"
+    year: 1984
+    note: "Future selves are distinct persons who deserve consideration — the small acts that accumulate across a life are owed to someone who is not quite you."
+  - author: "Simone de Beauvoir"
+    title: "The Ethics of Ambiguity"
+    year: 1947
+    note: "Freedom is not a private achievement — use the blade well means using it toward a world where the blade is available to all."
 ---
 
 If we have done this honestly, the book has not handed you a worldview to wear. It has handed you a small set of instruments — three blades, a duality, a loop — and the unsettling news that you are already using them. The only question is whether you use them on purpose.

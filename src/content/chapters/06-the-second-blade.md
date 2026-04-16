@@ -9,6 +9,39 @@ summary: "A being never holds the world directly. It holds a mediated constructi
 themes: ["model", "map", "territory", "representation", "perception", "error"]
 status: draft
 draft: false
+furtherReading:
+  - author: "Alfred Korzybski"
+    title: "Science and Sanity"
+    year: 1933
+    note: "Source of the canonical slogan. At minimum two representational layers separate us from reality; pathology follows when people act as if there are none."
+  - author: "Andy Clark"
+    title: "Surfing Uncertainty"
+    year: 2015
+    note: "The brain as a prediction machine — perception is controlled hallucination constrained by prediction error, not a passive mirror."
+  - author: "Karl Friston"
+    title: "The Free-Energy Principle: A Unified Brain Theory?"
+    year: 2010
+    note: "Variational free energy: the brain minimises surprise by either updating its model or acting to make its predictions true."
+  - author: "Gregory Bateson"
+    title: "Steps to an Ecology of Mind"
+    year: 1972
+    note: "Information is a difference that makes a difference — maps transduce rather than copy, and that is why they can be wrong."
+  - author: "Karl Popper"
+    title: "Conjectures and Refutations"
+    year: 1963
+    note: "Falsificationism: the gap between map and territory is not a tragedy but the engine of learning — error is structural."
+  - author: "Thomas Kuhn"
+    title: "The Structure of Scientific Revolutions"
+    year: 1962
+    note: "Paradigms are maps scaled to whole communities — paradigm shifts are forced corrections when anomalies overwhelm the existing model."
+  - author: "C.S. Peirce"
+    title: "Collected Papers (signs and inquiry)"
+    year: 1878
+    note: "The most rigorous theory of how signs work — fallibilism as the epistemological consequence of the map/territory gap."
+  - author: "Nelson Goodman"
+    title: "Ways of Worldmaking"
+    year: 1978
+    note: "Multiple worlds made by multiple maps, under rigorous constraints — radical constructive pluralism without collapsing into relativism."
 ---
 
 The first blade gave us a self with a world on the other side of it. The second blade does something nearly as consequential and considerably more confusing: it admits that what the self has of the world is *never the world*. It is a model. A drawing. A useful and incomplete sketch.

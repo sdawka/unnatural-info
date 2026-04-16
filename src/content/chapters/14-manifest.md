@@ -9,6 +9,43 @@ summary: "Models return to the world. Action, expression, behaviour, tool use, a
 themes: ["manifest", "action", "expression", "artifact", "behavior", "identity"]
 status: draft
 draft: false
+furtherReading:
+  - author: "John Dewey"
+    title: "Logic: The Theory of Inquiry"
+    year: 1938
+    note: "Instrumentalism: thought is a tool for action; inquiry begins when habitual action is blocked and ends when action can resume."
+  - author: "Karl Marx"
+    title: "Theses on Feuerbach"
+    year: 1845
+    note: "Philosophers have only interpreted the world; the point is to change it. The most compressed statement of the Manifest principle in the philosophical canon."
+  - author: "Hannah Arendt"
+    title: "The Human Condition"
+    year: 1958
+    note: "Action as natality — every act introduces genuine novelty and sets off unpredictable chains; manifestation is an irreversible wager."
+  - author: "Charles Sanders Peirce"
+    title: "How to Make Our Ideas Clear"
+    year: 1878
+    note: "Meaning is exhausted by potential action consequences — a model only becomes real when it manifests."
+  - author: "Merleau-Ponty"
+    title: "Phenomenology of Perception"
+    year: 1945
+    note: "Motor intentionality: much manifestation is pre-reflective and embodied — the body acts toward goals without consulting explicit models."
+  - author: "William James"
+    title: "The Will to Believe"
+    year: 1896
+    note: "We are entitled to believe ahead of evidence when action is required and the options are live, forced, and momentous. Manifestation is a justified wager."
+  - author: "Donald Schon"
+    title: "The Reflective Practitioner"
+    year: 1983
+    note: "Knowing-in-action and reflection-in-action: the model and manifest steps are not sequential but intertwined in skilled practice."
+  - author: "Edwin Hutchins"
+    title: "Cognition in the Wild"
+    year: 1995
+    note: "Cognition is distributed across people, artifacts, and environment — manifestation creates external cognitive infrastructure that changes what is thinkable."
+  - author: "Tim Ingold"
+    title: "Making"
+    year: 2013
+    note: "Making as following the material — manifestation is a correspondence between practitioner and world, not an imposition of inner plan on passive matter."
 ---
 
 A model that never returns to the world is just a hobby. *Manifest* is the third move: the loop closing, the model going back out and meeting the territory on the territory's terms. This is where things actually change, including, eventually, the model.

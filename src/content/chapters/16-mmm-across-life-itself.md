@@ -9,6 +9,43 @@ summary: "Measurement in simple life forms, modelling in nervous systems, manife
 themes: ["evolution", "civilisation", "recursion", "symbolic", "complexity", "life"]
 status: draft
 draft: false
+furtherReading:
+  - author: "Lynn Margulis"
+    title: "On the Origin of Mitosing Cells"
+    year: 1967
+    note: "Endosymbiosis as evolutionary MMM: a detected difference leads to a new cellular architecture leads to a radically new form of life — the eukaryote."
+  - author: "Jablonka & Lamb"
+    title: "Evolution in Four Dimensions"
+    year: 2005
+    note: "Four inheritance systems (genetic, epigenetic, behavioural, symbolic) as stacked layers of MMM loop capacity added over evolutionary time."
+  - author: "Terrence Deacon"
+    title: "Incomplete Nature"
+    year: 2011
+    note: "Teleodynamics: the condition under which something strives toward a goal and corrects deviations. The most rigorous account of how purposiveness emerges from matter."
+  - author: "Stuart Kauffman"
+    title: "The Origins of Order"
+    year: 1993
+    note: "Self-organisation at the edge of chaos provides the ordered landscape that evolution searches — natural selection alone cannot explain biological order."
+  - author: "Daniel Dennett"
+    title: "Darwin's Dangerous Idea"
+    year: 1995
+    note: "Natural selection as universal acid: design can emerge from unintelligent cumulative processes. The philosophical framing for extending MMM to all life."
+  - author: "W. Ross Ashby"
+    title: "An Introduction to Cybernetics"
+    year: 1956
+    note: "Law of requisite variety: a controller needs as much internal variety as the system it controls — the loop must match the complexity of what it regulates."
+  - author: "Charles Darwin"
+    title: "On the Origin of Species"
+    year: 1859
+    note: "The foundational text — the MMM loop running without a brain, across geological time, through descent with modification and natural selection."
+  - author: "Maynard Smith & Szathmary"
+    title: "The Major Transitions in Evolution"
+    year: 1995
+    note: "Each major transition is a new way of encoding and transmitting information — evolution as stacked MMM layers, each more compressed than the last."
+  - author: "Odling-Smee, Laland & Feldman"
+    title: "Niche Construction"
+    year: 2003
+    note: "Organisms do not just adapt to environments, they build them — the Manifest step feeds back into Measure across generations."
 ---
 
 The reason MMM is the recipe and not just *a* recipe is that it does not stop at the edge of human skin. It runs in things without brains. It runs in things without nervous systems. It runs in some things that, on a generous definition, are barely alive. What changes from one rung of the ladder to the next is not the loop but its resolution.
