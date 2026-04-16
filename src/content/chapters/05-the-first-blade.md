@@ -7,7 +7,34 @@ chapterNumber: 5
 order: 5
 summary: "The organism begins to separate what it is from what surrounds and affects it. Boundary, self/non-self, inside/outside, agency and exposure. Before which, the world is hungry."
 themes: ["boundary", "self", "non-self", "inside", "outside", "organism"]
-status: stub
+status: draft
 draft: false
 ---
-<!-- stub -->
+
+On a Unix machine, when the box first powers on, almost nothing exists yet. There is hardware, there is a kernel, and then there is one process whose only job is to start every other process. It is, with admirable lack of poetry, called *init*. Everything you ever do on that machine is downstream of it. The systems folder where it lives, on older systems, was called `init.d`.
+
+The mind does something analogous. Before there is a self with opinions, before there is a world to have opinions about, there is a process so primitive it barely looks like one: an organism quietly drawing a line between *me* and *not-me*. That line is the first blade. Everything else in this act — every model, every value, every category, every institution — boots from it.
+
+The cut is catastrophic in the cheerful sense the word originally meant: a turning, a downward fall, a thing-that-changes-everything. Before the blade, the world is hungry, undifferentiated pressure. After it, there is something here that things happen *to*.
+
+## Key moves
+
+- Distinction is the bootstrap process of mind. *InitD* names it on purpose: the first process from which all later processes load.
+- The first blade carves *self* from *non-self* — a boundary, not yet a personality.
+- The boundary is partly biological (membrane, skin, immune recognition) and partly informational (an organism that "treats this here as me").
+- Once the cut exists, agency and exposure are both born at the same moment: there is something that can act, and something that can be acted upon.
+- The blade is invented anew in every developing organism — and, dimly, in every moment of waking up.
+- The cut is partial and wrong-in-detail. The boundary leaks, shifts, and is constantly renegotiated. The frame is "first useful approximation," not "discovered fact."
+
+## Where this touches lived life
+
+- Boundary problems in adult life — codependence, enmeshment, dissociation — are negotiations of the first blade still happening, decades on.
+- Meditative reports of "self dissolving" describe what it feels like when the first cut briefly relaxes. The fact that this is reportable at all is interesting.
+- Grief often involves the discovery that a person you had treated as part of *me* was, in some operational sense, exactly that.
+
+## What we're not claiming
+
+- Not that the init.d analogy is a model of brain startup. It is a frame for the order of dependencies, not a neuroscience claim.
+- Not that the self/non-self boundary is real in any final sense. It is a working cut, useful and revisable.
+- Not that more boundary is always better. The cost of the cut is its own chapter.
+
