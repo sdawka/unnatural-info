@@ -42,6 +42,10 @@ furtherReading:
     title: "The Ethics of Ambiguity"
     year: 1947
     note: "Freedom requires others to be free — love and growth are not private achievements but ethical stakes in a shared world."
+  - author: "Ernest Becker"
+    title: "The Denial of Death"
+    year: 1973
+    note: "Immortality projects as the primary human meaning-making strategy — love, heroism, and creative work as attempts to transcend biological finitude; meaning is not just durable wanting but wanting pressed against the fact of death."
 ---
 
 If you take wanting seriously as the floor of life, three things that usually get separate chapters in different books turn out to be the same thing showing different faces. Love is what wanting looks like when it lines up with something else's wanting. Growth is what wanting looks like when it learns to do more. Meaning is what wanting looks like when it holds together over time.

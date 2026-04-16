@@ -42,6 +42,10 @@ furtherReading:
     title: "Free Agents"
     year: 2023
     note: "How nervous systems evolved to generate genuine agency rather than mere responsiveness — the biological story of why want precedes thought."
+  - author: "Ernest Becker"
+    title: "The Denial of Death"
+    year: 1973
+    note: "Death-awareness is the specific disruption that elevates animal want into human will — knowing we will die, we cannot simply follow instinct but must choose what to lean toward, and that gap is where the book lives."
 ---
 
 Descartes started in the wrong place. Before there is a thinker noticing it is thinking, there is a creature leaning toward something. A bacterium does not contemplate the sugar gradient; it goes. A baby does not theorise about milk; it roots. Whatever else is true about being alive, the first thing that is true is *wanting*.

@@ -36,6 +36,10 @@ furtherReading:
     title: "The Ethics of Ambiguity"
     year: 1947
     note: "Freedom is not a private achievement — use the blade well means using it toward a world where the blade is available to all."
+  - author: "Ernest Becker"
+    title: "The Denial of Death"
+    year: 1973
+    note: "The heroic project: we build worlds because we know we will die. Every act of world-making is simultaneously a refusal of meaninglessness and a wager against finitude."
 ---
 
 If we have done this honestly, the book has not handed you a worldview to wear. It has handed you a small set of instruments — three blades, a duality, a loop — and the unsettling news that you are already using them. The only question is whether you use them on purpose.

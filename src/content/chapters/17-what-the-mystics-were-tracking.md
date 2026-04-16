@@ -54,6 +54,10 @@ furtherReading:
     title: "Deliverance from Error"
     year: 1109
     note: "The spiritual crisis of over-modeling — the mystic as someone who has noticed their map is a map. The philosophical route to trust in direct experience."
+  - author: "Ernest Becker"
+    title: "The Denial of Death"
+    year: 1973
+    note: "Terror management theory's deepest precursor: religion and mystical practice as culturally sanctioned systems for metabolising death anxiety — what the mystics were tracking, at one level, is the problem Becker names."
 ---
 
 People have been doing this for a very long time, and they were not all idiots. That is the only methodological assumption this chapter requires.

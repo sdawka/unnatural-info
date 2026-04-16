@@ -32,6 +32,10 @@ furtherReading:
     title: "Subjectivity and Selfhood"
     year: 2005
     note: "Contemporary synthesis of Husserl and Merleau-Ponty: pre-reflective self-awareness as the structural foundation of all experience."
+  - author: "Ernest Becker"
+    title: "The Denial of Death"
+    year: 1973
+    note: "Awareness of our own mortality is precisely what makes human wanting 'unnatural' — we cannot live purely on instinct because we know we will die, and that knowledge forces us to construct meaning rather than merely respond."
 ---
 
 There is a long and slightly embarrassing history of people trying to explain everything. They mostly do it badly, and they almost always do it with too much confidence. This is another one of those attempts, and the only thing this prologue can honestly promise is that we have noticed.
