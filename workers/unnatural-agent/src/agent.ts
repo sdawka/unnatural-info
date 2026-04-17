@@ -28,12 +28,12 @@ interface Classification {
 // ---------------------------------------------------------------------------
 
 export class UnnaturalAgent extends Think<Env> {
-  override maxSteps = 15;
+  override maxSteps = 6;
   override chatRecovery = true;
 
   /** Main reasoning model — used for intake + synthesis orchestration. */
   override getModel(): LanguageModel {
-    return this.openrouter()("anthropic/claude-sonnet-4-5") as unknown as LanguageModel;
+    return this.openrouter()("google/gemma-4-26b-a4b-it") as unknown as LanguageModel;
   }
 
   /** Cheap model used inside pipeline tools for classification + extraction. */
@@ -65,6 +65,7 @@ export class UnnaturalAgent extends Think<Env> {
     const env = this.env;
     const cheap = () => this.cheapModel();
     const main = () => this.getModel();
+    const agent = this;
 
     return {
       classify_topic: tool({
@@ -221,18 +222,34 @@ export class UnnaturalAgent extends Think<Env> {
         }),
         execute: async ({ topic, type, document, wantsType, analysis }) => {
           try {
+            // Per-user daily cap. The Agent DO is keyed by user.id, so a
+            // counter in this DO's own storage is naturally per-user.
+            const cap = parseInt(env.DAILY_ANALYSIS_CAP ?? "20", 10);
+            const today = new Date().toISOString().slice(0, 10);
+            const counterKey = `analyses:${today}`;
+            const current = ((await agent.ctx.storage.get(counterKey)) as number | undefined) ?? 0;
+            if (current >= cap) {
+              return {
+                id: "",
+                stored: false,
+                error: `Daily analysis cap reached (${cap} per day). Try again tomorrow.`,
+              };
+            }
+
             // Extract structured fields from the prose using the cheap model.
             const extraction = await extractMetadata(cheap(), topic, type, analysis);
 
             const id = crypto.randomUUID();
             const tags = extractTags(type, analysis, extraction.primaryLens);
+            const userId = agent.name ?? null;
 
             await env.DB.prepare(
-              `INSERT INTO analyses (id, topic_name, type, mmm_stage, primary_lens, wants_type, tags, summary, full_analysis, created_at)
-               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+              `INSERT INTO analyses (id, user_id, topic_name, type, mmm_stage, primary_lens, wants_type, tags, summary, full_analysis, created_at)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
             )
               .bind(
                 id,
+                userId,
                 extraction.generalizedTopic,
                 type,
                 extraction.mmmStage,
@@ -245,7 +262,11 @@ export class UnnaturalAgent extends Think<Env> {
               )
               .run();
 
-            return { id, stored: true };
+            await agent.ctx.storage.put(counterKey, current + 1);
+            // Expire the counter ~36h out so stale dates clean themselves up.
+            await agent.ctx.storage.setAlarm(Date.now() + 36 * 60 * 60 * 1000);
+
+            return { id, stored: true, remaining: cap - (current + 1) };
           } catch (err) {
             return {
               id: "",
@@ -257,6 +278,21 @@ export class UnnaturalAgent extends Think<Env> {
         },
       }),
     };
+  }
+
+  /**
+   * Alarm handler: sweep stale per-day counters. Agent DOs persist storage
+   * for the lifetime of the user, so without cleanup daily counter keys
+   * would accumulate indefinitely.
+   */
+  async alarm(): Promise<void> {
+    const today = new Date().toISOString().slice(0, 10);
+    const entries = await this.ctx.storage.list({ prefix: "analyses:" });
+    for (const key of entries.keys()) {
+      if (key !== `analyses:${today}`) {
+        await this.ctx.storage.delete(key);
+      }
+    }
   }
 }
 

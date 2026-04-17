@@ -24,6 +24,30 @@ export default {
 
     // Better Auth routes — no session required.
     if (url.pathname.startsWith("/api/auth")) {
+      // Rate-limit the magic-link send endpoint: unauthenticated and
+      // triggers outbound email + DB writes. Fail-open if the binding
+      // isn't configured (dev mode). Enforced once binding is set up.
+      if (
+        url.pathname === "/api/auth/magic-link/send-magic-link" &&
+        request.method === "POST" &&
+        env.MAGIC_LINK_LIMITER
+      ) {
+        const ip =
+          request.headers.get("cf-connecting-ip") ??
+          request.headers.get("x-forwarded-for") ??
+          "unknown";
+        const { success } = await env.MAGIC_LINK_LIMITER.limit({ key: ip });
+        if (!success) {
+          return new Response(
+            JSON.stringify({ error: "Too many requests. Try again in a minute." }),
+            {
+              status: 429,
+              headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+            },
+          );
+        }
+      }
+
       const auth = createAuth(env);
       const response = await auth.handler(request);
       return withCors(response);

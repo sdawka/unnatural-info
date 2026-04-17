@@ -7,6 +7,10 @@ export function createAuth(env: Env) {
     database: env.DB,
     secret: env.BETTER_AUTH_SECRET,
     baseURL: env.BETTER_AUTH_URL,
+    trustedOrigins: [
+      "https://unnatural.info",
+      env.BETTER_AUTH_URL,
+    ],
     plugins: [
       magicLink({
         sendMagicLink: async ({ email, url }) => {

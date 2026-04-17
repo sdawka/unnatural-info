@@ -54,6 +54,7 @@ CREATE TABLE IF NOT EXISTS "verification" (
 
 CREATE TABLE IF NOT EXISTS analyses (
   id            TEXT PRIMARY KEY,
+  user_id       TEXT,           -- who ran the analysis (nullable for legacy rows)
   topic_name    TEXT NOT NULL,
   type          TEXT NOT NULL CHECK(type IN ('concept','situation','skill')),
   mmm_stage     TEXT CHECK(mmm_stage IN ('measure','model','manifest') OR mmm_stage IS NULL),
@@ -69,6 +70,7 @@ CREATE TABLE IF NOT EXISTS analyses (
 CREATE INDEX IF NOT EXISTS idx_analyses_type ON analyses(type);
 CREATE INDEX IF NOT EXISTS idx_analyses_mmm_stage ON analyses(mmm_stage);
 CREATE INDEX IF NOT EXISTS idx_analyses_created_at ON analyses(created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_analyses_user_created ON analyses(user_id, created_at DESC);
 
 CREATE VIRTUAL TABLE IF NOT EXISTS analyses_fts USING fts5(
   topic_name,
