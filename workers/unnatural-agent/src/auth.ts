@@ -1,11 +1,8 @@
 /// <reference path="../worker-configuration.d.ts" />
 import { betterAuth } from "better-auth";
 import { magicLink } from "better-auth/plugins/magic-link";
-import { Resend } from "resend";
 
 export function createAuth(env: Env) {
-  const resend = new Resend(env.RESEND_API_KEY);
-
   return betterAuth({
     database: env.DB,
     secret: env.BETTER_AUTH_SECRET,
@@ -13,11 +10,11 @@ export function createAuth(env: Env) {
     plugins: [
       magicLink({
         sendMagicLink: async ({ email, url }) => {
-          await resend.emails.send({
-            from: "unnatural <me@sahil.pro>",
+          await env.EMAIL.send({
             to: email,
+            from: "noreply@unnatural.info",
             subject: "Sign in to unnatural",
-            html: `<p>Click <a href="${url}">here</a> to sign in. This link expires in 10 minutes.</p>`,
+            text: `Click here to sign in: ${url}\n\nThis link expires in 10 minutes.`,
           });
         },
       }),

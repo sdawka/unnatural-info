@@ -17,5 +17,10 @@ binding = "DB"
 database_name = "unnatural-db"
 database_id = "placeholder-replace-after-wrangler-d1-create"
 
+[send_email]
+bindings = [
+  { name = "EMAIL" }
+]
+
 [vars]
 BETTER_AUTH_URL = "https://unnatural-agent.workers.dev"
