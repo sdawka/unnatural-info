@@ -40,7 +40,7 @@ furtherReading:
 
 There is a long and slightly embarrassing history of people trying to explain everything. They mostly do it badly, and they almost always do it with too much confidence. This is another one of those attempts, and the only thing this prologue can honestly promise is that we have noticed.
 
-The frame is *unscientific empirical*. Unscientific because we are not going to wait for the laboratory equipment to catch up before talking about will, distinction, meaning, or growth. Empirical because we are still going to begin from things any honest person can check against their own life: that wanting precedes thought, that the world arrives in pieces because we cut it that way, that learning feels like a particular shape from the inside.
+The frame is *unscientific empirical*. Unscientific because we are not going to wait for the laboratory equipment to catch up before talking about will, distinction, meaning, or growth. Empirical because we are still going to begin from things any honest person can check against their own life: that beneath thought there are feelings and beneath feelings there is want, that the world arrives in pieces because we cannot meet it whole and cut it to fit, that learning feels like a particular shape from the inside — and that the same shape keeps showing up when anyone else sits down to describe what it takes to be an agent.
 
 ## Key moves
 

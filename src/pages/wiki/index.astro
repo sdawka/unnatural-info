@@ -12,25 +12,53 @@ const sorted = wikiEntries.sort((a, b) => {
   return titleA.localeCompare(titleB);
 });
 
-const entries = sorted.map((e) => ({
-  slug: e.id,
-  title: e.data.title ?? e.id.replace(/-/g, ' '),
-  category: e.data.category,
-}));
+function extractH1(body: string | undefined): string | null {
+  if (!body) return null;
+  const match = body.match(/^\s*#\s+(.+?)\s*$/m);
+  return match ? match[1].trim() : null;
+}
+
+const entries = sorted.map((e) => {
+  const idSegments = e.id.split('/');
+  const derivedCategory = idSegments.length > 1 ? idSegments[0] : undefined;
+  const h1 = extractH1(e.body);
+  const fallback = idSegments[idSegments.length - 1]
+    .split('-')
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
+  const rawTitle = e.data.title ?? h1 ?? fallback;
+  return {
+    slug: e.id,
+    title: rawTitle,
+    category: e.data.category ?? derivedCategory,
+  };
+});
+
+const totalCount = entries.length;
 ---
 
 <BaseLayout title="Wiki" description="Compiled concepts from UNNATURAL. The LLM-owned layer of the knowledge base.">
   <SiteHeader />
-  <main class="wiki-index">
-    <div class="wiki-index__container">
-      <header class="wiki-index__header">
-        <p class="wiki-index__eyebrow">Knowledge base</p>
-        <h1 class="wiki-index__title">Wiki</h1>
-        <p class="wiki-index__desc">
-          Concepts compiled from source material. The wiki grows as the dump is ingested.
-          It is not written — it is compiled.
+  <main class="wi">
+    <div class="wi__container">
+      <header class="wi__header">
+        <p class="wi__kicker">
+          <span class="wi__kicker-glyph" aria-hidden="true">⌘</span>
+          Knowledge base
+        </p>
+        <h1 class="wi__title">The Wiki</h1>
+        <p class="wi__desc">
+          Concepts compiled from source material. <em>It is not written — it is compiled.</em>
+          Grows as the dump is ingested.
+        </p>
+        <p class="wi__meta">
+          <span class="wi__meta-value">{String(totalCount).padStart(2, '0')}</span>
+          <span class="wi__meta-label">entries</span>
+          <span class="wi__meta-sep" aria-hidden="true">·</span>
+          <span class="wi__meta-note">Press <kbd>/</kbd> to search</span>
         </p>
       </header>
+
       <WikiSearch entries={entries} />
     </div>
   </main>
@@ -38,11 +66,11 @@ const entries = sorted.map((e) => ({
 </BaseLayout>
 
 <style>
-  .wiki-index {
-    padding: var(--space-16) var(--space-6);
+  .wi {
+    padding: var(--space-16) var(--safe-right) var(--space-16) var(--safe-left);
   }
 
-  .wiki-index__container {
+  .wi__container {
     max-width: var(--page-max);
     margin: 0 auto;
     display: flex;
@@ -50,29 +78,96 @@ const entries = sorted.map((e) => ({
     gap: var(--space-12);
   }
 
-  .wiki-index__eyebrow {
+  .wi__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    max-width: 48rem;
+    padding-bottom: var(--space-6);
+    border-bottom: 1px dashed var(--color-rule);
+  }
+
+  .wi__kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
     font-family: var(--font-mono);
     font-size: var(--text-xs);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.14em;
     color: var(--color-wiki);
-    margin-bottom: var(--space-3);
   }
 
-  .wiki-index__title {
+  .wi__kicker-glyph {
+    font-size: 1.1em;
+    line-height: 1;
+    color: var(--color-wiki-soft);
+  }
+
+  .wi__title {
     font-family: var(--font-display);
+    font-variation-settings: 'opsz' 144, 'wght' 320, 'SOFT' 80;
     font-size: var(--text-4xl);
-    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.02em;
     color: var(--color-ink);
-    margin-bottom: var(--space-4);
+    text-wrap: balance;
   }
 
-  .wiki-index__desc {
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    font-style: italic;
+  @media (min-width: 48rem) {
+    .wi__title { font-size: var(--text-5xl); }
+  }
+
+  .wi__desc {
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 24, 'wght' 360, 'SOFT' 40;
+    font-size: var(--text-lg);
+    font-style: normal;
     color: var(--color-ink-muted);
-    max-width: 50ch;
-    line-height: 1.7;
+    max-width: 52ch;
+    line-height: 1.55;
+    margin-top: var(--space-2);
+  }
+
+  .wi__desc em {
+    font-style: italic;
+    color: var(--color-ink);
+  }
+
+  .wi__meta {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-3);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: var(--space-4);
+  }
+
+  .wi__meta-value {
+    font-size: 1.1rem;
+    color: var(--color-ink);
+    font-variation-settings: 'wght' 560;
+    letter-spacing: 0.05em;
+  }
+
+  .wi__meta-sep { color: var(--color-ink-faint); }
+
+  .wi__meta-note {
+    text-transform: none;
+    letter-spacing: 0.02em;
+  }
+
+  .wi__meta-note kbd {
+    font-family: var(--font-mono);
+    background: var(--color-ground-tint);
+    border: 1px solid var(--color-rule);
+    padding: 0.05em 0.35em;
+    border-radius: 2px;
+    font-size: 0.85em;
+    margin: 0 0.1em;
   }
 </style>

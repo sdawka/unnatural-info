@@ -6,6 +6,8 @@
 
 Act 2 of the book is not only an account of how minds carve the world into legible pieces. It is also an extended reckoning with what that carving costs. Chapter 11, "The Cost of the Blade," is the explicit accounting chapter, but the theme appears throughout the act and returns in the epilogue. The cost is structural — inseparable from the benefit — not an error to be corrected.
 
+The deeper reason the cost is structural is laid out in Chapter 5 and reinforced in Chapter 11: the universe is fractal (infinite detail at every scale) and chaotic (small differences explode, time runs either way without closing the books). At any cut we make, an infinite amount of detail falls on the other side — by construction, not because we were careless. You could keep dissecting forever, keep zooming out forever, run the dynamics forward or backward forever, and never exhaust what was discarded. The cost of the blade is the signature of finitude meeting an inexhaustible world. This is why it cannot be avoided, only remembered.
+
 The book's central image is precise: a beautiful sculpture is carved from a stone. The discarded fragments form a shadow beside it. The shadow is part of the sculpture, even though no one in the gallery talks about it. This means the cost is not a reason to stop cutting; it is a reason to keep the shadow in view.
 
 ## Four failure modes of distinction (Ch. 11)
@@ -50,6 +52,7 @@ The epilogue translates this into a practice: "Use the blade carefully: knowing 
 
 ## Key claims
 
+- The cost is structural, not avoidable. Fractal and chaotic infinity guarantee that an infinite amount of detail falls on the other side of any finite cut. — Source: `/src/content/chapters/11-the-cost-of-the-blade.md`, `/src/content/chapters/05-the-first-blade.md`
 - Every cut gains leverage and loses nuance; that is the deal. — Source: `/src/content/chapters/11-the-cost-of-the-blade.md`
 - The cost is not a sign the cut was wrong; it is a sign the cut was a cut. — Source: `/src/content/chapters/11-the-cost-of-the-blade.md`
 - The hallmark of ideology is the inability to be surprised. — Source: `/src/content/chapters/11-the-cost-of-the-blade.md`
@@ -73,4 +76,4 @@ The epilogue translates this into a practice: "Use the blade carefully: knowing 
 - Whether the pathological forms (reification, ideology) can be detected from inside the framework they have produced is not resolved.
 
 ---
-*Last updated: 2026-04-16 | Sources: 6 (Ch. 5–7, 8, 9, 11, Epilogue; /dump/overall.md)*
+*Last updated: 2026-04-16 | Sources: 6 (Ch. 5–7, 8, 9, 11, Epilogue; /dump/overall.md) — fractal/chaotic framing added 2026-04-16*

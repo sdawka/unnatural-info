@@ -5,8 +5,8 @@ act: mmm
 actTitle: "MMM"
 chapterNumber: 15
 order: 15
-summary: "Growth feels like better measurement, richer models, more effective manifestation — whether an organism evolves, a child learns language, a person masters a skill, a couple learns trust, or a civilisation builds science. A spiral of increasing complexity."
-themes: ["growth", "learning", "MMM", "recursion", "complexity", "synthesis"]
+summary: "Growth feels like better measurement, richer models, more effective manifestation — whether an organism evolves, a child learns language, a person masters a skill, a couple learns trust, or a civilisation builds science. This loop is the most meta process we can observe: the same shape re-appears every time someone tries to describe what agency or intelligence even is, including in Dupoux, LeCun, and Malik's recent three-system architecture for autonomous learning."
+themes: ["growth", "learning", "MMM", "recursion", "complexity", "synthesis", "agency", "meta"]
 status: draft
 draft: false
 furtherReading:
@@ -34,11 +34,17 @@ furtherReading:
     title: "Thought and Language"
     year: 1934
     note: "Zone of proximal development: the MMM loop is most generative not at mastered skills or impossible tasks but at the edge of current competence."
+  - author: "Emmanuel Dupoux, Yann LeCun & Jitendra Malik"
+    title: "Why AI systems don't learn and what to do about it: Lessons on autonomous learning from cognitive science"
+    year: 2026
+    note: "Proposes a three-system architecture for autonomous intelligence: System A (observation learning), System B (active-behavior learning), and System M (meta-control that switches between them). A structural echo of Measure, Model, Manifest — the same three-layer shape reappearing from a different discipline. Independent convergence, not influence."
 ---
 
 Three chapters ago we split the loop into pieces because that is how books work. From the inside, it is one motion. You notice something. The noticing rearranges what you think is going on. The rearrangement makes you do something slightly different. The slightly different thing teaches you what to notice next. Repeat.
 
 This is what learning feels like. Also: what evolution looks like, if you film it for a few million years. Also: what a relationship is, when it is alive. The loop is not a metaphor borrowed from one domain and stretched over others. It is the same shape, running on different substrates, at very different speeds.
+
+That is why we call it the most meta process we can observe. Every time someone — in biology, in psychology, in AI — tries to write down what it takes to be an agent, a three-layer structure keeps falling out of the attempt. In 2026, Dupoux, LeCun, and Malik described autonomous intelligence as the interplay of *observation learning* (a system that learns by watching), *active-behavior learning* (a system that learns by doing), and *meta-control* (a faculty that chooses between them). Different vocabulary, same shape: sense the world, model the world by acting on it, manage the whole process one level up. This book will not argue the match is exact — it is structural, not detailed. The point is that when the shape keeps recurring across independent attempts to describe agency, it is probably tracking something real about what being an agent requires.
 
 ## Key moves
 

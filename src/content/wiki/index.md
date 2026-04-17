@@ -9,9 +9,9 @@ Master catalog of all wiki pages, grouped by category. One-line summaries link t
 | Page | Summary |
 |------|---------|
 | [Prologue](acts/prologue.md) | A statement of epistemic method: unscientific but empirical, openly revisable, judged by whether it helps you see and act more clearly. |
-| [Act 1 — Volo Ergo Sum](acts/act-1-volo-ergo-sum.md) | The first act establishes want as the floor of life and traces its consequences: difference, individuality, love, growth, meaning, and a serviceable objectivity. |
-| [Act 2 — InitD](acts/act-2-initd.md) | The second act traces what appears once a wanting creature begins drawing distinctions: self vs. world, map vs. territory, good vs. bad — and the mounting cost of every cut. |
-| [Act 3 — MMM](acts/act-3-mmm.md) | The third act names the growth loop — Measure, Model, Manifest — and traces it from single-cell life through human civilisation, wisdom traditions, practical ethics, and epistemic humility. |
+| [Act 1 — Volo Ergo Sum](acts/act-1-volo-ergo-sum.md) | The first act climbs down the stack — thought, feelings, want — and establishes want as the floor of life, with feelings as the intermediate layer cognition actually runs on. |
+| [Act 2 — InitD](acts/act-2-initd.md) | The second act argues that finite beings *cannot* meet reality whole — the universe is fractal and chaotic, so distinction is how a living thing boots up inside an inexhaustible world. |
+| [Act 3 — MMM](acts/act-3-mmm.md) | The third act names MMM — Measure, Model, Manifest — as the most meta process we can observe: the same three-layer shape recurs every time someone tries to describe what agency or intelligence even is. |
 | [Epilogue](acts/epilogue.md) | The ethical conclusion: you cannot avoid willing, cutting, or manifesting — the only question is toward what kind of world. |
 
 ---
@@ -63,4 +63,4 @@ Master catalog of all wiki pages, grouped by category. One-line summaries link t
 | [log.md](log.md) | Append-only chronological record of all ingest, query, and lint operations. |
 
 ---
-*Last updated: 2026-04-16 | Total pages: 21*
+*Last updated: 2026-04-16 | Total pages: 21 — act summaries sharpened 2026-04-16*

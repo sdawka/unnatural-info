@@ -29,7 +29,7 @@ const chapters = defineCollection({
 const wiki = defineCollection({
   loader: glob({
     pattern: ['**/*.md', '!index.md', '!log.md', '!schema.md'],
-    base: new URL('../docs/', import.meta.url),
+    base: './src/content/wiki',
   }),
   schema: z.object({
     title: z.string().optional(),

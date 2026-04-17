@@ -4,11 +4,13 @@
 
 ## Overview
 
+The blades are motivated by a structural condition, not a pragmatic convenience. Finite beings cannot meet reality whole. The universe is fractal (infinite detail at every scale, from subatomic particles to superclusters bounded only by telescope reach) and chaotic (small differences in initial conditions explode, and time can run either direction forever). The information content of any finite region of spacetime, for any finite observer, is effectively infinite. To be finite is to be selectively deaf and dumb — and distinction is how a living thing boots up inside that excess.
+
 Act 2 is organised around the metaphor of blades — cuts that make the world legible at the cost of discarding whatever falls between the two sides. The book identifies three foundational cuts that operate prior to language, culture, and explicit cognition. They are "catastrophic" in the word's etymological sense: a turning, a downward fall, a thing-that-changes-everything. Before the blades, the world is undifferentiated pressure. After them, there is a self with a model of the world it can navigate by value.
 
 The three blades are not independent; they are ordered by dependency. The First Blade is the condition for the other two — without a self/non-self distinction, there is no subject to hold a model or navigate by value. The Second Blade gives the self something to work with — a model rather than the raw world. The Third Blade makes movement possible — without a sense of toward and away, a model is a map with no reason to travel.
 
-Critically, the blades are *working cuts*, not discovered facts. The self/non-self boundary leaks and shifts (phantom limbs, enmeshment, the dissolution reported in meditation). The map is always wrong in detail. The third blade is regularly miscalibrated, captured, or hijacked. The act closes in chapter 11 by naming what each blade cost.
+Critically, the blades are *working cuts*, not discovered facts. The self/non-self boundary leaks and shifts (phantom limbs, enmeshment, the dissolution reported in meditation). The map is always wrong in detail. The third blade is regularly miscalibrated, captured, or hijacked. The act closes in chapter 11 by naming what each blade cost — and reinforcing that the cost is structural, guaranteed by fractal and chaotic infinity on the other side of every cut.
 
 ## The First Blade: Self / Non-Self (Chapter 5)
 
@@ -36,6 +38,7 @@ Once a creature has a self and a model, it sorts what it perceives into *toward*
 
 ## Key claims
 
+- The motivation for the blades is the inexhaustibility of the world, not mere pragmatic simplification. Fractal and chaotic infinity guarantee that no finite observer can hold reality whole; cutting is the only way to operate. — Source: `/src/content/chapters/05-the-first-blade.md`
 - The three blades are ordered by dependency: First → Second → Third. None of the later cuts is available without the earlier ones. — Source: `/src/content/chapters/05-the-first-blade.md`, `/src/content/chapters/06-the-second-blade.md`, `/src/content/chapters/07-the-third-blade.md`
 - Each blade is a working cut, not a discovered fact; all are partial and revisable. — Source: `/src/content/chapters/05-the-first-blade.md`
 - The blade is "catastrophic" in the cheerful etymological sense: a turning that changes everything. — Source: `/src/content/chapters/05-the-first-blade.md`
@@ -57,4 +60,4 @@ Once a creature has a self and a model, it sorts what it perceives into *toward*
 - Whether any of the three cuts can be genuinely undone (as distinct from relaxed) is not addressed. Meditative "self-dissolution" is mentioned for the First Blade but not followed through.
 
 ---
-*Last updated: 2026-04-16 | Sources: 3 (Ch. 5–7) + Ch. 11*
+*Last updated: 2026-04-16 | Sources: 3 (Ch. 5–7) + Ch. 11 — fractal/chaotic motivation added 2026-04-16*

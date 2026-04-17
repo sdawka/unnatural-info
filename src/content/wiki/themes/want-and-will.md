@@ -8,6 +8,14 @@ The book is built on a single premise — want is prior to thought — and then 
 
 The distinction between *want* and *will* is introduced early but not always maintained rigidly. "Want" typically names the specific lean in any moment — attraction, aversion, care, preference. "Will" is the broader term for the entire layer of motivated motion, most of which never reaches awareness. Neither is the same as conscious choice, and both are prior to any explicit cognition.
 
+## The three-floor stack: thought, feelings, want
+
+Chapter 1 walks explicitly down three floors. Thought is the first floor — explicit propositions, what Descartes took as bedrock. Feelings are the middle floor — the continuous somatic/affective signal shared with every animal that turns toward or away. Want is the basement floor, present even in organisms with no nervous system at all.
+
+Feelings matter for this theme because they are the layer that actually runs cognition. Damasio's somatic-marker work shows that patients with intact reasoning but damaged somatic signalling cannot decide — they can list pros and cons forever because the feelings that normally collapse deliberation into action are gone. Feelings are not an ornament on thought; they are the substrate thought runs on.
+
+Want goes further down still. A bacterium following a sugar gradient does not feel hunger — there is no feeling machinery — but it unmistakably leans. The minimum definition: an asymmetry between *toward* and *away*. Thought rides on feeling; feeling rides on want. This is why the book's arguments operate at the want layer: it is the floor where every living thing is present.
+
 ## The biological substrate: homeostasis and interoception
 
 Before the philosophical argument begins, wanting has a biological mechanism. Homeostatic regulation — the body's constant correction of deviations from viable set-points — is the first form of wanting. Interoception, the sensing of internal body states, is the channel through which regulatory signals reach something like experience: hunger, pain, fatigue, desire. The concept of allostasis extends this beyond fixed set-points to anticipatory, predictive regulation — the body does not just react, it prepares.
@@ -62,6 +70,9 @@ In Act 3 the concept returns in a different register. The MMM loop requires want
 
 ## Key claims
 
+- The stack is layered: thought sits on feelings, feelings sit on want. The book's arguments operate at the want layer because that is the one shared by every living thing. — Source: `/src/content/chapters/01-before-thought-there-is-want.md`
+- Feelings are the intermediate layer — the somatic/affective signal shared with animals. Damasio's work shows deliberation breaks down when this layer is damaged, even with reasoning intact. — Source: `/src/content/chapters/01-before-thought-there-is-want.md`
+- Want is present even without a nervous system — chemotaxis in a bacterium is wanting in its minimal form, an asymmetry between toward and away. — Source: `/src/content/chapters/01-before-thought-there-is-want.md`
 - Want precedes thought; thought rides on want, not the reverse. — Source: `/src/content/chapters/01-before-thought-there-is-want.md`
 - Will is not conscious choice; it is the whole motivated layer, most of which is never aware. — Source: `/src/content/chapters/01-before-thought-there-is-want.md`
 - Individuality, path-dependence, and conflict are free structural consequences of multiple wills. — Source: `/src/content/chapters/02-will-creates-difference.md`
@@ -92,4 +103,4 @@ In Act 3 the concept returns in a different register. The MMM loop requires want
 - Whether death-anxiety is the *primary* cause of specifically human wanting-structures, or one important factor among several, is not resolved. Becker's case is powerful but competing accounts (SDT, attachment, social baseline) are not obviously derivative of mortality.
 
 ---
-*Last updated: 2026-04-16 | Sources: 6 (Ch. 1–4, /dump/overall.md, Becker 1973) + Act 3*
+*Last updated: 2026-04-16 | Sources: 6 (Ch. 1–4, /dump/overall.md, Becker 1973) + Act 3 — three-floor stack section added 2026-04-16*

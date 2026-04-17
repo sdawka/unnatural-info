@@ -44,6 +44,8 @@ The organising principle: each act has a foundation cluster, and the clusters ar
 
 **Oliver Williamson and transaction cost economics.** Williamson's work explains why some manifestations of the MMM loop produce institutions rather than open-market exchanges. When performance is hard to measure, when commitments require asset-specific investment, and when opportunism is possible, governance structures emerge to reduce the loop's friction. This provides Act 3's economic layer for the chapter on making and the civilisational scale of MMM.
 
+**Dupoux, LeCun, and Malik (2026).** "Why AI systems don't learn and what to do about it: Lessons on autonomous learning from cognitive science" (arXiv:2603.15381) proposes a three-system architecture for autonomous intelligence: System A (observation learning — learning by watching), System B (active-behavior learning — learning by doing), and System M (meta-control — choosing between them). This is a structural echo of Measure / Model / Manifest arriving from contemporary AI research. The book treats it as independent corroboration, not influence: when the three-layer shape recurs across independent attempts to describe agency, it is probably tracking something real. Chapter 15 names this the evidence that MMM is the most meta process we can observe.
+
 ## The book's position in its intellectual neighbourhood
 
 The `overall.md` source identifies the book's closest academic neighbours: embodied cognition, philosophy of action, social ontology, meaning-in-life research, cybernetics, and behavioral economics. It explicitly positions the project in a productive middle ground: philosophical (asks what kinds of things there are and how we know them) but scientific (stays answerable to public evidence and bounded cognition).
@@ -57,6 +59,7 @@ The deepest intellectual move is to let these otherwise separate traditions hang
 - Active inference unifies perception, prediction, planning, and action as a single loop — the rigorous version of MMM at the neural level. — Source: `/dump/overall.md`
 - Ashby's law of requisite variety is the formal statement of why the MMM loop must keep running in a complex environment. — Source: `/dump/overall.md`
 - Lorenz's chaos work explains why re-measurement is structurally necessary, not an admission of failure. — Source: `/dump/overall.md`
+- Dupoux, LeCun, and Malik's 2026 A/B/M architecture is structural convergence with MMM from AI research — independent corroboration that the three-layer shape tracks something real about agency. — Source: `/src/content/chapters/15-mmm-as-lived-experience.md`
 
 ## Connections
 
@@ -73,4 +76,4 @@ The deepest intellectual move is to let these otherwise separate traditions hang
 - Some of the cited traditions (SDT, social baseline theory, meaning research) are active empirical programs whose findings continue to evolve; the book's claims should be treated as indexed to findings as of the writing period, not as permanently established.
 
 ---
-*Last updated: 2026-04-16 | Sources: 1 (/dump/overall.md)*
+*Last updated: 2026-04-16 | Sources: 2 (/dump/overall.md; Ch. 15 for Dupoux/LeCun/Malik 2026) — updated 2026-04-16*

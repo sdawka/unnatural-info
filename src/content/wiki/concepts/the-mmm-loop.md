@@ -10,6 +10,8 @@ The three steps follow an ontological → relational → generative arc. First y
 
 The key argument is that this is not a heuristic borrowed from one field and applied to others as metaphor. It is the same underlying shape, running at different speeds and on different substrates. A bacterium running chemotaxis is running MMM at the molecular level. An organism with a nervous system compresses and accelerates the loop within a single lifetime. A human adds symbolic acceleration: language and culture allow measurements, models, and manifestations to be stored and reused across generations. A civilisation is recursive MMM loops stacked on top of biological ones.
 
+Chapter 15 sharpens this into a stronger claim: MMM is the *most meta process we can observe*. The evidence is structural convergence across independent attempts to describe agency. A 2026 paper by Emmanuel Dupoux, Yann LeCun, and Jitendra Malik ("Why AI systems don't learn and what to do about it: Lessons on autonomous learning from cognitive science") proposes a three-system architecture for autonomous intelligence: **System A** (observation learning — a system that learns by watching), **System B** (active-behavior learning — a system that learns by doing), and **System M** (meta-control — a faculty that chooses between them). This is a structural echo of Measure / Model / Manifest, arriving from AI research rather than from the book's own argument. The book does not claim the match is exact — it is structural, not detailed. The point is that when the three-layer shape keeps recurring across independent disciplines describing what agency requires, it is probably tracking something real. This is independent corroboration, not influence.
+
 Growth, experienced from the inside, is the felt sense of this loop turning: better measurement, richer models, more effective manifestation. Suffering that has no acute physical cause is usually a stalled loop — one of the three moves has seized up.
 
 ## Measure and Map (Chapter 12)
@@ -74,6 +76,8 @@ Contemplative traditions across cultures converge on a recognisable triad: a dis
 
 ## Key claims
 
+- MMM is the most meta process we can observe: the same three-layer shape falls out of every independent attempt — biology, psychology, AI — to describe what being an agent requires. — Source: `/src/content/chapters/15-mmm-as-lived-experience.md`, `/src/content/chapters/16-mmm-across-life-itself.md`
+- Dupoux, LeCun, and Malik (2026) propose a three-system architecture — observation learning (A), active-behavior learning (B), meta-control (M) — that is a structural echo of Measure / Model / Manifest. Independent convergence, not influence. — Source: `/src/content/chapters/15-mmm-as-lived-experience.md`
 - Growth from the inside is the felt experience of the MMM loop turning. — Source: `/src/content/chapters/15-mmm-as-lived-experience.md`
 - The same loop runs in evolution, individual learning, relationships, and civilisation — not as metaphor but as the same underlying shape. — Source: `/src/content/chapters/16-mmm-across-life-itself.md`
 - Most felt suffering without acute physical cause is a stalled loop; movement returns when the missing move is identified. — Source: `/src/content/chapters/15-mmm-as-lived-experience.md`
@@ -104,4 +108,4 @@ Contemplative traditions across cultures converge on a recognisable triad: a dis
 - The active inference framework (Friston) treats perception and action as continuous, not as separate phases of a loop. Whether the loop is a useful model or an artifact of decomposing what is really one motion is not resolved.
 
 ---
-*Last updated: 2026-04-16 | Sources: 9 (Ch. 12–19; /dump/overall.md) — framing sharpened 2026-04-16*
+*Last updated: 2026-04-16 | Sources: 9 (Ch. 12–19; /dump/overall.md) — meta-process + Dupoux/LeCun/Malik 2026 convergence added 2026-04-16*
