@@ -3,11 +3,10 @@ import { useAgent } from "agents/react";
 import { useAgentChat } from "@cloudflare/ai-chat/react";
 import type { UIMessage } from "ai";
 
-// TODO: replace AGENT_URL with deployed worker URL
 const AGENT_URL =
   (typeof import.meta !== "undefined" &&
     (import.meta as unknown as { env?: Record<string, string> }).env?.PUBLIC_AGENT_URL) ||
-  "https://unnatural-agent.YOUR_SUBDOMAIN.workers.dev";
+  "https://unnatural-agent.dawka.workers.dev";
 
 interface SessionUser {
   id: string;
