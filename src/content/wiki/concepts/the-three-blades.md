@@ -47,7 +47,7 @@ Once a creature has a self and a model, it sorts what it perceives into *toward*
 
 ## Connections
 
-- [[Act 2 — InitD]] — the act in which all three blades are introduced
+- [[Act 2 — init.d]] — the act in which all three blades are introduced
 - [[Foundational Dualities]] — the three blades are the first three entries in a broader taxonomy of dualities
 - [[Thingification]] — what happens after the blades: distinction accumulates into objects, names, institutions
 - [[Cost of Distinction]] — chapter 11's accounting of what each blade costs

@@ -24,14 +24,15 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
         </p>
 
         <div class="hero__question" aria-labelledby="hero-q">
-          <p class="hero__question-label">A child asks it first. It never really leaves.</p>
+          <p class="hero__question-label">A child asks it first.</p>
           <p class="hero__question-text" id="hero-q">
             <span class="hero__quote" aria-hidden="true">“</span>What are we<span class="hero__qmark">?</span><span class="hero__quote" aria-hidden="true">”</span>
           </p>
+          <p class="hero__wonder">Thirty years of wondering.</p>
         </div>
 
         <p class="hero__answer-lead">
-          Here is one answer.
+          One word eventually fits.
         </p>
 
         <h1 class="hero__title" aria-label="UNNATURAL">
@@ -39,7 +40,7 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
         </h1>
 
         <p class="hero__subtitle">
-          Natural beings who somehow broke into the <a href="/chapters/10-the-information-physical-duality" class="hero__subtitle-link">information realm</a> — and started looping it back through the physical world that made us.
+          Natural beings who slipped into the <a href="/chapters/10-the-information-physical-duality" class="hero__subtitle-link">information realm</a>. Now we loop it back through the physical world that made us.
         </p>
 
         <div class="thesis">
@@ -59,7 +60,7 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
             "Unscientific" does not mean anti-science.
             It means: not reducible to one formal discipline,
             not claiming lab-grade proof at every layer,
-            willing to begin from lived experience —
+            willing to begin from lived experience,
             but still committed to reality, clarity, and honest uncertainty.
           </p>
         </aside>
@@ -98,7 +99,7 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
                   <span class="act-card__arrow" aria-hidden="true">→</span>
                 </div>
                 <p class="act-card__premise">Why anything happens at all.</p>
-                <p class="act-card__detail">Before thought, there were feelings — shared with the animals. Before feelings, there was want: a bacterium leaning along a chemical gradient, the floor of the whole stack.</p>
+                <p class="act-card__detail">Before thought, there were feelings. The layer we share with the animals. Before feelings, there was want: a bacterium leaning along a chemical gradient, the floor of the whole stack.</p>
               </div>
             </a>
           </li>
@@ -108,11 +109,11 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
               <div class="act-card__numeral" aria-hidden="true">II</div>
               <div class="act-card__body">
                 <div class="act-card__title-row">
-                  <h3 class="act-card__name">InitD</h3>
+                  <h3 class="act-card__name">init.d</h3>
                   <span class="act-card__arrow" aria-hidden="true">→</span>
                 </div>
                 <p class="act-card__premise">What appears once distinction begins.</p>
-                <p class="act-card__detail">Finite beings cannot meet reality whole. The universe is fractal and chaotic — infinite detail at every scale, bottomless in both directions. Distinction is how we boot up inside that excess.</p>
+                <p class="act-card__detail">Finite beings cannot meet reality whole. The universe is fractal and chaotic: infinite detail at every scale, bottomless in both directions. Distinction is how we boot up inside that excess.</p>
               </div>
             </a>
           </li>
@@ -126,7 +127,7 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
                   <span class="act-card__arrow" aria-hidden="true">→</span>
                 </div>
                 <p class="act-card__premise">How life grows through recursive world-contact.</p>
-                <p class="act-card__detail">Measure, Model, Manifest. The most meta process we can observe — in a cell, a child, a civilisation. Dupoux, LeCun &amp; Malik (2026) arrive at a structural echo — observation, active behavior, meta-control — from a different direction.</p>
+                <p class="act-card__detail">Measure, Model, Manifest. The most meta process we can observe, running in a cell, a child, a civilisation. Dupoux, LeCun &amp; Malik (2026) arrive at a structural echo (observation, active behavior, meta-control) from a different direction.</p>
               </div>
             </a>
           </li>
@@ -214,11 +215,12 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     display: block;
     height: 1px;
     border-radius: 1px;
+    background: var(--color-ink);
   }
 
-  .hero__eyebrow-stack span:nth-child(1) { width: 18px; background: var(--color-act-i); }
-  .hero__eyebrow-stack span:nth-child(2) { width: 12px; background: var(--color-act-ii); }
-  .hero__eyebrow-stack span:nth-child(3) { width: 6px;  background: var(--color-act-iii); }
+  .hero__eyebrow-stack span:nth-child(1) { width: 18px; opacity: 1; }
+  .hero__eyebrow-stack span:nth-child(2) { width: 12px; opacity: 0.5; }
+  .hero__eyebrow-stack span:nth-child(3) { width: 6px;  opacity: 0.22; }
 
   .hero__footnote-mark {
     color: var(--color-ink-faint);
@@ -272,6 +274,28 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
   .hero__qmark {
     color: var(--color-act-i);
     font-variation-settings: 'opsz' 144, 'wght' 360, 'SOFT' 40;
+  }
+
+  .hero__wonder {
+    margin-top: var(--space-4);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--color-ink-muted);
+    position: relative;
+    display: inline-block;
+    padding-left: 2.5em;
+  }
+
+  .hero__wonder::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 2em;
+    height: 1px;
+    background: var(--color-ink-faint);
   }
 
   .hero__answer-lead {

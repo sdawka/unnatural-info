@@ -1,4 +1,4 @@
-# Act 2 — InitD
+# Act 2 — init.d
 
 > The second act argues that finite beings *cannot* meet reality whole — the universe is fractal and chaotic, so distinction is how a living thing boots up inside an inexhaustible world. Self vs. world, map vs. territory, good vs. bad, and the mounting cost of every cut.
 

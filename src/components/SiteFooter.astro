@@ -1,4 +1,5 @@
 ---
+const year = new Date().getFullYear();
 ---
 <footer class="sf">
   <div class="sf__inner">
@@ -16,18 +17,32 @@
         <span>Difference creates the question.</span>
       </p>
     </div>
-    <div class="sf__meta">
+    <nav class="sf__meta" aria-label="Footer">
       <a href="/">Home</a>
       <a href="/wiki/">Wiki</a>
       <a href="/reading">Reading</a>
-    </div>
+      <a href="/about">About</a>
+    </nav>
+  </div>
+
+  <div class="sf__rule" aria-hidden="true"></div>
+
+  <div class="sf__legal">
+    <p class="sf__copyright">
+      <span class="sf__copy-mark" aria-hidden="true">©</span>
+      {year} <a href="https://sahil.pro" rel="noopener" class="sf__author">Sahil Dawka</a>. A living document.
+    </p>
+    <p class="sf__version">
+      <span aria-hidden="true">v.</span>
+      <span>working draft</span>
+    </p>
   </div>
 </footer>
 
 <style>
   .sf {
     margin-top: var(--space-24);
-    padding: var(--space-16) var(--safe-right) calc(var(--space-10) + var(--safe-bottom)) var(--safe-left);
+    padding: var(--space-16) var(--safe-right) calc(var(--space-8) + var(--safe-bottom)) var(--safe-left);
     border-top: 1px solid var(--color-rule);
     background:
       linear-gradient(to bottom, transparent, color-mix(in srgb, var(--color-ground-tint) 60%, transparent));
@@ -52,10 +67,11 @@
     display: block;
     height: 2px;
     border-radius: 1px;
+    background: var(--color-ink);
   }
-  .sf__glyph span:nth-child(1) { width: 32px; background: var(--color-act-i); }
-  .sf__glyph span:nth-child(2) { width: 20px; background: var(--color-act-ii); }
-  .sf__glyph span:nth-child(3) { width: 10px; background: var(--color-act-iii); }
+  .sf__glyph span:nth-child(1) { width: 32px; opacity: 1; }
+  .sf__glyph span:nth-child(2) { width: 20px; opacity: 0.5; }
+  .sf__glyph span:nth-child(3) { width: 10px; opacity: 0.22; }
 
   .sf__body {
     max-width: 40ch;
@@ -116,6 +132,58 @@
     border-bottom-color: var(--color-ink);
   }
 
+  .sf__rule {
+    max-width: var(--page-max);
+    margin: var(--space-10) auto var(--space-6);
+    height: 1px;
+    background: var(--color-rule-soft);
+  }
+
+  .sf__legal {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+    letter-spacing: 0.08em;
+  }
+
+  .sf__copyright {
+    color: var(--color-ink-muted);
+    text-transform: none;
+    letter-spacing: 0.02em;
+  }
+
+  .sf__copy-mark {
+    font-family: var(--font-display);
+    font-size: 1.1em;
+    color: var(--color-ink-faint);
+    margin-right: 0.1em;
+  }
+
+  .sf__author {
+    color: var(--color-ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-rule);
+    transition: border-color var(--dur-fast);
+    padding-bottom: 1px;
+  }
+
+  .sf__author:hover {
+    border-bottom-color: var(--color-ink);
+  }
+
+  .sf__version {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-ink-faint);
+  }
+
   @media (max-width: 44rem) {
     .sf {
       padding-top: var(--space-12);
@@ -128,9 +196,18 @@
     .sf__meta {
       grid-column: 1 / -1;
       flex-direction: row;
+      flex-wrap: wrap;
       align-items: flex-start;
       gap: var(--space-5);
       padding-top: 0;
+    }
+    .sf__rule {
+      margin: var(--space-6) auto var(--space-4);
+    }
+    .sf__legal {
+      flex-direction: column;
+      gap: var(--space-2);
+      align-items: flex-start;
     }
   }
 </style>

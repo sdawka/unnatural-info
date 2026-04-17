@@ -5,7 +5,7 @@ act: mmm
 actTitle: "MMM"
 chapterNumber: 15
 order: 15
-summary: "Growth feels like better measurement, richer models, more effective manifestation — whether an organism evolves, a child learns language, a person masters a skill, a couple learns trust, or a civilisation builds science. This loop is the most meta process we can observe: the same shape re-appears every time someone tries to describe what agency or intelligence even is, including in Dupoux, LeCun, and Malik's recent three-system architecture for autonomous learning."
+summary: "Growth feels like better measurement, richer models, more effective manifestation, whether an organism evolves, a child learns language, a person masters a skill, a couple learns trust, or a civilisation builds science. This loop is the most meta process we can observe: the same shape re-appears every time someone tries to describe what agency or intelligence even is, including in Dupoux, LeCun, and Malik's recent three-system architecture for autonomous learning."
 themes: ["growth", "learning", "MMM", "recursion", "complexity", "synthesis", "agency", "meta"]
 status: draft
 draft: false
@@ -44,7 +44,7 @@ Three chapters ago we split the loop into pieces because that is how books work.
 
 This is what learning feels like. Also: what evolution looks like, if you film it for a few million years. Also: what a relationship is, when it is alive. The loop is not a metaphor borrowed from one domain and stretched over others. It is the same shape, running on different substrates, at very different speeds.
 
-That is why we call it the most meta process we can observe. Every time someone — in biology, in psychology, in AI — tries to write down what it takes to be an agent, a three-layer structure keeps falling out of the attempt. In 2026, Dupoux, LeCun, and Malik described autonomous intelligence as the interplay of *observation learning* (a system that learns by watching), *active-behavior learning* (a system that learns by doing), and *meta-control* (a faculty that chooses between them). Different vocabulary, same shape: sense the world, model the world by acting on it, manage the whole process one level up. This book will not argue the match is exact — it is structural, not detailed. The point is that when the shape keeps recurring across independent attempts to describe agency, it is probably tracking something real about what being an agent requires.
+That is why we call it the most meta process we can observe. Every time someone tries to write down what it takes to be an agent, in biology, in psychology, in AI, a three-layer structure keeps falling out of the attempt. In 2026, Dupoux, LeCun, and Malik described autonomous intelligence as the interplay of *observation learning* (a system that learns by watching), *active-behavior learning* (a system that learns by doing), and *meta-control* (a faculty that chooses between them). Different vocabulary, same shape: sense the world, model the world by acting on it, manage the whole process one level up. This book will not argue the match is exact. It is structural, not detailed. The point is that when the shape keeps recurring across independent attempts to describe agency, it is probably tracking something real about what being an agent requires.
 
 ## Key moves
 

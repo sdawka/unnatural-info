@@ -2,7 +2,7 @@
 title: "The Information / Physical Duality (Both Are Real, Which Is Inconvenient)"
 subtitle: "Two coupled domains, one loop"
 act: initd
-actTitle: "InitD"
+actTitle: "init.d"
 chapterNumber: 10
 order: 10
 summary: "Human life is lived at the interface between the physical and informational worlds. Beliefs, distinctions, models, meanings, identities, norms, institutions — not merely in the head, and not purely physical. Informational structures with physical consequences."
@@ -48,7 +48,7 @@ Two stories compete for the role of fundamental. In one, the world is made of st
 
 A finite human life is lived at the seam between these two. You are matter, and you are a story matter has been telling for some time about itself. Pretending one of them away is a popular sport in academic departments and a poor strategy for living.
 
-This is the chapter the prologue was pointing at. A child asks *what are we?* and the short answer is: the kind of natural being that learned to work in pure information — to hold models, meanings, norms, institutions that are not reducible to the mass on your bones — and then learned to loop those back through the physical world that made you. The loop is the thing. It is how a thought builds a city. It is how a diagram rearranges a life. It is why we call the whole business *unnatural*: not anti-natural, but natural that folded.
+This is the chapter the prologue was pointing at. A child asks *what are we?* and the short answer is: the kind of natural being that learned to work in pure information, to hold models, meanings, norms, institutions that are not reducible to the mass on your bones, and then learned to loop those back through the physical world that made you. The loop is the thing. It is how a thought builds a city. It is how a diagram rearranges a life. It is why we call the whole business *unnatural*: not anti-natural, but natural that folded.
 
 ## Key moves
 

@@ -46,7 +46,7 @@ The intellectual inheritance here is broad: Boyd's OODA loop; Kolb's experientia
 - [[Wisdom Traditions]] — chapter 17's argument synthesised
 - [[Objectivity]] — chapters 4 and 19 form a bracket; full treatment in the theme page
 - [[Act 1 — Volo Ergo Sum]] — the loop requires want as its engine
-- [[Act 2 — InitD]] — the loop requires distinctions to have something to measure
+- [[Act 2 — init.d]] — the loop requires distinctions to have something to measure
 - [[Thingification]] — institutions built by MMM loops are the most consequential thingifications
 
 ## Open questions

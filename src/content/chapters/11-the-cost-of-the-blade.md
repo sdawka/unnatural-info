@@ -2,7 +2,7 @@
 title: "The Cost of the Blade"
 subtitle: "Every distinction gains leverage and loses nuance"
 act: initd
-actTitle: "InitD"
+actTitle: "init.d"
 chapterNumber: 11
 order: 11
 summary: "The cost is structural, not avoidable. The universe is fractal and chaotic, so the information left uncaught at any cut is infinite by construction. Simplification, reification, stereotype, ideology. Forgetting our cuts are partial. A beautiful sculpture carved from stone — and the discarded fragments form a shadow beside it."
@@ -38,7 +38,7 @@ furtherReading:
 
 Every cut gains leverage and loses nuance. That is the deal. The first blade let us be a self at the cost of pretending we knew where we ended. The second blade let us think about the world at the cost of mistaking the model for it. The third blade let us navigate at the cost of making "good" and "bad" sound like properties of things rather than relationships with them.
 
-Recall why the blades had to come out in the first place. The universe is fractal and chaotic. At any cut we make, an infinite amount of detail falls on the other side — structurally, not because we were careless. You could keep dissecting forever, keep zooming out forever, run the dynamics forward or backward forever, and never exhaust what was discarded. The cost of the blade is not a mistake to be corrected. It is the signature of finitude meeting an inexhaustible world.
+Recall why the blades had to come out in the first place. The universe is fractal and chaotic. At any cut we make, an infinite amount of detail falls on the other side. Structurally, not because we were careless. You could keep dissecting forever, keep zooming out forever, run the dynamics forward or backward forever, and never exhaust what was discarded. The cost of the blade is not a mistake to be corrected. It is the signature of finitude meeting an inexhaustible world.
 
 The act ends here because we owe a chapter to what fell into the gaps. A beautiful sculpture is carved from a stone. The discarded fragments form a shadow beside it. The shadow is part of the sculpture, even though no one in the gallery talks about it.
 

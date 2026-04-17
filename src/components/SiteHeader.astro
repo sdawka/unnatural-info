@@ -19,7 +19,7 @@ const isActive = (prefix: string) => current === prefix || current.startsWith(pr
       </a>
       <a href="/acts/initd" class:list={["sh__act", "sh__act--ii", isActive('/acts/initd') && 'is-active']}>
         <span class="sh__act-num" aria-hidden="true">II</span>
-        <span class="sh__act-name">InitD</span>
+        <span class="sh__act-name">init.d</span>
       </a>
       <a href="/acts/mmm" class:list={["sh__act", "sh__act--iii", isActive('/acts/mmm') && 'is-active']}>
         <span class="sh__act-num" aria-hidden="true">III</span>
@@ -113,16 +113,16 @@ const isActive = (prefix: string) => current === prefix || current.startsWith(pr
     height: 2px;
     background: var(--color-ink);
     border-radius: 1px;
-    transition: width var(--dur-slow) var(--ease-out), background var(--dur-med) var(--ease-out);
+    transition: width var(--dur-slow) var(--ease-out), opacity var(--dur-med) var(--ease-out);
   }
 
-  .sh__logo-mark span:nth-child(1) { width: 20px; background: var(--color-act-i); }
-  .sh__logo-mark span:nth-child(2) { width: 14px; background: var(--color-act-ii); }
-  .sh__logo-mark span:nth-child(3) { width: 8px;  background: var(--color-act-iii); }
+  .sh__logo-mark span:nth-child(1) { width: 20px; opacity: 1; }
+  .sh__logo-mark span:nth-child(2) { width: 14px; opacity: 0.5; }
+  .sh__logo-mark span:nth-child(3) { width: 8px;  opacity: 0.22; }
 
-  .sh__logo:hover .sh__logo-mark span:nth-child(1) { width: 8px; }
-  .sh__logo:hover .sh__logo-mark span:nth-child(2) { width: 14px; }
-  .sh__logo:hover .sh__logo-mark span:nth-child(3) { width: 20px; }
+  .sh__logo:hover .sh__logo-mark span:nth-child(1) { width: 8px;  opacity: 0.22; }
+  .sh__logo:hover .sh__logo-mark span:nth-child(2) { width: 14px; opacity: 0.5; }
+  .sh__logo:hover .sh__logo-mark span:nth-child(3) { width: 20px; opacity: 1; }
 
   .sh__logo-text {
     font-family: var(--font-display);

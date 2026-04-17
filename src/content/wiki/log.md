@@ -150,7 +150,7 @@ Pages created:
 Key concepts added:
 - Volo Ergo Sum (want as the floor of life)
 - The Three Blades (self/world, map/territory, good/bad)
-- InitD (distinction as bootstrap process)
+- init.d (distinction as bootstrap process)
 - Thingification (continuous world made discrete)
 - Information/Physical Duality
 - Foundational Dualities (layered taxonomy)

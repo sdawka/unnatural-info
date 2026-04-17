@@ -9,7 +9,7 @@
 
 - Coined term: *unscientific empirical* — the book's governing epistemic stance
 - Three commitments: mark what we observe, mark what we interpret, mark what we don't know
-- Three-act structure announced: Volo Ergo Sum / InitD / MMM
+- Three-act structure announced: Volo Ergo Sum / init.d / MMM
 - Frame is a tool, judged by whether it helps you see and act more clearly
 
 ## Pages this source informs

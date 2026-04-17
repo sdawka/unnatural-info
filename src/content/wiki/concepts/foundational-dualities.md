@@ -61,7 +61,7 @@ Chapter 8 notes an important asymmetry between Western and Chinese dialectical t
 - [[Thingification]] — dualities are the mechanism by which thingification proceeds; every thingification is an application of a duality
 - [[Cost of Distinction]] — chapter 11 specifically addresses what happens when dualities are forgotten, reified, or weaponised
 - [[Information/Physical Duality]] — the information/physical duality is itself a cognitive-layer duality of particular importance
-- [[Act 2 — InitD]] — the full act in which this taxonomy is introduced and developed
+- [[Act 2 — init.d]] — the full act in which this taxonomy is introduced and developed
 
 ## Open questions
 

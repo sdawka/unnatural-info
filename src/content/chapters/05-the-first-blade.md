@@ -2,10 +2,10 @@
 title: "The First Blade: The Catastrophic Invention of Edges"
 subtitle: "Me and World"
 act: initd
-actTitle: "InitD"
+actTitle: "init.d"
 chapterNumber: 5
 order: 5
-summary: "Finite beings cannot meet reality whole. The universe is fractal and chaotic — infinite detail at every scale, bottomless in time, inexhaustible by any measurement. Distinction is how a living thing boots up inside that excess. The first cut: me and world. Agency and exposure are born together."
+summary: "Finite beings cannot meet reality whole. The universe is fractal and chaotic: infinite detail at every scale, bottomless in time, inexhaustible by any measurement. Distinction is how a living thing boots up inside that excess. The first cut: me and world. Agency and exposure are born together."
 themes: ["boundary", "self", "non-self", "inside", "outside", "organism", "fractal", "finitude"]
 status: draft
 draft: false
@@ -42,9 +42,9 @@ furtherReading:
 
 Start from the problem the blade is solving. Finite beings cannot meet reality whole. Not as a moral failure. As a structural condition.
 
-The universe is fractal. Pick any object — a leaf, a cell, a thought — and you can keep dissecting: organ to tissue to cell to organelle to molecule to atom to subatomic to whatever the next particle accelerator uncovers. You can also keep zooming out: body to ecosystem to planet to galaxy to supercluster, bounded only by how far our telescopes can see into light that started before we did. Between those horizons, at every scale, there is more detail than any observer can hold. The universe is also chaotic: small differences in initial conditions explode into unpredictable trajectories, and you can run time in either direction forever and never finish the accounting. The information content of any finite region of spacetime, for any finite observer, is effectively infinite.
+The universe is fractal. Pick any object, a leaf, a cell, a thought, and you can keep dissecting: organ to tissue to cell to organelle to molecule to atom to subatomic to whatever the next particle accelerator uncovers. You can also keep zooming out: body to ecosystem to planet to galaxy to supercluster, bounded only by how far our telescopes can see into light that started before we did. Between those horizons, at every scale, there is more detail than any observer can hold. The universe is also chaotic: small differences in initial conditions explode into unpredictable trajectories, and you can run time in either direction forever and never finish the accounting. The information content of any finite region of spacetime, for any finite observer, is effectively infinite.
 
-No organism can meet all of that. No brain can, no instrument can, no civilisation can. To be finite is to be selectively deaf and dumb — to drop almost everything and keep almost nothing — and then to live inside the keepings. Distinction is the name for how a living thing decides, moment by moment, what to keep.
+No organism can meet all of that. No brain can, no instrument can, no civilisation can. To be finite is to be selectively deaf and dumb. To drop almost everything and keep almost nothing, and then to live inside the keepings. Distinction is the name for how a living thing decides, moment by moment, what to keep.
 
 On a Unix machine, when the box first powers on, almost nothing exists yet. There is hardware, there is a kernel, and then there is one process whose only job is to start every other process. It is, with admirable lack of poetry, called *init*. Everything you ever do on that machine is downstream of it. The systems folder where it lives, on older systems, was called `init.d`.
 
@@ -54,7 +54,7 @@ The cut is catastrophic in the cheerful sense the word originally meant: a turni
 
 ## Key moves
 
-- Distinction is the bootstrap process of mind. *InitD* names it on purpose: the first process from which all later processes load.
+- Distinction is the bootstrap process of mind. *init.d* names it on purpose: the first process from which all later processes load.
 - The first blade carves *self* from *non-self* — a boundary, not yet a personality.
 - The boundary is partly biological (membrane, skin, immune recognition) and partly informational (an organism that "treats this here as me").
 - Once the cut exists, agency and exposure are both born at the same moment: there is something that can act, and something that can be acted upon.

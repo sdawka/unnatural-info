@@ -1,9 +1,9 @@
 ---
 title: "On Attempting to Explain Everything (Again)"
-subtitle: "What are we? — and what would an honest answer look like"
+subtitle: "A child's question, and what an honest answer looks like"
 act: prologue
 order: 0
-summary: "A child asks 'what are we?' and the question never leaves. This book is one answer: we are natural beings who broke into the information realm and started looping it back through the physical world that made us — the unnatural thing. The prologue sets the method: unscientific but empirical, willing to begin from lived experience, committed to reality and honest uncertainty."
+summary: "A child asks 'what are we?' and the question never leaves. Thirty years of wondering later, one word finally fits: unnatural. We are natural beings who slipped into the information realm and now loop it back through the physical world that made us. The prologue sets the method: unscientific but empirical, willing to begin from lived experience, committed to reality and honest uncertainty."
 themes: ["epistemology", "method", "empiricism", "framework"]
 status: draft
 draft: false
@@ -38,13 +38,15 @@ furtherReading:
     note: "Awareness of our own mortality is precisely what makes human wanting 'unnatural' — we cannot live purely on instinct because we know we will die, and that knowledge forces us to construct meaning rather than merely respond."
 ---
 
-A child asks *what are we?* — and the question never actually leaves. It goes underground, dressed up later as philosophy, religion, theory, ambition, crisis, awe. But the curiosity is the same one. Whatever is reading this sentence is, somehow, the kind of thing that can ask the question about itself. That is already strange.
+A child asks *what are we?*, and the question never actually leaves. It goes underground, dressed up later as philosophy, religion, theory, ambition, crisis, awe. Whatever is reading this sentence is, somehow, the kind of thing that can ask the question about itself. That is already strange.
 
-Here is one answer, which this book will spend its pages defending. We are natural beings — made of the same physics as rocks and rivers and bacteria — who somehow broke into the *information realm*. We started building models, meanings, stories, institutions; we learned to work in pure information; and we learned to loop it back through the physical world that made us. A thought reshapes a city. A diagram rearranges a life. That loop — physical world giving rise to information, information bending the physical world back — is what we mean by *unnatural*. Not anti-natural. Something natural that folded, and in folding, became strange to itself. (Chapter 10 makes this precise.)
+Thirty years of wondering. One word eventually fits: *unnatural*. Not anti-natural. Something natural that folded, and in folding, became strange to itself.
+
+We are natural beings. Same physics as rocks and rivers and bacteria. Then something happened. We slipped into the *information realm*. We built models, meanings, stories, institutions. We learned to work in pure information, and to loop it back through the physical world that made us. A thought reshapes a city. A diagram rearranges a life. That loop, physical giving rise to information, information bending the physical back, is what we mean by unnatural. Chapter 10 makes this precise.
 
 There is a long and slightly embarrassing history of people trying to explain everything. They mostly do it badly, and they almost always do it with too much confidence. This is another one of those attempts, and the only thing this prologue can honestly promise is that we have noticed.
 
-The frame is *unscientific empirical*. Unscientific because we are not going to wait for the laboratory equipment to catch up before talking about will, distinction, meaning, or growth. Empirical because we are still going to begin from things any honest person can check against their own life: that beneath thought there are feelings and beneath feelings there is want, that the world arrives in pieces because we cannot meet it whole and cut it to fit, that learning feels like a particular shape from the inside — and that the same shape keeps showing up when anyone else sits down to describe what it takes to be an agent.
+The frame is *unscientific empirical*. Unscientific because we are not going to wait for the laboratory equipment to catch up before talking about will, distinction, meaning, or growth. Empirical because we are still going to begin from things any honest person can check against their own life: that beneath thought there are feelings and beneath feelings there is want, that the world arrives in pieces because we cannot meet it whole and cut it to fit, that learning feels like a particular shape from the inside, and that the same shape keeps showing up when anyone else sits down to describe what it takes to be an agent.
 
 ## Key moves
 
@@ -52,7 +54,7 @@ The frame is *unscientific empirical*. Unscientific because we are not going to 
 - The frame sits between scientific and philosophical: no appeals to higher mysteries, but also no pretending we have lab-grade proof for layers that nobody has lab-grade proof for.
 - Three commitments run through every chapter: mark what we observe, mark what we interpret, mark what we don't know.
 - We treat lived experience as data — the only data finite minds actually have first-hand — while staying suspicious of how easily lived experience lies to itself.
-- Three acts structure the book: Volo Ergo Sum (why anything happens), InitD (what appears once distinction begins), MMM (how growth runs as a loop).
+- Three acts structure the book: Volo Ergo Sum (why anything happens), init.d (what appears once distinction begins), MMM (how growth runs as a loop).
 - The book is a tool. If a chapter does not give you something to look at, look for, or do, it has failed at its job.
 
 ## Where this touches lived life

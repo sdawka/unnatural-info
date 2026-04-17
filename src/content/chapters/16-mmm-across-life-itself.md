@@ -5,7 +5,7 @@ act: mmm
 actTitle: "MMM"
 chapterNumber: 16
 order: 16
-summary: "Measurement in simple life forms, modelling in nervous systems, manifestation through adaptation. Cumulative complexity in evolution. Human symbolic acceleration. Civilisation as recursive MMM. Not a ladder but a branching tree — the most meta process re-instantiated at every scale of life, the same shape AI research keeps rediscovering from the outside."
+summary: "Measurement in simple life forms, modelling in nervous systems, manifestation through adaptation. Cumulative complexity in evolution. Human symbolic acceleration. Civilisation as recursive MMM. Not a ladder but a branching tree: the most meta process re-instantiated at every scale of life, the same shape AI research keeps rediscovering from the outside."
 themes: ["evolution", "civilisation", "recursion", "symbolic", "complexity", "life"]
 status: draft
 draft: false
@@ -48,7 +48,7 @@ furtherReading:
     note: "Organisms do not just adapt to environments, they build them — the Manifest step feeds back into Measure across generations."
 ---
 
-The reason MMM is the most meta process we can observe — not just *a* recipe — is that it does not stop at the edge of human skin. It runs in things without brains. It runs in things without nervous systems. It runs in some things that, on a generous definition, are barely alive. What changes from one rung of the ladder to the next is not the loop but its resolution.
+The reason MMM is the most meta process we can observe, not just *a* recipe, is that it does not stop at the edge of human skin. It runs in things without brains. It runs in things without nervous systems. It runs in some things that, on a generous definition, are barely alive. What changes from one rung of the ladder to the next is not the loop but its resolution.
 
 A microbe measures with chemistry. A plant measures with light and time. A mammal measures with a nervous system and somatic feeling. We measure with all of those plus language, instrument, ritual, and one another. Each layer adds bandwidth. Each layer is the prior loop running faster, with more memory, holding more model.
 

@@ -38,7 +38,7 @@ The act's deepest move is ontological priority. Want is not a psychological add-
 - [[Volo Ergo Sum]] — the coined term and its full conceptual content
 - [[Want and Will]] — thematic treatment across chapters 1–3
 - [[Objectivity]] — Act 1 Ch. 4 and Act 3 Ch. 19 bracket the book's epistemic position
-- [[Act 2 — InitD]] — InitD shows what appears once a wanting creature begins drawing distinctions
+- [[Act 2 — init.d]] — init.d shows what appears once a wanting creature begins drawing distinctions
 - [[The MMM Loop]] — the loop is how wanting creatures grow; Act 1 provides the wanting; Act 3 provides the mechanism
 
 ## Open questions

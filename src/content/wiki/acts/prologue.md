@@ -14,7 +14,7 @@ Three commitments are announced that run throughout all 21 chapters: mark what w
 
 - The frame is "unscientific empirical": neither scientific in the lab-proof sense, nor anti-scientific, nor appealing to higher mysteries. — Source: `/src/content/chapters/prologue.md`
 - Lived experience counts as data — the only data finite minds have first-hand — while the tendency of lived experience to lie to itself is kept in view. — Source: `/src/content/chapters/prologue.md`
-- Three acts structure the argument: [[Act 1 — Volo Ergo Sum]] (why anything happens), [[Act 2 — InitD]] (what appears once distinction begins), [[Act 3 — MMM]] (how growth runs as a loop). — Source: `/src/content/chapters/prologue.md`
+- Three acts structure the argument: [[Act 1 — Volo Ergo Sum]] (why anything happens), [[Act 2 — init.d]] (what appears once distinction begins), [[Act 3 — MMM]] (how growth runs as a loop). — Source: `/src/content/chapters/prologue.md`
 - The whole frame is revisable; if a later chapter feels too certain, the prologue is the right place to return. — Source: `/src/content/chapters/prologue.md`
 
 ## Connections

@@ -1,11 +1,11 @@
 ---
 title: "Before Thought, There Is Want"
-subtitle: "Thought, feelings, want — climbing down the stack"
+subtitle: "Thought, feelings, want: climbing down the stack"
 act: volo-ergo-sum
 actTitle: "Volo Ergo Sum"
 chapterNumber: 1
 order: 1
-summary: "Before explicit thought, there were feelings — the layer we share with animals, the one Damasio showed is actually running our decisions. Before feelings, there was want: a bacterium along a chemical gradient, the floor of the whole stack. This chapter walks down the stairs — thought, feeling, want — and argues that want, not cognition, is where motion and value begin."
+summary: "Before explicit thought, there were feelings: the layer we share with animals, the one Damasio showed is actually running our decisions. Before feelings, there was want: a bacterium along a chemical gradient, the floor of the whole stack. This chapter walks down the stairs (thought, feeling, want) and argues that want, not cognition, is where motion and value begin."
 themes: ["want", "will", "feelings", "affect", "damasio", "attraction", "aversion", "motivation"]
 status: draft
 draft: false
@@ -50,9 +50,9 @@ furtherReading:
 
 Descartes started in the wrong place. Walk down the stairs.
 
-First floor: explicit thought — propositions, arguments, the thing Descartes took as his bedrock. Below that, the basement he missed: *feelings*. Not moods or opinions, but the continuous affective signal your body uses to orient before anything reaches words — the layer we share with every animal that turns toward or away. Damasio's work spent decades making this precise: patients with intact reasoning but damaged somatic signalling cannot decide. They can list pros and cons forever. The feelings that normally collapse deliberation into action are gone, and deliberation never terminates. Feelings are not an ornament on cognition. They are the substrate cognition runs on.
+First floor: explicit thought. Propositions, arguments, the thing Descartes took as his bedrock. Below that, the basement he missed: *feelings*. Not moods or opinions, but the continuous affective signal your body uses to orient before anything reaches words. This is the layer we share with every animal that turns toward or away. Damasio's work spent decades making it precise: patients with intact reasoning but damaged somatic signalling cannot decide. They can list pros and cons forever. The feelings that normally collapse deliberation into action are gone, and deliberation never terminates. Feelings are not an ornament on cognition. They are the substrate cognition runs on.
 
-Go down one more floor. Underneath feelings is something even more primal, present in creatures that have no nervous system at all: *want*. A bacterium following a sugar gradient does not feel hunger — there is no "feeling" machinery — but it unmistakably leans. It swims up the gradient. This is chemotaxis, and it is wanting in its minimal form: a lean, an orientation, an asymmetry between *toward* and *away*. A baby rooting for milk does not theorise. A paramecium does not deliberate. Whatever else is true about being alive, the first thing that is true is *wanting*.
+Go down one more floor. Underneath feelings is something even more primal, present in creatures that have no nervous system at all: *want*. A bacterium following a sugar gradient does not feel hunger. There is no "feeling" machinery. But it unmistakably leans. It swims up the gradient. This is chemotaxis, and it is wanting in its minimal form: a lean, an orientation, an asymmetry between *toward* and *away*. A baby rooting for milk does not theorise. A paramecium does not deliberate. Whatever else is true about being alive, the first thing that is true is *wanting*.
 
 This is what we mean by *Volo ergo sum*. Not a swap of one slogan for another, but a shift in where the floor is. Thought rides on feeling; feeling rides on want. Underneath cognition, underneath affect, underneath the long arguments about what is real, there is a primal lean. Attraction. Aversion. Care. Everything else is built on top.
 

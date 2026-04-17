@@ -23,7 +23,7 @@ The epilogue inherits from Arendt on natality and irreversible action, Murdoch o
 - [[The MMM Loop]] — "build the world" is the Manifest step writ large
 - [[Cost of Distinction]] — using the blade carefully is the practical response to chapter 11's argument
 - [[Act 1 — Volo Ergo Sum]] — cannot avoid willing
-- [[Act 2 — InitD]] — cannot avoid cutting
+- [[Act 2 — init.d]] — cannot avoid cutting
 - [[Act 3 — MMM]] — cannot avoid manifesting
 
 ## Open questions

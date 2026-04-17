@@ -1,0 +1,330 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+const CONTACT_EMAIL = 'hello@unnatural.info';
+---
+
+<BaseLayout
+  title="About"
+  description="About UNNATURAL: a working draft of a theory of everything, the method behind it, and how to reach the author."
+>
+  <SiteHeader />
+  <main class="ab">
+    <div class="ab__container">
+
+      <header class="ab__header">
+        <p class="ab__kicker">
+          <span class="ab__kicker-glyph" aria-hidden="true">§</span>
+          About this work
+        </p>
+        <h1 class="ab__title">A working draft, in the open.</h1>
+        <p class="ab__lead">
+          UNNATURAL is a book written in public. The chapters are drafts. The framing shifts week to week. Nothing here is a final claim.
+        </p>
+      </header>
+
+      <section class="ab__section">
+        <h2 class="ab__heading">What it is</h2>
+        <div class="ab__prose">
+          <p>
+            One working answer to the child's question <em>what are we?</em> It argues that we are natural beings who slipped into the information realm and now loop it back through the physical world that made us.
+          </p>
+          <p>
+            The argument runs in three movements. Act&nbsp;I locates the floor of life in wanting, not thinking. Act&nbsp;II (<code>init.d</code>) argues that a finite observer cannot meet a fractal, chaotic universe whole, so distinction is how living things boot up inside the excess. Act&nbsp;III names the growth loop (Measure, Model, Manifest) and traces it from a single cell to a civilisation.
+          </p>
+          <p>
+            The site is the working surface. The <a href="/wiki/">wiki</a> is the compiled residue.
+          </p>
+        </div>
+      </section>
+
+      <section class="ab__section">
+        <h2 class="ab__heading">Who</h2>
+        <div class="ab__prose">
+          <p>
+            Written by Sahil Dawka. More at <a href="https://sahil.pro" rel="noopener">sahil.pro</a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="ab__section">
+        <h2 class="ab__heading">Method</h2>
+        <div class="ab__prose">
+          <p>
+            The frame is <em>unscientific empirical</em>. Unscientific because it refuses to wait for lab equipment to catch up before talking about will, distinction, meaning, or growth. Empirical because every claim is meant to be checkable against a reader's own life, and revisable when it is not.
+          </p>
+          <p>
+            Three commitments run through every chapter. Mark what we observe. Mark what we interpret. Mark what we don't yet know.
+          </p>
+        </div>
+      </section>
+
+      <section class="ab__section">
+        <h2 class="ab__heading">Colophon</h2>
+        <dl class="ab__colophon">
+          <div class="ab__colophon-row">
+            <dt>Display</dt>
+            <dd><em>Fraunces</em>, variable optical size and SOFT axes.</dd>
+          </div>
+          <div class="ab__colophon-row">
+            <dt>Body</dt>
+            <dd><em>Source Serif 4</em>, tuned for screen reading.</dd>
+          </div>
+          <div class="ab__colophon-row">
+            <dt>Technical</dt>
+            <dd><em>JetBrains Mono</em>, for chapter numbers, labels, and the <code>init.d</code> reference.</dd>
+          </div>
+          <div class="ab__colophon-row">
+            <dt>Built with</dt>
+            <dd>Astro and plain CSS. The paper grain is an inlined SVG. Dark mode follows your system.</dd>
+          </div>
+          <div class="ab__colophon-row">
+            <dt>Source</dt>
+            <dd><a href="https://github.com/sdawka/unnatural-info" rel="noopener">github.com/sdawka/unnatural-info</a></dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="ab__section ab__section--contact">
+        <h2 class="ab__heading">Contact</h2>
+        <div class="ab__prose">
+          <p>
+            Notes, objections, corrections, and questions are all welcome. This is a working draft, and the argument gets sharper when it meets resistance.
+          </p>
+          <a class="ab__email" href={`mailto:${CONTACT_EMAIL}?subject=Unnatural`}>
+            <span class="ab__email-label">Write</span>
+            <span class="ab__email-addr">{CONTACT_EMAIL}</span>
+            <span class="ab__email-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+  .ab {
+    padding: var(--space-16) var(--safe-right) var(--space-16) var(--safe-left);
+  }
+
+  .ab__container {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+  }
+
+  .ab__header {
+    max-width: 48rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding-bottom: var(--space-6);
+    border-bottom: 1px dashed var(--color-rule);
+  }
+
+  .ab__kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-ink-muted);
+  }
+
+  .ab__kicker-glyph {
+    font-size: 1.2em;
+    line-height: 1;
+    color: var(--color-ink-faint);
+  }
+
+  .ab__title {
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 96, 'wght' 340, 'SOFT' 60;
+    font-size: var(--text-4xl);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: var(--color-ink);
+    text-wrap: balance;
+  }
+
+  @media (min-width: 48rem) {
+    .ab__title { font-size: var(--text-5xl); }
+  }
+
+  .ab__lead {
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 30, 'wght' 360, 'SOFT' 40;
+    font-size: var(--text-lg);
+    color: var(--color-ink-muted);
+    max-width: 52ch;
+    line-height: 1.5;
+    margin-top: var(--space-2);
+  }
+
+  .ab__section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    padding-bottom: var(--space-8);
+    border-bottom: 1px solid var(--color-rule-soft);
+  }
+
+  .ab__section:last-child {
+    border-bottom: none;
+  }
+
+  @media (min-width: 54rem) {
+    .ab__section {
+      grid-template-columns: 14rem 1fr;
+      gap: var(--space-8);
+    }
+  }
+
+  .ab__heading {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-ink-muted);
+    font-weight: 400;
+    padding-top: 0.4em;
+  }
+
+  .ab__prose {
+    max-width: 60ch;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: var(--lh-body);
+    color: var(--color-ink);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .ab__prose em {
+    font-style: italic;
+  }
+
+  .ab__prose a {
+    color: inherit;
+    border-bottom: 1px solid var(--color-rule);
+    transition: border-color var(--dur-fast), color var(--dur-fast);
+  }
+
+  .ab__prose a:hover {
+    border-bottom-color: var(--color-ink);
+  }
+
+  .ab__prose code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    background-color: var(--color-ground-tint);
+    padding: 0.05em 0.35em;
+    border-radius: 2px;
+  }
+
+  /* Colophon */
+  .ab__colophon {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    max-width: 60ch;
+  }
+
+  .ab__colophon-row {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    gap: var(--space-4);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--color-rule-soft);
+  }
+
+  .ab__colophon-row:last-child {
+    border-bottom: none;
+  }
+
+  .ab__colophon dt {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-ink-muted);
+    padding-top: 0.3em;
+  }
+
+  .ab__colophon dd {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--color-ink);
+    line-height: 1.45;
+  }
+
+  .ab__colophon em {
+    font-style: italic;
+    font-variation-settings: 'opsz' 16, 'wght' 500;
+  }
+
+  @media (max-width: 36rem) {
+    .ab__colophon-row {
+      grid-template-columns: 1fr;
+      gap: var(--space-1);
+    }
+    .ab__colophon dt { padding-top: 0; }
+  }
+
+  /* Contact button */
+  .ab__email {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    align-items: baseline;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-5);
+    border: 1px solid var(--color-rule);
+    text-decoration: none !important;
+    color: var(--color-ink);
+    transition: border-color var(--dur-med) var(--ease-out), background-color var(--dur-med) var(--ease-out);
+    background: color-mix(in srgb, var(--color-ground-tint) 30%, transparent);
+    align-self: flex-start;
+    border-bottom: 1px solid var(--color-rule) !important;
+  }
+
+  .ab__email:hover {
+    border-color: var(--color-ink);
+    background: var(--color-ground-tint);
+  }
+
+  .ab__email-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-ink-muted);
+  }
+
+  .ab__email-addr {
+    font-family: var(--font-mono);
+    font-size: var(--text-base);
+    color: var(--color-ink);
+    letter-spacing: 0.01em;
+  }
+
+  .ab__email-arrow {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    color: var(--color-ink-muted);
+    transition: transform var(--dur-med) var(--ease-out), color var(--dur-fast);
+  }
+
+  .ab__email:hover .ab__email-arrow {
+    color: var(--color-ink);
+    transform: translateX(4px);
+  }
+</style>
