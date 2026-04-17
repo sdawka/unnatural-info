@@ -23,36 +23,38 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
           <span>An <em>unscientific<a href="#unscientific-note" class="hero__footnote-mark" aria-label="What unscientific means">*</a></em> empirical theory of everything</span>
         </p>
 
-        <div class="hero__question" aria-labelledby="hero-q">
+        <div class="hero__narrative">
           <p class="hero__question-label">A child asks it first.</p>
-          <p class="hero__question-text" id="hero-q">
+          <p class="hero__question-text">
             <span class="hero__quote" aria-hidden="true">“</span>What are we<span class="hero__qmark">?</span><span class="hero__quote" aria-hidden="true">”</span>
           </p>
-          <p class="hero__wonder">Thirty years of wondering.</p>
+
+          <p class="hero__beat hero__beat--wonder">Thirty years of wondering.</p>
+          <p class="hero__beat hero__beat--answer">One word eventually fits.</p>
+
+          <h1 class="hero__title" aria-label="UNNATURAL">
+            <span class="hero__title-letter" data-delay="0">U</span><span class="hero__title-letter" data-delay="1">N</span><span class="hero__title-letter" data-delay="2">N</span><span class="hero__title-letter" data-delay="3">A</span><span class="hero__title-letter" data-delay="4">T</span><span class="hero__title-letter" data-delay="5">U</span><span class="hero__title-letter" data-delay="6">R</span><span class="hero__title-letter" data-delay="7">A</span><span class="hero__title-letter" data-delay="8">L</span>
+          </h1>
+
+          <p class="hero__subtitle">
+            Natural beings who slipped into the <a href="/chapters/10-the-information-physical-duality" class="hero__subtitle-link">information realm</a>. Now we loop it back through the physical world that made us.
+          </p>
         </div>
 
-        <p class="hero__answer-lead">
-          One word eventually fits.
-        </p>
-
-        <h1 class="hero__title" aria-label="UNNATURAL">
-          <span class="hero__title-letter" data-delay="0">U</span><span class="hero__title-letter" data-delay="1">N</span><span class="hero__title-letter" data-delay="2">N</span><span class="hero__title-letter" data-delay="3">A</span><span class="hero__title-letter" data-delay="4">T</span><span class="hero__title-letter" data-delay="5">U</span><span class="hero__title-letter" data-delay="6">R</span><span class="hero__title-letter" data-delay="7">A</span><span class="hero__title-letter" data-delay="8">L</span>
-        </h1>
-
-        <p class="hero__subtitle">
-          Natural beings who slipped into the <a href="/chapters/10-the-information-physical-duality" class="hero__subtitle-link">information realm</a>. Now we loop it back through the physical world that made us.
-        </p>
-
-        <div class="thesis">
+        <aside class="thesis" aria-label="The argument in six lines">
+          <p class="thesis__label">
+            <span class="glyph-stack" aria-hidden="true"><span></span><span></span><span></span></span>
+            The shape of the argument
+          </p>
           <ol class="thesis__lines">
             <li><span class="thesis__accent thesis__accent--i">Want</span> creates direction.</li>
             <li>Direction creates <span class="thesis__accent thesis__accent--ii">difference</span>.</li>
             <li>Difference creates self, world, value, and distinction.</li>
             <li>Distinction creates <em>models</em>.</li>
             <li>Models guide <span class="thesis__accent thesis__accent--iii">manifestation</span>.</li>
-            <li>The loop recurses. Life learns, grows, and complexifies.</li>
+            <li>The loop recurses. Life learns, grows, complexifies.</li>
           </ol>
-        </div>
+        </aside>
 
         <aside class="hero__disclaimer" id="unscientific-note">
           <span class="hero__disclaimer-marker" aria-hidden="true">*</span>
@@ -235,9 +237,9 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     color: var(--color-ink);
   }
 
-  /* The anchoring question */
-  .hero__question {
-    margin: var(--space-4) 0 var(--space-8);
+  /* The narrative arc — tight vertical rhythm, stacked as a single stanza */
+  .hero__narrative {
+    margin-top: var(--space-4);
   }
 
   .hero__question-label {
@@ -246,7 +248,7 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     font-style: italic;
     font-size: var(--text-base);
     color: var(--color-ink-muted);
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-2);
     line-height: 1.35;
   }
 
@@ -261,6 +263,7 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: clip;
+    margin-bottom: var(--space-5);
   }
 
   .hero__quote {
@@ -276,30 +279,9 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     font-variation-settings: 'opsz' 144, 'wght' 360, 'SOFT' 40;
   }
 
-  .hero__wonder {
-    display: block;
-    width: fit-content;
-    margin-top: var(--space-4);
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-    text-transform: uppercase;
-    letter-spacing: 0.22em;
-    color: var(--color-ink-muted);
-    position: relative;
-    padding-left: 2.5em;
-  }
-
-  .hero__wonder::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.5em;
-    width: 2em;
-    height: 1px;
-    background: var(--color-ink-faint);
-  }
-
-  .hero__answer-lead {
+  /* "Thirty years of wondering." and "One word eventually fits." are
+     parallel beats in the narrative. Same style, stacked tight. */
+  .hero__beat {
     display: block;
     width: fit-content;
     font-family: var(--font-mono);
@@ -307,20 +289,27 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     text-transform: uppercase;
     letter-spacing: 0.22em;
     color: var(--color-ink-muted);
-    margin-bottom: var(--space-4);
     position: relative;
     padding-left: 2.5em;
+    line-height: 1.4;
   }
 
-  .hero__answer-lead::before {
+  .hero__beat::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 0.5em;
+    top: 0.58em;
     width: 2em;
     height: 1px;
     background: var(--color-ink-faint);
   }
+
+  .hero__beat + .hero__beat {
+    margin-top: var(--space-1);
+  }
+
+  .hero__beat--wonder { /* pre-answer */ }
+  .hero__beat--answer { margin-bottom: var(--space-3); }
 
   .hero__subtitle-link {
     color: var(--color-act-ii);
@@ -346,7 +335,7 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     line-height: 0.9;
     letter-spacing: -0.015em;
     color: var(--color-ink);
-    margin-bottom: var(--space-6);
+    margin: 0 0 var(--space-3);
     display: flex;
     width: fit-content;
     max-width: 100%;
@@ -396,17 +385,32 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     font-style: italic;
     font-size: var(--text-xl);
     color: var(--color-ink-muted);
-    max-width: 36ch;
-    margin-bottom: var(--space-10);
+    max-width: 40ch;
+    margin: 0;
     line-height: 1.35;
     text-wrap: balance;
   }
 
-  /* Thesis — numbered lines, accented typography */
+  /* Thesis — the six-line spine of the argument. On mobile it sits below
+     the narrative; on desktop it becomes the right column. */
   .thesis {
-    margin-top: var(--space-10);
-    margin-bottom: var(--space-10);
-    max-width: 48ch;
+    margin-top: var(--space-12);
+  }
+
+  .thesis__label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-ink-muted);
+    margin-bottom: var(--space-5);
+  }
+
+  .thesis__label .glyph-stack {
+    color: var(--color-ink-faint);
   }
 
   .thesis__lines {
@@ -415,6 +419,7 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     display: flex;
     flex-direction: column;
     gap: var(--space-2);
+    max-width: 44ch;
   }
 
   .thesis__lines li {
@@ -422,9 +427,9 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     position: relative;
     padding-left: 2.5em;
     font-family: var(--font-display);
-    font-variation-settings: 'opsz' 36, 'wght' 340, 'SOFT' 40;
-    font-size: var(--text-xl);
-    line-height: 1.35;
+    font-variation-settings: 'opsz' 30, 'wght' 340, 'SOFT' 40;
+    font-size: var(--text-lg);
+    line-height: 1.4;
     color: var(--color-ink);
   }
 
@@ -453,6 +458,7 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     grid-template-columns: auto 1fr;
     gap: var(--space-4);
     max-width: 58ch;
+    margin-top: var(--space-12);
     padding: var(--space-5) var(--space-6);
     border-left: 2px solid var(--color-rule);
     background: color-mix(in srgb, var(--color-ground-tint) 40%, transparent);
@@ -534,6 +540,59 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     .hero__status-note {
       width: 100%;
       margin-left: calc(8px + var(--space-2));
+    }
+  }
+
+  /* ═══ Desktop hero layout ═══════════════════════════════════════════
+     Two-column grid: narrative on the left, thesis as a quiet sidebar
+     on the right. Disclaimer + status sit below as a full-width footer
+     band. Mobile (<62rem) stays as a single stack — nothing here touches
+     that. */
+  @media (min-width: 62rem) {
+    .hero {
+      padding-top: var(--space-24);
+      padding-bottom: var(--space-20);
+    }
+
+    .hero__inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 1fr);
+      grid-template-areas:
+        "eyebrow    eyebrow"
+        "narrative  thesis"
+        "disclaimer status";
+      column-gap: var(--space-16);
+      row-gap: var(--space-12);
+      align-items: start;
+    }
+
+    .hero__eyebrow    { grid-area: eyebrow;    margin-bottom: 0; }
+    .hero__narrative  { grid-area: narrative;  margin-top: 0; }
+    .thesis           {
+      grid-area: thesis;
+      margin-top: 0;
+      padding: var(--space-3) 0 var(--space-3) var(--space-8);
+      border-left: 1px solid var(--color-rule-soft);
+      align-self: start;
+      /* Pull the thesis so its label aligns with the baseline of the
+         question label on the left. */
+      margin-top: var(--space-1);
+    }
+    .hero__disclaimer { grid-area: disclaimer; margin-top: 0; }
+    .hero__status     { grid-area: status;     margin-top: 0; align-self: end; justify-self: end; flex-wrap: nowrap; }
+
+    /* On desktop, give the narrative slightly more breathing room before
+       the title reveal — it's the hinge of the page. */
+    .hero__beat--answer { margin-bottom: var(--space-4); }
+
+    /* Title must fit the narrower narrative column; cap tighter than
+       the mobile clamp. */
+    .hero__title {
+      font-size: clamp(3.25rem, 7vw, 4.5rem);
+    }
+
+    .hero__disclaimer {
+      max-width: 52ch;
     }
   }
 
