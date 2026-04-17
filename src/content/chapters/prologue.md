@@ -1,9 +1,9 @@
 ---
 title: "On Attempting to Explain Everything (Again)"
-subtitle: "A statement of method"
+subtitle: "What are we? — and what would an honest answer look like"
 act: prologue
 order: 0
-summary: "What does it mean to build a theory of everything that is unscientific but empirical? Not anti-science. Not pretending to have lab-grade proof for every layer. Willing to begin from lived experience, but still committed to reality, clarity, and honest uncertainty."
+summary: "A child asks 'what are we?' and the question never leaves. This book is one answer: we are natural beings who broke into the information realm and started looping it back through the physical world that made us — the unnatural thing. The prologue sets the method: unscientific but empirical, willing to begin from lived experience, committed to reality and honest uncertainty."
 themes: ["epistemology", "method", "empiricism", "framework"]
 status: draft
 draft: false
@@ -37,6 +37,10 @@ furtherReading:
     year: 1973
     note: "Awareness of our own mortality is precisely what makes human wanting 'unnatural' — we cannot live purely on instinct because we know we will die, and that knowledge forces us to construct meaning rather than merely respond."
 ---
+
+A child asks *what are we?* — and the question never actually leaves. It goes underground, dressed up later as philosophy, religion, theory, ambition, crisis, awe. But the curiosity is the same one. Whatever is reading this sentence is, somehow, the kind of thing that can ask the question about itself. That is already strange.
+
+Here is one answer, which this book will spend its pages defending. We are natural beings — made of the same physics as rocks and rivers and bacteria — who somehow broke into the *information realm*. We started building models, meanings, stories, institutions; we learned to work in pure information; and we learned to loop it back through the physical world that made us. A thought reshapes a city. A diagram rearranges a life. That loop — physical world giving rise to information, information bending the physical world back — is what we mean by *unnatural*. Not anti-natural. Something natural that folded, and in folding, became strange to itself. (Chapter 10 makes this precise.)
 
 There is a long and slightly embarrassing history of people trying to explain everything. They mostly do it badly, and they almost always do it with too much confidence. This is another one of those attempts, and the only thing this prologue can honestly promise is that we have noticed.
 
