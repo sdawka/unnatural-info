@@ -166,17 +166,18 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     overflow: hidden;
   }
 
+  /* Subtle paper vignette — neutral, almost imperceptible */
   .hero::after {
     content: '';
     position: absolute;
-    right: -10rem;
-    bottom: -8rem;
-    width: 40rem;
-    height: 40rem;
+    right: -14rem;
+    bottom: -10rem;
+    width: 44rem;
+    height: 44rem;
     border-radius: 50%;
     background: radial-gradient(circle at center,
-      color-mix(in srgb, var(--color-act-ii) 8%, transparent),
-      transparent 60%);
+      color-mix(in srgb, var(--color-ink) 4%, transparent),
+      transparent 65%);
     pointer-events: none;
     z-index: 0;
   }
@@ -272,7 +273,7 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
   }
 
   .hero__qmark {
-    color: var(--color-act-i);
+    color: var(--color-ink);
     font-variation-settings: 'opsz' 144, 'wght' 360, 'SOFT' 40;
   }
 
@@ -335,51 +336,56 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     color: var(--color-ink);
   }
 
-  /* Title — letter-by-letter variable axes, subtle pull on load */
+  /* Title — letter-by-letter stagger on load, stays on one line at any viewport */
   .hero__title {
     font-family: var(--font-display);
-    font-size: clamp(3.75rem, 13.5vw, var(--text-6xl));
-    line-height: 0.88;
-    letter-spacing: -0.01em;
+    /* Size scales with viewport but is capped so the 9 letters always fit on
+       a single line within the container. 11vw at a 62rem viewport (~992px)
+       gives 109px/letter × ~0.85 advance = ~835px, safely inside the
+       container's content width. Desktop cap is 6rem (96px). */
+    font-size: clamp(3.5rem, 11vw, 6rem);
+    line-height: 0.9;
+    letter-spacing: -0.015em;
     color: var(--color-ink);
     margin-bottom: var(--space-6);
     display: inline-flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     max-width: 100%;
   }
 
   .hero__title-letter {
     display: inline-block;
-    font-variation-settings: 'opsz' 144, 'wght' 310, 'SOFT' 100;
+    color: inherit;
+    font-variation-settings: 'opsz' 144, 'wght' 320, 'SOFT' 80;
     animation: hero-letter-enter var(--dur-slow) var(--ease-out) both;
     animation-delay: calc(var(--d, 0) * 40ms);
     transition: font-variation-settings var(--dur-med) var(--ease-out);
   }
 
-  .hero__title-letter:nth-child(1) { --d: 0; color: var(--color-ink); }
+  .hero__title-letter:nth-child(1) { --d: 0; }
   .hero__title-letter:nth-child(2) { --d: 1; }
-  .hero__title-letter:nth-child(3) { --d: 2; color: var(--color-act-i); }
+  .hero__title-letter:nth-child(3) { --d: 2; }
   .hero__title-letter:nth-child(4) { --d: 3; }
   .hero__title-letter:nth-child(5) { --d: 4; }
-  .hero__title-letter:nth-child(6) { --d: 5; color: var(--color-act-ii); }
+  .hero__title-letter:nth-child(6) { --d: 5; }
   .hero__title-letter:nth-child(7) { --d: 6; }
   .hero__title-letter:nth-child(8) { --d: 7; }
-  .hero__title-letter:nth-child(9) { --d: 8; color: var(--color-act-iii); }
+  .hero__title-letter:nth-child(9) { --d: 8; }
 
   .hero__title:hover .hero__title-letter {
-    font-variation-settings: 'opsz' 144, 'wght' 500, 'SOFT' 0;
+    font-variation-settings: 'opsz' 144, 'wght' 480, 'SOFT' 0;
   }
 
   @keyframes hero-letter-enter {
     from {
       opacity: 0;
-      transform: translateY(0.15em);
-      font-variation-settings: 'opsz' 144, 'wght' 200, 'SOFT' 100;
+      transform: translateY(0.12em);
+      font-variation-settings: 'opsz' 144, 'wght' 220, 'SOFT' 80;
     }
     to {
       opacity: 1;
       transform: translateY(0);
-      font-variation-settings: 'opsz' 144, 'wght' 310, 'SOFT' 100;
+      font-variation-settings: 'opsz' 144, 'wght' 320, 'SOFT' 80;
     }
   }
 
