@@ -46,7 +46,7 @@ Goodhart's Law is where the cost of distinction meets economics and practical et
 
 ## The remedy
 
-Chapter 11 is explicit: the remedy is not to stop cutting — without cuts there is no agency. The aim is to know which cuts you are wielding. This is the practice of *objectivity* (Ch. 19): treating your frameworks as frameworks, staying revisable, marking what you observe, interpret, and don't know.
+Chapter 11 is explicit: the remedy is not to stop cutting — without cuts there is no agency. The aim is to know which cuts you are wielding. This is the practice of *objectivity* (Ch. 22): treating your frameworks as frameworks, staying revisable, marking what you observe, interpret, and don't know.
 
 The epilogue translates this into a practice: "Use the blade carefully: knowing your cuts are partial is what keeps them from hardening into ideology."
 
@@ -65,7 +65,7 @@ The epilogue translates this into a practice: "Use the blade carefully: knowing 
 - [[Foundational Dualities]] — every duality costs whatever fell into the gap between its sides
 - [[Thingification]] — the most consequential form of accumulated cost; categories applied to people and institutions
 - [[Information/Physical Duality]] — the cost of confusing the informational layer with the physical (or denying one)
-- [[Objectivity]] — the practice of discipline in Ch. 19 is the constructive response to the cost of distinction
+- [[Objectivity]] — the practice of discipline in Ch. 22 is the constructive response to the cost of distinction
 - [[Epilogue]] — "use the blade carefully" closes the book with the cost theme
 
 ## Open questions

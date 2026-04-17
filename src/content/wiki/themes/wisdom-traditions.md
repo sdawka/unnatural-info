@@ -4,21 +4,21 @@
 
 ## Overview
 
-Chapter 17 is the book's direct engagement with mysticism, spirituality, and religious practice. Its methodological premise is deliberately minimal: "People have been doing this for a very long time, and they were not all idiots." The task is not to prove or disprove any tradition's metaphysical claims but to look at what they *do* and notice whether it has a recognisable shape.
+Chapter 20 is the book's direct engagement with mysticism, spirituality, and religious practice. Its methodological premise is deliberately minimal: "People have been doing this for a very long time, and they were not all idiots." The task is not to prove or disprove any tradition's metaphysical claims but to look at what they *do* and notice whether it has a recognisable shape.
 
 The chapter argues it does. Across Stoic, Buddhist, Vedantic, Sufi, Christian contemplative, Taoist, and Indigenous traditions — past the metaphysical disagreements and at the practices actually performed — a common triad appears: a discipline of attention (Measure), an ontology or story that frames experience (Model), and a practice or ethic that re-enters life (Manifest). This is MMM. The convergence is treated as an empirical observation, not a philosophical reduction.
 
 ## The structural argument
 
-Chapter 17 makes a careful distinction: traditions *converge* on structure but *diverge* on model content. The measurement and manifestation layers are "almost embarrassingly" consistent across traditions: sit, attend, notice more carefully, live differently, notice what changed. The model layer is where the real disagreements live — and those disagreements matter, internally to each tradition and practically in how they guide life.
+Chapter 20 makes a careful distinction: traditions *converge* on structure but *diverge* on model content. The measurement and manifestation layers are "almost embarrassingly" consistent across traditions: sit, attend, notice more carefully, live differently, notice what changed. The model layer is where the real disagreements live — and those disagreements matter, internally to each tradition and practically in how they guide life.
 
 The book refuses to collapse this: "All traditions are really saying the same thing" is false and unhelpful. It is consistent to say: the loop has the same shape, but what the loop is turning on — the content of the ontology, the object of meditation, the ethic of manifestation — differs significantly and the differences are real.
 
 ## The spiritual as informational pattern
 
-Chapter 10 flags, and chapter 17 develops, the idea that certain informational patterns are stable across cultures, persistent across centuries, and physically consequential without anyone fully understanding why they bind. Sacredness, ritual, archetype, the felt sense that a place "carries" something — these are treated as informational structures with physical shadows, not as nothing and not as metaphysical mysteries.
+Chapter 10 flags, and chapter 20 develops, the idea that certain informational patterns are stable across cultures, persistent across centuries, and physically consequential without anyone fully understanding why they bind. Sacredness, ritual, archetype, the felt sense that a place "carries" something — these are treated as informational structures with physical shadows, not as nothing and not as metaphysical mysteries.
 
-The "physical shadows" of wisdom traditions are observable: changed behaviour, changed institutions, changed neurophysiology (Davidson et al.'s gamma synchrony data on long-term meditators), changed built environments (temples, monasteries, retreat centers). Chapter 17 treats these physical consequences as evidence that the traditions are tracking something real about being a finite mind, without needing to endorse any particular cosmological claim.
+The "physical shadows" of wisdom traditions are observable: changed behaviour, changed institutions, changed neurophysiology (Davidson et al.'s gamma synchrony data on long-term meditators), changed built environments (temples, monasteries, retreat centers). Chapter 20 treats these physical consequences as evidence that the traditions are tracking something real about being a finite mind, without needing to endorse any particular cosmological claim.
 
 ## Why the convergence
 
@@ -48,30 +48,30 @@ This is not a debunking of the traditions. It is a second-order description that
 
 ## The limits of the frame
 
-Chapter 17 is unusual in the book for explicitly naming the limits of its own reductiveness. The MMM frame is "one of several legitimate cuts." The traditions have their own internal accounts, and those accounts may be tracking things the MMM frame misses. There are things mystics report that no third-person frame currently captures.
+Chapter 20 is unusual in the book for explicitly naming the limits of its own reductiveness. The MMM frame is "one of several legitimate cuts." The traditions have their own internal accounts, and those accounts may be tracking things the MMM frame misses. There are things mystics report that no third-person frame currently captures.
 
-This is consistent with the book's broader epistemic position (Ch. 19): the claim is not that the frame is complete, only that it is useful and honest.
+This is consistent with the book's broader epistemic position (Ch. 22): the claim is not that the frame is complete, only that it is useful and honest.
 
-## Practical implications (Ch. 18 connection)
+## Practical implications (Ch. 21 connection)
 
-Chapter 18 applies the insight from chapter 17 to practical life. A meditation practice that works is an MMM loop on attention itself. Naming it that way helps notice when one of the three moves is starving. Communities of practice (sanghas, churches, AA rooms) outperform solo seekers because the loop runs faster with other measurers present. This is a practical prediction with empirical support.
+Chapter 21 applies the insight from chapter 20 to practical life. A meditation practice that works is an MMM loop on attention itself. Naming it that way helps notice when one of the three moves is starving. Communities of practice (sanghas, churches, AA rooms) outperform solo seekers because the loop runs faster with other measurers present. This is a practical prediction with empirical support.
 
 ## Key claims
 
-- Across very different cosmologies, contemplative traditions converge on a triad: discipline of attention (Measure), ontology (Model), practice or ethic (Manifest). — Source: `/src/content/chapters/17-what-the-mystics-were-tracking.md`
-- Traditions converge on structure and diverge on model content; the divergences at the model layer matter and should not be glossed. — Source: `/src/content/chapters/17-what-the-mystics-were-tracking.md`
-- The "spiritual" is a stable pattern in the informational layer; humans repeatedly hill-climb toward it because it works on something real about being a finite mind. — Source: `/src/content/chapters/17-what-the-mystics-were-tracking.md`
-- The MMM frame does not exhaust what these traditions are doing; there are things mystics report that no third-person frame currently captures. — Source: `/src/content/chapters/17-what-the-mystics-were-tracking.md`
+- Across very different cosmologies, contemplative traditions converge on a triad: discipline of attention (Measure), ontology (Model), practice or ethic (Manifest). — Source: `/src/content/chapters/20-what-the-mystics-were-tracking.md`
+- Traditions converge on structure and diverge on model content; the divergences at the model layer matter and should not be glossed. — Source: `/src/content/chapters/20-what-the-mystics-were-tracking.md`
+- The "spiritual" is a stable pattern in the informational layer; humans repeatedly hill-climb toward it because it works on something real about being a finite mind. — Source: `/src/content/chapters/20-what-the-mystics-were-tracking.md`
+- The MMM frame does not exhaust what these traditions are doing; there are things mystics report that no third-person frame currently captures. — Source: `/src/content/chapters/20-what-the-mystics-were-tracking.md`
 - The Stoic control principle, Buddhist appropriation analysis, the Gita's autonomous action, and Daoist non-forcing are all structural analogies to the book's framework — presented as analogies, not hidden identities. — Source: `/dump/overall.md`
-- Communities of practice outperform solo seekers because the loop runs faster with other measurers around. — Source: `/src/content/chapters/17-what-the-mystics-were-tracking.md`
+- Communities of practice outperform solo seekers because the loop runs faster with other measurers around. — Source: `/src/content/chapters/20-what-the-mystics-were-tracking.md`
 
 ## Connections
 
-- [[The MMM Loop]] — wisdom traditions are MMM-shaped; chapter 17 is the application of the loop framework to spiritual practice
-- [[Information/Physical Duality]] — the "spiritual layer" introduced in Ch. 10 is the informational basis for chapter 17's argument
-- [[Act 3 — MMM]] — chapter 17 is the penultimate application chapter in Act 3
+- [[The MMM Loop]] — wisdom traditions are MMM-shaped; chapter 20 is the application of the loop framework to spiritual practice
+- [[Information/Physical Duality]] — the "spiritual layer" introduced in Ch. 10 is the informational basis for chapter 20's argument
+- [[Act 3 — MMM]] — chapter 20 is the penultimate application chapter in Act 3
 - [[Growth and Learning]] — wisdom traditions are a historically tested toolkit for the growth loop applied to attention and self-knowledge
-- [[Objectivity]] — the empirical, non-committal approach of chapter 17 is a practice of the objectivity disciplines from chapter 19
+- [[Objectivity]] — the empirical, non-committal approach of chapter 20 is a practice of the objectivity disciplines from chapter 22
 - [[The Denial of Death (Becker)]] — one reading of what wisdom traditions metabolise is death anxiety; contemplative practice as the most honest available response to mortality
 
 ## Open questions
@@ -81,4 +81,4 @@ Chapter 18 applies the insight from chapter 17 to practical life. A meditation p
 - The treatment is exclusively of traditions that have left textual records accessible to Western academic citation. Indigenous and oral traditions are named but not substantively engaged.
 
 ---
-*Last updated: 2026-04-16 | Sources: 5 (Ch. 10, 17, 18; /dump/overall.md; Becker 1973)*
+*Last updated: 2026-04-16 | Sources: 5 (Ch. 10, 20, 21; /dump/overall.md; Becker 1973)*

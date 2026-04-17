@@ -36,7 +36,7 @@ Master catalog of all wiki pages, grouped by category. One-line summaries link t
 | Page | Summary |
 |------|---------|
 | [Want and Will](themes/want-and-will.md) | How the concept of wanting, introduced as the floor of life in Chapter 1, propagates through the book's three acts as the engine of difference, the ground of love and meaning, and the fuel that drives the MMM loop. |
-| [Objectivity](themes/objectivity.md) | How the book treats objectivity across its full arc: not as a god's-eye view (Ch. 4) but as the residue of many wantings meeting the same constraints — and, in Ch. 19, as disciplined approximation under finitude. |
+| [Objectivity](themes/objectivity.md) | How the book treats objectivity across its full arc: not as a god's-eye view (Ch. 4) but as the residue of many wantings meeting the same constraints — and, in Ch. 22, as disciplined approximation under finitude. |
 | [Cost of Distinction](themes/cost-of-distinction.md) | The recurring theme that every cut — every blade, duality, category, thingification — gains leverage and loses nuance simultaneously; the shadow is part of the sculpture. |
 | [Growth and Learning](themes/growth-and-learning.md) | How the book treats growth: not as accumulation or scale, but as expanded capacity to handle structured difference — a theme that begins in Ch. 3 with love/growth/meaning and culminates in the MMM loop's account of growth at every scale of life. |
 | [Wisdom Traditions](themes/wisdom-traditions.md) | How the book situates contemplative and religious traditions within its framework: as empirically convergent, MMM-shaped practices that were doing applied attention-science with the tools they had — without reducing them to nothing beyond that. |
@@ -49,7 +49,7 @@ Master catalog of all wiki pages, grouped by category. One-line summaries link t
 
 | Page | Summary |
 |------|---------|
-| [Chapter Index](sources/chapters.md) | Quick reference mapping all 21 chapter files to the wiki pages they primarily inform. |
+| [Chapter Index](sources/chapters.md) | Quick reference mapping all 22 chapter files to the wiki pages they primarily inform. |
 | [Prologue Source](sources/prologue.md) | Source record for the prologue chapter. |
 | [Source: overall.md](sources/overall.md) | The author's working source graph — influences, references, and connections that informed the book. |
 

@@ -63,7 +63,7 @@ David Marr's three levels of analysis — the computational problem, the represe
 - [[Foundational Dualities]] — layered realism is related to but distinct from the duality taxonomy; it organises kinds of being rather than kinds of cut
 - [[The MMM Loop]] — Marr's levels are the representational theory underlying the Model phase of the loop
 - [[Cost of Distinction]] — the failure modes of each layer — treating social facts as natural, or abstract as concrete — are instances of the cost of the blade
-- [[Objectivity]] — the objectivity practices of Ch. 19 are the methodological expression of layered realism: use the right tool for the right layer
+- [[Objectivity]] — the objectivity practices of Ch. 22 are the methodological expression of layered realism: use the right tool for the right layer
 
 ## Open questions
 

@@ -3,8 +3,8 @@ title: "MMM as the Lived Experience of Growth"
 subtitle: "The central synthesis"
 act: mmm
 actTitle: "MMM"
-chapterNumber: 15
-order: 15
+chapterNumber: 16
+order: 16
 summary: "Growth feels like better measurement, richer models, more effective manifestation, whether an organism evolves, a child learns language, a person masters a skill, a couple learns trust, or a civilisation builds science. This loop is the most meta process we can observe: the same shape re-appears every time someone tries to describe what agency or intelligence even is, including in Dupoux, LeCun, and Malik's recent three-system architecture for autonomous learning."
 themes: ["growth", "learning", "MMM", "recursion", "complexity", "synthesis", "agency", "meta"]
 status: draft
@@ -13,7 +13,7 @@ furtherReading:
   - author: "David Kolb"
     title: "Experiential Learning"
     year: 1984
-    note: "Four-stage cycle (Experience to Reflection to Conceptualisation to Experimentation) — MMM at pedagogical scale, drawing on Dewey, Piaget, and Lewin."
+    note: "Four-stage cycle (Experience to Reflection to Conceptualisation to Experimentation): MMM at pedagogical scale, drawing on Dewey, Piaget, and Lewin."
   - author: "Argyris & Schon"
     title: "Organizational Learning"
     year: 1978
@@ -21,7 +21,7 @@ furtherReading:
   - author: "John Boyd"
     title: "Destruction and Creation"
     year: 1976
-    note: "OODA loop: Orient (the Model step) is where the real competitive advantage lives — speed through the loop beats better sensors or stronger action."
+    note: "OODA loop: Orient (the Model step) is where the real competitive advantage lives; speed through the loop beats better sensors or stronger action."
   - author: "Gregory Bateson"
     title: "Steps to an Ecology of Mind"
     year: 1972
@@ -29,7 +29,7 @@ furtherReading:
   - author: "Jean Piaget"
     title: "The Psychology of Intelligence"
     year: 1950
-    note: "Assimilation and accommodation: the organism fits experience to existing schema, or changes the schema to fit — equilibration drives development."
+    note: "Assimilation and accommodation: the organism fits experience to existing schema, or changes the schema to fit. Equilibration drives development."
   - author: "Lev Vygotsky"
     title: "Thought and Language"
     year: 1934
@@ -37,7 +37,7 @@ furtherReading:
   - author: "Emmanuel Dupoux, Yann LeCun & Jitendra Malik"
     title: "Why AI systems don't learn and what to do about it: Lessons on autonomous learning from cognitive science"
     year: 2026
-    note: "Proposes a three-system architecture for autonomous intelligence: System A (observation learning), System B (active-behavior learning), and System M (meta-control that switches between them). A structural echo of Measure, Model, Manifest — the same three-layer shape reappearing from a different discipline. Independent convergence, not influence."
+    note: "Proposes a three-system architecture for autonomous intelligence: System A (observation learning), System B (active-behavior learning), and System M (meta-control that switches between them). A structural echo of Measure, Model, Manifest: the same three-layer shape reappearing from a different discipline. Independent convergence, not influence."
 ---
 
 Three chapters ago we split the loop into pieces because that is how books work. From the inside, it is one motion. You notice something. The noticing rearranges what you think is going on. The rearrangement makes you do something slightly different. The slightly different thing teaches you what to notice next. Repeat.
@@ -51,7 +51,7 @@ That is why we call it the most meta process we can observe. Every time someone 
 - Growth, from the inside, is the felt experience of the MMM loop turning: better measurement, richer models, more effective manifestation.
 - The same loop runs in an organism evolving, a child learning a language, an adult mastering a skill, a couple learning trust, a civilisation building science.
 - Each turn of the loop is a small spiral, not a circle: you do not return to the same place; you return slightly higher up, holding a slightly larger world.
-- Growth, in this sense, is *growth in complexity* — not "more stuff" but "more capacity to handle structured difference."
+- Growth, in this sense, is *growth in complexity*: not "more stuff" but "more capacity to handle structured difference."
 - The loop can stall at any of its three points. Stalled measurement: you stop noticing. Stalled modelling: you keep noticing the same thing. Stalled manifesting: you keep modelling without acting.
 - Most felt suffering, when not from acute physical cause, is a stalled loop. Movement returns when the missing move is identified.
 
@@ -63,7 +63,7 @@ That is why we call it the most meta process we can observe. Every time someone 
 
 ## What we're not claiming
 
-- Not that the loop is the only thing happening. There are processes — grief, gestation, healing — where the loop is present but not central.
+- Not that the loop is the only thing happening. There are processes (grief, gestation, healing) where the loop is present but not central.
 - Not that more loops per minute is better. Some loops should turn slowly. Some should be allowed to rest.
 - Not that we have a complete account of *why* the loop runs at all. The conditions under which it starts and stops are still partly open.
 

@@ -11,11 +11,11 @@ furtherReading:
   - author: "Hannah Arendt"
     title: "The Human Condition"
     year: 1958
-    note: "Natality, promising, and forgiving — the ethics of irreversible action in a plural world; every act sets off unpredictable chains and that is the risk we take."
+    note: "Natality, promising, and forgiving: the ethics of irreversible action in a plural world; every act sets off unpredictable chains and that is the risk we take."
   - author: "Iris Murdoch"
     title: "The Sovereignty of Good"
     year: 1970
-    note: "The primary moral task is accurate perception — use the blade means cutting through self-deception; build the world means attending to what is actually there."
+    note: "The primary moral task is accurate perception. Use the blade means cutting through self-deception; build the world means attending to what is actually there."
   - author: "Albert Camus"
     title: "The Myth of Sisyphus"
     year: 1942
@@ -27,24 +27,24 @@ furtherReading:
   - author: "Emmanuel Levinas"
     title: "Ethics as First Philosophy"
     year: 1984
-    note: "Infinite responsibility to the face of the Other precedes ontology and epistemology — the world being built is always with and for others."
+    note: "Infinite responsibility to the face of the Other precedes ontology and epistemology; the world being built is always with and for others."
   - author: "Derek Parfit"
     title: "Reasons and Persons"
     year: 1984
-    note: "Future selves are distinct persons who deserve consideration — the small acts that accumulate across a life are owed to someone who is not quite you."
+    note: "Future selves are distinct persons who deserve consideration. The small acts that accumulate across a life are owed to someone who is not quite you."
   - author: "Simone de Beauvoir"
     title: "The Ethics of Ambiguity"
     year: 1947
-    note: "Freedom is not a private achievement — use the blade well means using it toward a world where the blade is available to all."
+    note: "Freedom is not a private achievement. Use the blade well means using it toward a world where the blade is available to all."
   - author: "Ernest Becker"
     title: "The Denial of Death"
     year: 1973
     note: "The heroic project: we build worlds because we know we will die. Every act of world-making is simultaneously a refusal of meaninglessness and a wager against finitude."
 ---
 
-If we have done this honestly, the book has not handed you a worldview to wear. It has handed you a small set of instruments — three blades, a duality, a loop — and the unsettling news that you are already using them. The only question is whether you use them on purpose.
+If we have done this honestly, the book has not handed you a worldview to wear. It has handed you a small set of instruments (at least three blades, a duality, a loop), and the unsettling news that you are already using them. The only question is whether you use them on purpose.
 
-You cannot avoid willing. You cannot avoid cutting. You cannot avoid manifesting. To live is to do all three, every hour, in things small enough to be invisible until they aren't. The choice is not whether — the choice is *toward what kind of world, self, and shared reality.*
+You cannot avoid willing. You cannot avoid cutting. You cannot avoid manifesting. To live is to do all three, every hour, in things small enough to be invisible until they aren't. The choice is to be or not to be — and the choice is toward *the world, the self, and the shared reality we are already building.*
 
 ## Key moves
 
@@ -53,7 +53,7 @@ You cannot avoid willing. You cannot avoid cutting. You cannot avoid manifesting
 - Use the blade carefully: knowing your cuts are partial is what keeps them from hardening into ideology.
 - Build the world deliberately: small manifestations accumulate into the only world that is going to exist.
 - The garden, the map, and the blade together: tend what is alive, hold the model lightly, cut where it serves.
-- Orient toward the greater good — not because it is decreed, but because the loop runs better, longer, in more lives, when it does.
+- Orient toward the greater good, not because it is decreed, but because the loop runs better, longer, in more lives, when it does.
 
 ## Where this touches lived life
 

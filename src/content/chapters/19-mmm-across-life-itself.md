@@ -3,8 +3,8 @@ title: "MMM Across Life Itself (Including the Bits Without Brains)"
 subtitle: "The evolutionary and civilisational arc"
 act: mmm
 actTitle: "MMM"
-chapterNumber: 16
-order: 16
+chapterNumber: 19
+order: 19
 summary: "Measurement in simple life forms, modelling in nervous systems, manifestation through adaptation. Cumulative complexity in evolution. Human symbolic acceleration. Civilisation as recursive MMM. Not a ladder but a branching tree: the most meta process re-instantiated at every scale of life, the same shape AI research keeps rediscovering from the outside."
 themes: ["evolution", "civilisation", "recursion", "symbolic", "complexity", "life"]
 status: draft
@@ -13,7 +13,7 @@ furtherReading:
   - author: "Lynn Margulis"
     title: "On the Origin of Mitosing Cells"
     year: 1967
-    note: "Endosymbiosis as evolutionary MMM: a detected difference leads to a new cellular architecture leads to a radically new form of life — the eukaryote."
+    note: "Endosymbiosis as evolutionary MMM: a detected difference leads to a new cellular architecture leads to a radically new form of life, the eukaryote."
   - author: "Jablonka & Lamb"
     title: "Evolution in Four Dimensions"
     year: 2005
@@ -25,7 +25,7 @@ furtherReading:
   - author: "Stuart Kauffman"
     title: "The Origins of Order"
     year: 1993
-    note: "Self-organisation at the edge of chaos provides the ordered landscape that evolution searches — natural selection alone cannot explain biological order."
+    note: "Self-organisation at the edge of chaos provides the ordered landscape that evolution searches. Natural selection alone cannot explain biological order."
   - author: "Daniel Dennett"
     title: "Darwin's Dangerous Idea"
     year: 1995
@@ -33,19 +33,19 @@ furtherReading:
   - author: "W. Ross Ashby"
     title: "An Introduction to Cybernetics"
     year: 1956
-    note: "Law of requisite variety: a controller needs as much internal variety as the system it controls — the loop must match the complexity of what it regulates."
+    note: "Law of requisite variety: a controller needs as much internal variety as the system it controls; the loop must match the complexity of what it regulates."
   - author: "Charles Darwin"
     title: "On the Origin of Species"
     year: 1859
-    note: "The foundational text — the MMM loop running without a brain, across geological time, through descent with modification and natural selection."
+    note: "The foundational text: the MMM loop running without a brain, across geological time, through descent with modification and natural selection."
   - author: "Maynard Smith & Szathmary"
     title: "The Major Transitions in Evolution"
     year: 1995
-    note: "Each major transition is a new way of encoding and transmitting information — evolution as stacked MMM layers, each more compressed than the last."
+    note: "Each major transition is a new way of encoding and transmitting information: evolution as stacked MMM layers, each more compressed than the last."
   - author: "Odling-Smee, Laland & Feldman"
     title: "Niche Construction"
     year: 2003
-    note: "Organisms do not just adapt to environments, they build them — the Manifest step feeds back into Measure across generations."
+    note: "Organisms do not just adapt to environments, they build them; the Manifest step feeds back into Measure across generations."
 ---
 
 The reason MMM is the most meta process we can observe, not just *a* recipe, is that it does not stop at the edge of human skin. It runs in things without brains. It runs in things without nervous systems. It runs in some things that, on a generous definition, are barely alive. What changes from one rung of the ladder to the next is not the loop but its resolution.
@@ -68,7 +68,7 @@ Read this way, it becomes hard to ignore that wisdom traditions across cultures 
 ## Where this touches lived life
 
 - The intuition that "we are part of nature" gets cashed out here as a literal claim about shared loop structure across scales.
-- The intuition that "humans are different" also survives — symbolic acceleration is a real and consequential difference, not a romantic exaggeration.
+- The intuition that "humans are different" also survives. Symbolic acceleration is a real and consequential difference, not a romantic exaggeration.
 - Watching a child learn is watching biological MMM and symbolic MMM braid into one another in real time. It is also why it is so disarming.
 
 ## What we're not claiming

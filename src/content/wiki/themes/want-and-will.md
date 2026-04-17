@@ -66,7 +66,7 @@ Chapter 4 introduces the complication: pure wanting gives you subjectivity but n
 
 ## Want as the engine of the MMM loop (Act 3)
 
-In Act 3 the concept returns in a different register. The MMM loop requires want as its engine: without orientation (wanting the model to be better, wanting to act from it), the loop has no reason to turn. Chapter 12's claim that "what gets noticed gets real" is a consequence of wanting — you notice what you lean toward. The loop stalls when wanting loses its line of sight to anything the creature actually cares about (burnout, as described in chapter 11, is wanting that has lost its bearing).
+In Act 3 the concept returns in a different register. The MMM loop requires want as its engine: without orientation (wanting the model to be better, wanting to act from it), the loop has no reason to turn. Chapter 13's claim that "what gets noticed gets real" is a consequence of wanting — you notice what you lean toward. The loop stalls when wanting loses its line of sight to anything the creature actually cares about (burnout, as described in chapter 11, is wanting that has lost its bearing).
 
 ## Key claims
 

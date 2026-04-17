@@ -17,11 +17,11 @@ furtherReading:
   - author: "Antonio Damasio"
     title: "The Feeling of What Happens"
     year: 1999
-    note: "Consciousness itself as the feeling of what happens — the organism's orientation precedes any conceptual self."
+    note: "Consciousness itself as the feeling of what happens; the organism's orientation precedes any conceptual self."
   - author: "Schopenhauer"
     title: "The World as Will and Representation"
     year: 1818
-    note: "Will as the thing-in-itself; intellect subordinate to drive — the most direct philosophical ancestor of volo ergo sum."
+    note: "Will as the thing-in-itself; intellect subordinate to drive. The most direct philosophical ancestor of volo ergo sum."
   - author: "Spinoza"
     title: "Ethics, Part III"
     year: 1677
@@ -33,19 +33,19 @@ furtherReading:
   - author: "Lisa Feldman Barrett"
     title: "How Emotions Are Made"
     year: 2017
-    note: "The brain as an allostatic predictor — wanting and orienting are its baseline mode, not reactions to the world."
+    note: "The brain as an allostatic predictor: wanting and orienting are its baseline mode, not reactions to the world."
   - author: "Anil Seth"
     title: "Being You"
     year: 2021
-    note: "Consciousness as controlled hallucination — wanting has a first-person character that neuroscience is only beginning to model from the inside."
+    note: "Consciousness as controlled hallucination. Wanting has a first-person character that neuroscience is only beginning to model from the inside."
   - author: "Kevin Mitchell"
     title: "Free Agents"
     year: 2023
-    note: "How nervous systems evolved to generate genuine agency rather than mere responsiveness — the biological story of why want precedes thought."
+    note: "How nervous systems evolved to generate genuine agency rather than mere responsiveness: the biological story of why want precedes thought."
   - author: "Ernest Becker"
     title: "The Denial of Death"
     year: 1973
-    note: "Death-awareness is the specific disruption that elevates animal want into human will — knowing we will die, we cannot simply follow instinct but must choose what to lean toward, and that gap is where the book lives."
+    note: "Death-awareness is the specific disruption that elevates animal want into human will. Knowing we will die, we cannot simply follow instinct but must choose what to lean toward, and that gap is where the book lives."
 ---
 
 Descartes started in the wrong place. Walk down the stairs.
@@ -59,7 +59,7 @@ This is what we mean by *Volo ergo sum*. Not a swap of one slogan for another, b
 ## Key moves
 
 - The stack is layered: thought sits on feelings, feelings sit on will. Most of the book's arguments operate at the will layer, the one shared by every living thing.
-- Feelings are not a human luxury — they are the affective/somatic layer shared with animals. Damasio's somatic-marker work shows decision-making collapses when this layer is damaged, even with reasoning intact.
+- Feelings are not a human luxury. They are the affective/somatic layer shared with animals. Damasio's somatic-marker work shows decision-making collapses when this layer is damaged, even with reasoning intact.
 - Will goes further down than feelings. A bacterium has no feelings, yet it leans along a chemical gradient. Lean is the minimum definition of will, and it is present wherever life is present.
 - Will is observable from the outside (a paramecium turns toward food) and from the inside (check where your attention is leaning before you deliberate).
 - "Thought" presupposes a thinker oriented toward something. That orientation is will, delivered through feelings. So thought rides on will, not the other way around.
@@ -70,7 +70,7 @@ This is what we mean by *Volo ergo sum*. Not a swap of one slogan for another, b
 ## Where this touches lived life
 
 - When you can't think clearly, ask what you want. The answer is usually closer than the analysis.
-- Most stuck moments are not failures of thought but tangles of competing wants — three of them, in disguise, pretending to be one decision.
+- Most stuck moments are not failures of thought but tangles of competing wants: three of them, in disguise, pretending to be one decision.
 - Self-knowledge starts as will-knowledge. You learn what you are by watching what you lean toward when nobody is grading you.
 
 ## What we're not claiming

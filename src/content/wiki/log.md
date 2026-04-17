@@ -4,6 +4,55 @@ Append-only chronological record of all ingest, query, and lint operations.
 
 ---
 
+## 2026-04-17T00:00:00Z INGEST: chapter insertions + renumbering (editorial)
+
+Chapters inserted:
+- 12-knowledge-or-the-shape-of-the-information-realm.md — new Act 3 opener; names what MMM operates on; math-as-counting (first blade outward), plurality of disciplines with good/bad historical cases (germ theory, Royal Society, suffrage; Lysenko, phrenology/Nazi race science, Galileo, tobacco science), Gödel's theorem stated plainly with full anti-abuse hygiene, self-referential-book motif
+- 17-applied-knowledge.md — new; info realm folds back into physical territory; institutions as frozen MMM; irreversibility on human timescales; no outside position
+- 18-how-we-change-the-world.md — new; civilisational-scale MMM ethics; five cases (germ theory, printing press, nuclear weapons, Green Revolution, internet); better/worse world-changing criteria (legibility, corrigibility, participation, humility about timescale)
+
+Chapters modified (source, not renumbered):
+- 06-the-second-blade.md — extended by ~450 words absorbing the strange loop; DNA-as-self-describing-map as cleanest biological case; Hofstadter (GEB, I Am a Strange Loop) added to furtherReading; subtitle extended; themes gained "strange loop" and "self-reference"; climax: the map becomes rich enough to sketch the mapmaker, the system looks at itself looking out
+
+Chapter files renumbered (order, chapterNumber, filename):
+- 12-measure.md → 13-measure.md (Ch. 12 → Ch. 13)
+- 13-model.md → 14-model.md (Ch. 13 → Ch. 14)
+- 14-manifest.md → 15-manifest.md (Ch. 14 → Ch. 15)
+- 15-mmm-as-lived-experience.md → 16-mmm-as-lived-experience.md (Ch. 15 → Ch. 16)
+- 16-mmm-across-life-itself.md → 19-mmm-across-life-itself.md (Ch. 16 → Ch. 19)
+- 17-what-the-mystics-were-tracking.md → 20-what-the-mystics-were-tracking.md (Ch. 17 → Ch. 20)
+- 18-how-to-live-better.md → 21-how-to-live-better.md (Ch. 18 → Ch. 21)
+- 19-the-most-objective-we-can-be.md → 22-the-most-objective-we-can-be.md (Ch. 19 → Ch. 22)
+
+Earlier in the same session (editorial sweep across all chapters):
+- Em dashes in prose bodies, summaries, and furtherReading notes removed across all 22 chapters and both prologue/epilogue; one em dash kept in epilogue as deliberate Shakespeare echo in the closing line
+- prologue.md — paragraph 2 gained "subset of the universe turning around to know itself" framing
+- 02-will-creates-difference.md — positive re-framing added: difference is what tells us what to change
+- 04-from-subjectivity-to-objectivity.md — objectivity-taken-for-granted; heavily-aligned / shared subjectivity; capital-T Truth as asymptote; minds-pumping-to-each-other sentence; italics for emphasis
+- 05-the-first-blade.md — "selectively deaf and dumb" expanded to all senses (blind, deaf, numb, nose-blind, taste-blind, mute; interoception, proprioception, subtler senses)
+- 08-the-foundational-dualities.md — Pirsig/Quality added as the prior unity from which dualities are cut; "anything noticed must be noticed in at least two opposites" principle; "calling something a thing is the first blade pointed outward" linking forward to Ch. 9
+- epilogue.md — "at least three blades"; closing line reworked to "The choice is to be or not to be..."
+
+Wiki pages updated:
+- sources/chapters.md — 8 renumbered rows + 3 new chapter rows; every source-path citation updated
+- index.md — "all 21 chapter files" → "all 22 chapter files"; Objectivity summary Ch. 19 → Ch. 22
+- acts/prologue.md, acts/act-1-volo-ergo-sum.md, acts/act-3-mmm.md — act overviews and connections updated
+- concepts/the-mmm-loop.md — section headings and source paths remapped
+- concepts/information-physical-duality.md, concepts/layered-realism.md, concepts/volo-ergo-sum.md — Ch. references updated
+- themes/objectivity.md, themes/wisdom-traditions.md, themes/growth-and-learning.md, themes/intellectual-lineage.md, themes/cost-of-distinction.md, themes/want-and-will.md — all stale Act 3 chapter references updated
+
+Other:
+- src/pages/index.astro — "Twenty-one chapters across three acts" → "Twenty-two chapters across three acts"
+
+Structural framings added:
+- The strange loop is folded into the Second Blade (Ch. 6), not a separate chapter; DNA is the biological instance
+- Knowledge chapter (Ch. 12) opens Act 3 as a prologue to MMM, because MMM is three operations on knowledge (Measure = discovery, Model = organisation, Manifest = application)
+- Applied knowledge (Ch. 17) and world-changing ethics (Ch. 18) split the civilisational Manifest into mechanics and evaluation
+
+Build verification: astro sync passes (content schema valid); astro build completes with 56 pages rendered.
+
+---
+
 ## 2026-04-16T16:00:00Z INGEST: three-act framing sharpened (editorial)
 
 Chapters edited (source):

@@ -8,7 +8,7 @@ The prologue announces the book's governing stance, which it calls *unscientific
 
 The method inherits from a tradition running from Merleau-Ponty's rigorous first-person phenomenology through James's radical empiricism to Wittgenstein's insistence that meaning is embedded in practice. The frame is explicitly situated — written from somewhere particular — and is judged not by transcendent correctness but by practical illumination.
 
-Three commitments are announced that run throughout all 21 chapters: mark what we observe; mark what we interpret; mark what we don't know. The book is presented as a tool, and a chapter that does not give you something to look at, look for, or do has failed its job.
+Three commitments are announced that run throughout all 22 chapters: mark what we observe; mark what we interpret; mark what we don't know. The book is presented as a tool, and a chapter that does not give you something to look at, look for, or do has failed its job.
 
 ## Key claims
 
@@ -21,7 +21,7 @@ Three commitments are announced that run throughout all 21 chapters: mark what w
 
 - [[Act 1 — Volo Ergo Sum]] — the first act that the prologue's method frames
 - [[Act 3 — MMM]] — MMM is itself a recursive instance of the method: measure experience, build model, manifest conclusion, revise
-- [[Objectivity]] — the prologue's epistemic humility grounds the book's treatment of objectivity in Ch. 4 and Ch. 19
+- [[Objectivity]] — the prologue's epistemic humility grounds the book's treatment of objectivity in Ch. 4 and Ch. 22
 
 ## Open questions
 

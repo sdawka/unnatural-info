@@ -5,7 +5,7 @@ act: initd
 actTitle: "init.d"
 chapterNumber: 10
 order: 10
-summary: "Human life is lived at the interface between the physical and informational worlds. Beliefs, distinctions, models, meanings, identities, norms, institutions — not merely in the head, and not purely physical. Informational structures with physical consequences."
+summary: "Human life is lived at the interface between the physical and informational worlds. Beliefs, distinctions, models, meanings, identities, norms, institutions. Not merely in the head, and not purely physical. Informational structures with physical consequences."
 themes: ["information", "physical", "duality", "causation", "belief", "institution"]
 status: draft
 draft: false
@@ -13,23 +13,23 @@ furtherReading:
   - author: "Norbert Wiener"
     title: "Cybernetics"
     year: 1948
-    note: "Information is information, not matter or energy — the irreducibility of the informational domain announced at the founding of cybernetics."
+    note: "Information is information, not matter or energy. The irreducibility of the informational domain announced at the founding of cybernetics."
   - author: "Claude Shannon"
     title: "A Mathematical Theory of Communication"
     year: 1948
-    note: "Information defined structurally and independently of physical substrate or semantic content — the same information can live in electrons, neurons, or ink."
+    note: "Information defined structurally and independently of physical substrate or semantic content: the same information can live in electrons, neurons, or ink."
   - author: "Gregory Bateson"
     title: "Form, Substance and Difference"
     year: 1970
-    note: "A difference that makes a difference — organism-relative information: a difference only counts for a system it matters to."
+    note: "A difference that makes a difference. Organism-relative information: a difference only counts for a system it matters to."
   - author: "John Archibald Wheeler"
     title: "Information, Physics, Quantum: The Search for Links"
     year: 1989
-    note: "It from Bit: every physical entity derives its existence from answers to yes-or-no questions — the most radical statement of informational primacy."
+    note: "It from Bit: every physical entity derives its existence from answers to yes-or-no questions. The most radical statement of informational primacy."
   - author: "Terrence Deacon"
     title: "Incomplete Nature"
     year: 2011
-    note: "The causal power of information comes from constraints — absences — not from physical properties. The most philosophically rigorous recent argument."
+    note: "The causal power of information comes from constraints (absences), not from physical properties. The most philosophically rigorous recent argument."
   - author: "Luciano Floridi"
     title: "The Philosophy of Information"
     year: 2011
@@ -41,10 +41,10 @@ furtherReading:
   - author: "Robert Rosen"
     title: "Life Itself"
     year: 1991
-    note: "Life as anticipatory system — the informational loop that distinguishes living from non-living matter runs on models of the future, not just responses to the past."
+    note: "Life as anticipatory system: the informational loop that distinguishes living from non-living matter runs on models of the future, not just responses to the past."
 ---
 
-Two stories compete for the role of fundamental. In one, the world is made of stuff — atoms, fields, energy — and everything else is decoration. In the other, the world is made of pattern — meaning, relation, structure — and the stuff is just where the pattern happens to be running. Both stories are partly right and entirely insufficient on their own.
+Two stories compete for the role of fundamental. In one, the world is made of stuff (atoms, fields, energy) and everything else is decoration. In the other, the world is made of pattern (meaning, relation, structure) and the stuff is just where the pattern happens to be running. Both stories are partly right and entirely insufficient on their own.
 
 A finite human life is lived at the seam between these two. You are matter, and you are a story matter has been telling for some time about itself. Pretending one of them away is a popular sport in academic departments and a poor strategy for living.
 
@@ -61,13 +61,13 @@ This is the chapter the prologue was pointing at. A child asks *what are we?* an
 
 ## A note on the spiritual layer
 
-Some patterns in the informational world are stable across cultures, persistent across centuries, and physically consequential without anyone fully understanding why they bind. Sacredness, ritual, archetype, egregore, the felt sense that a place or object "carries" something — these are not nothing. They behave like weather: describable in their effects, predictable to a point, not yet reducible to particle-level accounts. Treating them as informational structures with physical shadows lets us take them seriously without either mystifying them or dismissing them. We will return to this in the wisdom-traditions chapter.
+Some patterns in the informational world are stable across cultures, persistent across centuries, and physically consequential without anyone fully understanding why they bind. Sacredness, ritual, archetype, egregore, the felt sense that a place or object "carries" something: these are not nothing. They behave like weather: describable in their effects, predictable to a point, not yet reducible to particle-level accounts. Treating them as informational structures with physical shadows lets us take them seriously without either mystifying them or dismissing them. We will return to this in the wisdom-traditions chapter.
 
 ## Where this touches lived life
 
 - Money is informational; the suffering caused by losing it is physical. The interface is what your nervous system is reacting to.
 - Marriage is, technically, a paragraph that two people and a state agreed to share. Its end can wreck a body for a year. The informational layer pulls on the physical one with great force.
-- Loneliness is not a physical fact. It is an informational one — a model of being unseen — that produces measurable physiological effects.
+- Loneliness is not a physical fact. It is an informational one (a model of being unseen) that produces measurable physiological effects.
 
 ## What we're not claiming
 

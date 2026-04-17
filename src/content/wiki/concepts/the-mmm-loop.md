@@ -10,11 +10,11 @@ The three steps follow an ontological → relational → generative arc. First y
 
 The key argument is that this is not a heuristic borrowed from one field and applied to others as metaphor. It is the same underlying shape, running at different speeds and on different substrates. A bacterium running chemotaxis is running MMM at the molecular level. An organism with a nervous system compresses and accelerates the loop within a single lifetime. A human adds symbolic acceleration: language and culture allow measurements, models, and manifestations to be stored and reused across generations. A civilisation is recursive MMM loops stacked on top of biological ones.
 
-Chapter 15 sharpens this into a stronger claim: MMM is the *most meta process we can observe*. The evidence is structural convergence across independent attempts to describe agency. A 2026 paper by Emmanuel Dupoux, Yann LeCun, and Jitendra Malik ("Why AI systems don't learn and what to do about it: Lessons on autonomous learning from cognitive science") proposes a three-system architecture for autonomous intelligence: **System A** (observation learning — a system that learns by watching), **System B** (active-behavior learning — a system that learns by doing), and **System M** (meta-control — a faculty that chooses between them). This is a structural echo of Measure / Model / Manifest, arriving from AI research rather than from the book's own argument. The book does not claim the match is exact — it is structural, not detailed. The point is that when the three-layer shape keeps recurring across independent disciplines describing what agency requires, it is probably tracking something real. This is independent corroboration, not influence.
+Chapter 16 sharpens this into a stronger claim: MMM is the *most meta process we can observe*. The evidence is structural convergence across independent attempts to describe agency. A 2026 paper by Emmanuel Dupoux, Yann LeCun, and Jitendra Malik ("Why AI systems don't learn and what to do about it: Lessons on autonomous learning from cognitive science") proposes a three-system architecture for autonomous intelligence: **System A** (observation learning — a system that learns by watching), **System B** (active-behavior learning — a system that learns by doing), and **System M** (meta-control — a faculty that chooses between them). This is a structural echo of Measure / Model / Manifest, arriving from AI research rather than from the book's own argument. The book does not claim the match is exact — it is structural, not detailed. The point is that when the three-layer shape keeps recurring across independent disciplines describing what agency requires, it is probably tracking something real. This is independent corroboration, not influence.
 
 Growth, experienced from the inside, is the felt sense of this loop turning: better measurement, richer models, more effective manifestation. Suffering that has no acute physical cause is usually a stalled loop — one of the three moves has seized up.
 
-## Measure and Map (Chapter 12)
+## Measure and Map (Chapter 13)
 
 The ontological first step. Before you can understand a territory you must establish what pieces are in it — what exists, what qualities and dimensions are present, what varies and what stays the same. Measure is the act of becoming sensitive to difference; Map is the deliverable: a census of what is there before you know anything about how it works.
 
@@ -22,7 +22,7 @@ This distinction matters. Measuring is not modelling. The map is not yet a theor
 
 Two costs are symmetrical: ignoring something leaves you subject to its surprises; measuring it starts shaping you toward it. Pick what you look at carefully. The map is the precondition for everything that follows.
 
-## Model and Manipulate (Chapter 13)
+## Model and Manipulate (Chapter 14)
 
 The relational/causal step. Once pieces have been mapped, the next move is to build a working account of how they connect and affect each other — and then to manipulate the model: run what-ifs, move pieces, probe behavior at the edge of its range. The manipulation is exploratory, not destructive. This is how you discover causal structure rather than mere correlation.
 
@@ -30,7 +30,7 @@ A model can live in a nervous system, in language, in code, in a building, in a 
 
 Self-models are the most consequential models, because they govern what all other modelling is for. Better living often means better modelling rather than more effort; effort inside a wrong model is fuel for the wrong direction.
 
-## Manifest and Make (Chapter 14)
+## Manifest and Make (Chapter 15)
 
 The generative step. Using the pieces from Map and the rules discovered through Manipulate, you synthesise something that did not exist before. This is genuine creation — not just action or wager, but bringing new things into the world from discovered components and relationships.
 
@@ -50,7 +50,7 @@ The `overall.md` source identifies the intellectual architecture behind Act 3. T
 
 **Economics of time and governance.** Gary Becker's work on time allocation and human capital formalises what the loop looks like in economic life: time is the ultimate constrained resource, skill is embodied capital that future loops can draw on, and human capital investment is self-directed MMM across a lifetime. Oliver Williamson's transaction cost economics explains why some manifestations produce institutions rather than open-market exchanges: when measurement of performance is hard, when commitments require asset-specific investment, and when opportunism is possible, governance structures emerge to manage the loop's friction. Both frameworks translate the metaphysical account of MMM into practical predictions about how people organise their time, skills, and collective arrangements.
 
-## The loop as lived growth (Chapter 15)
+## The loop as lived growth (Chapter 16)
 
 From the inside, the loop is one motion: you notice something → the noticing rearranges what you think is going on → the rearrangement makes you do something slightly different → the slightly different thing teaches you what to notice next. Each turn is a small spiral, not a circle: you return to roughly the same point, but slightly higher, holding a slightly larger world.
 
@@ -59,7 +59,7 @@ Stall points:
 - **Stalled Model**: you keep noticing the same thing without updating the hypothesis. Confirmation bias, or the protective belt around a cherished theory.
 - **Stalled Manifest**: you keep modelling without acting. Insight accumulates; nothing changes. (Therapy that plateaus is often this.)
 
-## The loop across life itself (Chapter 16)
+## The loop across life itself (Chapter 19)
 
 | Level | Measure / Map | Model / Manipulate | Manifest / Make |
 |-------|---------|-------|----------|
@@ -70,33 +70,33 @@ Stall points:
 
 Evolutionary "progress" is not a ladder but a branching tree of variations, each running its own MMM loop in its own register.
 
-## MMM and wisdom traditions (Chapter 17)
+## MMM and wisdom traditions (Chapter 20)
 
 Contemplative traditions across cultures converge on a recognisable triad: a discipline of attention (Measure), an ontology or story (Model), and a practice or ethic that re-enters life (Manifest). The convergence is empirical — observable in the practices across very different metaphysical commitments. This does not mean all traditions are "saying the same thing"; they diverge sharply at the Model layer. But the structural shape is consistent.
 
 ## Key claims
 
-- MMM is the most meta process we can observe: the same three-layer shape falls out of every independent attempt — biology, psychology, AI — to describe what being an agent requires. — Source: `/src/content/chapters/15-mmm-as-lived-experience.md`, `/src/content/chapters/16-mmm-across-life-itself.md`
-- Dupoux, LeCun, and Malik (2026) propose a three-system architecture — observation learning (A), active-behavior learning (B), meta-control (M) — that is a structural echo of Measure / Model / Manifest. Independent convergence, not influence. — Source: `/src/content/chapters/15-mmm-as-lived-experience.md`
-- Growth from the inside is the felt experience of the MMM loop turning. — Source: `/src/content/chapters/15-mmm-as-lived-experience.md`
-- The same loop runs in evolution, individual learning, relationships, and civilisation — not as metaphor but as the same underlying shape. — Source: `/src/content/chapters/16-mmm-across-life-itself.md`
-- Most felt suffering without acute physical cause is a stalled loop; movement returns when the missing move is identified. — Source: `/src/content/chapters/15-mmm-as-lived-experience.md`
-- Better living means better modelling, not more effort. — Source: `/src/content/chapters/13-model.md`
-- Measuring is not modelling; the map is a census of what exists before any causal account. — Source: `/src/content/chapters/12-measure.md`
-- The manipulate phase of Model is how causal structure is discovered — not observation, but active probing. — Source: `/src/content/chapters/13-model.md`
-- Manifest is genuine creation: bringing new things into the world from discovered components and relationships, not merely acting on an existing plan. — Source: `/src/content/chapters/14-manifest.md`
-- Every manifestation is a wager on the current model. — Source: `/src/content/chapters/14-manifest.md`
-- Humans add symbolic acceleration; civilisations are recursive loops stacked on biological loops. — Source: `/src/content/chapters/16-mmm-across-life-itself.md`
+- MMM is the most meta process we can observe: the same three-layer shape falls out of every independent attempt — biology, psychology, AI — to describe what being an agent requires. — Source: `/src/content/chapters/16-mmm-as-lived-experience.md`, `/src/content/chapters/19-mmm-across-life-itself.md`
+- Dupoux, LeCun, and Malik (2026) propose a three-system architecture — observation learning (A), active-behavior learning (B), meta-control (M) — that is a structural echo of Measure / Model / Manifest. Independent convergence, not influence. — Source: `/src/content/chapters/16-mmm-as-lived-experience.md`
+- Growth from the inside is the felt experience of the MMM loop turning. — Source: `/src/content/chapters/16-mmm-as-lived-experience.md`
+- The same loop runs in evolution, individual learning, relationships, and civilisation — not as metaphor but as the same underlying shape. — Source: `/src/content/chapters/19-mmm-across-life-itself.md`
+- Most felt suffering without acute physical cause is a stalled loop; movement returns when the missing move is identified. — Source: `/src/content/chapters/16-mmm-as-lived-experience.md`
+- Better living means better modelling, not more effort. — Source: `/src/content/chapters/14-model.md`
+- Measuring is not modelling; the map is a census of what exists before any causal account. — Source: `/src/content/chapters/13-measure.md`
+- The manipulate phase of Model is how causal structure is discovered — not observation, but active probing. — Source: `/src/content/chapters/14-model.md`
+- Manifest is genuine creation: bringing new things into the world from discovered components and relationships, not merely acting on an existing plan. — Source: `/src/content/chapters/15-manifest.md`
+- Every manifestation is a wager on the current model. — Source: `/src/content/chapters/15-manifest.md`
+- Humans add symbolic acceleration; civilisations are recursive loops stacked on biological loops. — Source: `/src/content/chapters/19-mmm-across-life-itself.md`
 
 ## Connections
 
 - [[Act 3 — MMM]] — the act that develops this concept fully
 - [[Growth and Learning]] — thematic synthesis of the loop's consequences
-- [[Wisdom Traditions]] — chapter 17's treatment of MMM-shaped practices
+- [[Wisdom Traditions]] — chapter 20's treatment of MMM-shaped practices
 - [[Volo Ergo Sum]] — want provides the engine that drives the loop
 - [[The Three Blades]] — the loop operates on distinctions the blades have made
 - [[Thingification]] — institutions are the most durable Manifest outputs of civilisational MMM
-- [[Objectivity]] — chapter 19 defines objectivity as disciplined loop-running under finitude
+- [[Objectivity]] — chapter 22 defines objectivity as disciplined loop-running under finitude
 - [[Intellectual Lineage]] — Marr, Ashby, Lorenz, active inference, Becker, and Williamson are the primary theoretical scaffolds for Act 3
 - [[Layered Realism]] — Marr's levels formalise the distinction between the computational, representational, and physical layers of a model
 
@@ -108,4 +108,4 @@ Contemplative traditions across cultures converge on a recognisable triad: a dis
 - The active inference framework (Friston) treats perception and action as continuous, not as separate phases of a loop. Whether the loop is a useful model or an artifact of decomposing what is really one motion is not resolved.
 
 ---
-*Last updated: 2026-04-16 | Sources: 9 (Ch. 12–19; /dump/overall.md) — meta-process + Dupoux/LeCun/Malik 2026 convergence added 2026-04-16*
+*Last updated: 2026-04-16 | Sources: 12 (Ch. 12–22; /dump/overall.md) — meta-process + Dupoux/LeCun/Malik 2026 convergence added 2026-04-16*

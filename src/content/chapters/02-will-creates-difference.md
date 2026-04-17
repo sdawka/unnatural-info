@@ -5,7 +5,7 @@ act: volo-ergo-sum
 actTitle: "Volo Ergo Sum"
 chapterNumber: 2
 order: 2
-summary: "If beings want different things, or want the same things from different positions, difference appears. Variation, path-dependence, the splatter of subjectivity. Stable reality emerges not despite many subjectivities, but through their repeated collision with one another and with constraints."
+summary: "If beings want different things, or want the same things from different positions, difference appears. Variation, path-dependence, the splatter of subjectivity. Difference is the mess that generates conflict; it is also the signal that tells us what to change. Stable reality emerges not despite many subjectivities, but through their repeated collision with one another and with constraints."
 themes: ["difference", "direction", "individuality", "variation", "subjectivity"]
 status: draft
 draft: false
@@ -13,7 +13,7 @@ furtherReading:
   - author: "William James"
     title: "A Pluralistic Universe"
     year: 1909
-    note: "Reality is irreducibly multiple — divergence between streams of experience is structural, not accidental."
+    note: "Reality is irreducibly multiple; divergence between streams of experience is structural, not accidental."
   - author: "Gilbert Simondon"
     title: "Individuation in Light of Notions of Form and Information"
     year: 1964
@@ -25,11 +25,11 @@ furtherReading:
   - author: "W. Brian Arthur"
     title: "Increasing Returns and Path Dependence in the Economy"
     year: 1994
-    note: "Small early differences lock in large outcomes through positive feedback — path dependence as a general consequence of divergent wanting."
+    note: "Small early differences lock in large outcomes through positive feedback: path dependence as a general consequence of divergent wanting."
   - author: "Stuart Kauffman"
     title: "At Home in the Universe"
     year: 1995
-    note: "Stable structures emerge from the collision of many divergent elements without any top-down design — order for free."
+    note: "Stable structures emerge from the collision of many divergent elements without any top-down design. Order for free."
   - author: "Heraclitus"
     title: "Fragments"
     year: -500
@@ -38,7 +38,11 @@ furtherReading:
 
 If everything wanted exactly the same thing in exactly the same way, the universe would be a much more boring place and there would be considerably fewer arguments. As it happens, things want differently, or want the same things from different angles, and that is where most of reality comes from.
 
-A direction is a small disagreement with the rest of the cosmos about which way matters. Once you have many directions, you have variation. Once you have variation, you have individuals — not in the philosophical sense, but in the much harder operational sense of *this lump of stuff is going its own way and the rest of us must now deal with it*.
+A direction is a small disagreement with the rest of the cosmos about which way matters. Once you have many directions, you have variation. Once you have variation, you have individuals, not in the philosophical sense, but in the much harder operational sense of *this lump of stuff is going its own way and the rest of us must now deal with it*.
+
+This is also the good news, and it is worth saying plainly. Difference is what makes anything noticeable at all. A thing can only be seen against something it is not; a direction can only be corrected against a direction it isn't. Without variation there is nothing to compare, nothing to prefer, nothing to steer toward. Difference is what tells us what to change. Feedback, learning, growth, even the quiet business of knowing who you are: all of them require the same splatter of subjectivity that also, yes, causes the arguments.
+
+So the chapter title is only half-honest. Will creates difference, which creates problems, and also creates the only signal by which those problems could ever be named, located, or fixed.
 
 ## Key moves
 

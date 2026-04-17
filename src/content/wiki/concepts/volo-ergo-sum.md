@@ -34,7 +34,7 @@ The premise propagates through every subsequent act:
 - **Difference** (Ch. 2): when beings want from different positions, variation and individuality arise as free side-effects.
 - **Love/Growth/Meaning** (Ch. 3): these three are the same thing seen from different angles — what oriented wanting looks like when it aligns, expands, and persists.
 - **The Three Blades** (Ch. 5–7): the cuts a wanting creature makes to become operative in the world.
-- **The MMM Loop** (Ch. 12–14): the mechanism by which wanting creatures grow.
+- **The MMM Loop** (Ch. 13–15): the mechanism by which wanting creatures grow.
 
 ## Connections
 
@@ -63,4 +63,4 @@ The practical consequence is what the book's title names. "Unnatural" does not m
 - Whether death-anxiety is the *primary* driver of uniquely human want-structures, or one factor among several, is left open. Becker's case is strong but not the only account.
 
 ---
-*Last updated: 2026-04-16 | Sources: 3 (Ch. 1; /dump/overall.md; Becker 1973); propagates through all 21 chapters — three-floor stack framing added 2026-04-16*
+*Last updated: 2026-04-16 | Sources: 3 (Ch. 1; /dump/overall.md; Becker 1973); propagates through all 22 chapters — three-floor stack framing added 2026-04-16*

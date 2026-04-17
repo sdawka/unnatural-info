@@ -11,7 +11,7 @@ furtherReading:
   - author: "Merleau-Ponty"
     title: "Phenomenology of Perception"
     year: 1945
-    note: "Rigorous first-person method — pure description steering between reductionism and intellectualism without appealing to either."
+    note: "Rigorous first-person method: pure description steering between reductionism and intellectualism without appealing to either."
   - author: "Thomas Nagel"
     title: "What Is It Like to Be a Bat?"
     year: 1974
@@ -19,7 +19,7 @@ furtherReading:
   - author: "Kierkegaard"
     title: "Concluding Unscientific Postscript"
     year: 1846
-    note: "The title is deliberate — indirect communication from a situated, exploratory stance rather than a philosophical system."
+    note: "The title is deliberate: indirect communication from a situated, exploratory stance rather than a philosophical system."
   - author: "William James"
     title: "Essays in Radical Empiricism"
     year: 1912
@@ -35,12 +35,12 @@ furtherReading:
   - author: "Ernest Becker"
     title: "The Denial of Death"
     year: 1973
-    note: "Awareness of our own mortality is precisely what makes human wanting 'unnatural' — we cannot live purely on instinct because we know we will die, and that knowledge forces us to construct meaning rather than merely respond."
+    note: "Awareness of our own mortality is precisely what makes human wanting 'unnatural': we cannot live purely on instinct because we know we will die, and that knowledge forces us to construct meaning rather than merely respond."
 ---
 
 A child asks *what are we?*, and the question never actually leaves. It goes underground, dressed up later as philosophy, religion, theory, ambition, crisis, awe. Whatever is reading this sentence is, somehow, the kind of thing that can ask the question about itself. That is already strange.
 
-Thirty years of wondering later, one word fits: *unnatural*. Not anti-natural. Something natural that folded, and in folding, became strange to itself.
+Thirty years of wondering later, one word fits: *unnatural*. Not anti-natural. Something natural that folded, and in folding, became strange to itself. A subset of the universe that turned around to know the rest of itself. Including, awkwardly, the part doing the knowing.
 
 We are natural beings. Same physics as rocks and rivers and bacteria. Then something happened. We slipped into the *information realm*. We built models, meanings, stories, institutions. We learned to work in pure information, and to loop it back through the physical world that made us. A thought reshapes a city. A diagram rearranges a life. That loop, physical giving rise to information, information bending the physical back, is what we mean by unnatural. Chapter 10 makes this precise.
 
@@ -53,7 +53,7 @@ The frame is *unscientific empirical*. Unscientific because we are not going to 
 - A theory of everything written in this voice is not a final account; it is a working frame, openly revisable, and judged by whether it helps you see and act more clearly.
 - The frame sits between scientific and philosophical: no appeals to higher mysteries, but also no pretending we have lab-grade proof for layers that nobody has lab-grade proof for.
 - Three commitments run through every chapter: mark what we observe, mark what we interpret, mark what we don't know.
-- We treat lived experience as data — the only data finite minds actually have first-hand — while staying suspicious of how easily lived experience lies to itself.
+- We treat lived experience as data (the only data finite minds actually have first-hand) while staying suspicious of how easily lived experience lies to itself.
 - Three acts structure the book: Volo Ergo Sum (why anything happens), init.d (what appears once distinction begins), MMM (how growth runs as a loop).
 - The book is a tool. If a chapter does not give you something to look at, look for, or do, it has failed at its job.
 

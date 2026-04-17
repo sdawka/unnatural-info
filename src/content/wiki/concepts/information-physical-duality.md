@@ -22,7 +22,7 @@ The examples chosen in the chapter are precise: money (informational; the suffer
 
 ## The spiritual layer
 
-Chapter 10 includes an explicit note on what it calls "the spiritual layer": patterns in the informational world that are stable across cultures, persistent across centuries, and physically consequential without anyone fully understanding why they bind. Sacredness, ritual, archetype, the felt sense that a place "carries" something — these are treated not as nothing and not as metaphysical mysteries but as informational structures with physical shadows. The chapter commits to taking them seriously while refusing to either mystify or dismiss them, and flags that chapter 17 (on wisdom traditions) will return to this.
+Chapter 10 includes an explicit note on what it calls "the spiritual layer": patterns in the informational world that are stable across cultures, persistent across centuries, and physically consequential without anyone fully understanding why they bind. Sacredness, ritual, archetype, the felt sense that a place "carries" something — these are treated not as nothing and not as metaphysical mysteries but as informational structures with physical shadows. The chapter commits to taking them seriously while refusing to either mystify or dismiss them, and flags that chapter 20 (on wisdom traditions) will return to this.
 
 ## Key claims
 
@@ -38,7 +38,7 @@ Chapter 10 includes an explicit note on what it calls "the spiritual layer": pat
 - [[The Three Blades]] — the Second Blade (map/territory) is an instance of the information/physical duality at the perceptual level
 - [[Foundational Dualities]] — the information/physical duality is a cognitive-layer duality of particular structural importance
 - [[Cost of Distinction]] — confusing the informational with the physical (or denying one) is one of the most costly forms of reification
-- [[Wisdom Traditions]] — the "spiritual layer" flagged here is revisited in chapter 17 through the MMM frame
+- [[Wisdom Traditions]] — the "spiritual layer" flagged here is revisited in chapter 20 through the MMM frame
 - [[The MMM Loop]] — models are informational structures; manifestations have physical consequences; the loop runs at the interface
 
 ## Open questions
@@ -48,4 +48,4 @@ Chapter 10 includes an explicit note on what it calls "the spiritual layer": pat
 - Whether the informational layer is in some sense more fundamental (Wheeler's "it from bit") or merely co-fundamental with the physical is explicitly left open.
 
 ---
-*Last updated: 2026-04-16 | Sources: 2 (Ch. 10, Ch. 17)*
+*Last updated: 2026-04-16 | Sources: 2 (Ch. 10, Ch. 20)*
