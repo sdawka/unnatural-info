@@ -1,43 +1,136 @@
 ---
 ---
-<footer class="site-footer">
-  <div class="site-footer__inner">
-    <p class="site-footer__text">
-      UNNATURAL — An unscientific empirical theory of everything.
-    </p>
-    <p class="site-footer__sub">
-      Will creates difference. Difference creates self. Self creates the question.
-    </p>
+<footer class="sf">
+  <div class="sf__inner">
+    <div class="sf__glyph" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="sf__body">
+      <p class="sf__title">UNNATURAL</p>
+      <p class="sf__tagline">
+        An unscientific empirical theory of everything.
+      </p>
+      <p class="sf__thesis">
+        <span>Want creates direction.</span>
+        <span>Direction creates difference.</span>
+        <span>Difference creates the question.</span>
+      </p>
+    </div>
+    <div class="sf__meta">
+      <a href="/">Home</a>
+      <a href="/wiki/">Wiki</a>
+      <a href="/reading">Reading</a>
+    </div>
   </div>
 </footer>
 
 <style>
-  .site-footer {
+  .sf {
     margin-top: var(--space-24);
-    padding: var(--space-12) var(--space-6);
+    padding: var(--space-16) var(--safe-right) calc(var(--space-10) + var(--safe-bottom)) var(--safe-left);
     border-top: 1px solid var(--color-rule);
+    background:
+      linear-gradient(to bottom, transparent, color-mix(in srgb, var(--color-ground-tint) 60%, transparent));
   }
 
-  .site-footer__inner {
+  .sf__inner {
     max-width: var(--page-max);
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  .sf__glyph {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 0.5em;
+  }
+  .sf__glyph span {
+    display: block;
+    height: 2px;
+    border-radius: 1px;
+  }
+  .sf__glyph span:nth-child(1) { width: 32px; background: var(--color-act-i); }
+  .sf__glyph span:nth-child(2) { width: 20px; background: var(--color-act-ii); }
+  .sf__glyph span:nth-child(3) { width: 10px; background: var(--color-act-iii); }
+
+  .sf__body {
+    max-width: 40ch;
+  }
+
+  .sf__title {
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 20, 'wght' 600, 'SOFT' 20;
+    font-size: var(--text-lg);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-ink);
+  }
+
+  .sf__tagline {
+    margin-top: var(--space-2);
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 24, 'wght' 360, 'SOFT' 40;
+    font-style: italic;
+    font-size: var(--text-base);
+    color: var(--color-ink-muted);
+  }
+
+  .sf__thesis {
+    margin-top: var(--space-4);
     display: flex;
     flex-direction: column;
+    gap: 0.1em;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-ink-faint);
+    letter-spacing: 0.02em;
+  }
+
+  .sf__meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     gap: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-ink-muted);
+    padding-top: 0.8em;
   }
 
-  .site-footer__text {
-    font-family: var(--font-display);
-    font-size: var(--text-sm);
-    font-weight: 300;
-    color: var(--color-ink-muted);
+  .sf__meta a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--dur-fast), color var(--dur-fast);
+    padding-bottom: 2px;
   }
 
-  .site-footer__sub {
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    font-style: italic;
-    color: var(--color-ink-muted);
-    opacity: 0.7;
+  .sf__meta a:hover {
+    color: var(--color-ink);
+    border-bottom-color: var(--color-ink);
+  }
+
+  @media (max-width: 44rem) {
+    .sf {
+      padding-top: var(--space-12);
+      margin-top: var(--space-16);
+    }
+    .sf__inner {
+      grid-template-columns: auto 1fr;
+      row-gap: var(--space-6);
+    }
+    .sf__meta {
+      grid-column: 1 / -1;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: var(--space-5);
+      padding-top: 0;
+    }
   }
 </style>

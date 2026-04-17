@@ -7,29 +7,65 @@ interface Props {
 const { act, actTitle } = Astro.props;
 
 const ACT_META: Record<string, { roman: string; name: string; color: string }> = {
-  'volo-ergo-sum': { roman: 'I', name: 'Volo Ergo Sum', color: 'var(--color-act-i)' },
-  'initd':         { roman: 'II', name: 'InitD',         color: 'var(--color-act-ii)' },
+  'volo-ergo-sum': { roman: 'I',   name: 'Volo Ergo Sum', color: 'var(--color-act-i)' },
+  'initd':         { roman: 'II',  name: 'InitD',         color: 'var(--color-act-ii)' },
   'mmm':           { roman: 'III', name: 'MMM',           color: 'var(--color-act-iii)' },
-  'prologue':      { roman: '',   name: 'Prologue',       color: 'var(--color-ink-muted)' },
-  'epilogue':      { roman: '',   name: 'Epilogue',       color: 'var(--color-ink-muted)' },
+  'prologue':      { roman: '',    name: 'Prologue',      color: 'var(--color-ink-muted)' },
+  'epilogue':      { roman: '',    name: 'Epilogue',      color: 'var(--color-ink-muted)' },
 };
 
 const meta = ACT_META[act];
 const displayName = actTitle ?? meta.name;
-const label = meta.roman ? `Act ${meta.roman} — ${displayName}` : displayName;
 ---
 
-<span class="act-badge" style={`--accent: ${meta.color}`}>
-  {label}
-</span>
+<a href={meta.roman ? `/acts/${act}` : '/'} class="ab" style={`--accent: ${meta.color}`}>
+  {meta.roman && (
+    <span class="ab__roman" aria-hidden="true">{meta.roman}</span>
+  )}
+  <span class="ab__name">
+    {meta.roman ? `Act ${meta.roman}` : ''}
+    {meta.roman && <span aria-hidden="true"> · </span>}
+    <em>{displayName}</em>
+  </span>
+</a>
 
 <style>
-  .act-badge {
+  .ab {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
     font-family: var(--font-mono);
     font-size: var(--text-xs);
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--accent);
+    text-decoration: none;
+    line-height: 1;
+    transition: opacity var(--dur-fast);
+  }
+
+  .ab:hover { opacity: 0.7; }
+
+  .ab__roman {
     display: inline-block;
+    border: 1px solid currentColor;
+    padding: 0.2em 0.4em;
+    min-width: 2.1em;
+    text-align: center;
+    font-variation-settings: 'wght' 520;
+  }
+
+  .ab__name {
+    color: currentColor;
+  }
+
+  .ab__name em {
+    font-style: italic;
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 14, 'wght' 380, 'SOFT' 30;
+    font-size: 1.1em;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    margin-left: 0.1em;
   }
 </style>

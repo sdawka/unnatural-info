@@ -1,0 +1,59 @@
+---
+interface Props {
+  act?: 'volo-ergo-sum' | 'initd' | 'mmm' | 'prologue' | 'epilogue';
+}
+const { act = 'prologue' } = Astro.props;
+const COLOR: Record<string, string> = {
+  'volo-ergo-sum': 'var(--color-act-i)',
+  'initd': 'var(--color-act-ii)',
+  'mmm': 'var(--color-act-iii)',
+  'prologue': 'var(--color-ink)',
+  'epilogue': 'var(--color-ink)',
+};
+const color = COLOR[act] ?? 'var(--color-ink)';
+---
+
+<div class="rp" data-reading-progress style={`--rp-color: ${color}`}>
+  <div class="rp__bar" data-rp-bar></div>
+</div>
+
+<script is:inline>
+  (() => {
+    const bar = document.querySelector('[data-rp-bar]');
+    if (!bar) return;
+    let ticking = false;
+    const update = () => {
+      const doc = document.documentElement;
+      const scrolled = window.scrollY;
+      const height = (doc.scrollHeight - doc.clientHeight) || 1;
+      const pct = Math.max(0, Math.min(100, (scrolled / height) * 100));
+      bar.style.transform = `scaleX(${pct / 100})`;
+      ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
+    update();
+  })();
+</script>
+
+<style>
+  .rp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    z-index: 60;
+    background: transparent;
+    pointer-events: none;
+  }
+  .rp__bar {
+    height: 100%;
+    background: var(--rp-color);
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: transform 80ms linear;
+  }
+</style>

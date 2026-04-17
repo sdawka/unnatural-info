@@ -1,46 +1,145 @@
 :root {
-  /* Palette */
-  --color-ground: #F4F1EB;
-  --color-ink: #1A1714;
-  --color-ink-muted: #6B6560;
-  --color-rule: #C8C3BB;
+  /* ——— Paper & Ink ——— */
+  --color-ground: #F1EBDF;           /* vellum */
+  --color-ground-tint: #EBE3D2;      /* slightly darker tint for subtle depth */
+  --color-ground-warm: #E7DEC9;      /* section bands */
+  --color-ink: #141110;
+  --color-ink-soft: #2A2520;
+  --color-ink-muted: #6B6159;
+  --color-ink-faint: #978E84;
+  --color-rule: #C7BDA9;
+  --color-rule-soft: #D9D0BE;
 
-  /* Act accents */
-  --color-act-i: #8B3A3A;       /* cinnabar — want, fire */
-  --color-act-ii: #2C4A6E;      /* prussian blue — distinction */
-  --color-act-iii: #3D5C3A;     /* forest — growth, recursion */
-  --color-wiki: #5C4A2E;        /* umber — archive */
+  /* ——— Act accents ——— */
+  --color-act-i: #8B2E26;            /* cinnabar — want, fire */
+  --color-act-i-soft: #C66A5C;
+  --color-act-ii: #23416B;           /* prussian — distinction */
+  --color-act-ii-soft: #5B7BA6;
+  --color-act-iii: #2E5138;          /* forest — growth */
+  --color-act-iii-soft: #6F9178;
+  --color-wiki: #5B4420;             /* umber — archive */
+  --color-wiki-soft: #9A7E4B;
 
-  /* Typography */
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'EB Garamond', Georgia, serif;
-  --font-mono: 'Martian Mono', 'Courier New', monospace;
+  /* ——— Typography ——— */
+  --font-display: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Source Serif 4', 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', 'Martian Mono', 'SF Mono', ui-monospace, monospace;
 
-  /* Type scale */
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1.125rem;    /* 18px body */
-  --text-lg: 1.25rem;
-  --text-xl: 1.5rem;
-  --text-2xl: 2rem;
-  --text-3xl: 2.75rem;
-  --text-4xl: 3.75rem;
-  --text-5xl: 5rem;
+  /* Variable-font axes we actually use */
+  --display-opsz: 72;    /* large display optical size */
+  --display-wght: 320;   /* light-ish, but cut crisp */
+  --display-soft: 25;    /* Fraunces SOFT axis — slight bite on headlines */
 
-  /* Spacing */
+  /* ——— Type scale (mobile-first) ——— */
+  --text-xs:   0.75rem;       /* 12px — labels */
+  --text-sm:   0.875rem;      /* 14px — meta */
+  --text-base: 1.0625rem;     /* 17px — body on mobile */
+  --text-lg:   1.1875rem;     /* 19px */
+  --text-xl:   1.4375rem;     /* 23px */
+  --text-2xl:  1.875rem;      /* 30px */
+  --text-3xl:  2.375rem;      /* 38px */
+  --text-4xl:  3rem;          /* 48px */
+  --text-5xl:  4rem;          /* 64px */
+  --text-6xl:  6rem;          /* 96px — home hero */
+
+  /* Measure (line-length) */
+  --prose-width: 36rem;       /* ~38ch on mobile, ~62ch on desktop */
+  --prose-width-narrow: 30rem;
+  --page-max: 68rem;
+  --sidenote-width: 220px;
+  --sidenote-gap: 2rem;
+
+  /* Leading (line-height) */
+  --lh-tight: 1.1;
+  --lh-snug: 1.25;
+  --lh-body: 1.65;            /* reading default */
+  --lh-loose: 1.85;
+
+  /* ——— Spacing ——— */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
   --space-4: 1rem;
+  --space-5: 1.25rem;
   --space-6: 1.5rem;
   --space-8: 2rem;
+  --space-10: 2.5rem;
   --space-12: 3rem;
   --space-16: 4rem;
+  --space-20: 5rem;
   --space-24: 6rem;
+  --space-32: 8rem;
 
-  /* Layout */
-  --prose-width: 66ch;
-  --page-max: 1100px;
-  --sidenote-width: 220px;
-  --sidenote-gap: 2rem;
+  /* ——— Motion ——— */
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-sharp: cubic-bezier(0.9, 0, 0.1, 1);
+  --dur-fast: 140ms;
+  --dur-med: 280ms;
+  --dur-slow: 520ms;
+
+  /* ——— Atmosphere ——— */
+  --grain-opacity: 0.04;
+  --focus-ring: 0 0 0 2px var(--color-ground), 0 0 0 4px var(--color-ink);
+
+  /* Safe areas for notched devices */
+  --safe-top: max(env(safe-area-inset-top), 0px);
+  --safe-bottom: max(env(safe-area-inset-bottom), 0px);
+  --safe-left: max(env(safe-area-inset-left), var(--space-6));
+  --safe-right: max(env(safe-area-inset-right), var(--space-6));
+}
+
+/* ——— Desktop up-tuning of scale and measure ——— */
+@media (min-width: 48rem) {
+  :root {
+    --text-base: 1.125rem;    /* 18px */
+    --text-lg:   1.25rem;
+    --text-xl:   1.5rem;
+    --text-2xl:  2rem;
+    --text-3xl:  2.75rem;
+    --text-4xl:  3.75rem;
+    --text-5xl:  5rem;
+    --text-6xl:  7.5rem;
+    --prose-width: 40rem;     /* ~62ch */
+    --lh-body: 1.7;
+  }
+}
+
+/* ——— Dark mode ——— */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-ground: #16130F;
+    --color-ground-tint: #1C1814;
+    --color-ground-warm: #23201B;
+    --color-ink: #EFE9DB;
+    --color-ink-soft: #D4CDBB;
+    --color-ink-muted: #9A9285;
+    --color-ink-faint: #6E675D;
+    --color-rule: #3A362E;
+    --color-rule-soft: #2A2620;
+
+    --color-act-i: #D07060;          /* lift in dark */
+    --color-act-i-soft: #8B3A3A;
+    --color-act-ii: #7EA0CA;
+    --color-act-ii-soft: #3F5B80;
+    --color-act-iii: #A5C39B;
+    --color-act-iii-soft: #4E7050;
+    --color-wiki: #C8A870;
+    --color-wiki-soft: #7A5E36;
+
+    --grain-opacity: 0.06;
+    --focus-ring: 0 0 0 2px var(--color-ground), 0 0 0 4px var(--color-ink);
+  }
+}
+
+/* ——— Reduced motion ——— */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

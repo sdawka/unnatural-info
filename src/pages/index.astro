@@ -13,72 +13,125 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
 
   <main class="home">
 
-    <!-- Hero / Manifesto -->
-    <section class="home__hero">
-      <div class="home__hero-inner">
-        <p class="home__eyebrow">An unscientific<a href="#unscientific-note" class="home__eyebrow-note" aria-label="What unscientific means">*</a> empirical theory of everything</p>
-        <h1 class="home__title">UNNATURAL</h1>
-        <p class="home__subtitle">A framework for how life moves, divides, knows, and grows.</p>
-        <p class="home__thesis">
-          Will and want come first.<br />
-          Will creates direction. Direction creates difference.<br />
-          Difference creates self, world, value, and distinction.<br />
-          Distinction creates models. Models guide manifestation.<br />
-          Manifestation reshapes information and physical reality.<br />
-          The loop recurses. Life learns, grows, and complexifies.
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__inner">
+        <p class="hero__eyebrow">
+          <span class="hero__eyebrow-stack" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span>An <em>unscientific<a href="#unscientific-note" class="hero__footnote-mark" aria-label="What unscientific means">*</a></em> empirical theory of everything</span>
         </p>
-        <p class="home__disclaimer" id="unscientific-note">
-          <span class="home__disclaimer-marker">*</span>
-          "Unscientific" does not mean anti-science.
-          It means: not reducible to one formal discipline,
-          not claiming lab-grade proof at every layer,
-          willing to begin from lived experience —
-          but still committed to reality, clarity, and honest uncertainty.
+
+        <h1 class="hero__title" aria-label="UNNATURAL">
+          <span class="hero__title-letter" data-delay="0">U</span><span class="hero__title-letter" data-delay="1">N</span><span class="hero__title-letter" data-delay="2">N</span><span class="hero__title-letter" data-delay="3">A</span><span class="hero__title-letter" data-delay="4">T</span><span class="hero__title-letter" data-delay="5">U</span><span class="hero__title-letter" data-delay="6">R</span><span class="hero__title-letter" data-delay="7">A</span><span class="hero__title-letter" data-delay="8">L</span>
+        </h1>
+
+        <p class="hero__subtitle">
+          A framework for how life moves, divides, knows, and grows.
+        </p>
+
+        <div class="thesis">
+          <ol class="thesis__lines">
+            <li><span class="thesis__accent thesis__accent--i">Want</span> creates direction.</li>
+            <li>Direction creates <span class="thesis__accent thesis__accent--ii">difference</span>.</li>
+            <li>Difference creates self, world, value, and distinction.</li>
+            <li>Distinction creates <em>models</em>.</li>
+            <li>Models guide <span class="thesis__accent thesis__accent--iii">manifestation</span>.</li>
+            <li>The loop recurses. Life learns, grows, and complexifies.</li>
+          </ol>
+        </div>
+
+        <aside class="hero__disclaimer" id="unscientific-note">
+          <span class="hero__disclaimer-marker" aria-hidden="true">*</span>
+          <p>
+            "Unscientific" does not mean anti-science.
+            It means: not reducible to one formal discipline,
+            not claiming lab-grade proof at every layer,
+            willing to begin from lived experience —
+            but still committed to reality, clarity, and honest uncertainty.
+          </p>
+        </aside>
+
+        <p class="hero__status" aria-label="Document status">
+          <span class="hero__status-dot" aria-hidden="true"></span>
+          <span class="hero__status-label">Living document</span>
+          <span class="hero__status-sep" aria-hidden="true">·</span>
+          <span class="hero__status-note">a work in progress, continuously refined.</span>
         </p>
       </div>
     </section>
 
-    <!-- Three Acts -->
-    <section class="home__acts">
-      <div class="home__acts-inner">
-        <h2 class="home__acts-heading">Three Acts</h2>
-        <div class="home__acts-grid">
+    <!-- Three Acts — asymmetric index -->
+    <section class="acts" aria-labelledby="acts-heading">
+      <div class="acts__inner">
+        <header class="acts__header">
+          <p class="acts__label">
+            <span class="glyph-stack" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </span>
+            Three Acts
+          </p>
+          <h2 class="acts__heading" id="acts-heading">
+            The argument<br />in three movements.
+          </h2>
+        </header>
 
-          <a href="/acts/volo-ergo-sum" class="act-card act-card--i">
-            <span class="act-card__roman">I</span>
-            <div class="act-card__body">
-              <h3 class="act-card__name">Volo Ergo Sum</h3>
-              <p class="act-card__premise">Why anything happens at all.</p>
-              <p class="act-card__detail">Before thought, there is want. This act asks why there is any motion, any action, any value, any difference at all.</p>
-            </div>
-          </a>
+        <ol class="acts__grid">
+          <li class="act-card act-card--i">
+            <a href="/acts/volo-ergo-sum" class="act-card__link">
+              <div class="act-card__numeral" aria-hidden="true">I</div>
+              <div class="act-card__body">
+                <div class="act-card__title-row">
+                  <h3 class="act-card__name">Volo Ergo Sum</h3>
+                  <span class="act-card__arrow" aria-hidden="true">→</span>
+                </div>
+                <p class="act-card__premise">Why anything happens at all.</p>
+                <p class="act-card__detail">Before thought, there were feelings — shared with the animals. Before feelings, there was want: a bacterium leaning along a chemical gradient, the floor of the whole stack.</p>
+              </div>
+            </a>
+          </li>
 
-          <a href="/acts/initd" class="act-card act-card--ii">
-            <span class="act-card__roman">II</span>
-            <div class="act-card__body">
-              <h3 class="act-card__name">InitD</h3>
-              <p class="act-card__premise">What appears once distinction begins.</p>
-              <p class="act-card__detail">Finite beings do not meet reality whole. They carve it. The first process — init.d for the mind.</p>
-            </div>
-          </a>
+          <li class="act-card act-card--ii">
+            <a href="/acts/initd" class="act-card__link">
+              <div class="act-card__numeral" aria-hidden="true">II</div>
+              <div class="act-card__body">
+                <div class="act-card__title-row">
+                  <h3 class="act-card__name">InitD</h3>
+                  <span class="act-card__arrow" aria-hidden="true">→</span>
+                </div>
+                <p class="act-card__premise">What appears once distinction begins.</p>
+                <p class="act-card__detail">Finite beings cannot meet reality whole. The universe is fractal and chaotic — infinite detail at every scale, bottomless in both directions. Distinction is how we boot up inside that excess.</p>
+              </div>
+            </a>
+          </li>
 
-          <a href="/acts/mmm" class="act-card act-card--iii">
-            <span class="act-card__roman">III</span>
-            <div class="act-card__body">
-              <h3 class="act-card__name">MMM</h3>
-              <p class="act-card__premise">How life grows through recursive world-contact.</p>
-              <p class="act-card__detail">Measure, Model, Manifest. The most meta process. The loop that runs in a cell, a child, a civilisation.</p>
-            </div>
-          </a>
-
-        </div>
+          <li class="act-card act-card--iii">
+            <a href="/acts/mmm" class="act-card__link">
+              <div class="act-card__numeral" aria-hidden="true">III</div>
+              <div class="act-card__body">
+                <div class="act-card__title-row">
+                  <h3 class="act-card__name">MMM</h3>
+                  <span class="act-card__arrow" aria-hidden="true">→</span>
+                </div>
+                <p class="act-card__premise">How life grows through recursive world-contact.</p>
+                <p class="act-card__detail">Measure, Model, Manifest. The most meta process we can observe — in a cell, a child, a civilisation. Dupoux, LeCun &amp; Malik (2026) arrive at a structural echo — observation, active behavior, meta-control — from a different direction.</p>
+              </div>
+            </a>
+          </li>
+        </ol>
       </div>
     </section>
 
     <!-- Table of Contents -->
-    <section class="home__toc">
-      <div class="home__toc-inner">
-        <h2 class="home__toc-heading">Contents</h2>
+    <section class="toc-section">
+      <div class="toc-section__inner">
+        <header class="toc-section__header">
+          <p class="toc-section__label">Contents</p>
+          <p class="toc-section__hint">
+            <span aria-hidden="true">↓</span> Twenty-one chapters across three acts
+          </p>
+        </header>
         <TableOfContents chapters={chapters} />
       </div>
     </section>
@@ -89,189 +142,502 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
 </BaseLayout>
 
 <style>
-  /* Hero */
-  .home__hero {
-    padding: var(--space-24) var(--space-6) var(--space-16);
-    border-bottom: 1px solid var(--color-rule);
+  .home {
+    padding-top: 0;
   }
 
-  .home__hero-inner {
+  /* ——— Hero ——— */
+  .hero {
+    padding: var(--space-20) var(--safe-right) var(--space-16) var(--safe-left);
+    border-bottom: 1px solid var(--color-rule-soft);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    right: -10rem;
+    bottom: -8rem;
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    background: radial-gradient(circle at center,
+      color-mix(in srgb, var(--color-act-ii) 8%, transparent),
+      transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero__inner {
     max-width: var(--page-max);
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
   }
 
-  .home__eyebrow {
+  .hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-ink-muted);
+    margin-bottom: var(--space-6);
+  }
+
+  .hero__eyebrow em {
+    font-style: italic;
+    color: var(--color-ink);
+  }
+
+  .hero__eyebrow-stack {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .hero__eyebrow-stack span {
+    display: block;
+    height: 1px;
+    border-radius: 1px;
+  }
+
+  .hero__eyebrow-stack span:nth-child(1) { width: 18px; background: var(--color-act-i); }
+  .hero__eyebrow-stack span:nth-child(2) { width: 12px; background: var(--color-act-ii); }
+  .hero__eyebrow-stack span:nth-child(3) { width: 6px;  background: var(--color-act-iii); }
+
+  .hero__footnote-mark {
+    color: var(--color-ink-faint);
+    text-decoration: none;
+    font-size: 0.7em;
+    vertical-align: super;
+    margin-left: 1px;
+  }
+
+  .hero__footnote-mark:hover {
+    color: var(--color-ink);
+  }
+
+  /* Title — letter-by-letter variable axes, subtle pull on load */
+  .hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(3.75rem, 13.5vw, var(--text-6xl));
+    line-height: 0.88;
+    letter-spacing: -0.01em;
+    color: var(--color-ink);
+    margin-bottom: var(--space-6);
+    display: inline-flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .hero__title-letter {
+    display: inline-block;
+    font-variation-settings: 'opsz' 144, 'wght' 310, 'SOFT' 100;
+    animation: hero-letter-enter var(--dur-slow) var(--ease-out) both;
+    animation-delay: calc(var(--d, 0) * 40ms);
+    transition: font-variation-settings var(--dur-med) var(--ease-out);
+  }
+
+  .hero__title-letter:nth-child(1) { --d: 0; color: var(--color-ink); }
+  .hero__title-letter:nth-child(2) { --d: 1; }
+  .hero__title-letter:nth-child(3) { --d: 2; color: var(--color-act-i); }
+  .hero__title-letter:nth-child(4) { --d: 3; }
+  .hero__title-letter:nth-child(5) { --d: 4; }
+  .hero__title-letter:nth-child(6) { --d: 5; color: var(--color-act-ii); }
+  .hero__title-letter:nth-child(7) { --d: 6; }
+  .hero__title-letter:nth-child(8) { --d: 7; }
+  .hero__title-letter:nth-child(9) { --d: 8; color: var(--color-act-iii); }
+
+  .hero__title:hover .hero__title-letter {
+    font-variation-settings: 'opsz' 144, 'wght' 500, 'SOFT' 0;
+  }
+
+  @keyframes hero-letter-enter {
+    from {
+      opacity: 0;
+      transform: translateY(0.15em);
+      font-variation-settings: 'opsz' 144, 'wght' 200, 'SOFT' 100;
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      font-variation-settings: 'opsz' 144, 'wght' 310, 'SOFT' 100;
+    }
+  }
+
+  .hero__subtitle {
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 36, 'wght' 350, 'SOFT' 40;
+    font-style: italic;
+    font-size: var(--text-xl);
+    color: var(--color-ink-muted);
+    max-width: 36ch;
+    margin-bottom: var(--space-10);
+    line-height: 1.35;
+    text-wrap: balance;
+  }
+
+  /* Thesis — numbered lines, accented typography */
+  .thesis {
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-10);
+    max-width: 48ch;
+  }
+
+  .thesis__lines {
+    list-style: none;
+    counter-reset: thesis;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .thesis__lines li {
+    counter-increment: thesis;
+    position: relative;
+    padding-left: 2.5em;
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 36, 'wght' 340, 'SOFT' 40;
+    font-size: var(--text-xl);
+    line-height: 1.35;
+    color: var(--color-ink);
+  }
+
+  .thesis__lines li::before {
+    content: counter(thesis, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 0.45em;
+    font-family: var(--font-mono);
+    font-size: 0.55em;
+    color: var(--color-ink-faint);
+    letter-spacing: 0.08em;
+  }
+
+  .thesis__accent {
+    font-style: italic;
+    font-variation-settings: 'opsz' 36, 'wght' 420, 'SOFT' 60;
+  }
+  .thesis__accent--i   { color: var(--color-act-i); }
+  .thesis__accent--ii  { color: var(--color-act-ii); }
+  .thesis__accent--iii { color: var(--color-act-iii); }
+
+  /* Disclaimer */
+  .hero__disclaimer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-4);
+    max-width: 58ch;
+    padding: var(--space-5) var(--space-6);
+    border-left: 2px solid var(--color-rule);
+    background: color-mix(in srgb, var(--color-ground-tint) 40%, transparent);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  .hero__disclaimer-marker {
+    font-family: var(--font-mono);
+    font-style: normal;
+    color: var(--color-ink-faint);
+    font-size: 1.2em;
+    line-height: 1;
+  }
+
+  /* Living-document status */
+  .hero__status {
+    margin-top: var(--space-5);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
     font-family: var(--font-mono);
     font-size: var(--text-xs);
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: var(--color-ink-muted);
-    margin-bottom: var(--space-4);
   }
 
-  .home__title {
-    font-family: var(--font-display);
-    font-size: clamp(4rem, 12vw, 9rem);
-    font-weight: 300;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+  .hero__status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-act-iii);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-act-iii) 60%, transparent);
+    animation: pulse 2.4s var(--ease-out) infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-act-iii) 50%, transparent);
+      opacity: 1;
+    }
+    50% {
+      box-shadow: 0 0 0 6px color-mix(in srgb, var(--color-act-iii) 0%, transparent);
+      opacity: 0.7;
+    }
+  }
+
+  .hero__status-label {
     color: var(--color-ink);
-    line-height: 0.95;
-    margin-bottom: var(--space-6);
+    font-variation-settings: 'wght' 520;
   }
 
-  .home__subtitle {
-    font-family: var(--font-body);
-    font-size: var(--text-xl);
+  .hero__status-sep {
+    color: var(--color-ink-faint);
+  }
+
+  .hero__status-note {
+    text-transform: none;
+    letter-spacing: 0.02em;
+    color: var(--color-ink-muted);
     font-style: italic;
-    color: var(--color-ink-muted);
-    max-width: 50ch;
-    margin-bottom: var(--space-12);
-    line-height: 1.5;
-  }
-
-  .home__thesis {
-    font-family: var(--font-display);
-    font-size: var(--text-2xl);
-    font-weight: 300;
-    line-height: 1.6;
-    color: var(--color-ink);
-    max-width: 44ch;
-    margin-bottom: var(--space-8);
-  }
-
-  .home__eyebrow-note {
-    color: var(--color-ink-muted);
-    text-decoration: none;
-    font-size: 0.75em;
-    vertical-align: super;
-    margin-left: 1px;
-  }
-
-  .home__eyebrow-note:hover {
-    color: var(--color-ink);
-  }
-
-  .home__disclaimer {
     font-family: var(--font-body);
-    font-size: var(--text-base);
-    font-style: italic;
-    color: var(--color-ink-muted);
-    max-width: 55ch;
-    line-height: 1.7;
-    padding-left: var(--space-6);
-    border-left: 2px solid var(--color-rule);
+    font-size: var(--text-sm);
   }
 
-  .home__disclaimer-marker {
-    font-style: normal;
-    margin-right: var(--space-1);
+  @media (max-width: 36rem) {
+    .hero__status {
+      flex-wrap: wrap;
+      gap: var(--space-1) var(--space-2);
+    }
+    .hero__status-sep { display: none; }
+    .hero__status-note {
+      width: 100%;
+      margin-left: calc(8px + var(--space-2));
+    }
   }
 
-  /* Acts */
-  .home__acts {
-    padding: var(--space-16) var(--space-6);
-    border-bottom: 1px solid var(--color-rule);
+  /* ——— Acts ——— */
+  .acts {
+    padding: var(--space-20) var(--safe-right) var(--space-20) var(--safe-left);
+    border-bottom: 1px solid var(--color-rule-soft);
   }
 
-  .home__acts-inner {
+  .acts__inner {
     max-width: var(--page-max);
     margin: 0 auto;
   }
 
-  .home__acts-heading {
+  .acts__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-8);
+    margin-bottom: var(--space-12);
+    flex-wrap: wrap;
+  }
+
+  .acts__label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
     font-family: var(--font-mono);
     font-size: var(--text-xs);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.14em;
     color: var(--color-ink-muted);
-    margin-bottom: var(--space-8);
   }
 
-  .home__acts-grid {
+  .acts__label .glyph-stack {
+    color: var(--color-ink-faint);
+  }
+
+  .acts__heading {
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 72, 'wght' 330, 'SOFT' 40;
+    font-size: var(--text-3xl);
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    color: var(--color-ink);
+    max-width: 16ch;
+    text-align: right;
+    text-wrap: balance;
+  }
+
+  @media (max-width: 48rem) {
+    .acts__heading {
+      text-align: left;
+      font-size: var(--text-2xl);
+      max-width: 20ch;
+    }
+  }
+
+  .acts__grid {
+    list-style: none;
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-6);
+    gap: 0;
+    border-top: 1px solid var(--color-rule);
+    border-left: 1px solid var(--color-rule);
   }
 
-  @media (max-width: 900px) {
-    .home__acts-grid {
+  @media (max-width: 62rem) {
+    .acts__grid {
       grid-template-columns: 1fr;
+      border-left: none;
     }
   }
 
   .act-card {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4);
-    padding: var(--space-8);
-    border: 1px solid var(--color-rule);
-    text-decoration: none;
-    transition: border-color 0.2s;
     position: relative;
+    border-right: 1px solid var(--color-rule);
+    border-bottom: 1px solid var(--color-rule);
     overflow: hidden;
   }
 
-  .act-card:hover {
-    border-color: var(--color-ink);
+  @media (max-width: 62rem) {
+    .act-card {
+      border-left: 1px solid var(--color-rule);
+    }
   }
 
-  .act-card__roman {
-    font-family: var(--font-display);
-    font-size: var(--text-5xl);
-    font-weight: 300;
-    line-height: 0.9;
+  .act-card::before {
+    content: '';
     position: absolute;
-    bottom: var(--space-4);
-    right: var(--space-4);
-    opacity: 0.08;
+    inset: 0;
+    background: linear-gradient(135deg,
+      color-mix(in srgb, var(--acc, var(--color-ink)) 7%, transparent),
+      transparent 55%);
+    opacity: 0;
+    transition: opacity var(--dur-med) var(--ease-out);
+    pointer-events: none;
   }
 
-  .act-card--i .act-card__roman { color: var(--color-act-i); opacity: 0.12; }
-  .act-card--ii .act-card__roman { color: var(--color-act-ii); opacity: 0.12; }
-  .act-card--iii .act-card__roman { color: var(--color-act-iii); opacity: 0.12; }
+  .act-card:hover::before {
+    opacity: 1;
+  }
+
+  .act-card--i   { --acc: var(--color-act-i); }
+  .act-card--ii  { --acc: var(--color-act-ii); }
+  .act-card--iii { --acc: var(--color-act-iii); }
+
+  .act-card__link {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: var(--space-6);
+    padding: var(--space-8);
+    text-decoration: none;
+    color: inherit;
+    min-height: 20rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .act-card__numeral {
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 144, 'wght' 280, 'SOFT' 100;
+    font-size: clamp(5rem, 10vw, 8rem);
+    line-height: 0.85;
+    color: var(--acc);
+    opacity: 0.9;
+    letter-spacing: -0.03em;
+    transition: opacity var(--dur-med) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+  }
+
+  .act-card:hover .act-card__numeral {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+
+  .act-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .act-card__title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+  }
 
   .act-card__name {
     font-family: var(--font-display);
+    font-variation-settings: 'opsz' 36, 'wght' 400, 'SOFT' 30;
     font-size: var(--text-2xl);
-    font-weight: 300;
+    line-height: 1;
+    color: var(--acc);
   }
 
-  .act-card--i .act-card__name { color: var(--color-act-i); }
-  .act-card--ii .act-card__name { color: var(--color-act-ii); }
-  .act-card--iii .act-card__name { color: var(--color-act-iii); }
+  .act-card__arrow {
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 24, 'wght' 400, 'SOFT' 40;
+    font-size: var(--text-lg);
+    color: var(--color-ink-muted);
+    transition: transform var(--dur-med) var(--ease-out), color var(--dur-fast);
+  }
+
+  .act-card:hover .act-card__arrow {
+    transform: translateX(6px);
+    color: var(--acc);
+  }
 
   .act-card__premise {
     font-family: var(--font-body);
+    font-variation-settings: 'wght' 560;
     font-size: var(--text-base);
-    font-weight: 500;
     color: var(--color-ink);
+    line-height: 1.4;
   }
 
   .act-card__detail {
     font-family: var(--font-body);
     font-size: var(--text-sm);
-    font-style: italic;
     color: var(--color-ink-muted);
     line-height: 1.6;
   }
 
-  /* TOC */
-  .home__toc {
-    padding: var(--space-16) var(--space-6);
+  /* ——— TOC section ——— */
+  .toc-section {
+    padding: var(--space-20) var(--safe-right) var(--space-16) var(--safe-left);
   }
 
-  .home__toc-inner {
+  .toc-section__inner {
     max-width: var(--page-max);
     margin: 0 auto;
   }
 
-  .home__toc-heading {
+  .toc-section__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-4);
+    margin-bottom: var(--space-10);
+    flex-wrap: wrap;
+  }
+
+  .toc-section__label {
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 72, 'wght' 360, 'SOFT' 40;
+    font-size: var(--text-3xl);
+    color: var(--color-ink);
+    line-height: 1;
+  }
+
+  .toc-section__hint {
     font-family: var(--font-mono);
     font-size: var(--text-xs);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     color: var(--color-ink-muted);
-    margin-bottom: var(--space-8);
+  }
+
+  @media (max-width: 48rem) {
+    .hero { padding: var(--space-12) var(--safe-right) var(--space-10) var(--safe-left); }
+    .hero__subtitle { font-size: var(--text-lg); }
+    .thesis__lines li { font-size: var(--text-lg); }
+    .acts { padding: var(--space-12) var(--safe-right) var(--space-12) var(--safe-left); }
+    .act-card__link { padding: var(--space-6); min-height: auto; }
+    .toc-section { padding: var(--space-12) var(--safe-right) var(--space-12) var(--safe-left); }
   }
 </style>

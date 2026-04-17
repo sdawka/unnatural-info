@@ -10,125 +10,273 @@ interface Props {
 }
 
 const { entries } = Astro.props;
+
+// Derive category from slug if not explicitly set
+const enriched = entries.map((entry) => {
+  const category = entry.category ?? (entry.slug.includes('/') ? entry.slug.split('/')[0] : undefined);
+  return { ...entry, category };
+});
+
+// Group by category, preserving ordering priority
+const CATEGORY_ORDER = ['acts', 'concepts', 'themes', 'sources'];
+const groupsMap = new Map<string, typeof enriched>();
+for (const e of enriched) {
+  const key = e.category ?? 'other';
+  if (!groupsMap.has(key)) groupsMap.set(key, []);
+  groupsMap.get(key)!.push(e);
+}
+
+const groups = Array.from(groupsMap.entries())
+  .sort(([a], [b]) => {
+    const ai = CATEGORY_ORDER.indexOf(a);
+    const bi = CATEGORY_ORDER.indexOf(b);
+    if (ai === -1 && bi === -1) return a.localeCompare(b);
+    if (ai === -1) return 1;
+    if (bi === -1) return -1;
+    return ai - bi;
+  })
+  .map(([category, items]) => ({
+    category,
+    items: items.sort((a, b) => a.title.localeCompare(b.title)),
+  }));
 ---
 
-<div class="wiki-search">
-  <input
-    type="search"
-    id="wiki-search-input"
-    class="wiki-search__input"
-    placeholder="Search concepts…"
-    aria-label="Search wiki concepts"
-    autocomplete="off"
-  />
-  <ul class="wiki-search__list" id="wiki-search-list" role="list">
-    {entries.map((entry) => (
-      <li class="wiki-search__item" data-title={entry.title.toLowerCase()} data-category={entry.category?.toLowerCase() ?? ''}>
-        <a href={`/wiki/${entry.slug}`} class="wiki-search__link">
-          {entry.category && (
-            <span class="wiki-search__category">{entry.category}</span>
-          )}
-          <span class="wiki-search__title">{entry.title}</span>
-        </a>
-      </li>
+<div class="ws">
+  <label class="ws__search">
+    <span class="ws__search-icon" aria-hidden="true">⌕</span>
+    <input
+      type="search"
+      id="wiki-search-input"
+      class="ws__input"
+      placeholder="Search entries…"
+      aria-label="Search wiki entries"
+      autocomplete="off"
+    />
+    <kbd class="ws__kbd" aria-hidden="true">/</kbd>
+  </label>
+
+  <div id="wiki-search-list" class="ws__groups">
+    {groups.map(({ category, items }) => (
+      <section class="ws__group" data-group={category.toLowerCase()}>
+        <header class="ws__group-head">
+          <span class="ws__group-label">{category}</span>
+          <span class="ws__group-count">{String(items.length).padStart(2, '0')}</span>
+        </header>
+        <ul class="ws__list" role="list">
+          {items.map((entry) => (
+            <li class="ws__item" data-title={entry.title.toLowerCase()} data-category={entry.category?.toLowerCase() ?? ''}>
+              <a href={`/wiki/${entry.slug}`} class="ws__link">
+                <span class="ws__title">{entry.title}</span>
+                <span class="ws__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
     ))}
-  </ul>
-  {entries.length === 0 && (
-    <p class="wiki-search__empty">
-      No concepts yet. The wiki grows as the dump is compiled.
-    </p>
-  )}
+  </div>
+
+  <p class="ws__empty" id="wiki-search-empty" hidden>
+    No entries match. Try a different query.
+  </p>
 </div>
 
 <script>
   const input = document.getElementById('wiki-search-input') as HTMLInputElement | null;
   const list = document.getElementById('wiki-search-list');
+  const empty = document.getElementById('wiki-search-empty');
 
-  if (input && list) {
-    input.addEventListener('input', () => {
-      const query = input.value.toLowerCase().trim();
-      const items = list.querySelectorAll<HTMLLIElement>('.wiki-search__item');
-      items.forEach((item) => {
-        const title = item.dataset.title ?? '';
-        const category = item.dataset.category ?? '';
-        const match = !query || title.includes(query) || category.includes(query);
-        item.style.display = match ? '' : 'none';
-      });
+  if (input && list && empty) {
+    // "/" focuses the search like a shortcut
+    document.addEventListener('keydown', (e) => {
+      if (e.key === '/' && document.activeElement !== input) {
+        const target = e.target as HTMLElement | null;
+        if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA')) return;
+        e.preventDefault();
+        input.focus();
+        input.select();
+      }
     });
+
+    const update = () => {
+      const query = input.value.toLowerCase().trim();
+      const groups = list.querySelectorAll<HTMLElement>('.ws__group');
+      let anyVisible = false;
+      groups.forEach((group) => {
+        const items = group.querySelectorAll<HTMLLIElement>('.ws__item');
+        let groupVisible = 0;
+        items.forEach((item) => {
+          const title = item.dataset.title ?? '';
+          const cat = item.dataset.category ?? '';
+          const match = !query || title.includes(query) || cat.includes(query);
+          item.style.display = match ? '' : 'none';
+          if (match) groupVisible++;
+        });
+        group.style.display = groupVisible === 0 ? 'none' : '';
+        if (groupVisible > 0) anyVisible = true;
+      });
+      empty.hidden = anyVisible;
+    };
+
+    input.addEventListener('input', update);
   }
 </script>
 
 <style>
-  .wiki-search {
+  .ws {
     display: flex;
     flex-direction: column;
-    gap: var(--space-6);
+    gap: var(--space-10);
   }
 
-  .wiki-search__input {
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--color-rule);
-    padding: var(--space-3) 0;
-    color: var(--color-ink);
-    outline: none;
-    width: 100%;
-    max-width: 40ch;
-    transition: border-color 0.15s;
+  /* Search bar */
+  .ws__search {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--color-rule);
+    background: color-mix(in srgb, var(--color-ground-tint) 40%, transparent);
+    max-width: 32rem;
+    transition: border-color var(--dur-fast);
   }
 
-  .wiki-search__input:focus {
+  .ws__search:focus-within {
     border-color: var(--color-wiki);
   }
 
-  .wiki-search__input::placeholder {
+  .ws__search-icon {
+    font-size: 1.1rem;
+    color: var(--color-ink-muted);
+    line-height: 1;
+  }
+
+  .ws__input {
+    font-family: var(--font-body);
+    font-variation-settings: 'wght' 440;
+    font-size: var(--text-base);
+    background: transparent;
+    border: none;
+    color: var(--color-ink);
+    outline: none;
+    width: 100%;
+  }
+
+  .ws__input::placeholder {
     color: var(--color-ink-muted);
     font-style: italic;
   }
 
-  .wiki-search__list {
+  .ws__kbd {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--color-ink-muted);
+    background: var(--color-ground);
+    border: 1px solid var(--color-rule);
+    padding: 0.15em 0.5em;
+    border-radius: 2px;
+    line-height: 1;
+  }
+
+  /* Groups */
+  .ws__groups {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  @media (min-width: 54rem) {
+    .ws__groups {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: var(--space-16);
+      row-gap: var(--space-12);
+    }
+  }
+
+  .ws__group-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--color-rule);
+    margin-bottom: var(--space-3);
+  }
+
+  .ws__group-label {
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 30, 'wght' 380, 'SOFT' 40;
+    font-size: var(--text-xl);
+    font-style: italic;
+    color: var(--color-wiki);
+    text-transform: capitalize;
+  }
+
+  .ws__group-count {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--color-ink-faint);
+    letter-spacing: 0.08em;
+  }
+
+  .ws__list {
     list-style: none;
     padding: 0;
-    border-top: 1px solid var(--color-rule);
   }
 
-  .wiki-search__item {
-    border-bottom: 1px solid var(--color-rule);
+  .ws__item {
+    border-bottom: 1px solid var(--color-rule-soft);
   }
 
-  .wiki-search__link {
+  .ws__item:last-child { border-bottom: none; }
+
+  .ws__link {
     display: flex;
-    flex-direction: column;
-    gap: var(--space-1);
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-3);
     padding: var(--space-3) 0;
     text-decoration: none;
-    transition: opacity 0.15s;
+    transition: padding-left var(--dur-med) var(--ease-out);
   }
 
-  .wiki-search__link:hover {
-    opacity: 0.65;
+  .ws__link:hover {
+    padding-left: var(--space-3);
   }
 
-  .wiki-search__category {
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
+  .ws__title {
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 20, 'wght' 380, 'SOFT' 30;
+    font-size: var(--text-base);
+    color: var(--color-ink);
+    line-height: 1.25;
+    transition: color var(--dur-fast);
+  }
+
+  .ws__link:hover .ws__title {
     color: var(--color-wiki);
   }
 
-  .wiki-search__title {
+  .ws__arrow {
     font-family: var(--font-display);
-    font-size: var(--text-xl);
-    font-weight: 300;
-    color: var(--color-ink);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity var(--dur-med) var(--ease-out), transform var(--dur-med) var(--ease-out), color var(--dur-fast);
   }
 
-  .wiki-search__empty {
+  .ws__link:hover .ws__arrow {
+    opacity: 1;
+    transform: translateX(0);
+    color: var(--color-wiki);
+  }
+
+  .ws__empty {
     font-family: var(--font-body);
     font-style: italic;
     color: var(--color-ink-muted);
+    padding: var(--space-6) 0;
   }
 </style>

@@ -1,72 +1,233 @@
+/* ——— Prose: long-form reading ——— */
+
 .prose {
   max-width: var(--prose-width);
   font-family: var(--font-body);
+  font-variation-settings: 'opsz' 12, 'wght' 420;
   font-size: var(--text-base);
-  line-height: 1.75;
+  line-height: var(--lh-body);
   color: var(--color-ink);
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
+/* ——— Headings ——— */
 .prose h1,
 .prose h2,
 .prose h3,
 .prose h4 {
   font-family: var(--font-display);
-  font-weight: 300;
-  line-height: 1.2;
+  font-variation-settings: 'opsz' 60, 'wght' 340, 'SOFT' 30;
+  line-height: var(--lh-tight);
+  letter-spacing: -0.015em;
   color: var(--color-ink);
 }
 
-.prose h1 { font-size: var(--text-4xl); margin-top: var(--space-16); margin-bottom: var(--space-6); }
-.prose h2 { font-size: var(--text-2xl); margin-top: var(--space-12); margin-bottom: var(--space-4); }
-.prose h3 { font-size: var(--text-xl); margin-top: var(--space-8); margin-bottom: var(--space-3); }
-.prose h4 { font-size: var(--text-lg); margin-top: var(--space-6); margin-bottom: var(--space-2); }
-
-.prose p {
+.prose h1 {
+  font-size: var(--text-4xl);
+  margin-top: var(--space-20);
   margin-bottom: var(--space-6);
+  font-variation-settings: 'opsz' 100, 'wght' 320, 'SOFT' 40;
 }
 
-.prose p + p {
-  text-indent: 1.5em;
-  margin-top: calc(-1 * var(--space-2));
+.prose h2 {
+  font-size: var(--text-2xl);
+  margin-top: var(--space-16);
+  margin-bottom: var(--space-4);
+  position: relative;
+  padding-left: 0;
 }
 
-.prose blockquote {
-  border-left: 2px solid var(--color-rule);
-  padding-left: var(--space-6);
-  margin: var(--space-8) 0;
-  font-style: italic;
-  color: var(--color-ink-muted);
+.prose h2::before {
+  content: '§';
+  position: absolute;
+  left: -1.4em;
+  top: 0.15em;
+  font-family: var(--font-mono);
+  font-size: 0.55em;
+  color: var(--color-ink-faint);
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
-.prose ul, .prose ol {
-  padding-left: var(--space-6);
-  margin-bottom: var(--space-6);
+@media (max-width: 48rem) {
+  .prose h2::before {
+    position: static;
+    display: inline-block;
+    margin-right: 0.5em;
+    font-size: 0.55em;
+    vertical-align: 0.25em;
+  }
 }
 
-.prose li {
+.prose h3 {
+  font-size: var(--text-xl);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-3);
+}
+
+.prose h4 {
+  font-size: var(--text-lg);
+  margin-top: var(--space-8);
   margin-bottom: var(--space-2);
+  font-variation-settings: 'opsz' 20, 'wght' 560, 'SOFT' 20;
+  letter-spacing: 0;
+}
+
+/* ——— Paragraphs ——— */
+.prose p {
+  margin-bottom: var(--space-5);
+  text-wrap: pretty;
+}
+
+/* Drop cap on the opening paragraph */
+.prose > p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 144, 'wght' 340, 'SOFT' 60;
+  float: left;
+  font-size: 4.1em;
+  line-height: 0.88;
+  padding: 0.06em 0.08em 0 0;
+  margin-top: 0.08em;
+  color: var(--color-ink);
+}
+
+@media (max-width: 40rem) {
+  .prose > p:first-of-type::first-letter {
+    font-size: 3.4em;
+  }
+}
+
+/* Leading small-caps in the first line, for the opening paragraph only */
+.prose > p:first-of-type::first-line {
+  font-variant-caps: small-caps;
+  letter-spacing: 0.04em;
+}
+
+/* Inline links in prose — animated underline */
+.prose a {
+  color: inherit;
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size var(--dur-med) var(--ease-out);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-rule);
+  padding-bottom: 1px;
+}
+
+.prose a:hover {
+  background-size: 100% 1px;
+  border-bottom-color: transparent;
+}
+
+/* ——— Blockquote ——— */
+.prose blockquote {
+  border-left: 3px solid var(--color-ink-faint);
+  padding: var(--space-2) 0 var(--space-2) var(--space-6);
+  margin: var(--space-8) 0;
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 36, 'wght' 360, 'SOFT' 60;
+  font-style: italic;
+  font-size: var(--text-lg);
+  line-height: 1.45;
+  color: var(--color-ink-soft);
+}
+
+.prose blockquote p + p {
+  margin-top: var(--space-4);
+}
+
+/* ——— Lists ——— */
+.prose ul, .prose ol {
+  padding-left: var(--space-5);
+  margin: var(--space-5) 0 var(--space-6);
+}
+
+.prose ul { list-style: none; }
+
+.prose ul > li {
+  position: relative;
+  padding-left: var(--space-5);
+  margin-bottom: var(--space-3);
+}
+
+.prose ul > li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 0.7em;
+  height: 1px;
+  background: var(--color-ink-muted);
+}
+
+.prose ol {
+  list-style: none;
+  counter-reset: item;
+}
+
+.prose ol > li {
+  counter-increment: item;
+  position: relative;
+  padding-left: 2.2em;
+  margin-bottom: var(--space-3);
+}
+
+.prose ol > li::before {
+  content: counter(item, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0.12em;
+  font-family: var(--font-mono);
+  font-size: 0.7em;
+  color: var(--color-ink-muted);
+  letter-spacing: 0.05em;
+}
+
+/* Nested lists */
+.prose li > ul,
+.prose li > ol {
+  margin: var(--space-2) 0 0;
 }
 
 .prose strong {
-  font-weight: 600;
+  font-variation-settings: 'opsz' 12, 'wght' 600;
+  color: var(--color-ink);
 }
 
 .prose em {
   font-style: italic;
 }
 
-/* Footnotes rendered by Astro's markdown processor */
+/* Mixed-case SMCPS */
+.prose .smcp, .prose abbr {
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+/* ——— Footnotes / superscripts ——— */
+.prose sup {
+  font-family: var(--font-mono);
+  font-size: 0.62em;
+  vertical-align: super;
+  line-height: 0;
+  color: var(--color-ink-muted);
+}
+
 .prose .footnotes {
   margin-top: var(--space-16);
-  padding-top: var(--space-8);
+  padding-top: var(--space-6);
   border-top: 1px solid var(--color-rule);
   font-size: var(--text-sm);
   color: var(--color-ink-muted);
 }
 
-.prose sup {
-  font-family: var(--font-mono);
-  font-size: 0.65em;
-  vertical-align: super;
-  line-height: 0;
+/* Widow / orphan */
+.prose p,
+.prose li {
+  orphans: 2;
+  widows: 2;
 }

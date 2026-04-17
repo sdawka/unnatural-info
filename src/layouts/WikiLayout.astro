@@ -3,39 +3,72 @@ import type { CollectionEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import '../styles/prose.css';
 
 interface Props {
   entry: CollectionEntry<'wiki'>;
 }
 
 const { entry } = Astro.props;
-const title = entry.data.title ?? entry.id.replace(/-/g, ' ');
-const category = entry.data.category;
+const idSegments = entry.id.split('/');
+const category = entry.data.category ?? (idSegments.length > 1 ? idSegments[0] : undefined);
+
+function extractH1(body: string | undefined): string | null {
+  if (!body) return null;
+  const match = body.match(/^\s*#\s+(.+?)\s*$/m);
+  return match ? match[1].trim() : null;
+}
+
+const h1 = extractH1(entry.body);
+const fallback = idSegments[idSegments.length - 1]
+  .split('-')
+  .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+  .join(' ');
+const title = entry.data.title ?? h1 ?? fallback;
 const updated = entry.data.updated;
 ---
 
 <BaseLayout title={title}>
   <SiteHeader />
-  <main class="wiki-page">
-    <div class="wiki-page__container">
-      <nav class="wiki-breadcrumb" aria-label="Breadcrumb">
-        <a href="/wiki/">Wiki</a>
-        <span aria-hidden="true"> / </span>
-        <span>{title}</span>
+  <main class="wp">
+    <div class="wp__container">
+      <nav class="wp__breadcrumb" aria-label="Breadcrumb">
+        <a href="/wiki/" class="wp__crumb">
+          <span class="wp__crumb-mark" aria-hidden="true">⌘</span>
+          Wiki
+        </a>
+        {category && (
+          <>
+            <span class="wp__crumb-sep" aria-hidden="true">/</span>
+            <span class="wp__crumb wp__crumb--cat">{category.charAt(0).toUpperCase() + category.slice(1)}</span>
+          </>
+        )}
+        <span class="wp__crumb-sep" aria-hidden="true">/</span>
+        <span class="wp__crumb wp__crumb--current">{title}</span>
       </nav>
 
-      <header class="wiki-header">
-        {category && <p class="wiki-category">{category}</p>}
-        <h1 class="wiki-title">{title}</h1>
-        {updated && <p class="wiki-updated">Updated {updated}</p>}
+      <header class="wp__header">
+        <p class="wp__kicker">
+          <span class="wp__kicker-glyph" aria-hidden="true">§</span>
+          Compiled entry
+        </p>
+        <h1 class="wp__title">{title}</h1>
+        {updated && (
+          <p class="wp__updated">
+            <span aria-hidden="true">↻</span>
+            Updated {updated}
+          </p>
+        )}
       </header>
 
-      <article class="prose wiki-body">
+      <article class="prose wp__body">
         <slot />
       </article>
 
-      <footer class="wiki-footer">
-        <a href="/wiki/" class="wiki-footer__back">← All concepts</a>
+      <footer class="wp__footer">
+        <a href="/wiki/" class="wp__back">
+          <span aria-hidden="true">←</span> All entries
+        </a>
       </footer>
     </div>
   </main>
@@ -43,83 +76,191 @@ const updated = entry.data.updated;
 </BaseLayout>
 
 <style>
-  .wiki-page {
-    padding: var(--space-12) var(--space-6);
+  .wp {
+    padding: var(--space-10) var(--safe-right) var(--space-10) var(--safe-left);
   }
 
-  .wiki-page__container {
+  .wp__container {
     max-width: var(--page-max);
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, var(--prose-width));
+    justify-content: start;
   }
 
-  .wiki-breadcrumb {
+  @media (min-width: 64rem) {
+    .wp__container {
+      grid-template-columns: 1fr minmax(0, var(--prose-width)) 1fr;
+      justify-content: stretch;
+    }
+    .wp__breadcrumb, .wp__header, .wp__body, .wp__footer {
+      grid-column: 2;
+    }
+  }
+
+  /* Breadcrumb */
+  .wp__breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
     font-family: var(--font-mono);
     font-size: var(--text-xs);
-    color: var(--color-wiki);
-    margin-bottom: var(--space-8);
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
+    color: var(--color-ink-muted);
+    margin-bottom: var(--space-8);
   }
 
-  .wiki-breadcrumb a {
+  .wp__crumb {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
     color: var(--color-wiki);
     text-decoration: none;
+    transition: color var(--dur-fast);
   }
 
-  .wiki-breadcrumb a:hover {
-    text-decoration: underline;
+  .wp__crumb:hover { color: var(--color-ink); }
+
+  .wp__crumb-mark {
+    font-size: 1.1em;
+    line-height: 1;
   }
 
-  .wiki-header {
-    max-width: var(--prose-width);
+  .wp__crumb--cat {
+    color: var(--color-ink-muted);
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 12, 'wght' 400, 'SOFT' 40;
+    font-size: 0.85rem;
+  }
+
+  .wp__crumb--current {
+    color: var(--color-ink);
+    text-transform: none;
+    letter-spacing: 0.02em;
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 14, 'wght' 460, 'SOFT' 40;
+    font-size: 0.85rem;
+  }
+
+  .wp__crumb-sep { color: var(--color-ink-faint); }
+
+  /* Header */
+  .wp__header {
     margin-bottom: var(--space-10);
     display: flex;
     flex-direction: column;
-    gap: var(--space-2);
+    gap: var(--space-3);
+    padding-bottom: var(--space-6);
+    border-bottom: 1px dashed var(--color-rule);
   }
 
-  .wiki-category {
+  .wp__kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
     font-family: var(--font-mono);
     font-size: var(--text-xs);
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.14em;
     color: var(--color-wiki);
   }
 
-  .wiki-title {
-    font-family: var(--font-display);
-    font-size: var(--text-4xl);
-    font-weight: 300;
-    color: var(--color-ink);
-    line-height: 1.15;
+  .wp__kicker-glyph {
+    font-size: 1.2em;
+    line-height: 1;
+    color: var(--color-wiki-soft);
   }
 
-  .wiki-updated {
+  .wp__title {
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 96, 'wght' 340, 'SOFT' 40;
+    font-size: var(--text-3xl);
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    color: var(--color-ink);
+    text-wrap: balance;
+  }
+
+  @media (min-width: 48rem) {
+    .wp__title { font-size: var(--text-4xl); }
+  }
+
+  .wp__updated {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
     font-family: var(--font-mono);
     font-size: var(--text-xs);
     color: var(--color-ink-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: var(--space-2);
   }
 
-  .wiki-body {
+  .wp__body {
     max-width: var(--prose-width);
   }
 
-  .wiki-footer {
+  /* Wiki-specific prose accent */
+  .wp__body :global(h1) { display: none; } /* markdown h1 is redundant with wp__title */
+  .wp__body :global(blockquote) {
+    border-left-color: var(--color-wiki-soft);
+  }
+  .wp__body :global(a) {
+    border-bottom-color: color-mix(in srgb, var(--color-wiki) 50%, transparent);
+  }
+  .wp__body :global(a:hover) {
+    color: var(--color-wiki);
+  }
+  .wp__body :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-5) 0;
+    font-size: var(--text-sm);
+  }
+  .wp__body :global(th),
+  .wp__body :global(td) {
+    border-bottom: 1px solid var(--color-rule-soft);
+    text-align: left;
+    padding: var(--space-2) var(--space-3);
+    vertical-align: top;
+  }
+  .wp__body :global(th) {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-ink-muted);
+    border-bottom: 1px solid var(--color-rule);
+    font-weight: 400;
+  }
+
+  .wp__footer {
     margin-top: var(--space-16);
-    padding-top: var(--space-8);
+    padding-top: var(--space-6);
     border-top: 1px solid var(--color-rule);
   }
 
-  .wiki-footer__back {
+  .wp__back {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
     font-family: var(--font-mono);
     font-size: var(--text-xs);
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
     color: var(--color-wiki);
     text-decoration: none;
+    transition: transform var(--dur-med) var(--ease-out), color var(--dur-fast);
   }
 
-  .wiki-footer__back:hover {
-    text-decoration: underline;
+  .wp__back:hover {
+    color: var(--color-ink);
+    transform: translateX(-3px);
   }
 </style>
