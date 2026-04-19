@@ -680,11 +680,11 @@ const chapters = await getCollection("chapters", ({ data }) => !data.draft);
       display: grid;
       grid-template-columns: minmax(0, 1.18fr) minmax(19rem, 0.82fr);
       grid-template-areas:
-        "eyebrow    thesis"
-        "narrative  thesis"
+        "eyebrow    disclaimer"
+        "narrative  disclaimer"
         "title      title"
-        "subtitle   disclaimer"
-        "status     disclaimer";
+        "subtitle   thesis"
+        "status     thesis";
       column-gap: var(--space-16);
       row-gap: var(--space-8);
       align-items: start;
