@@ -1,18 +1,17 @@
 ---
-import { getCollection } from 'astro:content';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import SiteHeader from '../components/SiteHeader.astro';
-import SiteFooter from '../components/SiteFooter.astro';
-import TableOfContents from '../components/TableOfContents.astro';
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import TableOfContents from "../components/TableOfContents.astro";
 
-const chapters = await getCollection('chapters', ({ data }) => !data.draft);
+const chapters = await getCollection("chapters", ({ data }) => !data.draft);
 ---
 
 <BaseLayout title="UNNATURAL">
   <SiteHeader />
 
   <main class="home">
-
     <!-- Hero -->
     <section class="hero">
       <div class="hero__inner">
@@ -20,58 +19,102 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
           <span class="hero__eyebrow-stack" aria-hidden="true">
             <span></span><span></span><span></span>
           </span>
-          <span>An <em>unscientific<a href="#unscientific-note" class="hero__footnote-mark" aria-label="What unscientific means">*</a></em> empirical theory of everything</span>
+          <span
+            >An <em
+              >unscientific<a
+                href="#unscientific-note"
+                class="hero__footnote-mark"
+                aria-label="What unscientific means">*</a
+              ></em
+            > empirical theory of everything</span
+          >
         </p>
 
         <div class="hero__narrative">
-          <p class="hero__question-label">A child asks the meatiest question ever </p>
-          <p class="hero__question-text">
-            <span class="hero__quote" aria-hidden="true">“</span>What are we<span class="hero__qmark">?</span><span class="hero__quote" aria-hidden="true">”</span>
+          <p class="hero__question-label">
+            A child asks the meatiest question ever
           </p>
-          <p class="hero__beat">Thirty years of wondering, listening, and reading later, an answer that was always there, clarifies itself: </p>
+          <p class="hero__question-text">
+            <span class="hero__quote" aria-hidden="true">“</span>What are we<span
+              class="hero__qmark">?</span
+            ><span class="hero__quote" aria-hidden="true">”</span>
+          </p>
+          <p class="hero__beat">
+            Thirty years of wondering, listening, and reading later, an answer
+            that was always there, clarifies itself:
+          </p>
         </div>
 
         <h1 class="hero__title" aria-label="UNNATURAL">
-          <span class="hero__title-letter" data-delay="0">U</span><span class="hero__title-letter" data-delay="1">N</span><span class="hero__title-letter" data-delay="2">N</span><span class="hero__title-letter" data-delay="3">A</span><span class="hero__title-letter" data-delay="4">T</span><span class="hero__title-letter" data-delay="5">U</span><span class="hero__title-letter" data-delay="6">R</span><span class="hero__title-letter" data-delay="7">A</span><span class="hero__title-letter" data-delay="8">L</span>
+          <span class="hero__title-letter" data-delay="0">U</span><span
+            class="hero__title-letter"
+            data-delay="1">N</span
+          ><span class="hero__title-letter" data-delay="2">N</span><span
+            class="hero__title-letter"
+            data-delay="3">A</span
+          ><span class="hero__title-letter" data-delay="4">T</span><span
+            class="hero__title-letter"
+            data-delay="5">U</span
+          ><span class="hero__title-letter" data-delay="6">R</span><span
+            class="hero__title-letter"
+            data-delay="7">A</span
+          ><span class="hero__title-letter" data-delay="8">L</span>
         </h1>
 
         <p class="hero__subtitle">
-          We are the only natural beings who are gifted privileged access to the <a href="/chapters/10-the-information-physical-duality" class="hero__subtitle-link">information realm</a>, as we loop strangely back through the physical realm to become ourselves. We are subsets of the universe that wanted to know itself, and can choose not to.
+          We are the only natural beings who are gifted privileged access to the <a
+            href="/chapters/10-the-information-physical-duality"
+            class="hero__subtitle-link">information realm</a
+          >, as we loop strangely back through the physical realm to become
+          ourselves. We are subsets of the universe that wanted to know itself,
+          and can choose not to.
         </p>
-
-        <aside class="thesis" aria-label="The argument in six lines">
-          <p class="thesis__label">
-            <span class="glyph-stack" aria-hidden="true"><span></span><span></span><span></span></span>
-            The shape of the argument
-          </p>
-          <ol class="thesis__lines">
-            <li><span class="thesis__accent thesis__accent--i">Will</span> creates direction.</li>
-            <li>Direction creates <span class="thesis__accent thesis__accent--ii">difference</span>.</li>
-            <li>Difference creates self, world, value, and distinction.</li>
-            <li>Distinction creates <em>models</em>.</li>
-            <li>Models guide <span class="thesis__accent thesis__accent--iii">manifestation</span>.</li>
-            <li>The loop recurses. Life learns, grows, complexifies.</li>
-          </ol>
-        </aside>
 
         <aside class="hero__disclaimer" id="unscientific-note">
           <span class="hero__disclaimer-marker" aria-hidden="true">*</span>
           <p>
-            "Unscientific" does not mean anti-science.
-            It means I am not the most rigorous or at all peer-reviewed,
-            my argument is not reducible to one formal discipline,
-            I'm not providing proofs or postulating predictions,
-            nor am I confident in my correctness and completeness.
-            I always try to begin from lived experience,
-            I'm committed to reality, clarity, and honest uncertainty.
+            "Unscientific" does not mean anti-science. It means I am not the
+            most rigorous or at all peer-reviewed, my argument is not reducible
+            to one formal discipline, I'm not providing proofs or postulating
+            predictions, nor am I confident in my correctness and completeness.
+            I always try to begin from lived experience, I'm committed to
+            reality, clarity, and honest uncertainty.
           </p>
+        </aside>
+        <aside class="thesis" aria-label="The argument in six lines">
+          <p class="thesis__label">
+            <span class="glyph-stack" aria-hidden="true"
+              ><span></span><span></span><span></span></span
+            >
+            The shape of the argument
+          </p>
+          <ol class="thesis__lines">
+            <li>
+              <span class="thesis__accent thesis__accent--i">Will</span> creates direction.
+            </li>
+            <li>
+              Direction creates <span class="thesis__accent thesis__accent--ii"
+                >difference</span
+              >.
+            </li>
+            <li>Difference creates self, world, value, and distinction.</li>
+            <li>Distinction creates <em>models</em>.</li>
+            <li>
+              Models guide <span class="thesis__accent thesis__accent--iii"
+                >manifestation</span
+              >.
+            </li>
+            <li>The loop recurses. Life learns, grows, complexifies.</li>
+          </ol>
         </aside>
 
         <p class="hero__status" aria-label="Document status">
           <span class="hero__status-dot" aria-hidden="true"></span>
           <span class="hero__status-label">Living document</span>
           <span class="hero__status-sep" aria-hidden="true">·</span>
-          <span class="hero__status-note">a work in progress, continuously refined.</span>
+          <span class="hero__status-note"
+            >a work in progress, continuously refined.</span
+          >
         </p>
       </div>
     </section>
@@ -101,7 +144,11 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
                   <span class="act-card__arrow" aria-hidden="true">→</span>
                 </div>
                 <p class="act-card__premise">I will, therefore I am.</p>
-                <p class="act-card__detail">Before thought, and before feeling, something leans. A bacterium follows a chemical gradient. A person follows a hunch. Anything that happens starts with a tilt.</p>
+                <p class="act-card__detail">
+                  Before thought, and before feeling, something leans. A
+                  bacterium follows a chemical gradient. A person follows a
+                  hunch. Anything that happens starts with a tilt.
+                </p>
               </div>
             </a>
           </li>
@@ -114,8 +161,14 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
                   <h3 class="act-card__name">init.d</h3>
                   <span class="act-card__arrow" aria-hidden="true">→</span>
                 </div>
-                <p class="act-card__premise">Finite beings in an infinite universe.</p>
-                <p class="act-card__detail">We cannot take in the whole thing. So we carve, name, sort, and simplify. Distinction is how a mind gets started without melting.</p>
+                <p class="act-card__premise">
+                  Finite beings in an infinite universe.
+                </p>
+                <p class="act-card__detail">
+                  We cannot take in the whole thing. So we carve, name, sort,
+                  and simplify. Distinction is how a mind gets started without
+                  melting.
+                </p>
               </div>
             </a>
           </li>
@@ -129,7 +182,10 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
                   <span class="act-card__arrow" aria-hidden="true">→</span>
                 </div>
                 <p class="act-card__premise">Growth is a good loop.</p>
-                <p class="act-card__detail">Measure, Model, Manifest. Notice the world, make a better map, test it, do something with it, then let the world answer back.</p>
+                <p class="act-card__detail">
+                  Measure, Model, Manifest. Notice the world, make a better map,
+                  test it, do something with it, then let the world answer back.
+                </p>
               </div>
             </a>
           </li>
@@ -149,7 +205,6 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
         <TableOfContents chapters={chapters} />
       </div>
     </section>
-
   </main>
 
   <SiteFooter />
@@ -170,16 +225,18 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
 
   /* Subtle paper vignette — neutral, almost imperceptible */
   .hero::after {
-    content: '';
+    content: "";
     position: absolute;
     right: -14rem;
     bottom: -10rem;
     width: 44rem;
     height: 44rem;
     border-radius: 50%;
-    background: radial-gradient(circle at center,
+    background: radial-gradient(
+      circle at center,
       color-mix(in srgb, var(--color-ink) 4%, transparent),
-      transparent 65%);
+      transparent 65%
+    );
     pointer-events: none;
     z-index: 0;
   }
@@ -221,9 +278,18 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     background: var(--color-ink);
   }
 
-  .hero__eyebrow-stack span:nth-child(1) { width: 18px; opacity: 1; }
-  .hero__eyebrow-stack span:nth-child(2) { width: 12px; opacity: 0.5; }
-  .hero__eyebrow-stack span:nth-child(3) { width: 6px;  opacity: 0.22; }
+  .hero__eyebrow-stack span:nth-child(1) {
+    width: 18px;
+    opacity: 1;
+  }
+  .hero__eyebrow-stack span:nth-child(2) {
+    width: 12px;
+    opacity: 0.5;
+  }
+  .hero__eyebrow-stack span:nth-child(3) {
+    width: 6px;
+    opacity: 0.22;
+  }
 
   .hero__footnote-mark {
     color: var(--color-ink-faint);
@@ -244,7 +310,10 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
 
   .hero__question-label {
     font-family: var(--font-display);
-    font-variation-settings: 'opsz' 18, 'wght' 380, 'SOFT' 40;
+    font-variation-settings:
+      "opsz" 18,
+      "wght" 380,
+      "SOFT" 40;
     font-style: italic;
     font-size: var(--text-base);
     color: var(--color-ink-muted);
@@ -255,7 +324,10 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
   .hero__question-text {
     display: block;
     font-family: var(--font-display);
-    font-variation-settings: 'opsz' 144, 'wght' 300, 'SOFT' 80;
+    font-variation-settings:
+      "opsz" 144,
+      "wght" 300,
+      "SOFT" 80;
     font-size: clamp(2.5rem, 7vw, 4.5rem);
     line-height: 1;
     color: var(--color-ink);
@@ -268,7 +340,10 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
 
   .hero__quote {
     font-family: var(--font-display);
-    font-variation-settings: 'opsz' 144, 'wght' 340, 'SOFT' 100;
+    font-variation-settings:
+      "opsz" 144,
+      "wght" 340,
+      "SOFT" 100;
     color: var(--color-ink-faint);
     line-height: 1;
     padding: 0 0.05em;
@@ -276,7 +351,10 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
 
   .hero__qmark {
     color: var(--color-ink);
-    font-variation-settings: 'opsz' 144, 'wght' 360, 'SOFT' 40;
+    font-variation-settings:
+      "opsz" 144,
+      "wght" 360,
+      "SOFT" 40;
   }
 
   /* Single-line beat that bridges question and reveal. */
@@ -295,7 +373,7 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
   }
 
   .hero__beat::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0.58em;
@@ -339,42 +417,75 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
   .hero__title-letter {
     display: inline-block;
     color: inherit;
-    font-variation-settings: 'opsz' 144, 'wght' 320, 'SOFT' 80;
+    font-variation-settings:
+      "opsz" 144,
+      "wght" 320,
+      "SOFT" 80;
     animation: hero-letter-enter var(--dur-slow) var(--ease-out) both;
     animation-delay: calc(var(--d, 0) * 40ms);
     transition: font-variation-settings var(--dur-med) var(--ease-out);
   }
 
-  .hero__title-letter:nth-child(1) { --d: 0; }
-  .hero__title-letter:nth-child(2) { --d: 1; }
-  .hero__title-letter:nth-child(3) { --d: 2; }
-  .hero__title-letter:nth-child(4) { --d: 3; }
-  .hero__title-letter:nth-child(5) { --d: 4; }
-  .hero__title-letter:nth-child(6) { --d: 5; }
-  .hero__title-letter:nth-child(7) { --d: 6; }
-  .hero__title-letter:nth-child(8) { --d: 7; }
-  .hero__title-letter:nth-child(9) { --d: 8; }
+  .hero__title-letter:nth-child(1) {
+    --d: 0;
+  }
+  .hero__title-letter:nth-child(2) {
+    --d: 1;
+  }
+  .hero__title-letter:nth-child(3) {
+    --d: 2;
+  }
+  .hero__title-letter:nth-child(4) {
+    --d: 3;
+  }
+  .hero__title-letter:nth-child(5) {
+    --d: 4;
+  }
+  .hero__title-letter:nth-child(6) {
+    --d: 5;
+  }
+  .hero__title-letter:nth-child(7) {
+    --d: 6;
+  }
+  .hero__title-letter:nth-child(8) {
+    --d: 7;
+  }
+  .hero__title-letter:nth-child(9) {
+    --d: 8;
+  }
 
   .hero__title:hover .hero__title-letter {
-    font-variation-settings: 'opsz' 144, 'wght' 480, 'SOFT' 0;
+    font-variation-settings:
+      "opsz" 144,
+      "wght" 480,
+      "SOFT" 0;
   }
 
   @keyframes hero-letter-enter {
     from {
       opacity: 0;
       transform: translateY(0.12em);
-      font-variation-settings: 'opsz' 144, 'wght' 220, 'SOFT' 80;
+      font-variation-settings:
+        "opsz" 144,
+        "wght" 220,
+        "SOFT" 80;
     }
     to {
       opacity: 1;
       transform: translateY(0);
-      font-variation-settings: 'opsz' 144, 'wght' 320, 'SOFT' 80;
+      font-variation-settings:
+        "opsz" 144,
+        "wght" 320,
+        "SOFT" 80;
     }
   }
 
   .hero__subtitle {
     font-family: var(--font-display);
-    font-variation-settings: 'opsz' 36, 'wght' 350, 'SOFT' 40;
+    font-variation-settings:
+      "opsz" 36,
+      "wght" 350,
+      "SOFT" 40;
     font-style: italic;
     font-size: var(--text-xl);
     color: var(--color-ink-muted);
@@ -420,7 +531,10 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     position: relative;
     padding-left: 2.5em;
     font-family: var(--font-display);
-    font-variation-settings: 'opsz' 30, 'wght' 340, 'SOFT' 40;
+    font-variation-settings:
+      "opsz" 30,
+      "wght" 340,
+      "SOFT" 40;
     font-size: var(--text-lg);
     line-height: 1.4;
     color: var(--color-ink);
@@ -439,11 +553,20 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
 
   .thesis__accent {
     font-style: italic;
-    font-variation-settings: 'opsz' 36, 'wght' 420, 'SOFT' 60;
+    font-variation-settings:
+      "opsz" 36,
+      "wght" 420,
+      "SOFT" 60;
   }
-  .thesis__accent--i   { color: var(--color-act-i); }
-  .thesis__accent--ii  { color: var(--color-act-ii); }
-  .thesis__accent--iii { color: var(--color-act-iii); }
+  .thesis__accent--i {
+    color: var(--color-act-i);
+  }
+  .thesis__accent--ii {
+    color: var(--color-act-ii);
+  }
+  .thesis__accent--iii {
+    color: var(--color-act-iii);
+  }
 
   /* Disclaimer */
   .hero__disclaimer {
@@ -490,25 +613,29 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     height: 8px;
     border-radius: 50%;
     background: var(--color-act-iii);
-    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-act-iii) 60%, transparent);
+    box-shadow: 0 0 0 0
+      color-mix(in srgb, var(--color-act-iii) 60%, transparent);
     animation: pulse 2.4s var(--ease-out) infinite;
     flex-shrink: 0;
   }
 
   @keyframes pulse {
-    0%, 100% {
-      box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-act-iii) 50%, transparent);
+    0%,
+    100% {
+      box-shadow: 0 0 0 0
+        color-mix(in srgb, var(--color-act-iii) 50%, transparent);
       opacity: 1;
     }
     50% {
-      box-shadow: 0 0 0 6px color-mix(in srgb, var(--color-act-iii) 0%, transparent);
+      box-shadow: 0 0 0 6px
+        color-mix(in srgb, var(--color-act-iii) 0%, transparent);
       opacity: 0.7;
     }
   }
 
   .hero__status-label {
     color: var(--color-ink);
-    font-variation-settings: 'wght' 520;
+    font-variation-settings: "wght" 520;
   }
 
   .hero__status-sep {
@@ -529,7 +656,9 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
       flex-wrap: wrap;
       gap: var(--space-1) var(--space-2);
     }
-    .hero__status-sep { display: none; }
+    .hero__status-sep {
+      display: none;
+    }
     .hero__status-note {
       width: 100%;
       margin-left: calc(8px + var(--space-2));
@@ -561,19 +690,43 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
       align-items: start;
     }
 
-    .hero__eyebrow    { grid-area: eyebrow;    margin-bottom: 0; }
-    .hero__narrative  { grid-area: narrative;  margin-top: 0; }
-    .thesis           {
+    .hero__eyebrow {
+      grid-area: eyebrow;
+      margin-bottom: 0;
+    }
+    .hero__narrative {
+      grid-area: narrative;
+      margin-top: 0;
+    }
+    .thesis {
       grid-area: thesis;
       margin-top: 0;
       padding: var(--space-5) 0 var(--space-5) var(--space-8);
       border-left: 1px solid var(--color-rule-soft);
       align-self: start;
     }
-    .hero__title      { grid-area: title;      margin: 0; }
-    .hero__subtitle   { grid-area: subtitle;   margin: 0; max-width: 44ch; }
-    .hero__disclaimer { grid-area: disclaimer; margin-top: 0; max-width: none; align-self: start; }
-    .hero__status     { grid-area: status;     margin-top: var(--space-2); align-self: start; justify-self: start; flex-wrap: nowrap; }
+    .hero__title {
+      grid-area: title;
+      margin: 0;
+    }
+    .hero__subtitle {
+      grid-area: subtitle;
+      margin: 0;
+      max-width: 44ch;
+    }
+    .hero__disclaimer {
+      grid-area: disclaimer;
+      margin-top: 0;
+      max-width: none;
+      align-self: start;
+    }
+    .hero__status {
+      grid-area: status;
+      margin-top: var(--space-2);
+      align-self: start;
+      justify-self: start;
+      flex-wrap: nowrap;
+    }
 
     /* UNNATURAL now spans both columns — scale it up. */
     .hero__title {
@@ -633,7 +786,10 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
 
   .acts__heading {
     font-family: var(--font-display);
-    font-variation-settings: 'opsz' 72, 'wght' 330, 'SOFT' 40;
+    font-variation-settings:
+      "opsz" 72,
+      "wght" 330,
+      "SOFT" 40;
     font-size: var(--text-3xl);
     line-height: 1.05;
     letter-spacing: -0.015em;
@@ -737,12 +893,14 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
   }
 
   .act-card::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg,
+    background: linear-gradient(
+      135deg,
       color-mix(in srgb, var(--acc, var(--color-ink)) 7%, transparent),
-      transparent 55%);
+      transparent 55%
+    );
     opacity: 0;
     transition: opacity var(--dur-med) var(--ease-out);
     pointer-events: none;
@@ -752,9 +910,15 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     opacity: 1;
   }
 
-  .act-card--i   { --acc: var(--color-act-i); }
-  .act-card--ii  { --acc: var(--color-act-ii); }
-  .act-card--iii { --acc: var(--color-act-iii); }
+  .act-card--i {
+    --acc: var(--color-act-i);
+  }
+  .act-card--ii {
+    --acc: var(--color-act-ii);
+  }
+  .act-card--iii {
+    --acc: var(--color-act-iii);
+  }
 
   .act-card__link {
     display: grid;
@@ -771,13 +935,18 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
 
   .act-card__numeral {
     font-family: var(--font-display);
-    font-variation-settings: 'opsz' 144, 'wght' 280, 'SOFT' 100;
+    font-variation-settings:
+      "opsz" 144,
+      "wght" 280,
+      "SOFT" 100;
     font-size: clamp(5rem, 10vw, 8rem);
     line-height: 0.85;
     color: var(--acc);
     opacity: 0.9;
     letter-spacing: -0.03em;
-    transition: opacity var(--dur-med) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+    transition:
+      opacity var(--dur-med) var(--ease-out),
+      transform var(--dur-slow) var(--ease-out);
   }
 
   .act-card:hover .act-card__numeral {
@@ -800,7 +969,10 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
 
   .act-card__name {
     font-family: var(--font-display);
-    font-variation-settings: 'opsz' 36, 'wght' 400, 'SOFT' 30;
+    font-variation-settings:
+      "opsz" 36,
+      "wght" 400,
+      "SOFT" 30;
     font-size: var(--text-2xl);
     line-height: 1;
     color: var(--acc);
@@ -808,10 +980,15 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
 
   .act-card__arrow {
     font-family: var(--font-display);
-    font-variation-settings: 'opsz' 24, 'wght' 400, 'SOFT' 40;
+    font-variation-settings:
+      "opsz" 24,
+      "wght" 400,
+      "SOFT" 40;
     font-size: var(--text-lg);
     color: var(--color-ink-muted);
-    transition: transform var(--dur-med) var(--ease-out), color var(--dur-fast);
+    transition:
+      transform var(--dur-med) var(--ease-out),
+      color var(--dur-fast);
   }
 
   .act-card:hover .act-card__arrow {
@@ -821,7 +998,7 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
 
   .act-card__premise {
     font-family: var(--font-body);
-    font-variation-settings: 'wght' 560;
+    font-variation-settings: "wght" 560;
     font-size: var(--text-base);
     color: var(--color-ink);
     line-height: 1.4;
@@ -855,7 +1032,10 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
 
   .toc-section__label {
     font-family: var(--font-display);
-    font-variation-settings: 'opsz' 72, 'wght' 360, 'SOFT' 40;
+    font-variation-settings:
+      "opsz" 72,
+      "wght" 360,
+      "SOFT" 40;
     font-size: var(--text-3xl);
     color: var(--color-ink);
     line-height: 1;
@@ -870,11 +1050,27 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
   }
 
   @media (max-width: 48rem) {
-    .hero { padding: var(--space-12) var(--safe-right) var(--space-10) var(--safe-left); }
-    .hero__subtitle { font-size: var(--text-lg); }
-    .thesis__lines li { font-size: var(--text-lg); }
-    .acts { padding: var(--space-12) var(--safe-right) var(--space-12) var(--safe-left); }
-    .act-card__link { padding: var(--space-6); min-height: auto; }
-    .toc-section { padding: var(--space-12) var(--safe-right) var(--space-12) var(--safe-left); }
+    .hero {
+      padding: var(--space-12) var(--safe-right) var(--space-10)
+        var(--safe-left);
+    }
+    .hero__subtitle {
+      font-size: var(--text-lg);
+    }
+    .thesis__lines li {
+      font-size: var(--text-lg);
+    }
+    .acts {
+      padding: var(--space-12) var(--safe-right) var(--space-12)
+        var(--safe-left);
+    }
+    .act-card__link {
+      padding: var(--space-6);
+      min-height: auto;
+    }
+    .toc-section {
+      padding: var(--space-12) var(--safe-right) var(--space-12)
+        var(--safe-left);
+    }
   }
 </style>
