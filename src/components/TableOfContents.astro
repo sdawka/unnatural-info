@@ -199,6 +199,34 @@ const GROUPS = [
     line-height: 1.4;
   }
 
+  @media (min-width: 62rem) {
+    .toc {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-10) var(--space-12);
+      align-items: start;
+    }
+
+    .toc__group--i,
+    .toc__group--ii,
+    .toc__group--iii {
+      min-height: 100%;
+    }
+
+    .toc__group--iii {
+      grid-column: 1 / -1;
+    }
+
+    .toc__group--iii .toc__list {
+      columns: 2;
+      column-gap: var(--space-12);
+    }
+
+    .toc__group--iii .toc__item {
+      break-inside: avoid;
+    }
+  }
+
   @media (max-width: 44rem) {
     .toc__link {
       grid-template-columns: 3ch 1fr;

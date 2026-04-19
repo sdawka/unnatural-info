@@ -539,25 +539,25 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
   /* ═══ Desktop hero layout ═══════════════════════════════════════════
      Two-level grid. Upper band: narrative on the left, thesis as a
      sidebar on the right. Middle band: UNNATURAL spans full width, big.
-     Lower band: subtitle full width, then disclaimer + status. Mobile
+     Lower band: subtitle + status on the left, footnote on the right. Mobile
      (<62rem) stays as a single stack — nothing here touches that. */
   @media (min-width: 62rem) {
     .hero {
-      padding-top: var(--space-20);
+      padding-top: var(--space-24);
       padding-bottom: var(--space-20);
     }
 
     .hero__inner {
       display: grid;
-      grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 1fr);
+      grid-template-columns: minmax(0, 1.18fr) minmax(19rem, 0.82fr);
       grid-template-areas:
-        "eyebrow    eyebrow"
+        "eyebrow    thesis"
         "narrative  thesis"
         "title      title"
-        "subtitle   subtitle"
-        "disclaimer status";
+        "subtitle   disclaimer"
+        "status     disclaimer";
       column-gap: var(--space-16);
-      row-gap: var(--space-10);
+      row-gap: var(--space-8);
       align-items: start;
     }
 
@@ -565,15 +565,15 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     .hero__narrative  { grid-area: narrative;  margin-top: 0; }
     .thesis           {
       grid-area: thesis;
-      margin-top: var(--space-1);
-      padding: var(--space-3) 0 var(--space-3) var(--space-8);
+      margin-top: 0;
+      padding: var(--space-5) 0 var(--space-5) var(--space-8);
       border-left: 1px solid var(--color-rule-soft);
       align-self: start;
     }
     .hero__title      { grid-area: title;      margin: 0; }
-    .hero__subtitle   { grid-area: subtitle;   margin: 0; max-width: 56ch; }
-    .hero__disclaimer { grid-area: disclaimer; margin-top: 0; max-width: 52ch; }
-    .hero__status     { grid-area: status;     margin-top: 0; align-self: end; justify-self: end; flex-wrap: nowrap; }
+    .hero__subtitle   { grid-area: subtitle;   margin: 0; max-width: 44ch; }
+    .hero__disclaimer { grid-area: disclaimer; margin-top: 0; max-width: none; align-self: start; }
+    .hero__status     { grid-area: status;     margin-top: var(--space-2); align-self: start; justify-self: start; flex-wrap: nowrap; }
 
     /* UNNATURAL now spans both columns — scale it up. */
     .hero__title {
@@ -583,6 +583,16 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     /* Question is decisively smaller than the title. */
     .hero__question-text {
       font-size: clamp(2.25rem, 5vw, 3.5rem);
+    }
+  }
+
+  @media (min-width: 72rem) {
+    .hero__inner {
+      grid-template-columns: minmax(0, 1.25fr) minmax(21rem, 0.75fr);
+    }
+
+    .hero__title {
+      font-size: clamp(6rem, 9.8vw, 8.5rem);
     }
   }
 
@@ -649,6 +659,61 @@ const chapters = await getCollection('chapters', ({ data }) => !data.draft);
     gap: 0;
     border-top: 1px solid var(--color-rule);
     border-left: 1px solid var(--color-rule);
+  }
+
+  @media (min-width: 62rem) {
+    .acts__inner {
+      display: grid;
+      grid-template-columns: minmax(13rem, 0.34fr) minmax(0, 1fr);
+      gap: var(--space-10);
+      align-items: start;
+    }
+
+    .acts__header {
+      position: sticky;
+      top: calc(var(--safe-top) + var(--space-8));
+      display: block;
+      margin-bottom: 0;
+      padding-top: var(--space-2);
+    }
+
+    .acts__label {
+      margin-bottom: var(--space-5);
+    }
+
+    .acts__heading {
+      text-align: left;
+      max-width: 10ch;
+    }
+
+    .acts__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .act-card {
+      border-left: 1px solid var(--color-rule);
+    }
+
+    .act-card__link {
+      grid-template-columns: minmax(7rem, 0.28fr) minmax(0, 1fr);
+      grid-template-rows: 1fr;
+      align-items: start;
+      min-height: 0;
+      padding: 1.75rem var(--space-8);
+    }
+
+    .act-card__numeral {
+      font-size: clamp(4.5rem, 7vw, 7rem);
+    }
+
+    .act-card__body {
+      gap: var(--space-2);
+      padding-top: var(--space-2);
+    }
+
+    .act-card__detail {
+      max-width: 58ch;
+    }
   }
 
   @media (max-width: 62rem) {
