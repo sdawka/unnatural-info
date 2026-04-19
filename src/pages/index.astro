@@ -65,7 +65,7 @@ const chapters = await getCollection("chapters", ({ data }) => !data.draft);
           We are the only natural beings who are gifted privileged access to the <a
             href="/chapters/10-the-information-physical-duality"
             class="hero__subtitle-link">information realm</a
-          >, as we loop strangely back through the physical realm to become
+          >, looping back through the physical realm to become
           ourselves. We are subsets of the universe that wanted to know itself,
           and can choose not to.
         </p>
@@ -385,11 +385,6 @@ const chapters = await getCollection("chapters", ({ data }) => !data.draft);
   .hero__subtitle-link {
     color: var(--color-act-ii);
     text-decoration: none;
-    background-image: linear-gradient(to right, currentColor, currentColor);
-    background-size: 100% 1px;
-    background-position: 0 100%;
-    background-repeat: no-repeat;
-    padding-bottom: 1px;
     transition: color var(--dur-fast);
   }
 
