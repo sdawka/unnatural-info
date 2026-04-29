@@ -1,12 +1,12 @@
 ---
 title: "Cycle 2: Map, Move, Make"
-subtitle: "What can I do?"
+subtitle: "The cycle of Creating"
 act: mmm
 actTitle: "MMM"
 chapterNumber: 15
 order: 15
-summary: "The practical cycle. Map: chart the territory as it relates to your purposes. Move: navigate with direction, learn by going. Make: produce something tangible through directed effort. This is the practical stance — doing, building, creating through agency. Moderate ego-control: 'I navigate and build.'"
-themes: ["map", "move", "make", "practice", "craft", "navigation", "production", "agency", "effort"]
+summary: "The cycle of Creating. Map environment to produce domains. Move energy to produce progress. Make efforts to produce changes. This is creating through navigation, effort, and directed agency. Moderate ego-control: 'I navigate and build.'"
+themes: ["map", "move", "make", "creating", "craft", "navigation", "production", "agency", "environment", "energy", "efforts", "domains", "progress", "changes"]
 status: draft
 draft: false
 furtherReading:
@@ -28,57 +28,57 @@ furtherReading:
     note: "The cognitive demands of manual work. Making is thinking with materials."
 ---
 
-## The practical cycle
+## The cycle of Creating
 
 Cycle 2 answers the question: what can I do?
 
-Its three moves — Map, Move, Make — constitute the grammar of practical agency. This is how we navigate the world and produce tangible results.
+Its three moves — Map, Move, Make — constitute the grammar of creating. You map environment to produce domains. You move energy to produce progress. You make efforts to produce changes. This is how we navigate the world and bring new things into being.
 
 The stance is moderate ego-control. You are still the agent, but now the world is not just an object of knowledge — it is a terrain you must respect and work with. You move through it, not just upon it.
 
-## Map
+## Map Environment → Domains
 
-The first move. Where Measure in Cycle 1 is analytical (what dimensions exist? what varies?), Map in Cycle 2 is navigational (what is the terrain I'm moving through?).
+The first move. You map the environment — and the deliverable is domains. Where Measure in Cycle 1 is analytical (what differences exist?), Map in Cycle 2 is navigational (what is the environment I'm moving through?).
 
-The map answers: where am I? Where do I want to go? What paths connect them? What obstacles lie between?
+The map carves the broad environment into bounded domains: where am I? Where do I want to go? What paths connect them? What obstacles lie between?
 
 This is not the same as modelling. A model explains how things work. A map shows where things are relative to your purposes. You can have a perfect map of a city without understanding its economics, history, or social dynamics. You can also have a deep model of urban systems without knowing which street leads to the bakery.
 
-Mapping is pragmatic. It is oriented by a destination, even if that destination is vague. The question is not "what is true?" but "what do I need to know to get there?"
+Mapping is pragmatic. It is oriented by a destination, even if that destination is vague. The question is not "what is true?" but "what do I need to know to get there?" You survey the environment and produce a domain — a bounded space you can operate in.
 
 James Scott's distinction between metis (practical knowledge) and techne (abstract knowledge) captures this. Cycle 1 is techne — general, transferable, codifiable. Cycle 2's mapping is metis — local, contextual, embodied. The farmer knows this field, not fields in general.
 
-## Move
+## Move Energy → Progress
 
-The second move. Navigation with direction.
+The second move. You move energy — time, attention, effort — and the deliverable is progress. Navigation with direction.
 
-You have a map. You have a destination. Now you cross the distance.
+You have a domain. You have a destination. Now you deploy energy to cross the distance.
 
 Move acknowledges something Cycle 1 often misses: not all progress comes from understanding first. Sometimes you learn by going. The territory reveals itself through motion. You discover obstacles, shortcuts, and features that no map could have shown you.
 
 This is not blind action. It is directed movement that expects to learn as it goes. The sailor tacking against the wind is not following a pre-computed path — they are responding to conditions as they emerge, adjusting course continuously.
 
-Move is the bridge between understanding and creation. In Cycle 1, you might know everything about the terrain and never set foot in it. In Cycle 2, you traverse it. The traversal changes both you and your understanding.
+Move is the bridge between understanding and creation. In Cycle 1, you might know everything about the terrain and never set foot in it. In Cycle 2, you traverse it. The traversal changes both you and your understanding. Energy in, progress out.
 
-## Make
+## Make Efforts → Changes
 
-The third move. You produce something tangible.
+The third move. You make efforts — and the deliverable is changes. You produce something tangible.
 
-Making is creation through directed effort. You know what you want. You have moved toward it. Now you build it.
+Making is creation through directed effort. You know what you want. You have a domain. You have made progress. Now you apply effort to produce the change you're trying to make.
 
 This is the stance of craft. The carpenter makes a table. The entrepreneur makes a company. The cook makes a meal. The result is something that did not exist before — brought into being through skill, effort, and material engagement.
 
-Making differs from Cycle 1's manipulation. Manipulation probes the world to understand it better; making changes the world to produce something new. The scientist manipulates to learn; the craftsperson makes to create.
+Making differs from Cycle 1's manipulation. Manipulation probes variables to produce control; making applies efforts to produce changes. The scientist manipulates to learn; the craftsperson makes to create.
 
-Cycle 2 is complete when something new exists. Not a new idea (that's still Cycle 1), but a new thing — an artifact, a result, a change in the world that you can point to.
+The cycle of Creating is complete when something new exists. Not a new idea (that's still Cycle 1), but a new thing — a change in the world that you can point to. Domains, progress, changes: the outputs of creating.
 
 ## The stance
 
-Cycle 2 is the stance of craft, entrepreneurship, and practical action. It is what we mean when we say someone "gets things done."
+The cycle of Creating is the stance of craft, entrepreneurship, and practical action. It is what we mean when we say someone "gets things done."
 
 The strengths:
-- Results: actual changes in the world, not just models of it
-- Learning through doing: knowledge that comes from engagement
+- Results: actual changes in the world, not just predictions about it
+- Learning through doing: knowledge that comes from moving energy through domains
 - Responsiveness: adapting to conditions as they emerge
 
 The limitations:
@@ -86,7 +86,7 @@ The limitations:
 - May miss deeper patterns that require Cycle 1 analysis
 - Effort can substitute for wisdom
 
-Cycle 2 is not inferior to Cycle 1. It is a different mode — the practical mode — with its own grammar and its own criteria for success.
+Creating is not inferior to Learning. It is a different mode with its own grammar and its own criteria for success.
 
 ## The stall point
 

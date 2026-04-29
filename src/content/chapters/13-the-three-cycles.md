@@ -5,8 +5,8 @@ act: mmm
 actTitle: "MMM"
 chapterNumber: 13
 order: 13
-summary: "Growth is not one loop but three cycles, each operating at a different level of consciousness. Cycle 1 (Measure, Model, Manipulate) is epistemological: what can I know? Cycle 2 (Map, Move, Make) is practical: what can I do? Cycle 3 (Marvel, Meander, Manifest) is ontological: what can I become? Together they trace a gradient from control to co-creation, from 'I analyze and change' to 'I receive and align.'"
-themes: ["cycles", "agency", "control", "growth", "consciousness", "epistemology", "practice", "spirituality"]
+summary: "Growth is not one loop but three cycles, each operating at a different level of consciousness. Cycle 1 (Measure, Model, Manipulate) is the cycle of Learning: you measure differences to produce observations, model relationships to produce predictions, manipulate variables to produce control. Cycle 2 (Map, Move, Make) is the cycle of Creating: you map environment to produce domains, move energy to produce progress, make efforts to produce changes. Cycle 3 (Marvel, Meander, Manifest) is the cycle of Becoming: you marvel at presence to produce openness, meander through possibility to find direction, manifest purpose into emergence."
+themes: ["cycles", "agency", "control", "growth", "consciousness", "learning", "creating", "becoming"]
 status: draft
 draft: false
 furtherReading:
@@ -32,23 +32,23 @@ The answer is not one loop but three cycles. Each has three moves. Each operates
 
 ## The three cycles
 
-**Cycle 1 — Scientific (Measure, Model, Manipulate)**
+**Cycle 1 — Learning (Measure, Model, Manipulate)**
 
-The epistemological cycle. The question it answers: what can I know?
+The cycle of learning. The question it answers: what can I know?
 
-You observe, you build abstractions, you intervene to test your understanding. This is the cycle of analysis, prediction, and controlled experimentation. The stance is high ego-control: "I analyze and change."
+You measure differences to produce observations. You model relationships to produce predictions. You manipulate variables to produce control. This is the cycle of analysis, prediction, and controlled experimentation. The stance is high ego-control: "I analyze and change."
 
-**Cycle 2 — Applied (Map, Move, Make)**
+**Cycle 2 — Creating (Map, Move, Make)**
 
-The practical cycle. The question it answers: what can I do?
+The cycle of creating. The question it answers: what can I do?
 
-You chart the territory, you navigate with purpose, you produce tangible results. This is the cycle of craft, direction, and creation through effort. The stance is moderate ego-control: "I navigate and build."
+You map the environment to produce domains. You move energy to produce progress. You make efforts to produce changes. This is the cycle of craft, direction, and creation through effort. The stance is moderate ego-control: "I navigate and build."
 
-**Cycle 3 — Spiritual (Marvel, Meander, Manifest)**
+**Cycle 3 — Becoming (Marvel, Meander, Manifest)**
 
-The ontological cycle. The question it answers: what can I become?
+The cycle of becoming. The question it answers: what can I become?
 
-You receive with wonder, you wander without fixed purpose, you bring things into being through alignment rather than force. This is the cycle of receptivity, trust, and emergence. The stance is low ego-control: "I receive and align."
+You marvel at presence to produce openness. You meander through possibility to find direction. You manifest purpose into emergence. This is the cycle of receptivity, trust, and transformation. The stance is low ego-control: "I receive and align."
 
 ## The gradient
 
@@ -83,11 +83,11 @@ Each relationship requires a different stance, different moves, different criter
 
 The cycles are both developmental — you mature through them — and parallel — mature agents have all three available.
 
-Most formal education operates in Cycle 1. You learn to measure, to model, to test. Success is prediction and control.
+Most formal education operates in Cycle 1. You learn to measure differences, model relationships, manipulate variables. Success is prediction and control. The outputs are observations, predictions, control.
 
-Most practical expertise operates in Cycle 2. You learn the terrain, you develop skill, you produce. Success is tangible output.
+Most practical expertise operates in Cycle 2. You learn to map your environment, move your energy, make your efforts count. Success is tangible creation. The outputs are domains, progress, changes.
 
-Wisdom traditions and certain forms of mastery operate in Cycle 3. You learn to receive, to trust, to allow. Success is alignment and emergence.
+Wisdom traditions and certain forms of mastery operate in Cycle 3. You learn to marvel at presence, meander through possibility, manifest purpose. Success is alignment and emergence. The outputs are openness, direction, emergence.
 
 But a scientist who has a breakthrough while walking (Meander) and allows the insight to develop (Manifest) before rigorously testing it (Manipulate) is running Cycle 3 within Cycle 1. A craftsperson who enters flow states (Cycle 3) while executing precise technique (Cycle 2) based on deep understanding (Cycle 1) is running all three simultaneously.
 
@@ -95,4 +95,4 @@ The question for any situation is: which cycle does this call for? Sometimes you
 
 ## What follows
 
-The next three chapters develop each cycle in turn: Cycle 1 (Measure, Model, Manipulate), Cycle 2 (Map, Move, Make), and Cycle 3 (Marvel, Meander, Manifest). The chapter after that examines how the cycles relate — when to shift between them, how they nest within each other, and what it looks like when each one stalls.
+The next three chapters develop each cycle in turn: Learning (Measure, Model, Manipulate), Creating (Map, Move, Make), and Becoming (Marvel, Meander, Manifest). The chapter after that examines how the cycles relate — when to shift between them, how they nest within each other, and what it looks like when each one stalls.
