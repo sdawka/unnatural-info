@@ -3,8 +3,8 @@ title: "MMM as the Lived Experience of Growth"
 subtitle: "The central synthesis"
 act: mmm
 actTitle: "MMM"
-chapterNumber: 16
-order: 16
+chapterNumber: 18
+order: 18
 summary: "Growth feels like better measurement, richer models, more effective manifestation, whether an organism evolves, a child learns language, a person masters a skill, a couple learns trust, or a civilisation builds science. This loop is the most meta process we can observe: the same shape re-appears every time someone tries to describe what agency or intelligence even is, including in Dupoux, LeCun, and Malik's recent three-system architecture for autonomous learning."
 themes: ["growth", "learning", "MMM", "recursion", "complexity", "synthesis", "agency", "meta"]
 status: draft

@@ -3,8 +3,8 @@ title: "How to Live Better, Given Everything"
 subtitle: "The framework applied"
 act: mmm
 actTitle: "MMM"
-chapterNumber: 21
-order: 21
+chapterNumber: 23
+order: 23
 summary: "Self-esteem, trust, relationships, exercise, money, meaning. Each examined through the three-act lens. Act I: what do I want and fear? Act II: what model of self am I trapped in? Act III: what measurements, models, and manifestations would actually help?"
 themes: ["self-esteem", "trust", "relationships", "money", "meaning", "application"]
 status: draft

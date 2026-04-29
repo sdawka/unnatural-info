@@ -1,111 +1,146 @@
 # The MMM Loop
 
-> The recursive three-step growth loop — Measure and Map, Model and Manipulate, Manifest and Make — that runs at every scale from single-cell life to human civilisation.
+> Three cycles of agency — Scientific (Measure, Model, Manipulate), Applied (Map, Move, Make), and Spiritual (Marvel, Meander, Manifest) — that together trace a progression from control to co-creation.
 
 ## Overview
 
-MMM is the book's central answer to the question: how do wanting, distinguishing creatures actually grow? The loop names three moves that always appear together in any instance of genuine learning or development: discriminating what pieces exist and charting the territory (Measure/Map), building a model of how those pieces connect and probing its behavior (Model/Manipulate), and synthesising something new from the discovered components and relationships (Manifest/Make). The loop then turns again from what the new thing reveals.
+MMM answers the question: how do wanting, distinguishing creatures actually grow? The answer is three cycles, each with three moves, each operating at a different level of consciousness.
 
-The three steps follow an ontological → relational → generative arc. First you establish what exists. Then you learn how it works. Then you bring something new into being from that knowledge. Each step has a distinct character and cannot substitute for the others: measuring is not modelling; modelling is not making.
+The cycles follow a gradient of decreasing ego-control:
+- **Cycle 1** operates through analysis and intervention — "I measure, I model, I manipulate"
+- **Cycle 2** operates through navigation and craft — "I chart, I move, I make"
+- **Cycle 3** operates through receptivity and alignment — "I wonder, I wander, I allow"
 
-The key argument is that this is not a heuristic borrowed from one field and applied to others as metaphor. It is the same underlying shape, running at different speeds and on different substrates. A bacterium running chemotaxis is running MMM at the molecular level. An organism with a nervous system compresses and accelerates the loop within a single lifetime. A human adds symbolic acceleration: language and culture allow measurements, models, and manifestations to be stored and reused across generations. A civilisation is recursive MMM loops stacked on top of biological ones.
+This is not three separate processes but three expressions of the same underlying grammar of agency, differentiated by the agent's relationship to their own agency. The same pattern runs at every scale — in molecular biology, in learning, in evolution, in contemplative practice, in civilisation.
 
-Chapter 16 sharpens this into a stronger claim: MMM is the *most meta process we can observe*. The evidence is structural convergence across independent attempts to describe agency. A 2026 paper by Emmanuel Dupoux, Yann LeCun, and Jitendra Malik ("Why AI systems don't learn and what to do about it: Lessons on autonomous learning from cognitive science") proposes a three-system architecture for autonomous intelligence: **System A** (observation learning — a system that learns by watching), **System B** (active-behavior learning — a system that learns by doing), and **System M** (meta-control — a faculty that chooses between them). This is a structural echo of Measure / Model / Manifest, arriving from AI research rather than from the book's own argument. The book does not claim the match is exact — it is structural, not detailed. The point is that when the three-layer shape keeps recurring across independent disciplines describing what agency requires, it is probably tracking something real. This is independent corroboration, not influence.
+## Cycle 1: Measure, Model, Manipulate (Scientific)
 
-Growth, experienced from the inside, is the felt sense of this loop turning: better measurement, richer models, more effective manifestation. Suffering that has no acute physical cause is usually a stalled loop — one of the three moves has seized up.
+The epistemological cycle. The question it answers: **What can I know?**
 
-## Measure and Map (Chapter 13)
+### Measure
 
-The ontological first step. Before you can understand a territory you must establish what pieces are in it — what exists, what qualities and dimensions are present, what varies and what stays the same. Measure is the act of becoming sensitive to difference; Map is the deliverable: a census of what is there before you know anything about how it works.
+The first move. Before you can understand a territory you must establish what pieces are in it — what exists, what qualities and dimensions are present, what varies and what stays the same. Measure is the act of becoming sensitive to difference.
 
-This distinction matters. Measuring is not modelling. The map is not yet a theory of causal relationships; it is a principled inventory of the territory. Every instrument carries a theory of what matters — there is no neutral measurement, only better or worse choices about what to attend to. But the choice to attend is still prior to the choice to explain.
+Every measurement instrument carries a theory of what matters — there is no neutral measurement, only better or worse choices about what to attend to. Two costs are symmetrical: ignoring something leaves you subject to its surprises; measuring it starts shaping you toward it.
 
-Two costs are symmetrical: ignoring something leaves you subject to its surprises; measuring it starts shaping you toward it. Pick what you look at carefully. The map is the precondition for everything that follows.
+### Model
 
-## Model and Manipulate (Chapter 14)
+The second move. Once you know what pieces exist, the next move is to build a working account of how they connect and affect each other. A model is a compressed representation of relationships — it predicts how changes propagate.
 
-The relational/causal step. Once pieces have been mapped, the next move is to build a working account of how they connect and affect each other — and then to manipulate the model: run what-ifs, move pieces, probe behavior at the edge of its range. The manipulation is exploratory, not destructive. This is how you discover causal structure rather than mere correlation.
+A model can live in a nervous system, in language, in code, in a ritual. The substrate does not change the function. You know you have a real model when you can use it to anticipate what will happen before it happens.
 
-A model can live in a nervous system, in language, in code, in a building, in a ritual. The substrate does not change the function. But the manipulate phase is what converts a static hypothesis into a tool for understanding. You know you have a real model when you can move its parts and predict what changes.
+### Manipulate
 
-Self-models are the most consequential models, because they govern what all other modelling is for. Better living often means better modelling rather than more effort; effort inside a wrong model is fuel for the wrong direction.
+The third move of Cycle 1. You intervene — run what-ifs, move pieces, probe behaviour at the edges. The manipulation is exploratory: this is how you discover causal structure rather than mere correlation.
 
-## Manifest and Make (Chapter 15)
+Cycle 1 is complete when you can predict and control. This is the stance of science, engineering, and formal analysis.
 
-The generative step. Using the pieces from Map and the rules discovered through Manipulate, you synthesise something that did not exist before. This is genuine creation — not just action or wager, but bringing new things into the world from discovered components and relationships.
+**Stall point**: Analysis paralysis — "I need more data before I can act."
 
-This step is qualitatively different from the first two. Measuring describes what is. Modelling and manipulating explains how it works. Making produces what has not yet been. The new thing is not derivable from the map or the model alone — it requires the creative act of synthesis.
+## Cycle 2: Map, Move, Make (Applied)
 
-A model that never returns to the world is a hobby. Every manifestation is a wager that the model is right enough to build from — and the wager pays back as new material to measure in the next turn of the loop. Without making, the loop stalls; the knowledge remains inert.
+The practical cycle. The question it answers: **What can I do?**
 
-## Theoretical scaffolding from the dump source
+### Map
 
-The `overall.md` source identifies the intellectual architecture behind Act 3. Three clusters provide the backbone.
+The first move of Cycle 2. Where Measure in Cycle 1 is analytical (what dimensions exist?), Map is navigational (what is the terrain I'm moving through?). The map is a chart of the territory as it relates to your purposes — paths, obstacles, destinations.
 
-**Representational stack — Marr's levels.** David Marr's three levels of analysis distinguish: (1) the computational problem being solved, (2) the representations and algorithms deployed, and (3) the physical implementation. For the MMM loop this means: Model is not "just matter" and not "just information." It is a physically implemented state doing semantic work for an organism. A belief is matter with a job. This lets the book navigate the information/physical duality without collapsing it.
+Mapping is not modelling. The map does not yet explain how things work; it shows where things are and how they connect to where you want to go.
 
-**Active inference and embodied cognition.** Active inference (Friston and colleagues) provides a contemporary bridge: perception, prediction, planning, and action are unified as a single process of minimising prediction error. The organism is always already modelling; measurement and manifestation are phases of one continuous loop, not separate operations. Ecological psychology (Gibson's affordances) and radical embodied cognitive science (Chemero) add the complementary caution: cognition is not imprisoned inside detached representations. The organism and its environment are co-constituted. The loop does not run inside the head — it runs between organism and world.
+### Move
 
-**Cybernetics and the law of requisite variety.** W. Ross Ashby's work establishes the theoretical foundation for why the loop must keep running. A controller needs enough internal variety to match the variety of what it controls. A system that cannot match its environment's complexity will be overwhelmed by it. Lorenz's chaos work adds the temporal dimension: deterministic systems with sensitive dependence on initial conditions hit intrinsic limits on prediction. Long-range extrapolation from a single snapshot fails structurally, not from lack of effort. Therefore: measure again, model again, act again. The loop is not a productivity heuristic — it is a structural response to bounded cognition in a chaotic-enough world.
+The second move. Navigation with direction. You are not analysing or predicting — you are traversing. Move is the bridge between understanding and creation: you have a map, you have a destination, now you cross the distance.
 
-**Economics of time and governance.** Gary Becker's work on time allocation and human capital formalises what the loop looks like in economic life: time is the ultimate constrained resource, skill is embodied capital that future loops can draw on, and human capital investment is self-directed MMM across a lifetime. Oliver Williamson's transaction cost economics explains why some manifestations produce institutions rather than open-market exchanges: when measurement of performance is hard, when commitments require asset-specific investment, and when opportunism is possible, governance structures emerge to manage the loop's friction. Both frameworks translate the metaphysical account of MMM into practical predictions about how people organise their time, skills, and collective arrangements.
+Move acknowledges that not all progress comes from understanding. Sometimes you learn by going, not by knowing first. The territory reveals itself through motion.
 
-## The loop as lived growth (Chapter 16)
+### Make
 
-From the inside, the loop is one motion: you notice something → the noticing rearranges what you think is going on → the rearrangement makes you do something slightly different → the slightly different thing teaches you what to notice next. Each turn is a small spiral, not a circle: you return to roughly the same point, but slightly higher, holding a slightly larger world.
+The third move of Cycle 2. You produce something tangible — a result, an artifact, a change in the world. Making is creation through directed effort: you know what you want, you move toward it, you build it.
 
-Stall points:
-- **Stalled Measure**: you stop noticing. Attention has narrowed; the inputs are the same as they were last year.
-- **Stalled Model**: you keep noticing the same thing without updating the hypothesis. Confirmation bias, or the protective belt around a cherished theory.
-- **Stalled Manifest**: you keep modelling without acting. Insight accumulates; nothing changes. (Therapy that plateaus is often this.)
+Cycle 2 is complete when something new exists that did not exist before. This is the stance of craft, entrepreneurship, and practical action.
 
-## The loop across life itself (Chapter 19)
+**Stall point**: Pragmatic tunnel vision — "just do something" without understanding or alignment.
 
-| Level | Measure / Map | Model / Manipulate | Manifest / Make |
-|-------|---------|-------|----------|
-| Single cell | Chemical gradient sensing | Regulatory networks | Gene expression, adaptation |
-| Multicellular | Coordinated sensors | Signalling networks | Movement, growth |
-| Nervous system | Perceptual apparatus | Neural prediction models | Behaviour, learning within a life |
-| Human symbolic | Instruments, language, each other | Culture, science, narrative | Institutions, artifacts, civilisation |
+## Cycle 3: Marvel, Meander, Manifest (Spiritual)
 
-Evolutionary "progress" is not a ladder but a branching tree of variations, each running its own MMM loop in its own register.
+The ontological cycle. The question it answers: **What can I become?**
 
-## MMM and wisdom traditions (Chapter 20)
+### Marvel
 
-Contemplative traditions across cultures converge on a recognisable triad: a discipline of attention (Measure), an ontology or story (Model), and a practice or ethic that re-enters life (Manifest). The convergence is empirical — observable in the practices across very different metaphysical commitments. This does not mean all traditions are "saying the same thing"; they diverge sharply at the Model layer. But the structural shape is consistent.
+The first move of Cycle 3. Where Measure is analytical and Map is navigational, Marvel is receptive. You encounter reality with wonder — not to analyse it, not to use it, but to receive it. Marvel is appreciation before instrumentalisation.
+
+This is not passive. Receptive wonder requires presence, attention, openness. It is the capacity to be struck by what is, before you decide what to do with it.
+
+### Meander
+
+The second move. Where Move in Cycle 2 is directed navigation toward a goal, Meander is wandering without fixed purpose. You trust the path to reveal itself. This is not aimlessness — it is exploration led by curiosity and intuition rather than predetermined destination.
+
+Meander challenges the assumption that all growth is teleological. Some of the most important discoveries — in science, in art, in life — come from following threads without knowing where they lead.
+
+### Manifest
+
+The third move of Cycle 3. Where Make in Cycle 2 is creation through effort, Manifest is creation through alignment. You do not force something into being; you allow conditions for it to emerge. The difference is in the agent's stance: making says "I build this"; manifesting says "I align with this becoming."
+
+Cycle 3 is complete when something has come into being that you did not engineer but participated in. This is the stance of contemplative practice, certain forms of creativity, and wisdom traditions.
+
+**Stall point**: Passive waiting — surrender becomes avoidance, "allowing" becomes not acting.
+
+## How the Cycles Relate
+
+### Developmental progression
+
+You mature through the cycles. Most formal education operates in Cycle 1. Most practical expertise operates in Cycle 2. Wisdom traditions and certain forms of mastery operate in Cycle 3.
+
+This is not a hierarchy where Cycle 3 is "better" — it is a progression where later cycles become available as your relationship to agency evolves. A child learning to walk is in Cycle 2. A scientist testing hypotheses is in Cycle 1. A master craftsperson who has "forgotten" technique and simply flows is touching Cycle 3.
+
+### Parallel availability
+
+Mature agents have all three cycles available. The question is not "which cycle am I in?" but "which cycle does this situation call for?"
+
+- When you need to understand a new domain: Cycle 1
+- When you need to produce results under constraints: Cycle 2
+- When you need to let go of control and allow emergence: Cycle 3
+
+### The cycles within cycles
+
+Each cycle can contain the others. A scientist (Cycle 1) who has a breakthrough insight while walking (Meander) and then allows the idea to develop (Manifest) before rigorously testing it (Manipulate) is running Cycle 3 within Cycle 1.
+
+## The Cycles Across Substrates
+
+| Level | Cycle 1 | Cycle 2 | Cycle 3 |
+|-------|---------|---------|---------|
+| Single cell | Chemical gradient sensing, regulatory networks | Directed movement, metabolic production | ? |
+| Nervous system | Perceptual discrimination, predictive models | Navigation, skilled action | Flow states, intuitive response |
+| Human symbolic | Science, analysis, formal systems | Craft, engineering, institution-building | Contemplative practice, artistic creation |
+| Civilisation | Research programs, academic knowledge | Industry, governance, infrastructure | Wisdom traditions, cultural renewal |
+
+Whether Cycle 3 is uniquely available to symbolic creatures, or whether simpler organisms have some analog, remains an open question.
 
 ## Key claims
 
-- MMM is the most meta process we can observe: the same three-layer shape falls out of every independent attempt — biology, psychology, AI — to describe what being an agent requires. — Source: `/src/content/chapters/16-mmm-as-lived-experience.md`, `/src/content/chapters/19-mmm-across-life-itself.md`
-- Dupoux, LeCun, and Malik (2026) propose a three-system architecture — observation learning (A), active-behavior learning (B), meta-control (M) — that is a structural echo of Measure / Model / Manifest. Independent convergence, not influence. — Source: `/src/content/chapters/16-mmm-as-lived-experience.md`
-- Growth from the inside is the felt experience of the MMM loop turning. — Source: `/src/content/chapters/16-mmm-as-lived-experience.md`
-- The same loop runs in evolution, individual learning, relationships, and civilisation — not as metaphor but as the same underlying shape. — Source: `/src/content/chapters/19-mmm-across-life-itself.md`
-- Most felt suffering without acute physical cause is a stalled loop; movement returns when the missing move is identified. — Source: `/src/content/chapters/16-mmm-as-lived-experience.md`
-- Better living means better modelling, not more effort. — Source: `/src/content/chapters/14-model.md`
-- Measuring is not modelling; the map is a census of what exists before any causal account. — Source: `/src/content/chapters/13-measure.md`
-- The manipulate phase of Model is how causal structure is discovered — not observation, but active probing. — Source: `/src/content/chapters/14-model.md`
-- Manifest is genuine creation: bringing new things into the world from discovered components and relationships, not merely acting on an existing plan. — Source: `/src/content/chapters/15-manifest.md`
-- Every manifestation is a wager on the current model. — Source: `/src/content/chapters/15-manifest.md`
-- Humans add symbolic acceleration; civilisations are recursive loops stacked on biological loops. — Source: `/src/content/chapters/19-mmm-across-life-itself.md`
+- MMM comprises three cycles, each with three moves, differentiated by the agent's relationship to control.
+- The cycles form a developmental progression (you mature through them) and remain as parallel registers (mature agents choose situationally).
+- Cycle 1 is epistemological (knowing), Cycle 2 is practical (doing), Cycle 3 is ontological (becoming).
+- Each cycle has characteristic stall points: analysis paralysis (1), pragmatic tunnel vision (2), passive avoidance (3).
+- Growth from the inside is the felt experience of the cycles turning — or the felt stuckness when they stall.
+- The same three-cycle structure runs across substrates, from molecular biology to civilisation.
 
 ## Connections
 
 - [[Act 3 — MMM]] — the act that develops this concept fully
-- [[Growth and Learning]] — thematic synthesis of the loop's consequences
-- [[Wisdom Traditions]] — chapter 20's treatment of MMM-shaped practices
-- [[Volo Ergo Sum]] — want provides the engine that drives the loop
-- [[The Three Blades]] — the loop operates on distinctions the blades have made
-- [[Thingification]] — institutions are the most durable Manifest outputs of civilisational MMM
-- [[Objectivity]] — chapter 22 defines objectivity as disciplined loop-running under finitude
-- [[Intellectual Lineage]] — Marr, Ashby, Lorenz, active inference, Becker, and Williamson are the primary theoretical scaffolds for Act 3
-- [[Layered Realism]] — Marr's levels formalise the distinction between the computational, representational, and physical layers of a model
+- [[Growth and Learning]] — thematic synthesis of the cycles' consequences
+- [[Wisdom Traditions]] — Cycle 3 as the domain of contemplative practice
+- [[Volo Ergo Sum]] — want provides the engine that drives the cycles
+- [[The Three Blades]] — the cycles operate on distinctions the blades have made
+- [[Thingification]] — institutions are durable outputs of civilisational cycles
+- [[Objectivity]] — chapter 24 defines objectivity as disciplined cycle-running under finitude
 
 ## Open questions
 
-- The conditions under which the loop starts and stops are acknowledged as "partly open." The book does not give a complete account of what kicks a stalled loop back into motion.
-- The right ratio of Measure to Model to Manifest is explicitly domain-dependent; no general theory is offered.
-- Why the loop runs at all — what makes matter start striving — is an inheritance from the open question in Act 1 about the origin of wanting.
-- The active inference framework (Friston) treats perception and action as continuous, not as separate phases of a loop. Whether the loop is a useful model or an artifact of decomposing what is really one motion is not resolved.
+- The conditions under which agents shift between cycles are acknowledged as partly open.
+- Whether Cycle 3 is available to non-symbolic creatures or requires language and reflexive consciousness.
+- The relationship between Meander (purposeless wandering) and directed growth — how does wandering serve becoming?
+- Why the cycles run at all — what makes matter start striving — is inherited from Act 1.
 
 ---
-*Last updated: 2026-04-16 | Sources: 12 (Ch. 12–22; /dump/overall.md) — meta-process + Dupoux/LeCun/Malik 2026 convergence added 2026-04-16*
+*Last updated: 2026-04-28 | Sources: 13 — three-cycle framework introduced*

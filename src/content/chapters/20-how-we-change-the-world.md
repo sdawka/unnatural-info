@@ -3,8 +3,8 @@ title: "How We Change the World"
 subtitle: "Better and worse world-changing, given we cannot not change it"
 act: mmm
 actTitle: "MMM"
-chapterNumber: 18
-order: 18
+chapterNumber: 20
+order: 20
 summary: "Given that the loop reshapes the territory whether we like it or not, the question is not whether to change the world but how to change it with less damage and more repair. Worked cases (germ theory, the printing press, nuclear weapons, the Green Revolution, the internet) each came with real gifts and real costs. The chapter sketches what seems to distinguish world-changing we later respect from world-changing we later regret."
 themes: ["ethics", "technology", "civilisation", "scale", "history", "responsibility", "world-changing"]
 status: draft

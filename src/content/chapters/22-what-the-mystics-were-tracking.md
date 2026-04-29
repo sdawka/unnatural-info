@@ -3,8 +3,8 @@ title: "What the Mystics Were Tracking"
 subtitle: "Wisdom traditions, read as MMM-shaped patterns"
 act: mmm
 actTitle: "MMM"
-chapterNumber: 20
-order: 20
+chapterNumber: 22
+order: 22
 summary: "Across cultures and centuries, contemplative traditions converged on practices that look, structurally, like high-resolution measurement, careful modeling, and disciplined manifestation. Read this way, the 'spiritual' becomes a stable pattern in the informational layer, neither reduced to neurons nor inflated to cosmic decree."
 themes: ["wisdom", "tradition", "spirituality", "ritual", "information", "pattern", "MMM"]
 status: draft

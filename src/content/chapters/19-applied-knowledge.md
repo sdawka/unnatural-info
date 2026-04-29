@@ -3,8 +3,8 @@ title: "Applied Knowledge, or How the Info Realm Folds Back"
 subtitle: "The artifact becomes the territory"
 act: mmm
 actTitle: "MMM"
-chapterNumber: 17
-order: 17
+chapterNumber: 19
+order: 19
 summary: "Knowledge does not stay in heads. It congeals into tools, habits, institutions, codes, and those artifacts become part of the world the next round of measuring has to measure. The loop runs above the individual, across generations, with institutions holding memory. The feedback is irreversible on human timescales, and there is no outside position from which to regulate it."
 themes: ["knowledge", "artifact", "institution", "feedback", "civilisation", "irreversibility", "MMM"]
 status: draft

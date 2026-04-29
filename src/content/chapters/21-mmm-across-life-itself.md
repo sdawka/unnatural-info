@@ -3,8 +3,8 @@ title: "MMM Across Life Itself (Including the Bits Without Brains)"
 subtitle: "The evolutionary and civilisational arc"
 act: mmm
 actTitle: "MMM"
-chapterNumber: 19
-order: 19
+chapterNumber: 21
+order: 21
 summary: "Measurement in simple life forms, modelling in nervous systems, manifestation through adaptation. Cumulative complexity in evolution. Human symbolic acceleration. Civilisation as recursive MMM. Not a ladder but a branching tree: the most meta process re-instantiated at every scale of life, the same shape AI research keeps rediscovering from the outside."
 themes: ["evolution", "civilisation", "recursion", "symbolic", "complexity", "life"]
 status: draft
