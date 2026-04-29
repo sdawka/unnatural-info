@@ -1,5 +1,5 @@
 ---
-title: "Cycle 1: Measure, Model, Manipulate"
+title: "Learning: Measure, Model, Manipulate"
 subtitle: "The cycle of Learning"
 act: mmm
 actTitle: "MMM"
@@ -30,7 +30,7 @@ furtherReading:
 
 ## The cycle of Learning
 
-Cycle 1 answers the question: what can I know?
+Learning answers the question: what can I know?
 
 Its three moves — Measure, Model, Manipulate — constitute the grammar of learning. You measure differences to produce observations. You model relationships to produce predictions. You manipulate variables to produce control. This is how we turn the blooming, buzzing confusion of experience into reliable knowledge.
 
@@ -92,15 +92,15 @@ Learning is not wrong. It is not inferior. It is one mode of engagement that wor
 
 ## The stall point
 
-Cycle 1 stalls in analysis paralysis.
+Learning stalls in analysis paralysis.
 
 The symptoms: "I need more data before I can act." "Let me build a better model." "We should study this further." The measuring and modeling continue; the manipulation never comes. Or the manipulation comes, but only as another form of data-gathering — not as genuine action in the world.
 
-This is Cycle 1 eating itself. The loop spins without producing change. Knowledge accumulates; nothing happens.
+This is Learning eating itself. The loop spins without producing change. Knowledge accumulates; nothing happens.
 
-The exit from a Cycle 1 stall is often not more Cycle 1. It is shifting to Cycle 2 (just move, make something) or Cycle 3 (stop analyzing, start receiving).
+The exit from a Learning stall is often not more Learning. It is shifting to Creating (just move, make something) or Becoming (stop analyzing, start receiving).
 
-## Cycle 1 across substrates
+## Learning across substrates
 
 | Substrate | Measure | Model | Manipulate |
 |-----------|---------|-------|------------|

@@ -25,9 +25,9 @@ The act's central claim is that this three-cycle structure is not a heuristic bu
 |---|-------|-----------|
 | 12 | Knowledge, or the Shape of the Information Realm | Opening the act: mapping knowledge as the substrate the cycles operate on |
 | 13 | The Three Cycles | Introducing Learning, Creating, Becoming: why three cycles, how they relate, the control-to-surrender gradient |
-| 14 | Cycle 1: Measure, Model, Manipulate | Learning: Differences → Observations, Relationships → Predictions, Variables → Control |
-| 15 | Cycle 2: Map, Move, Make | Creating: Environment → Domains, Energy → Progress, Efforts → Changes |
-| 16 | Cycle 3: Marvel, Meander, Manifest | Becoming: Presence → Openness, Possibility → Direction, Purpose → Emergence |
+| 14 | Learning: Measure, Model, Manipulate | Differences → Observations, Relationships → Predictions, Variables → Control |
+| 15 | Creating: Map, Move, Make | Environment → Domains, Energy → Progress, Efforts → Changes |
+| 16 | Becoming: Marvel, Meander, Manifest | Presence → Openness, Possibility → Direction, Purpose → Emergence |
 | 17 | The Cycles in Relation | Synthesis: developmental progression, parallel availability, when to shift, stall points |
 | 18 | MMM as the Lived Experience of Growth | The cycles from the inside — growth as felt experience |
 | 19 | Applied Knowledge, or How the Info Realm Folds Back | How knowledge re-enters action and reshapes the territory |
@@ -61,8 +61,8 @@ The act's central claim is that this three-cycle structure is not a heuristic bu
 
 ## Open questions
 
-- The conditions under which agents shift between cycles — what signals that Cycle 1 has exhausted its usefulness and Cycle 2 or 3 is needed?
-- Whether the three cycles map cleanly onto biological substrates, or whether Cycle 3 is uniquely available to symbolic creatures.
+- The conditions under which agents shift between cycles — what signals that Learning has exhausted its usefulness and Creating or Becoming is needed?
+- Whether the three cycles map cleanly onto biological substrates, or whether Becoming is uniquely available to symbolic creatures.
 - Why the cycles run at all — what makes matter start striving — is flagged as an open question inherited from Act 1.
 - The relationship between Meander (purposeless wandering) and growth (which seems to require direction).
 

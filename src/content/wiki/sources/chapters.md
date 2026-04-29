@@ -17,17 +17,19 @@ Quick reference for all ingested chapter files and the wiki pages they primarily
 | 10-the-information-physical-duality.md | Ch. 10: The Information / Physical Duality | init.d | concepts/information-physical-duality.md, themes/wisdom-traditions.md |
 | 11-the-cost-of-the-blade.md | Ch. 11: The Cost of the Blade | init.d | themes/cost-of-distinction.md |
 | 12-knowledge-or-the-shape-of-the-information-realm.md | Ch. 12: Knowledge, or the Shape of the Information Realm | MMM | concepts/the-mmm-loop.md |
-| 13-measure.md | Ch. 13: Measure and Map | MMM | concepts/the-mmm-loop.md |
-| 14-model.md | Ch. 14: Model and Manipulate | MMM | concepts/the-mmm-loop.md |
-| 15-manifest.md | Ch. 15: Manifest and Make | MMM | concepts/the-mmm-loop.md |
-| 16-mmm-as-lived-experience.md | Ch. 16: MMM as the Lived Experience of Growth | MMM | concepts/the-mmm-loop.md, themes/growth-and-learning.md |
-| 17-applied-knowledge.md | Ch. 17: Applied Knowledge, or How the Info Realm Folds Back | MMM | concepts/the-mmm-loop.md |
-| 18-how-we-change-the-world.md | Ch. 18: How We Change the World | MMM | concepts/the-mmm-loop.md |
-| 19-mmm-across-life-itself.md | Ch. 19: MMM Across Life Itself | MMM | concepts/the-mmm-loop.md, themes/growth-and-learning.md |
-| 20-what-the-mystics-were-tracking.md | Ch. 20: What the Mystics Were Tracking | MMM | themes/wisdom-traditions.md |
-| 21-how-to-live-better.md | Ch. 21: How to Live Better, Given Everything | MMM | concepts/the-mmm-loop.md, themes/growth-and-learning.md |
-| 22-the-most-objective-we-can-be.md | Ch. 22: The Most Objective We Can Be | MMM | themes/objectivity.md |
+| 13-the-three-cycles.md | Ch. 13: The Three Cycles | MMM | concepts/the-mmm-loop.md, acts/act-3-mmm.md |
+| 14-cycle-1-measure-model-manipulate.md | Ch. 14: Learning: Measure, Model, Manipulate | MMM | concepts/the-mmm-loop.md |
+| 15-cycle-2-map-move-make.md | Ch. 15: Creating: Map, Move, Make | MMM | concepts/the-mmm-loop.md |
+| 16-cycle-3-marvel-meander-manifest.md | Ch. 16: Becoming: Marvel, Meander, Manifest | MMM | concepts/the-mmm-loop.md |
+| 17-the-cycles-in-relation.md | Ch. 17: The Cycles in Relation | MMM | concepts/the-mmm-loop.md |
+| 18-mmm-as-lived-experience.md | Ch. 18: MMM as the Lived Experience of Growth | MMM | concepts/the-mmm-loop.md, themes/growth-and-learning.md |
+| 19-applied-knowledge.md | Ch. 19: Applied Knowledge, or How the Info Realm Folds Back | MMM | concepts/the-mmm-loop.md |
+| 20-how-we-change-the-world.md | Ch. 20: How We Change the World | MMM | concepts/the-mmm-loop.md |
+| 21-mmm-across-life-itself.md | Ch. 21: MMM Across Life Itself | MMM | concepts/the-mmm-loop.md, themes/growth-and-learning.md |
+| 22-what-the-mystics-were-tracking.md | Ch. 22: What the Mystics Were Tracking | MMM | themes/wisdom-traditions.md |
+| 23-how-to-live-better.md | Ch. 23: How to Live Better, Given Everything | MMM | concepts/the-mmm-loop.md, themes/growth-and-learning.md |
+| 24-the-most-objective-we-can-be.md | Ch. 24: The Most Objective We Can Be | MMM | themes/objectivity.md |
 | epilogue.md | Epilogue: Use the Blade, Build the World | Epilogue | acts/epilogue.md, themes/cost-of-distinction.md |
 
 ---
-*Ingested: 2026-04-16*
+*Updated: 2026-04-29 — Three-cycle framework (Learning, Creating, Becoming)*
