@@ -24,7 +24,7 @@ const { chapter, prev, next } = Astro.props;
 const { title, subtitle, act, actTitle, chapterNumber, furtherReading } = chapter.data;
 ---
 
-<BaseLayout title={title} description={chapter.data.summary}>
+<BaseLayout title={title} description={chapter.data.summary} cinematic>
   <ReadingProgress act={act} />
   <SiteHeader />
   <main class={`cp cp--${act}`}>
