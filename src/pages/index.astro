@@ -9,30 +9,35 @@ const questions = [
 ---
 
 <BaseLayout title="UNNATURAL" cinematic>
-  <main class="landing">
+  <main class="landing" id="landing">
     <div class="landing__content">
-      <!-- Question (visible initially) -->
-      <p class="landing__question" id="question"></p>
-
-      <!-- Progress line -->
-      <div class="landing__progress" id="progress">
-        <div class="landing__progress-fill"></div>
+      <!-- Slide 1: Question + Progress -->
+      <div class="landing__slide landing__slide--question" id="slide-question">
+        <p class="landing__question" id="question"></p>
+        <div class="landing__progress" id="progress">
+          <div class="landing__progress-fill"></div>
+        </div>
       </div>
 
-      <!-- Reveal container (hidden initially) -->
-      <div class="landing__reveal" id="reveal">
+      <!-- Slide 2: Title (UNNATURAL INFORMATION together) -->
+      <div class="landing__slide landing__slide--title" id="slide-title">
         <p class="landing__question-shrunk" id="question-shrunk"></p>
+        <div class="landing__title-unified" id="title-unified">
+          <span class="landing__word">UNNATURAL</span>
+          <span class="landing__word">INFORMATION</span>
+        </div>
+      </div>
 
-        <div class="landing__title" id="title">
-          <!-- UNNATURAL + its because -->
+      <!-- Slide 3: Separated with Because sentences -->
+      <div class="landing__slide landing__slide--separated" id="slide-separated">
+        <p class="landing__question-shrunk">&nbsp;</p>
+        <div class="landing__title-separated" id="title-separated">
           <div class="landing__word-group" id="group-unnatural">
             <span class="landing__word">UNNATURAL</span>
             <p class="landing__because" id="because-1">
               Because you have free admin access to the information realm.
             </p>
           </div>
-
-          <!-- INFORMATION + its because -->
           <div class="landing__word-group" id="group-information">
             <span class="landing__word">INFORMATION</span>
             <p class="landing__because" id="because-2">
@@ -40,7 +45,6 @@ const questions = [
             </p>
           </div>
         </div>
-
         <a href="/explore" class="landing__enter" id="enter">ENTER</a>
       </div>
     </div>
@@ -49,7 +53,9 @@ const questions = [
   <script define:vars={{ questions }}>
     const question = questions[Math.floor(Math.random() * questions.length)];
     document.getElementById('question').textContent = question;
-    document.getElementById('question-shrunk').textContent = question.toUpperCase();
+    document.querySelectorAll('.landing__question-shrunk').forEach(el => {
+      el.textContent = question.toUpperCase();
+    });
   </script>
 </BaseLayout>
 
@@ -60,31 +66,45 @@ const questions = [
     align-items: center;
     justify-content: center;
     padding: var(--space-8);
+    overflow: hidden;
   }
 
   .landing__content {
     text-align: center;
-    max-width: 36rem;
+    max-width: 40rem;
+    position: relative;
   }
 
-  /* Question - initial state */
+  /* Slides */
+  .landing__slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .landing__slide.active {
+    display: flex;
+  }
+
+  /* Slide 1: Question */
+  .landing__slide--question {
+    view-transition-name: question-slide;
+  }
+
   .landing__question {
     font-family: var(--font-display);
     font-variation-settings: "opsz" 36, "wght" 340, "SOFT" 60;
     font-style: italic;
-    font-size: clamp(1.25rem, 4vw, 1.75rem);
+    font-size: clamp(1.5rem, 5vw, 2rem);
     color: var(--color-ink);
     margin: 0 0 var(--space-10);
-    opacity: 0;
-    animation: fadeIn var(--anim-fade) forwards;
   }
 
-  /* Progress line */
   .landing__progress {
-    width: 140px;
+    width: 160px;
     height: 2px;
     background: var(--color-rule);
-    margin: 0 auto;
     overflow: hidden;
   }
 
@@ -95,164 +115,212 @@ const questions = [
     animation: fillProgress 2.5s linear forwards;
   }
 
-  /* Reveal container - hidden initially */
-  .landing__reveal {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
+  /* Slide 2: Title unified */
+  .landing__slide--title {
+    view-transition-name: title-slide;
   }
 
-  .landing__reveal.active {
-    display: flex;
-  }
-
-  /* Shrunk question */
   .landing__question-shrunk {
     font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.2em;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
     color: var(--color-ink-ghost);
     margin: 0 0 var(--space-12);
-    opacity: 0;
+    min-height: 1em;
   }
 
-  /* Title container */
-  .landing__title {
+  .landing__title-unified {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0;
+    gap: 0.25rem;
   }
 
-  /* Word group (word + its because) */
+  /* Slide 3: Separated */
+  .landing__slide--separated {
+    view-transition-name: separated-slide;
+  }
+
+  .landing__title-separated {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-12);
+  }
+
   .landing__word-group {
     display: flex;
     flex-direction: column;
     align-items: center;
-    opacity: 0;
   }
 
   .landing__word {
     font-family: var(--font-display);
     font-variation-settings: "opsz" 72, "wght" var(--title-weight, 300), "SOFT" 40;
-    font-size: clamp(2.5rem, 12vw, 4rem);
+    font-size: clamp(2.8rem, 14vw, 4.5rem);
     letter-spacing: var(--title-tracking, 0.32em);
     color: var(--color-ink);
     line-height: 1;
   }
 
-  /* Because sentences */
   .landing__because {
     font-family: var(--font-display);
     font-style: italic;
-    font-size: clamp(0.7rem, 2vw, 0.85rem);
+    font-size: clamp(0.75rem, 2.5vw, 0.95rem);
     color: var(--color-ink-faint);
     letter-spacing: 0.02em;
-    margin: var(--space-3) 0 0 0;
-    max-width: 28rem;
+    margin: var(--space-4) 0 0 0;
+    max-width: 30rem;
     opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 600ms ease-out, transform 600ms ease-out;
   }
 
-  /* Enter link */
+  .landing__because.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   .landing__enter {
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     letter-spacing: 0.4em;
     color: var(--color-ink-faint);
     text-decoration: none;
     margin-top: var(--space-16);
     opacity: 0;
-    transition: color var(--dur-fast);
+    transform: translateY(8px);
+    transition: opacity 500ms ease-out, transform 500ms ease-out, color var(--dur-fast);
+  }
+
+  .landing__enter.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .landing__enter:hover {
     color: var(--color-ink);
   }
 
-  @keyframes fadeIn {
-    to { opacity: 1; }
-  }
-
   @keyframes fillProgress {
     to { width: 100%; }
   }
 
-  /* Hide question and progress after reveal */
-  .landing.revealed .landing__question,
-  .landing.revealed .landing__progress {
-    display: none;
+  /* View Transition animations */
+  @keyframes slide-out-up {
+    from { opacity: 1; transform: translateY(0) scale(1); }
+    to { opacity: 0; transform: translateY(-30px) scale(0.95); }
+  }
+
+  @keyframes slide-in-up {
+    from { opacity: 0; transform: translateY(30px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  @keyframes crossfade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  @keyframes crossfade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Apply to view transitions */
+  ::view-transition-old(question-slide),
+  ::view-transition-old(title-slide) {
+    animation: slide-out-up 600ms ease-out forwards;
+  }
+
+  ::view-transition-new(title-slide),
+  ::view-transition-new(separated-slide) {
+    animation: slide-in-up 600ms ease-out forwards;
+  }
+
+  /* Fallback for no view transitions */
+  @supports not (view-transition-name: none) {
+    .landing__slide {
+      transition: opacity 500ms ease-out;
+    }
   }
 </style>
 
 <script>
-  const questionEl = document.getElementById('question');
-  const progressEl = document.getElementById('progress');
-  const revealEl = document.getElementById('reveal');
-  const questionShrunk = document.getElementById('question-shrunk');
-  const groupUnnatural = document.getElementById('group-unnatural');
-  const groupInformation = document.getElementById('group-information');
+  const slideQuestion = document.getElementById('slide-question');
+  const slideTitle = document.getElementById('slide-title');
+  const slideSeparated = document.getElementById('slide-separated');
   const because1 = document.getElementById('because-1');
   const because2 = document.getElementById('because-2');
   const enter = document.getElementById('enter');
-  const title = document.getElementById('title');
 
-  let revealed = false;
+  let stage = 0; // 0 = question, 1 = title, 2 = separated
 
-  function reveal() {
-    if (revealed) return;
-    revealed = true;
+  // Start with question slide visible
+  slideQuestion.classList.add('active');
 
-    // Hide question and progress
-    questionEl.style.display = 'none';
-    progressEl.style.display = 'none';
-
-    // Show reveal container
-    revealEl.classList.add('active');
-
-    // Animation sequence - slower, more cinematic
-    const animate = (el, delay, duration = 400) => {
+  function transition(fromSlide, toSlide, callback) {
+    if (document.startViewTransition) {
+      document.startViewTransition(() => {
+        fromSlide.classList.remove('active');
+        toSlide.classList.add('active');
+        if (callback) callback();
+      });
+    } else {
+      // Fallback without view transitions
+      fromSlide.style.opacity = '0';
       setTimeout(() => {
-        el.style.transition = `opacity ${duration}ms ease-out`;
-        el.style.opacity = '1';
-      }, delay);
-    };
-
-    // 0ms - Question shrinks up
-    animate(questionShrunk, 0, 300);
-
-    // 300ms - UNNATURAL + INFORMATION appear together (as groups, opacity 1)
-    setTimeout(() => {
-      groupUnnatural.style.transition = 'opacity 500ms ease-out';
-      groupUnnatural.style.opacity = '1';
-      groupInformation.style.transition = 'opacity 500ms ease-out';
-      groupInformation.style.opacity = '1';
-      // But the because sentences inside are still opacity 0
-    }, 300);
-
-    // 1000ms - Words separate (add gap between groups)
-    setTimeout(() => {
-      title.style.transition = 'gap 600ms ease-out';
-      title.style.gap = 'var(--space-10)';
-    }, 1000);
-
-    // 1800ms - First "because" fades in (under UNNATURAL)
-    animate(because1, 1800, 500);
-
-    // 2500ms - Second "because" fades in (under INFORMATION)
-    animate(because2, 2500, 500);
-
-    // 3200ms - Enter appears
-    animate(enter, 3200, 400);
+        fromSlide.classList.remove('active');
+        fromSlide.style.opacity = '';
+        toSlide.classList.add('active');
+        if (callback) callback();
+      }, 500);
+    }
   }
 
-  // Auto-reveal after progress completes (2.5s)
-  setTimeout(reveal, 2500);
+  function advanceToTitle() {
+    if (stage !== 0) return;
+    stage = 1;
 
-  // Skip on click or scroll
-  document.addEventListener('click', reveal);
-  document.addEventListener('scroll', reveal);
-  document.addEventListener('keydown', reveal);
+    transition(slideQuestion, slideTitle, () => {
+      // After transition, wait then advance to separated
+      setTimeout(advanceToSeparated, 1200);
+    });
+  }
+
+  function advanceToSeparated() {
+    if (stage !== 1) return;
+    stage = 2;
+
+    transition(slideTitle, slideSeparated, () => {
+      // Animate in the because sentences and enter
+      setTimeout(() => because1.classList.add('visible'), 400);
+      setTimeout(() => because2.classList.add('visible'), 1000);
+      setTimeout(() => enter.classList.add('visible'), 1600);
+    });
+  }
+
+  function skipToEnd() {
+    if (stage === 2) return;
+
+    // Skip directly to final state
+    slideQuestion.classList.remove('active');
+    slideTitle.classList.remove('active');
+    slideSeparated.classList.add('active');
+    stage = 2;
+
+    // Quick reveal of all elements
+    setTimeout(() => because1.classList.add('visible'), 100);
+    setTimeout(() => because2.classList.add('visible'), 200);
+    setTimeout(() => enter.classList.add('visible'), 300);
+  }
+
+  // Auto-advance after progress bar (2.5s)
+  setTimeout(advanceToTitle, 2500);
+
+  // Skip on interaction
+  document.addEventListener('click', skipToEnd);
+  document.addEventListener('keydown', skipToEnd);
 
   // TODO: PostHog integration for A/B tracking of questions
   // window.posthog?.capture('landing_question_shown', { question });
