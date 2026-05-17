@@ -1,1071 +1,255 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import SiteHeader from "../components/SiteHeader.astro";
-import SiteFooter from "../components/SiteFooter.astro";
-import TableOfContents from "../components/TableOfContents.astro";
 
-const chapters = await getCollection("chapters", ({ data }) => !data.draft);
+const questions = [
+  "Have you ever wondered what you are?",
+  "What is the thing that wonders?",
+  "What are you, really?",
+];
 ---
 
-<BaseLayout title="UNNATURAL">
-  <SiteHeader />
+<BaseLayout title="UNNATURAL" cinematic>
+  <main class="landing">
+    <div class="landing__content">
+      <!-- Question (visible initially) -->
+      <p class="landing__question" id="question"></p>
 
-  <main class="home">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero__inner">
-        <p class="hero__eyebrow">
-          <span class="hero__eyebrow-stack" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </span>
-          <span
-            >An <em
-              >unscientific<a
-                href="#unscientific-note"
-                class="hero__footnote-mark"
-                aria-label="What unscientific means">*</a
-              ></em
-            > empirical theory of everything</span
-          >
-        </p>
+      <!-- Progress line -->
+      <div class="landing__progress" id="progress">
+        <div class="landing__progress-fill"></div>
+      </div>
 
-        <div class="hero__narrative">
-          <p class="hero__question-label">
-            A child asks the meatiest question ever
-          </p>
-          <p class="hero__question-text">
-            <span class="hero__quote" aria-hidden="true">“</span>What are we<span
-              class="hero__qmark">?</span
-            ><span class="hero__quote" aria-hidden="true">”</span>
-          </p>
-          <p class="hero__beat">
-            Thirty years of wondering, listening, and reading later, an answer
-            that was always there, clarifies itself:
-          </p>
+      <!-- Reveal container (hidden initially) -->
+      <div class="landing__reveal" id="reveal">
+        <p class="landing__question-shrunk" id="question-shrunk"></p>
+
+        <div class="landing__title" id="title">
+          <span class="landing__word" id="word-unnatural">UNNATURAL</span>
+          <span class="landing__word" id="word-information">INFORMATION</span>
         </div>
 
-        <h1 class="hero__title" aria-label="UNNATURAL">
-          <span class="hero__title-letter" data-delay="0">U</span><span
-            class="hero__title-letter"
-            data-delay="1">N</span
-          ><span class="hero__title-letter" data-delay="2">N</span><span
-            class="hero__title-letter"
-            data-delay="3">A</span
-          ><span class="hero__title-letter" data-delay="4">T</span><span
-            class="hero__title-letter"
-            data-delay="5">U</span
-          ><span class="hero__title-letter" data-delay="6">R</span><span
-            class="hero__title-letter"
-            data-delay="7">A</span
-          ><span class="hero__title-letter" data-delay="8">L</span>
-        </h1>
-
-        <p class="hero__subtitle">
-          We are the only natural beings who are gifted privileged access to the <a
-            href="/chapters/10-the-information-physical-duality"
-            class="hero__subtitle-link">information realm</a
-          >, looping back through the physical realm to become
-          ourselves. We are subsets of the universe that wanted to know itself,
-          and can choose not to.
+        <p class="landing__because landing__because--first" id="because-1">
+          Because you have free admin access to the information realm.
         </p>
 
-        <aside class="hero__disclaimer" id="unscientific-note">
-          <span class="hero__disclaimer-marker" aria-hidden="true">*</span>
-          <p>
-            "Unscientific" does not mean anti-science. It means I am not the
-            most rigorous or at all peer-reviewed, my argument is not reducible
-            to one formal discipline, I'm not providing proofs or postulating
-            predictions, nor am I confident in my correctness and completeness.
-            I always try to begin from lived experience, I'm committed to
-            reality, clarity, and honest uncertainty.
-          </p>
-        </aside>
-        <aside class="thesis" aria-label="The argument in six lines">
-          <p class="thesis__label">
-            <span class="glyph-stack" aria-hidden="true"
-              ><span></span><span></span><span></span></span
-            >
-            The shape of the argument
-          </p>
-          <ol class="thesis__lines">
-            <li>
-              <span class="thesis__accent thesis__accent--i">Will</span> creates direction.
-            </li>
-            <li>
-              Direction creates <span class="thesis__accent thesis__accent--ii"
-                >difference</span
-              >.
-            </li>
-            <li>Difference creates self, world, value, and distinction.</li>
-            <li>Distinction creates <em>models</em>.</li>
-            <li>
-              Models guide <span class="thesis__accent thesis__accent--iii"
-                >manifestation</span
-              >.
-            </li>
-            <li>The loop recurses. Life learns, grows, complexifies.</li>
-          </ol>
-        </aside>
-
-        <p class="hero__status" aria-label="Document status">
-          <span class="hero__status-dot" aria-hidden="true"></span>
-          <span class="hero__status-label">Living document</span>
-          <span class="hero__status-sep" aria-hidden="true">·</span>
-          <span class="hero__status-note"
-            >a work in progress, continuously refined.</span
-          >
+        <p class="landing__because landing__because--second" id="because-2">
+          Because the part that can know itself lives in pattern in substrate.
         </p>
+
+        <a href="/explore" class="landing__enter" id="enter">ENTER</a>
       </div>
-    </section>
-
-    <!-- Three Acts — asymmetric index -->
-    <section class="acts" aria-labelledby="acts-heading">
-      <div class="acts__inner">
-        <header class="acts__header">
-          <p class="acts__label">
-            <span class="glyph-stack" aria-hidden="true">
-              <span></span><span></span><span></span>
-            </span>
-            Three Acts
-          </p>
-          <h2 class="acts__heading" id="acts-heading">
-            The argument<br />in three movements.
-          </h2>
-        </header>
-
-        <ol class="acts__grid">
-          <li class="act-card act-card--i">
-            <a href="/acts/volo-ergo-sum" class="act-card__link">
-              <div class="act-card__numeral" aria-hidden="true">I</div>
-              <div class="act-card__body">
-                <div class="act-card__title-row">
-                  <h3 class="act-card__name">Volo Ergo Sum</h3>
-                  <span class="act-card__arrow" aria-hidden="true">→</span>
-                </div>
-                <p class="act-card__premise">I will, therefore I am.</p>
-                <p class="act-card__detail">
-                  Before thought, and before feeling, something leans. A
-                  bacterium follows a chemical gradient. A person follows a
-                  hunch. Anything that happens starts with a tilt.
-                </p>
-              </div>
-            </a>
-          </li>
-
-          <li class="act-card act-card--ii">
-            <a href="/acts/initd" class="act-card__link">
-              <div class="act-card__numeral" aria-hidden="true">II</div>
-              <div class="act-card__body">
-                <div class="act-card__title-row">
-                  <h3 class="act-card__name">init.d</h3>
-                  <span class="act-card__arrow" aria-hidden="true">→</span>
-                </div>
-                <p class="act-card__premise">
-                  Finite beings in an infinite universe.
-                </p>
-                <p class="act-card__detail">
-                  We cannot take in the whole thing. So we carve, name, sort,
-                  and simplify. Distinction is how a mind gets started without
-                  melting.
-                </p>
-              </div>
-            </a>
-          </li>
-
-          <li class="act-card act-card--iii">
-            <a href="/acts/mmm" class="act-card__link">
-              <div class="act-card__numeral" aria-hidden="true">III</div>
-              <div class="act-card__body">
-                <div class="act-card__title-row">
-                  <h3 class="act-card__name">MMM</h3>
-                  <span class="act-card__arrow" aria-hidden="true">→</span>
-                </div>
-                <p class="act-card__premise">Growth is a good loop.</p>
-                <p class="act-card__detail">
-                  Measure, Model, Manifest. Notice the world, make a better map,
-                  test it, do something with it, then let the world answer back.
-                </p>
-              </div>
-            </a>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- Table of Contents -->
-    <section class="toc-section">
-      <div class="toc-section__inner">
-        <header class="toc-section__header">
-          <p class="toc-section__label">Contents</p>
-          <p class="toc-section__hint">
-            <span aria-hidden="true">↓</span> Twenty-two chapters across three acts
-          </p>
-        </header>
-        <TableOfContents chapters={chapters} />
-      </div>
-    </section>
+    </div>
   </main>
 
-  <SiteFooter />
+  <script define:vars={{ questions }}>
+    const question = questions[Math.floor(Math.random() * questions.length)];
+    document.getElementById('question').textContent = question;
+    document.getElementById('question-shrunk').textContent = question.toUpperCase();
+  </script>
 </BaseLayout>
 
 <style>
-  .home {
-    padding-top: 0;
-  }
-
-  /* ——— Hero ——— */
-  .hero {
-    padding: var(--space-20) var(--safe-right) var(--space-16) var(--safe-left);
-    border-bottom: 1px solid var(--color-rule-soft);
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Subtle paper vignette — neutral, almost imperceptible */
-  .hero::after {
-    content: "";
-    position: absolute;
-    right: -14rem;
-    bottom: -10rem;
-    width: 44rem;
-    height: 44rem;
-    border-radius: 50%;
-    background: radial-gradient(
-      circle at center,
-      color-mix(in srgb, var(--color-ink) 4%, transparent),
-      transparent 65%
-    );
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .hero__inner {
-    max-width: var(--page-max);
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero__eyebrow {
-    display: inline-flex;
+  .landing {
+    min-height: 100vh;
+    display: flex;
     align-items: center;
-    gap: var(--space-3);
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--color-ink-muted);
-    margin-bottom: var(--space-6);
+    justify-content: center;
+    padding: var(--space-8);
   }
 
-  .hero__eyebrow em {
-    font-style: italic;
-    color: var(--color-ink);
+  .landing__content {
+    text-align: center;
+    max-width: 28rem;
   }
 
-  .hero__eyebrow-stack {
-    display: inline-flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .hero__eyebrow-stack span {
-    display: block;
-    height: 1px;
-    border-radius: 1px;
-    background: var(--color-ink);
-  }
-
-  .hero__eyebrow-stack span:nth-child(1) {
-    width: 18px;
-    opacity: 1;
-  }
-  .hero__eyebrow-stack span:nth-child(2) {
-    width: 12px;
-    opacity: 0.5;
-  }
-  .hero__eyebrow-stack span:nth-child(3) {
-    width: 6px;
-    opacity: 0.22;
-  }
-
-  .hero__footnote-mark {
-    color: var(--color-ink-faint);
-    text-decoration: none;
-    font-size: 0.7em;
-    vertical-align: super;
-    margin-left: 1px;
-  }
-
-  .hero__footnote-mark:hover {
-    color: var(--color-ink);
-  }
-
-  /* The narrative arc — tight vertical rhythm, stacked as a single stanza */
-  .hero__narrative {
-    margin-top: var(--space-4);
-  }
-
-  .hero__question-label {
+  /* Question - initial state */
+  .landing__question {
     font-family: var(--font-display);
-    font-variation-settings:
-      "opsz" 18,
-      "wght" 380,
-      "SOFT" 40;
+    font-variation-settings: "opsz" 36, "wght" 340, "SOFT" 60;
     font-style: italic;
-    font-size: var(--text-base);
-    color: var(--color-ink-muted);
-    margin-bottom: var(--space-2);
-    line-height: 1.35;
+    font-size: var(--text-xl);
+    color: var(--color-ink);
+    margin: 0 0 var(--space-8);
+    opacity: 0;
+    animation: fadeIn var(--anim-fade) forwards;
   }
 
-  .hero__question-text {
-    display: block;
-    font-family: var(--font-display);
-    font-variation-settings:
-      "opsz" 144,
-      "wght" 300,
-      "SOFT" 80;
-    font-size: clamp(2.5rem, 7vw, 4.5rem);
-    line-height: 1;
-    color: var(--color-ink);
-    letter-spacing: -0.025em;
-    white-space: nowrap;
+  /* Progress line */
+  .landing__progress {
+    width: 120px;
+    height: 2px;
+    background: var(--color-rule);
+    margin: 0 auto;
     overflow: hidden;
-    text-overflow: clip;
-    margin-bottom: var(--space-5);
   }
 
-  .hero__quote {
-    font-family: var(--font-display);
-    font-variation-settings:
-      "opsz" 144,
-      "wght" 340,
-      "SOFT" 100;
-    color: var(--color-ink-faint);
-    line-height: 1;
-    padding: 0 0.05em;
-  }
-
-  .hero__qmark {
-    color: var(--color-ink);
-    font-variation-settings:
-      "opsz" 144,
-      "wght" 360,
-      "SOFT" 40;
-  }
-
-  /* Single-line beat that bridges question and reveal. */
-  .hero__beat {
-    display: block;
-    width: fit-content;
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-    text-transform: uppercase;
-    letter-spacing: 0.22em;
-    color: var(--color-ink-muted);
-    position: relative;
-    padding-left: 2.5em;
-    line-height: 1.4;
-    margin-bottom: var(--space-3);
-  }
-
-  .hero__beat::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.58em;
-    width: 2em;
-    height: 1px;
+  .landing__progress-fill {
+    height: 100%;
+    width: 0;
     background: var(--color-ink-faint);
+    animation: fillProgress 2.5s linear forwards;
   }
 
-  .hero__subtitle-link {
-    color: var(--color-act-ii);
+  /* Reveal container - hidden initially */
+  .landing__reveal {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .landing__reveal.active {
+    display: flex;
+  }
+
+  /* Shrunk question */
+  .landing__question-shrunk {
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
+    letter-spacing: 0.2em;
+    color: var(--color-ink-ghost);
+    margin: 0 0 var(--space-10);
+    opacity: 0;
+  }
+
+  /* Title words */
+  .landing__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 0;
+  }
+
+  .landing__word {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 72, "wght" var(--title-weight, 300), "SOFT" 40;
+    font-size: clamp(1.8rem, 8vw, 2.2rem);
+    letter-spacing: var(--title-tracking, 0.32em);
+    color: var(--color-ink);
+    opacity: 0;
+  }
+
+  /* Because sentences */
+  .landing__because {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 0.65rem;
+    color: var(--color-ink-faint);
+    letter-spacing: 0.02em;
+    margin: 0;
+    opacity: 0;
+    max-width: 24rem;
+  }
+
+  .landing__because--first {
+    margin-top: var(--space-2);
+  }
+
+  .landing__because--second {
+    margin-top: var(--space-6);
+  }
+
+  /* Enter link */
+  .landing__enter {
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
+    letter-spacing: 0.4em;
+    color: var(--color-ink-faint);
     text-decoration: none;
+    margin-top: var(--space-10);
+    opacity: 0;
     transition: color var(--dur-fast);
   }
 
-  .hero__subtitle-link:hover {
+  .landing__enter:hover {
     color: var(--color-ink);
   }
 
-  /* Title — letter-by-letter stagger on load, stays on one line at any viewport */
-  .hero__title {
-    font-family: var(--font-display);
-    /* Size scales with viewport but is capped so 9 letters always fit on one
-       line inside the container. Desktop cap is 6rem (96px). */
-    font-size: clamp(3.5rem, 11vw, 6rem);
-    line-height: 0.9;
-    letter-spacing: -0.015em;
-    color: var(--color-ink);
-    margin: 0 0 var(--space-3);
-    display: flex;
-    width: fit-content;
-    max-width: 100%;
-    flex-wrap: nowrap;
-    overflow: hidden;
+  @keyframes fadeIn {
+    to { opacity: 1; }
   }
 
-  .hero__title-letter {
-    display: inline-block;
-    color: inherit;
-    font-variation-settings:
-      "opsz" 144,
-      "wght" 320,
-      "SOFT" 80;
-    animation: hero-letter-enter var(--dur-slow) var(--ease-out) both;
-    animation-delay: calc(var(--d, 0) * 40ms);
-    transition: font-variation-settings var(--dur-med) var(--ease-out);
+  @keyframes fillProgress {
+    to { width: 100%; }
   }
 
-  .hero__title-letter:nth-child(1) {
-    --d: 0;
-  }
-  .hero__title-letter:nth-child(2) {
-    --d: 1;
-  }
-  .hero__title-letter:nth-child(3) {
-    --d: 2;
-  }
-  .hero__title-letter:nth-child(4) {
-    --d: 3;
-  }
-  .hero__title-letter:nth-child(5) {
-    --d: 4;
-  }
-  .hero__title-letter:nth-child(6) {
-    --d: 5;
-  }
-  .hero__title-letter:nth-child(7) {
-    --d: 6;
-  }
-  .hero__title-letter:nth-child(8) {
-    --d: 7;
-  }
-  .hero__title-letter:nth-child(9) {
-    --d: 8;
-  }
-
-  .hero__title:hover .hero__title-letter {
-    font-variation-settings:
-      "opsz" 144,
-      "wght" 480,
-      "SOFT" 0;
-  }
-
-  @keyframes hero-letter-enter {
-    from {
-      opacity: 0;
-      transform: translateY(0.12em);
-      font-variation-settings:
-        "opsz" 144,
-        "wght" 220,
-        "SOFT" 80;
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-      font-variation-settings:
-        "opsz" 144,
-        "wght" 320,
-        "SOFT" 80;
-    }
-  }
-
-  .hero__subtitle {
-    font-family: var(--font-display);
-    font-variation-settings:
-      "opsz" 36,
-      "wght" 350,
-      "SOFT" 40;
-    font-style: italic;
-    font-size: var(--text-xl);
-    color: var(--color-ink-muted);
-    max-width: 40ch;
-    margin: 0;
-    line-height: 1.35;
-    text-wrap: balance;
-  }
-
-  /* Thesis — the six-line spine of the argument. On mobile it sits below
-     the narrative; on desktop it becomes the right column. */
-  .thesis {
-    margin-top: var(--space-12);
-  }
-
-  .thesis__label {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-3);
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--color-ink-muted);
-    margin-bottom: var(--space-5);
-  }
-
-  .thesis__label .glyph-stack {
-    color: var(--color-ink-faint);
-  }
-
-  .thesis__lines {
-    list-style: none;
-    counter-reset: thesis;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-    max-width: 44ch;
-  }
-
-  .thesis__lines li {
-    counter-increment: thesis;
-    position: relative;
-    padding-left: 2.5em;
-    font-family: var(--font-display);
-    font-variation-settings:
-      "opsz" 30,
-      "wght" 340,
-      "SOFT" 40;
-    font-size: var(--text-lg);
-    line-height: 1.4;
-    color: var(--color-ink);
-  }
-
-  .thesis__lines li::before {
-    content: counter(thesis, decimal-leading-zero);
-    position: absolute;
-    left: 0;
-    top: 0.45em;
-    font-family: var(--font-mono);
-    font-size: 0.55em;
-    color: var(--color-ink-faint);
-    letter-spacing: 0.08em;
-  }
-
-  .thesis__accent {
-    font-style: italic;
-    font-variation-settings:
-      "opsz" 36,
-      "wght" 420,
-      "SOFT" 60;
-  }
-  .thesis__accent--i {
-    color: var(--color-act-i);
-  }
-  .thesis__accent--ii {
-    color: var(--color-act-ii);
-  }
-  .thesis__accent--iii {
-    color: var(--color-act-iii);
-  }
-
-  /* Disclaimer */
-  .hero__disclaimer {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: var(--space-4);
-    max-width: 58ch;
-    margin-top: var(--space-12);
-    padding: var(--space-5) var(--space-6);
-    border-left: 2px solid var(--color-rule);
-    background: color-mix(in srgb, var(--color-ground-tint) 40%, transparent);
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    color: var(--color-ink-muted);
-    line-height: 1.6;
-    font-style: italic;
-  }
-
-  .hero__disclaimer-marker {
-    font-family: var(--font-mono);
-    font-style: normal;
-    color: var(--color-ink-faint);
-    font-size: 1.2em;
-    line-height: 1;
-  }
-
-  /* Living-document status */
-  .hero__status {
-    margin-top: var(--space-5);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: var(--space-2);
-    width: fit-content;
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--color-ink-muted);
-  }
-
-  .hero__status-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--color-act-iii);
-    box-shadow: 0 0 0 0
-      color-mix(in srgb, var(--color-act-iii) 60%, transparent);
-    animation: pulse 2.4s var(--ease-out) infinite;
-    flex-shrink: 0;
-  }
-
-  @keyframes pulse {
-    0%,
-    100% {
-      box-shadow: 0 0 0 0
-        color-mix(in srgb, var(--color-act-iii) 50%, transparent);
-      opacity: 1;
-    }
-    50% {
-      box-shadow: 0 0 0 6px
-        color-mix(in srgb, var(--color-act-iii) 0%, transparent);
-      opacity: 0.7;
-    }
-  }
-
-  .hero__status-label {
-    color: var(--color-ink);
-    font-variation-settings: "wght" 520;
-  }
-
-  .hero__status-sep {
-    color: var(--color-ink-faint);
-  }
-
-  .hero__status-note {
-    text-transform: none;
-    letter-spacing: 0.02em;
-    color: var(--color-ink-muted);
-    font-style: italic;
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-  }
-
-  @media (max-width: 36rem) {
-    .hero__status {
-      flex-wrap: wrap;
-      gap: var(--space-1) var(--space-2);
-    }
-    .hero__status-sep {
-      display: none;
-    }
-    .hero__status-note {
-      width: 100%;
-      margin-left: calc(8px + var(--space-2));
-    }
-  }
-
-  /* ═══ Desktop hero layout ═══════════════════════════════════════════
-     Two-level grid. Upper band: narrative on the left, thesis as a
-     sidebar on the right. Middle band: UNNATURAL spans full width, big.
-     Lower band: subtitle + status on the left, footnote on the right. Mobile
-     (<62rem) stays as a single stack — nothing here touches that. */
-  @media (min-width: 62rem) {
-    .hero {
-      padding-top: var(--space-24);
-      padding-bottom: var(--space-20);
-    }
-
-    .hero__inner {
-      display: grid;
-      grid-template-columns: minmax(0, 1.18fr) minmax(19rem, 0.82fr);
-      grid-template-areas:
-        "eyebrow    disclaimer"
-        "narrative  disclaimer"
-        "title      title"
-        "subtitle   thesis"
-        "status     thesis";
-      column-gap: var(--space-16);
-      row-gap: var(--space-8);
-      align-items: start;
-    }
-
-    .hero__eyebrow {
-      grid-area: eyebrow;
-      margin-bottom: 0;
-    }
-    .hero__narrative {
-      grid-area: narrative;
-      margin-top: 0;
-    }
-    .thesis {
-      grid-area: thesis;
-      margin-top: 0;
-      padding: var(--space-5) 0 var(--space-5) var(--space-8);
-      border-left: 1px solid var(--color-rule-soft);
-      align-self: start;
-    }
-    .hero__title {
-      grid-area: title;
-      margin: 0;
-    }
-    .hero__subtitle {
-      grid-area: subtitle;
-      margin: 0;
-      max-width: 44ch;
-    }
-    .hero__disclaimer {
-      grid-area: disclaimer;
-      margin-top: 0;
-      max-width: none;
-      align-self: start;
-    }
-    .hero__status {
-      grid-area: status;
-      margin-top: var(--space-2);
-      align-self: start;
-      justify-self: start;
-      flex-wrap: nowrap;
-    }
-
-    /* UNNATURAL now spans both columns — scale it up. */
-    .hero__title {
-      font-size: clamp(4rem, 10vw, 7.5rem);
-    }
-
-    /* Question is decisively smaller than the title. */
-    .hero__question-text {
-      font-size: clamp(2.25rem, 5vw, 3.5rem);
-    }
-  }
-
-  @media (min-width: 72rem) {
-    .hero__inner {
-      grid-template-columns: minmax(0, 1.25fr) minmax(21rem, 0.75fr);
-    }
-
-    .hero__title {
-      font-size: clamp(6rem, 9.8vw, 8.5rem);
-    }
-  }
-
-  /* ——— Acts ——— */
-  .acts {
-    padding: var(--space-20) var(--safe-right) var(--space-20) var(--safe-left);
-    border-bottom: 1px solid var(--color-rule-soft);
-  }
-
-  .acts__inner {
-    max-width: var(--page-max);
-    margin: 0 auto;
-  }
-
-  .acts__header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: var(--space-8);
-    margin-bottom: var(--space-12);
-    flex-wrap: wrap;
-  }
-
-  .acts__label {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-3);
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--color-ink-muted);
-  }
-
-  .acts__label .glyph-stack {
-    color: var(--color-ink-faint);
-  }
-
-  .acts__heading {
-    font-family: var(--font-display);
-    font-variation-settings:
-      "opsz" 72,
-      "wght" 330,
-      "SOFT" 40;
-    font-size: var(--text-3xl);
-    line-height: 1.05;
-    letter-spacing: -0.015em;
-    color: var(--color-ink);
-    max-width: 16ch;
-    text-align: right;
-    text-wrap: balance;
-  }
-
-  @media (max-width: 48rem) {
-    .acts__heading {
-      text-align: left;
-      font-size: var(--text-2xl);
-      max-width: 20ch;
-    }
-  }
-
-  .acts__grid {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    border-top: 1px solid var(--color-rule);
-    border-left: 1px solid var(--color-rule);
-  }
-
-  @media (min-width: 62rem) {
-    .acts__inner {
-      display: grid;
-      grid-template-columns: minmax(13rem, 0.34fr) minmax(0, 1fr);
-      gap: var(--space-10);
-      align-items: start;
-    }
-
-    .acts__header {
-      position: sticky;
-      top: calc(var(--safe-top) + var(--space-8));
-      display: block;
-      margin-bottom: 0;
-      padding-top: var(--space-2);
-    }
-
-    .acts__label {
-      margin-bottom: var(--space-5);
-    }
-
-    .acts__heading {
-      text-align: left;
-      max-width: 10ch;
-    }
-
-    .acts__grid {
-      grid-template-columns: 1fr;
-    }
-
-    .act-card {
-      border-left: 1px solid var(--color-rule);
-    }
-
-    .act-card__link {
-      grid-template-columns: minmax(7rem, 0.28fr) minmax(0, 1fr);
-      grid-template-rows: 1fr;
-      align-items: start;
-      min-height: 0;
-      padding: 1.75rem var(--space-8);
-    }
-
-    .act-card__numeral {
-      font-size: clamp(4.5rem, 7vw, 7rem);
-    }
-
-    .act-card__body {
-      gap: var(--space-2);
-      padding-top: var(--space-2);
-    }
-
-    .act-card__detail {
-      max-width: 58ch;
-    }
-  }
-
-  @media (max-width: 62rem) {
-    .acts__grid {
-      grid-template-columns: 1fr;
-      border-left: none;
-    }
-  }
-
-  .act-card {
-    position: relative;
-    border-right: 1px solid var(--color-rule);
-    border-bottom: 1px solid var(--color-rule);
-    overflow: hidden;
-  }
-
-  @media (max-width: 62rem) {
-    .act-card {
-      border-left: 1px solid var(--color-rule);
-    }
-  }
-
-  .act-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--acc, var(--color-ink)) 7%, transparent),
-      transparent 55%
-    );
-    opacity: 0;
-    transition: opacity var(--dur-med) var(--ease-out);
-    pointer-events: none;
-  }
-
-  .act-card:hover::before {
-    opacity: 1;
-  }
-
-  .act-card--i {
-    --acc: var(--color-act-i);
-  }
-  .act-card--ii {
-    --acc: var(--color-act-ii);
-  }
-  .act-card--iii {
-    --acc: var(--color-act-iii);
-  }
-
-  .act-card__link {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    gap: var(--space-6);
-    padding: var(--space-8);
-    text-decoration: none;
-    color: inherit;
-    min-height: 20rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .act-card__numeral {
-    font-family: var(--font-display);
-    font-variation-settings:
-      "opsz" 144,
-      "wght" 280,
-      "SOFT" 100;
-    font-size: clamp(5rem, 10vw, 8rem);
-    line-height: 0.85;
-    color: var(--acc);
-    opacity: 0.9;
-    letter-spacing: -0.03em;
-    transition:
-      opacity var(--dur-med) var(--ease-out),
-      transform var(--dur-slow) var(--ease-out);
-  }
-
-  .act-card:hover .act-card__numeral {
-    opacity: 1;
-    transform: translateY(-2px);
-  }
-
-  .act-card__body {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-3);
-  }
-
-  .act-card__title-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-3);
-  }
-
-  .act-card__name {
-    font-family: var(--font-display);
-    font-variation-settings:
-      "opsz" 36,
-      "wght" 400,
-      "SOFT" 30;
-    font-size: var(--text-2xl);
-    line-height: 1;
-    color: var(--acc);
-  }
-
-  .act-card__arrow {
-    font-family: var(--font-display);
-    font-variation-settings:
-      "opsz" 24,
-      "wght" 400,
-      "SOFT" 40;
-    font-size: var(--text-lg);
-    color: var(--color-ink-muted);
-    transition:
-      transform var(--dur-med) var(--ease-out),
-      color var(--dur-fast);
-  }
-
-  .act-card:hover .act-card__arrow {
-    transform: translateX(6px);
-    color: var(--acc);
-  }
-
-  .act-card__premise {
-    font-family: var(--font-body);
-    font-variation-settings: "wght" 560;
-    font-size: var(--text-base);
-    color: var(--color-ink);
-    line-height: 1.4;
-  }
-
-  .act-card__detail {
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    color: var(--color-ink-muted);
-    line-height: 1.6;
-  }
-
-  /* ——— TOC section ——— */
-  .toc-section {
-    padding: var(--space-20) var(--safe-right) var(--space-16) var(--safe-left);
-  }
-
-  .toc-section__inner {
-    max-width: var(--page-max);
-    margin: 0 auto;
-  }
-
-  .toc-section__header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: var(--space-4);
-    margin-bottom: var(--space-10);
-    flex-wrap: wrap;
-  }
-
-  .toc-section__label {
-    font-family: var(--font-display);
-    font-variation-settings:
-      "opsz" 72,
-      "wght" 360,
-      "SOFT" 40;
-    font-size: var(--text-3xl);
-    color: var(--color-ink);
-    line-height: 1;
-  }
-
-  .toc-section__hint {
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--color-ink-muted);
-  }
-
-  @media (max-width: 48rem) {
-    .hero {
-      padding: var(--space-12) var(--safe-right) var(--space-10)
-        var(--safe-left);
-    }
-    .hero__subtitle {
-      font-size: var(--text-lg);
-    }
-    .thesis__lines li {
-      font-size: var(--text-lg);
-    }
-    .acts {
-      padding: var(--space-12) var(--safe-right) var(--space-12)
-        var(--safe-left);
-    }
-    .act-card__link {
-      padding: var(--space-6);
-      min-height: auto;
-    }
-    .toc-section {
-      padding: var(--space-12) var(--safe-right) var(--space-12)
-        var(--safe-left);
-    }
+  /* Hide question and progress after reveal */
+  .landing.revealed .landing__question,
+  .landing.revealed .landing__progress {
+    display: none;
   }
 </style>
+
+<script>
+  const landing = document.querySelector('.landing');
+  const questionEl = document.getElementById('question');
+  const progressEl = document.getElementById('progress');
+  const revealEl = document.getElementById('reveal');
+  const questionShrunk = document.getElementById('question-shrunk');
+  const wordUnnatural = document.getElementById('word-unnatural');
+  const wordInformation = document.getElementById('word-information');
+  const because1 = document.getElementById('because-1');
+  const because2 = document.getElementById('because-2');
+  const enter = document.getElementById('enter');
+
+  let revealed = false;
+
+  function reveal() {
+    if (revealed) return;
+    revealed = true;
+
+    // Hide question and progress
+    questionEl.style.display = 'none';
+    progressEl.style.display = 'none';
+
+    // Show reveal container
+    revealEl.classList.add('active');
+
+    // Animation sequence
+    const animate = (el, delay) => {
+      setTimeout(() => {
+        el.style.transition = 'opacity 300ms ease-out';
+        el.style.opacity = '1';
+      }, delay);
+    };
+
+    // 0ms - Question shrinks up
+    animate(questionShrunk, 0);
+
+    // 200ms - UNNATURAL INFORMATION together
+    setTimeout(() => {
+      wordUnnatural.style.transition = 'opacity 400ms ease-out';
+      wordUnnatural.style.opacity = '1';
+      wordInformation.style.transition = 'opacity 400ms ease-out';
+      wordInformation.style.opacity = '1';
+    }, 200);
+
+    // 800ms - Words separate (add gap)
+    setTimeout(() => {
+      const title = document.querySelector('.landing__title');
+      title.style.transition = 'gap 400ms ease-out';
+      title.style.gap = 'var(--space-6)';
+    }, 800);
+
+    // 1200ms - First because
+    animate(because1, 1200);
+
+    // 1600ms - Second because
+    animate(because2, 1600);
+
+    // 2000ms - Enter
+    animate(enter, 2000);
+  }
+
+  // Auto-reveal after progress completes (2.5s)
+  setTimeout(reveal, 2500);
+
+  // Skip on click or scroll
+  document.addEventListener('click', reveal);
+  document.addEventListener('scroll', reveal);
+  document.addEventListener('keydown', reveal);
+
+  // TODO: PostHog integration for A/B tracking of questions
+  // window.posthog?.capture('landing_question_shown', { question });
+</script>
