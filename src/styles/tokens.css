@@ -143,3 +143,36 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* ——— Cinematic mode (forced dark) ——— */
+.cinematic {
+  --color-ground: #0a0a0a;
+  --color-ground-tint: #111;
+  --color-ground-warm: #151515;
+  --color-ink: #e8e8e8;
+  --color-ink-soft: #ccc;
+  --color-ink-muted: #888;
+  --color-ink-faint: #555;
+  --color-ink-ghost: #333;
+  --color-rule: #222;
+  --color-rule-soft: #1a1a1a;
+
+  /* Act accents — lifted for dark bg */
+  --color-act-i: #a84a42;
+  --color-act-i-soft: #7a3530;
+  --color-act-ii: #4a6a9a;
+  --color-act-ii-soft: #3a5070;
+  --color-act-iii: #4a7a5a;
+  --color-act-iii-soft: #3a5a45;
+  --color-wiki: #a08050;
+  --color-wiki-soft: #705838;
+
+  --grain-opacity: 0;
+
+  /* Animation tokens */
+  --anim-fade: 300ms ease-out;
+  --anim-fade-slow: 400ms ease-out;
+  --anim-stagger: 400ms;
+  --title-tracking: 0.32em;
+  --title-weight: 300;
+}
