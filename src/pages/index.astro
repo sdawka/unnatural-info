@@ -24,17 +24,22 @@ const questions = [
         <p class="landing__question-shrunk" id="question-shrunk"></p>
 
         <div class="landing__title" id="title">
-          <span class="landing__word" id="word-unnatural">UNNATURAL</span>
-          <span class="landing__word" id="word-information">INFORMATION</span>
+          <!-- UNNATURAL + its because -->
+          <div class="landing__word-group" id="group-unnatural">
+            <span class="landing__word">UNNATURAL</span>
+            <p class="landing__because" id="because-1">
+              Because you have free admin access to the information realm.
+            </p>
+          </div>
+
+          <!-- INFORMATION + its because -->
+          <div class="landing__word-group" id="group-information">
+            <span class="landing__word">INFORMATION</span>
+            <p class="landing__because" id="because-2">
+              Because the part that can know itself lives in pattern in substrate.
+            </p>
+          </div>
         </div>
-
-        <p class="landing__because landing__because--first" id="because-1">
-          Because you have free admin access to the information realm.
-        </p>
-
-        <p class="landing__because landing__because--second" id="because-2">
-          Because the part that can know itself lives in pattern in substrate.
-        </p>
 
         <a href="/explore" class="landing__enter" id="enter">ENTER</a>
       </div>
@@ -59,7 +64,7 @@ const questions = [
 
   .landing__content {
     text-align: center;
-    max-width: 28rem;
+    max-width: 36rem;
   }
 
   /* Question - initial state */
@@ -67,16 +72,16 @@ const questions = [
     font-family: var(--font-display);
     font-variation-settings: "opsz" 36, "wght" 340, "SOFT" 60;
     font-style: italic;
-    font-size: var(--text-xl);
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
     color: var(--color-ink);
-    margin: 0 0 var(--space-8);
+    margin: 0 0 var(--space-10);
     opacity: 0;
     animation: fadeIn var(--anim-fade) forwards;
   }
 
   /* Progress line */
   .landing__progress {
-    width: 120px;
+    width: 140px;
     height: 2px;
     background: var(--color-rule);
     margin: 0 auto;
@@ -105,59 +110,58 @@ const questions = [
   /* Shrunk question */
   .landing__question-shrunk {
     font-family: var(--font-mono);
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     letter-spacing: 0.2em;
     color: var(--color-ink-ghost);
-    margin: 0 0 var(--space-10);
+    margin: 0 0 var(--space-12);
     opacity: 0;
   }
 
-  /* Title words */
+  /* Title container */
   .landing__title {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0;
-    margin-bottom: 0;
+  }
+
+  /* Word group (word + its because) */
+  .landing__word-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
   }
 
   .landing__word {
     font-family: var(--font-display);
     font-variation-settings: "opsz" 72, "wght" var(--title-weight, 300), "SOFT" 40;
-    font-size: clamp(1.8rem, 8vw, 2.2rem);
+    font-size: clamp(2.5rem, 12vw, 4rem);
     letter-spacing: var(--title-tracking, 0.32em);
     color: var(--color-ink);
-    opacity: 0;
+    line-height: 1;
   }
 
   /* Because sentences */
   .landing__because {
     font-family: var(--font-display);
     font-style: italic;
-    font-size: 0.65rem;
+    font-size: clamp(0.7rem, 2vw, 0.85rem);
     color: var(--color-ink-faint);
     letter-spacing: 0.02em;
-    margin: 0;
+    margin: var(--space-3) 0 0 0;
+    max-width: 28rem;
     opacity: 0;
-    max-width: 24rem;
-  }
-
-  .landing__because--first {
-    margin-top: var(--space-2);
-  }
-
-  .landing__because--second {
-    margin-top: var(--space-6);
   }
 
   /* Enter link */
   .landing__enter {
     font-family: var(--font-mono);
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     letter-spacing: 0.4em;
     color: var(--color-ink-faint);
     text-decoration: none;
-    margin-top: var(--space-10);
+    margin-top: var(--space-16);
     opacity: 0;
     transition: color var(--dur-fast);
   }
@@ -182,16 +186,16 @@ const questions = [
 </style>
 
 <script>
-  const landing = document.querySelector('.landing');
   const questionEl = document.getElementById('question');
   const progressEl = document.getElementById('progress');
   const revealEl = document.getElementById('reveal');
   const questionShrunk = document.getElementById('question-shrunk');
-  const wordUnnatural = document.getElementById('word-unnatural');
-  const wordInformation = document.getElementById('word-information');
+  const groupUnnatural = document.getElementById('group-unnatural');
+  const groupInformation = document.getElementById('group-information');
   const because1 = document.getElementById('because-1');
   const because2 = document.getElementById('because-2');
   const enter = document.getElementById('enter');
+  const title = document.getElementById('title');
 
   let revealed = false;
 
@@ -206,40 +210,40 @@ const questions = [
     // Show reveal container
     revealEl.classList.add('active');
 
-    // Animation sequence
-    const animate = (el, delay) => {
+    // Animation sequence - slower, more cinematic
+    const animate = (el, delay, duration = 400) => {
       setTimeout(() => {
-        el.style.transition = 'opacity 300ms ease-out';
+        el.style.transition = `opacity ${duration}ms ease-out`;
         el.style.opacity = '1';
       }, delay);
     };
 
     // 0ms - Question shrinks up
-    animate(questionShrunk, 0);
+    animate(questionShrunk, 0, 300);
 
-    // 200ms - UNNATURAL INFORMATION together
+    // 300ms - UNNATURAL + INFORMATION appear together (as groups, opacity 1)
     setTimeout(() => {
-      wordUnnatural.style.transition = 'opacity 400ms ease-out';
-      wordUnnatural.style.opacity = '1';
-      wordInformation.style.transition = 'opacity 400ms ease-out';
-      wordInformation.style.opacity = '1';
-    }, 200);
+      groupUnnatural.style.transition = 'opacity 500ms ease-out';
+      groupUnnatural.style.opacity = '1';
+      groupInformation.style.transition = 'opacity 500ms ease-out';
+      groupInformation.style.opacity = '1';
+      // But the because sentences inside are still opacity 0
+    }, 300);
 
-    // 800ms - Words separate (add gap)
+    // 1000ms - Words separate (add gap between groups)
     setTimeout(() => {
-      const title = document.querySelector('.landing__title');
-      title.style.transition = 'gap 400ms ease-out';
-      title.style.gap = 'var(--space-6)';
-    }, 800);
+      title.style.transition = 'gap 600ms ease-out';
+      title.style.gap = 'var(--space-10)';
+    }, 1000);
 
-    // 1200ms - First because
-    animate(because1, 1200);
+    // 1800ms - First "because" fades in (under UNNATURAL)
+    animate(because1, 1800, 500);
 
-    // 1600ms - Second because
-    animate(because2, 1600);
+    // 2500ms - Second "because" fades in (under INFORMATION)
+    animate(because2, 2500, 500);
 
-    // 2000ms - Enter
-    animate(enter, 2000);
+    // 3200ms - Enter appears
+    animate(enter, 3200, 400);
   }
 
   // Auto-reveal after progress completes (2.5s)
