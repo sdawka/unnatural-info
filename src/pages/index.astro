@@ -12,7 +12,7 @@ const questions = [
   <main class="landing" id="landing">
     <div class="landing__content">
       <!-- Slide 1: Question + Progress -->
-      <div class="landing__slide landing__slide--question" id="slide-question">
+      <div class="landing__slide" id="slide-question">
         <p class="landing__question" id="question"></p>
         <div class="landing__progress" id="progress">
           <div class="landing__progress-fill"></div>
@@ -20,25 +20,25 @@ const questions = [
       </div>
 
       <!-- Slide 2: Title (UNNATURAL INFORMATION together) -->
-      <div class="landing__slide landing__slide--title" id="slide-title">
-        <p class="landing__question-shrunk" id="question-shrunk"></p>
-        <div class="landing__title-unified" id="title-unified">
+      <div class="landing__slide" id="slide-title">
+        <p class="landing__question-echo" id="question-echo"></p>
+        <div class="landing__title-unified">
           <span class="landing__word">UNNATURAL</span>
           <span class="landing__word">INFORMATION</span>
         </div>
       </div>
 
       <!-- Slide 3: Separated with Because sentences -->
-      <div class="landing__slide landing__slide--separated" id="slide-separated">
-        <p class="landing__question-shrunk">&nbsp;</p>
-        <div class="landing__title-separated" id="title-separated">
-          <div class="landing__word-group" id="group-unnatural">
+      <div class="landing__slide" id="slide-separated">
+        <p class="landing__question-echo">&nbsp;</p>
+        <div class="landing__title-separated">
+          <div class="landing__word-group">
             <span class="landing__word">UNNATURAL</span>
             <p class="landing__because" id="because-1">
               Because you have free admin access to the information realm.
             </p>
           </div>
-          <div class="landing__word-group" id="group-information">
+          <div class="landing__word-group">
             <span class="landing__word">INFORMATION</span>
             <p class="landing__because" id="because-2">
               Because the part that can know itself lives in pattern in substrate.
@@ -53,9 +53,10 @@ const questions = [
   <script define:vars={{ questions }}>
     const question = questions[Math.floor(Math.random() * questions.length)];
     document.getElementById('question').textContent = question;
-    document.querySelectorAll('.landing__question-shrunk').forEach(el => {
-      el.textContent = question.toUpperCase();
+    document.querySelectorAll('.landing__question-echo').forEach(el => {
+      if (el.textContent.trim()) el.textContent = question.toUpperCase();
     });
+    document.getElementById('question-echo').textContent = question.toUpperCase();
   </script>
 </BaseLayout>
 
@@ -75,23 +76,20 @@ const questions = [
     position: relative;
   }
 
-  /* Slides */
+  /* Slides - only one visible at a time */
   .landing__slide {
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    view-transition-name: slide;
   }
 
   .landing__slide.active {
     display: flex;
   }
 
-  /* Slide 1: Question */
-  .landing__slide--question {
-    view-transition-name: question-slide;
-  }
-
+  /* Question */
   .landing__question {
     font-family: var(--font-display);
     font-variation-settings: "opsz" 36, "wght" 340, "SOFT" 60;
@@ -115,20 +113,17 @@ const questions = [
     animation: fillProgress 2.5s linear forwards;
   }
 
-  /* Slide 2: Title unified */
-  .landing__slide--title {
-    view-transition-name: title-slide;
-  }
-
-  .landing__question-shrunk {
+  /* Echo question (shrunk, in later slides) */
+  .landing__question-echo {
     font-family: var(--font-mono);
     font-size: 0.65rem;
     letter-spacing: 0.25em;
     color: var(--color-ink-ghost);
     margin: 0 0 var(--space-12);
-    min-height: 1em;
+    min-height: 1.2em;
   }
 
+  /* Title unified (slide 2) */
   .landing__title-unified {
     display: flex;
     flex-direction: column;
@@ -136,11 +131,7 @@ const questions = [
     gap: 0.25rem;
   }
 
-  /* Slide 3: Separated */
-  .landing__slide--separated {
-    view-transition-name: separated-slide;
-  }
-
+  /* Title separated (slide 3) */
   .landing__title-separated {
     display: flex;
     flex-direction: column;
@@ -172,8 +163,9 @@ const questions = [
     margin: var(--space-4) 0 0 0;
     max-width: 30rem;
     opacity: 0;
-    transform: translateY(8px);
-    transition: opacity 600ms ease-out, transform 600ms ease-out;
+    transform: translateY(10px);
+    transition: opacity 800ms cubic-bezier(0.25, 0.1, 0.25, 1),
+                transform 800ms cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
   .landing__because.visible {
@@ -189,8 +181,10 @@ const questions = [
     text-decoration: none;
     margin-top: var(--space-16);
     opacity: 0;
-    transform: translateY(8px);
-    transition: opacity 500ms ease-out, transform 500ms ease-out, color var(--dur-fast);
+    transform: translateY(10px);
+    transition: opacity 700ms cubic-bezier(0.25, 0.1, 0.25, 1),
+                transform 700ms cubic-bezier(0.25, 0.1, 0.25, 1),
+                color var(--dur-fast);
   }
 
   .landing__enter.visible {
@@ -206,42 +200,52 @@ const questions = [
     to { width: 100%; }
   }
 
-  /* View Transition animations */
-  @keyframes slide-out-up {
-    from { opacity: 1; transform: translateY(0) scale(1); }
-    to { opacity: 0; transform: translateY(-30px) scale(0.95); }
+  /* View Transition: smooth crossfade with subtle movement */
+  ::view-transition-old(slide) {
+    animation: fade-out 800ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
 
-  @keyframes slide-in-up {
-    from { opacity: 0; transform: translateY(30px) scale(0.95); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
+  ::view-transition-new(slide) {
+    animation: fade-in 800ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
 
-  @keyframes crossfade-out {
-    from { opacity: 1; }
-    to { opacity: 0; }
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.98) translateY(-20px);
+    }
   }
 
-  @keyframes crossfade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.98) translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
   }
 
-  /* Apply to view transitions */
-  ::view-transition-old(question-slide),
-  ::view-transition-old(title-slide) {
-    animation: slide-out-up 600ms ease-out forwards;
+  /* Ensure view transition group is positioned correctly */
+  ::view-transition-group(slide) {
+    animation-duration: 800ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  ::view-transition-new(title-slide),
-  ::view-transition-new(separated-slide) {
-    animation: slide-in-up 600ms ease-out forwards;
+  ::view-transition-image-pair(slide) {
+    isolation: isolate;
   }
 
-  /* Fallback for no view transitions */
-  @supports not (view-transition-name: none) {
-    .landing__slide {
-      transition: opacity 500ms ease-out;
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(slide),
+    ::view-transition-new(slide) {
+      animation: none;
     }
   }
 </style>
@@ -254,74 +258,66 @@ const questions = [
   const because2 = document.getElementById('because-2');
   const enter = document.getElementById('enter');
 
-  let stage = 0; // 0 = question, 1 = title, 2 = separated
+  let stage = 0;
 
-  // Start with question slide visible
+  // Start with question slide
   slideQuestion.classList.add('active');
 
-  function transition(fromSlide, toSlide, callback) {
+  async function transitionTo(fromSlide, toSlide) {
     if (document.startViewTransition) {
-      document.startViewTransition(() => {
+      await document.startViewTransition(() => {
         fromSlide.classList.remove('active');
         toSlide.classList.add('active');
-        if (callback) callback();
-      });
+      }).finished;
     } else {
-      // Fallback without view transitions
-      fromSlide.style.opacity = '0';
-      setTimeout(() => {
-        fromSlide.classList.remove('active');
-        fromSlide.style.opacity = '';
-        toSlide.classList.add('active');
-        if (callback) callback();
-      }, 500);
+      fromSlide.classList.remove('active');
+      toSlide.classList.add('active');
     }
   }
 
-  function advanceToTitle() {
+  async function advanceToTitle() {
     if (stage !== 0) return;
     stage = 1;
 
-    transition(slideQuestion, slideTitle, () => {
-      // After transition, wait then advance to separated
-      setTimeout(advanceToSeparated, 1200);
-    });
+    await transitionTo(slideQuestion, slideTitle);
+
+    // Wait, then advance to separated
+    setTimeout(advanceToSeparated, 1400);
   }
 
-  function advanceToSeparated() {
+  async function advanceToSeparated() {
     if (stage !== 1) return;
     stage = 2;
 
-    transition(slideTitle, slideSeparated, () => {
-      // Animate in the because sentences and enter
-      setTimeout(() => because1.classList.add('visible'), 400);
-      setTimeout(() => because2.classList.add('visible'), 1000);
-      setTimeout(() => enter.classList.add('visible'), 1600);
-    });
+    await transitionTo(slideTitle, slideSeparated);
+
+    // Reveal because sentences and enter with staggered timing
+    setTimeout(() => because1.classList.add('visible'), 500);
+    setTimeout(() => because2.classList.add('visible'), 1200);
+    setTimeout(() => enter.classList.add('visible'), 1900);
   }
 
   function skipToEnd() {
     if (stage === 2) return;
+    stage = 2;
 
-    // Skip directly to final state
+    // Instant switch to final slide
     slideQuestion.classList.remove('active');
     slideTitle.classList.remove('active');
     slideSeparated.classList.add('active');
-    stage = 2;
 
-    // Quick reveal of all elements
-    setTimeout(() => because1.classList.add('visible'), 100);
-    setTimeout(() => because2.classList.add('visible'), 200);
-    setTimeout(() => enter.classList.add('visible'), 300);
+    // Quick staggered reveal
+    setTimeout(() => because1.classList.add('visible'), 150);
+    setTimeout(() => because2.classList.add('visible'), 300);
+    setTimeout(() => enter.classList.add('visible'), 450);
   }
 
-  // Auto-advance after progress bar (2.5s)
+  // Auto-advance after progress (2.5s)
   setTimeout(advanceToTitle, 2500);
 
   // Skip on interaction
   document.addEventListener('click', skipToEnd);
   document.addEventListener('keydown', skipToEnd);
 
-  // TODO: PostHog integration for A/B tracking of questions
-  // window.posthog?.capture('landing_question_shown', { question });
+  // TODO: PostHog integration
 </script>
