@@ -2,11 +2,13 @@
 interface Props {
   title: string;
   description?: string;
+  cinematic?: boolean;
 }
 
 const {
   title,
   description = 'An unscientific empirical theory of everything. A framework for how life moves, divides, knows, and grows.',
+  cinematic = false,
 } = Astro.props;
 
 const pageTitle = title === 'UNNATURAL' ? 'UNNATURAL' : `${title} — UNNATURAL`;
@@ -15,7 +17,7 @@ import '../styles/global.css';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class:list={[{ cinematic }]}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
