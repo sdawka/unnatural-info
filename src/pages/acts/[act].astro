@@ -45,7 +45,7 @@ const actChapters = allChapters
   .sort((a, b) => a.data.order - b.data.order);
 ---
 
-<BaseLayout title={actData.name} description={actData.premise}>
+<BaseLayout title={actData.name} description={actData.premise} cinematic>
   <SiteHeader />
   <main class={`ap ap--${actData.cls}`} style={`--acc: ${actData.color}`}>
 
