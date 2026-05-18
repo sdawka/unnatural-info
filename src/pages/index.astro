@@ -254,6 +254,41 @@ const questions = [
       animation: none;
     }
   }
+
+  /* Mobile adjustments */
+  @media (max-width: 640px) {
+    .landing {
+      padding: var(--space-6);
+    }
+
+    .landing__question-echo {
+      letter-spacing: 0.15em;
+      font-size: 0.5rem;
+      margin-bottom: var(--space-8);
+    }
+
+    .landing__title.separated {
+      gap: var(--space-8);
+    }
+
+    .landing__word {
+      letter-spacing: 0.12em;
+    }
+
+    .landing__word-group:last-child .landing__word {
+      letter-spacing: 0.1em;
+    }
+
+    .landing__because {
+      font-size: 0.75rem;
+      padding: 0 var(--space-2);
+    }
+
+    .landing__enter {
+      margin-top: var(--space-10);
+      letter-spacing: 0.25em;
+    }
+  }
 </style>
 
 <script>
