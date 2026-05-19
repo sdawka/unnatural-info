@@ -9,7 +9,7 @@ const chapters = defineCollection({
   schema: z.object({
     title: z.string(),
     subtitle: z.string().optional(),
-    act: z.enum(['prologue', 'volo-ergo-sum', 'initd', 'mmm', 'epilogue']),
+    act: z.enum(['preface', 'prologue', 'volo-ergo-sum', 'initd', 'mmm', 'epilogue']),
     actTitle: z.string().optional(),
     chapterNumber: z.number().optional(),
     order: z.number(),

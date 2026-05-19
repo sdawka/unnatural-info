@@ -1,12 +1,13 @@
 ---
 interface Props {
-  act: 'volo-ergo-sum' | 'initd' | 'mmm' | 'prologue' | 'epilogue';
+  act: 'preface' | 'volo-ergo-sum' | 'initd' | 'mmm' | 'prologue' | 'epilogue';
   actTitle?: string;
 }
 
 const { act, actTitle } = Astro.props;
 
 const ACT_META: Record<string, { roman: string; name: string; color: string }> = {
+  'preface':       { roman: '',    name: 'Preface',       color: 'var(--color-ink-muted)' },
   'volo-ergo-sum': { roman: 'I',   name: 'Volo Ergo Sum', color: 'var(--color-act-i)' },
   'initd':         { roman: 'II',  name: 'init.d',         color: 'var(--color-act-ii)' },
   'mmm':           { roman: 'III', name: 'MMM',           color: 'var(--color-act-iii)' },
