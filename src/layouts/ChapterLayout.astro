@@ -8,6 +8,7 @@ import SiteFooter from '../components/SiteFooter.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
 import { readingMinutes, draftLabel } from '../lib/book';
 import { practicesForChapter } from '../lib/practices';
+import references from '../data/references.json';
 import '../styles/prose.css';
 
 interface NavEntry {
@@ -25,6 +26,7 @@ interface Props {
 const { chapter, prev, next } = Astro.props;
 const { title, subtitle, act, actTitle, chapterNumber, furtherReading } = chapter.data;
 const practices = practicesForChapter(chapterNumber, chapter.id);
+const referenceCount = references.filter(reference => reference.chapters.includes(chapter.id)).length;
 ---
 
 <BaseLayout title={title} description={chapter.data.summary} cinematic>
@@ -91,6 +93,8 @@ const practices = practicesForChapter(chapterNumber, chapter.id);
         </details>
       )}
 
+      {referenceCount > 0 && <p class="fr__catalog"><a href={`/reading?chapter=${encodeURIComponent(chapter.id)}`}>Explore all {referenceCount} references connected to this chapter <span aria-hidden="true">→</span></a><span>Original and current sources, with notes on their place in the book.</span></p>}
+
       <ChapterNav prev={prev} next={next} />
     </div>
   </main>
@@ -113,6 +117,9 @@ const practices = practicesForChapter(chapterNumber, chapter.id);
   .cp__practice small { display: block; color: var(--color-ink-muted); font-size: var(--text-sm); }
   .cp__practice > p, .cp__recall p { font-size: var(--text-sm); color: var(--color-ink-muted); margin-top: var(--space-4); }
   .cp__recall summary, .fr__heading { cursor: pointer; }
+  .fr__catalog { max-width: var(--prose-width); margin: var(--space-5) auto var(--space-8); font-size: var(--text-sm); }
+  .fr__catalog a { text-decoration: underline; text-underline-offset: .2em; }
+  .fr__catalog > span { display: block; margin-top: var(--space-2); color: var(--color-ink-muted); }
   .cp {
     padding: var(--space-12) var(--safe-right) var(--space-12) var(--safe-left);
   }
@@ -241,7 +248,7 @@ const practices = practicesForChapter(chapterNumber, chapter.id);
     .cp__body {
       grid-column: 2;
     }
-    .fr, .cp__practice, nav.cn {
+    .fr, .fr__catalog, .cp__practice, nav.cn {
       grid-column: 2;
     }
   }
