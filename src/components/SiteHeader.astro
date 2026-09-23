@@ -55,7 +55,7 @@ const isBook = current === '/explore' || current.startsWith('/acts/') || current
 </script>
 
 <style>
-  .sh { position: sticky; top: 0; z-index: 50; padding-top: var(--safe-top); background: color-mix(in srgb, var(--color-ground) 88%, transparent); backdrop-filter: blur(16px) saturate(115%); border-bottom: 1px solid var(--color-rule-soft); }
+  .sh { position: sticky; top: 0; z-index: 50; padding-top: var(--safe-top); background: var(--color-ground); background: color-mix(in srgb, var(--color-ground) 88%, transparent); backdrop-filter: blur(16px) saturate(115%); border-bottom: 1px solid var(--color-rule-soft); view-transition-name: site-header; }
   .sh__bar { max-width: var(--page-max); min-height: calc(var(--header-height) - var(--safe-top)); margin: 0 auto; padding: var(--space-2) var(--safe-right) var(--space-2) var(--safe-left); display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: var(--space-6); }
   .sh__logo { display: inline-flex; min-height: 44px; align-items: center; gap: var(--space-3); color: var(--color-ink); }
   .sh__logo-mark { display: inline-flex; flex-direction: column; gap: 3px; padding: 2px 0; }

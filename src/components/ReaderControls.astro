@@ -1,17 +1,26 @@
-<fieldset class="rc metal-surface" data-reader-controls hidden>
-  <legend>Text size</legend>
-  <label><input type="radio" name="reader-size" value="regular" /> <span>Regular</span></label>
-  <label><input type="radio" name="reader-size" value="larger" /> <span>Larger</span></label>
-  <label><input type="radio" name="reader-size" value="largest" /> <span>Largest</span></label>
-</fieldset>
+<details class="rc" data-reader-controls hidden>
+  <summary aria-label="Reading settings">
+    <span>Reading settings</span>
+    <small data-reader-size-label>Regular</small>
+  </summary>
+  <fieldset class="rc__choices">
+    <legend>Text size</legend>
+    <label><input type="radio" name="reader-size" value="regular" /> <span>Regular</span></label>
+    <label><input type="radio" name="reader-size" value="larger" /> <span>Larger</span></label>
+    <label><input type="radio" name="reader-size" value="largest" /> <span>Largest</span></label>
+  </fieldset>
+</details>
 
 <script>
-  const controls = document.querySelector<HTMLFieldSetElement>('[data-reader-controls]');
+  const controls = document.querySelector<HTMLDetailsElement>('[data-reader-controls]');
   if (controls) {
+    const label = controls.querySelector<HTMLElement>('[data-reader-size-label]');
+    const names = { regular: 'Regular', larger: 'Larger', largest: 'Largest' } as const;
     const current = document.documentElement.dataset.readerSize ?? 'regular';
     const selected = controls.querySelector<HTMLInputElement>(`input[value="${current}"]`)
       ?? controls.querySelector<HTMLInputElement>('input[value="regular"]');
     if (selected) selected.checked = true;
+    if (label && (current === 'regular' || current === 'larger' || current === 'largest')) label.textContent = names[current];
     controls.hidden = false;
     controls.addEventListener('change', (event) => {
       const input = event.target as HTMLInputElement;
@@ -19,20 +28,45 @@
       const value = input.value;
       if (value !== 'regular' && value !== 'larger' && value !== 'largest') return;
       document.documentElement.dataset.readerSize = value;
+      if (label) label.textContent = names[value];
       try { localStorage.setItem('unnatural:reader-size', value); } catch { /* This page still updates. */ }
+    });
+    const summary = controls.querySelector<HTMLElement>('summary');
+    controls.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape' || !controls.open) return;
+      controls.open = false;
+      summary?.focus();
+    });
+    document.addEventListener('pointerdown', (event) => {
+      if (controls.open && event.target instanceof Node && !controls.contains(event.target)) {
+        controls.open = false;
+      }
     });
   }
 </script>
 
 <style>
-  .rc { width: fit-content; display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-1); margin-top: var(--space-5); padding: var(--space-1); border-radius: var(--radius-sm); box-shadow: none; font-family: var(--font-ui); }
+  .rc { position: relative; width: fit-content; font-family: var(--font-ui); }
   .rc[hidden] { display: none; }
-  .rc legend { float: left; padding: 0 var(--space-2); color: var(--color-ink-muted); font-size: .8125rem; }
-  .rc label { position: relative; min-height: 44px; display: inline-flex; align-items: center; }
-  .rc input { position: absolute; inset: 0; opacity: 0; }
-  .rc span { min-height: 44px; display: inline-flex; align-items: center; padding: 0 var(--space-3); border-radius: 4px; color: var(--color-ink-muted); font-size: .8125rem; font-weight: 600; }
-  .rc input:checked + span { color: var(--color-on-metal); background: linear-gradient(135deg, var(--color-metal-high), var(--color-metal-mid) 52%, var(--color-metal-low)); }
-  .rc input:focus-visible + span { outline: 2px solid var(--color-focus); outline-offset: 2px; }
-  @media (forced-colors: active) { .rc input:checked + span { outline: 2px solid Highlight; outline-offset: -3px; } .rc input:focus-visible + span { outline: 2px dashed Highlight; outline-offset: 2px; } }
-  @media (max-width: 30rem) { .rc { width: 100%; } .rc legend { width: 100%; padding: var(--space-2) var(--space-2) 0; } .rc label { flex: 1; } .rc span { width: 100%; justify-content: center; padding-inline: var(--space-2); } }
+  .rc > summary { min-height: 44px; display: inline-flex; align-items: center; gap: var(--space-2); padding: 0 var(--space-3); border: 1px solid var(--color-rule); border-radius: var(--radius-sm); background: var(--color-surface); list-style: none; color: var(--color-ink-soft); font-size: .8125rem; font-weight: 600; }
+  .rc > summary::-webkit-details-marker { display: none; }
+  .rc > summary::before { content: 'Aa'; color: var(--color-ink-muted); font-family: var(--font-display); font-size: 1rem; }
+  .rc > summary::after { content: '+'; width: 1em; color: var(--color-ink-muted); text-align: center; }
+  .rc[open] > summary::after { content: '−'; }
+  .rc > summary small { color: var(--color-ink-muted); font: 500 .8125rem/1 var(--font-ui); }
+  .rc[open] > summary { background: var(--color-surface-raised); }
+  .rc__choices { position: absolute; z-index: 4; right: 0; top: calc(100% + var(--space-2)); width: min(19rem, calc(100vw - 2 * var(--gutter))); display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-1); padding: var(--space-3); border: 1px solid var(--color-rule); border-radius: var(--radius-md); background: var(--color-surface); box-shadow: var(--shadow-panel); }
+  .rc__choices legend { grid-column: 1 / -1; padding: 0 var(--space-1) var(--space-2); color: var(--color-ink-muted); font-size: .8125rem; }
+  .rc__choices label { position: relative; min-height: 44px; display: flex; }
+  .rc__choices input { position: absolute; inset: 0; opacity: 0; }
+  .rc__choices span { min-height: 44px; width: 100%; display: inline-flex; align-items: center; justify-content: center; padding: 0 var(--space-2); border-radius: 4px; color: var(--color-ink-muted); font-size: .8125rem; font-weight: 600; }
+  .rc__choices input:checked + span { color: var(--color-on-metal); background: linear-gradient(135deg, var(--color-metal-high), var(--color-metal-mid) 52%, var(--color-metal-low)); }
+  .rc__choices input:focus-visible + span { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+  @media (forced-colors: active) { .rc__choices input:checked + span { outline: 2px solid Highlight; outline-offset: -3px; } }
+  @media (max-width: 30rem) {
+    .rc { width: 100%; }
+    .rc > summary { width: 100%; }
+    .rc > summary span { flex: 1; }
+    .rc__choices { left: 0; right: 0; width: auto; }
+  }
 </style>

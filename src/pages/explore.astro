@@ -28,7 +28,7 @@ const paths = READING_PATHS.map(path => ({
       <p class="book-kicker">Three acts · {count} chapters · Working drafts</p>
       <h1 class="book-title">Follow the thread.</h1>
       <p class="book-lead">Life doesn’t always make sense. Even when it should. Follow that question through wanting, knowledge, culture, society, technology, and the living world we belong to.</p>
-      <div class="book-actions"><a class="book-button" href="/chapters/prologue">Begin the book · about {readingMinutes(start?.body)} min →</a><ResumeReading /></div>
+      <div class="book-actions"><a class="book-button" href="/chapters/prologue">Begin the book · about {readingMinutes(start?.body)} min →</a><a class="book-link" href="#contents-heading">Jump to contents ↓</a><ResumeReading /></div>
       <p class="book-small">Reading estimates cover the prose. Pause as long as you like for the optional practices.</p>
     </header>
     <section class="book-section" aria-labelledby="route-heading">
@@ -45,7 +45,7 @@ const paths = READING_PATHS.map(path => ({
       <div class="book-aside"><h3>Try a short sample · about {samplerMinutes} minutes</h3><p>Begin with the book’s question, see how information changes the physical world, then ask what makes collective change worth making.</p><ol>{sampler.map(chapter => <li><a href={`/chapters/${chapter.id}`}>{chapter.data.title}</a></li>)}</ol></div>
       <div class="book-paths">{paths.map(path => <article id={`path-${path.id}`} aria-labelledby={`path-title-${path.id}`}><h3 id={`path-title-${path.id}`}>{path.title}</h3><p>{path.description}</p><ol>{path.entries.map(chapter => <li><a href={`/chapters/${chapter.id}`}>{chapter.data.chapterNumber}. {chapter.data.title}</a></li>)}</ol></article>)}</div>
     </section>
-    <section class="book-section" aria-labelledby="contents-heading">
+    <section id="contents-section" class="book-section" aria-labelledby="contents-heading">
       <h2 id="contents-heading">The whole book.</h2>
       <p>The prologue is the suggested beginning. The preface is an optional origin story. Every chapter is a working draft, open to correction.</p>
       <TableOfContents chapters={chapters} />
@@ -59,3 +59,14 @@ const paths = READING_PATHS.map(path => ({
   </main>
   <SiteFooter />
 </BaseLayout>
+<style>
+  .book-page > header { padding-bottom: var(--space-4); }
+  .book-page > header .book-lead { max-width: 58ch; }
+  .book-page > header .book-actions { align-items: center; }
+  .book-page > header .book-actions .book-link { min-height: var(--control-height, 48px); display: inline-flex; align-items: center; }
+  #contents-section { scroll-margin-top: calc(var(--header-height) + var(--space-4)); }
+  @media (max-width: 44rem) {
+    .book-page > header .book-actions { align-items: stretch; }
+    .book-page > header .book-actions .book-link { justify-content: center; }
+  }
+</style>

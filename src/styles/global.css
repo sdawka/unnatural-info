@@ -1,6 +1,7 @@
 /* UNNATURAL — shared industrial reading surface */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Manrope:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&family=JetBrains+Mono:ital,wght@0,300..600;1,300..600&display=swap');
 @import './tokens.css';
+@import './metal.css';
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; scroll-behavior: smooth; scroll-padding-top: calc(var(--header-height) + var(--space-4)); overflow-x: clip; background: var(--color-ground); }
@@ -29,18 +30,17 @@ img, svg { max-width: 100%; height: auto; display: block; }
 .glyph-stack span:nth-child(1) { width: 18px; } .glyph-stack span:nth-child(2) { width: 12px; opacity: .7; } .glyph-stack span:nth-child(3) { width: 6px; opacity: .4; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
-/* Shared black-metal surfaces. The reflection runs once per deliberate interaction. */
+/* Shared black-metal surfaces. Reading surfaces remain still. */
 .metal-surface { border: 1px solid var(--color-rule); background: linear-gradient(145deg, color-mix(in srgb, var(--color-surface-raised) 72%, transparent), color-mix(in srgb, var(--color-surface) 94%, black)); box-shadow: inset 0 1px 0 color-mix(in srgb, var(--color-metal-high) 9%, transparent), var(--shadow-panel); }
-.metal-action { position: relative; isolation: isolate; overflow: hidden; }
-.metal-action::after { content: ''; position: absolute; z-index: 0; inset: -80% -45%; pointer-events: none; opacity: .48; background: linear-gradient(112deg, transparent 42%, color-mix(in srgb, var(--color-metal-high) 55%, transparent) 49%, color-mix(in srgb, var(--color-metal-low) 38%, transparent) 52%, transparent 59%); transform: translateX(-72%) rotate(2deg); transition: transform var(--dur-slow) var(--ease-out); }
-.metal-action > * { position: relative; z-index: 1; }
-.metal-action:is(:hover, :focus-visible, :active)::after { transform: translateX(72%) rotate(2deg); }
 
 @view-transition { navigation: auto; }
-::view-transition-old(root) { animation: 220ms var(--ease-out) both page-out; }
-::view-transition-new(root) { animation: var(--dur-slow) var(--ease-out) both liquid-in; }
-@keyframes page-out { to { opacity: .68; filter: brightness(.7); } }
-@keyframes liquid-in { from { clip-path: inset(0 100% 0 0 round 50%); filter: brightness(1.7) saturate(0); } to { clip-path: inset(0 0 0 0 round 0); filter: none; } }
+::view-transition-old(root) { animation: 280ms var(--ease-out) both page-out; }
+::view-transition-new(root) { animation: 440ms var(--ease-out) both liquid-in; }
+::view-transition-group(site-header) { animation-duration: 0s; }
+::view-transition-old(site-header) { display: none; }
+::view-transition-new(site-header) { animation: none; }
+@keyframes page-out { to { opacity: .3; } }
+@keyframes liquid-in { from { clip-path: ellipse(5% 65% at -10% 50%); } to { clip-path: ellipse(150% 180% at 0% 50%); } }
 
 @media (forced-colors: active) {
   .metal-surface, .metal-action { border: 1px solid CanvasText; box-shadow: none; }

@@ -1,0 +1,39 @@
+/* A reflection belongs to the control, with no continuous animation. */
+:is(.metal-action, .book-button, .practice-workbench button, .analysis-send) {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  --metal-x: 50%;
+  --metal-y: 50%;
+}
+
+:is(.metal-action, .book-button, .practice-workbench button, .analysis-send)::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: -1px;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(ellipse 60% 160% at var(--metal-x) var(--metal-y), transparent 32%, rgb(255 255 255 / .1) 47%, rgb(255 255 255 / .18) 49%, transparent 53%),
+    radial-gradient(ellipse 80% 110% at var(--metal-x) var(--metal-y), rgb(255 255 255 / .045), transparent 70%);
+  transform: scale(1.12);
+  transition: opacity var(--dur-med) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+}
+
+:is(.metal-action, .book-button, .practice-workbench button, .analysis-send):is(:focus-visible, :active):not(:disabled)::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  :is(.metal-action, .book-button, .practice-workbench button, .analysis-send):hover:not(:disabled)::after {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce), (forced-colors: active) {
+  :is(.metal-action, .book-button, .practice-workbench button, .analysis-send)::after { display: none; }
+}

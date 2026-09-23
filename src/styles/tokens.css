@@ -1,4 +1,4 @@
-:root, :root[data-theme='dark'] {
+:root {
   color-scheme: dark;
   --color-ground: #0c0e10; --color-ground-tint: #14171b; --color-ground-warm: #1d2227;
   --color-ink: #f0efea; --color-ink-soft: #ced1d3; --color-ink-muted: #a3a9af; --color-ink-faint: #939aa1;

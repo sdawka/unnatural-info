@@ -99,24 +99,6 @@
     border-color var(--dur-fast, 160ms),
     transform var(--dur-fast, 160ms);
 }
-.practice-workbench button::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(
-    115deg,
-    transparent 26%,
-    color-mix(in srgb, var(--color-metal-high, #fff) 35%, transparent) 50%,
-    transparent 74%
-  );
-  transform: translateX(-130%);
-  transition: transform var(--dur-slow, 560ms) var(--ease-out, ease-out);
-}
-.practice-workbench button:hover:not(:disabled)::after,
-.practice-workbench button:focus-visible::after {
-  transform: translateX(130%);
-}
 .practice-workbench button:hover:not(:disabled) {
   border-color: var(--color-metal-high, var(--color-ink));
   transform: translateY(-1px);

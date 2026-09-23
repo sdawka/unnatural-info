@@ -20,7 +20,7 @@ const color = COLOR[act] ?? 'var(--color-ink)';
 <script>
   (() => {
     const bar = document.querySelector<HTMLElement>('[data-rp-bar]');
-    const region = document.querySelector('[data-reading-region]');
+    const region = document.querySelector<HTMLElement>('[data-reading-region]');
     if (!bar || !region) return;
     let ticking = false;
     const update = () => {
@@ -31,11 +31,14 @@ const color = COLOR[act] ?? 'var(--color-ink)';
       bar.style.transform = `scaleX(${pct / 100})`;
       ticking = false;
     };
-    window.addEventListener('scroll', () => {
+    const requestUpdate = () => {
       if (!ticking) { ticking = true; requestAnimationFrame(update); }
-    }, { passive: true });
-    window.addEventListener('resize', update, { passive: true });
-    update();
+    };
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate, { passive: true });
+    if ('ResizeObserver' in window) new ResizeObserver(requestUpdate).observe(region);
+    document.fonts?.ready.then(requestUpdate).catch(() => {});
+    requestUpdate();
   })();
 </script>
 

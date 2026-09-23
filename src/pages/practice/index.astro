@@ -2,8 +2,35 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
+import { getCollection } from 'astro:content';
 import { PRACTICES } from '../../lib/practices';
+import { ACTS } from '../../lib/book';
 import '../../styles/book.css';
+
+const chapters = await getCollection('chapters', ({ data }) => !data.draft && typeof data.chapterNumber === 'number');
+const chapterAct = new Map<number, string>();
+for (const chapter of chapters) {
+  if (typeof chapter.data.chapterNumber === 'number') chapterAct.set(chapter.data.chapterNumber, chapter.data.act);
+}
+const PRACTICE_ACTS = ACTS.map(act => {
+  const chapterNumbers = chapters
+    .filter(chapter => chapter.data.act === act.key)
+    .map(chapter => chapter.data.chapterNumber)
+    .filter((number): number is number => typeof number === 'number')
+    .sort((a, b) => a - b);
+  const range = chapterNumbers.length === 1
+    ? `Chapter ${chapterNumbers[0]}`
+    : `Chapters ${chapterNumbers[0]}–${chapterNumbers.at(-1)}`;
+  return {
+    ...act,
+    id: act.roman.toLowerCase(),
+    range,
+  };
+});
+const actsForPractice = (numbers: number[]) => {
+  const actKeys = new Set(numbers.map(number => chapterAct.get(number)).filter((key): key is string => Boolean(key)));
+  return PRACTICE_ACTS.filter(act => actKeys.has(act.key));
+};
 ---
 <BaseLayout title="Small philosophical tests" description={PRACTICES.length + ' optional exercises that put a specific idea from the book into your hands.'} cinematic>
   <SiteHeader />
@@ -12,8 +39,95 @@ import '../../styles/book.css';
     <h1 class="book-title">Put the idea in your hands.</h1>
     <p class="book-lead">A boundary, a map, a label, a sheet of paper. Each exercise makes one philosophical distinction visible through something you can inspect or do.</p>
     <p class="book-copy">Some tests use a physical object or a quick mark on paper. Others use an invented case with assumptions you can open and question. They cannot prove a worldview or diagnose you. Their job is smaller: let you notice whether a distinction changes what you can see, explain, or try.</p>
-    <ol class="book-acts">{PRACTICES.map((practice, index) => <li><a href={'/practice/' + practice.slug} class="book-act" style="--act-color: var(--color-act-ii)"><span class="book-act__num" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><div><p class="book-kicker">{practice.concept}</p><h2 style="font: 380 var(--text-2xl)/1.2 var(--font-display)">{practice.title}</h2><p>{practice.question}</p><small>About {practice.minutes} minutes →</small></div></a></li>)}</ol>
+    <section class="practice-directory" aria-labelledby="practice-directory-heading">
+      <div class="practice-directory__heading">
+        <h2 id="practice-directory-heading">Choose a place to begin.</h2>
+        <p>These are all optional. Pick a question, an object, or a few minutes.</p>
+      </div>
+      <form class="practice-filter" id="practice-filter" hidden aria-label="Filter exercises by act">
+        <label for="practice-act">Show exercises from
+          <select id="practice-act" name="act" aria-controls="practice-list">
+            <option value="">All three acts</option>
+            {PRACTICE_ACTS.map(act => <option value={act.id}>Act {act.roman} · {act.name} · {act.range}</option>)}
+          </select>
+        </label>
+        <p id="practice-count" role="status" aria-live="polite">{PRACTICES.length} exercises</p>
+        <button type="reset">Show all</button>
+      </form>
+      <p class="book-small practice-filter__fallback">All {PRACTICES.length} exercises are listed below. They overlap: one exercise can connect chapters in more than one act.</p>
+      <ol class="book-acts" id="practice-list">
+        {PRACTICES.map((practice, index) => {
+          const acts = actsForPractice(practice.chapters);
+          return <li data-practice data-acts={acts.map(act => act.id).join(' ')}><a href={'/practice/' + practice.slug} class="book-act" style={`--act-color: ${acts[0]?.color ?? 'var(--color-act-ii)'}`}><span class="book-act__num" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><div><p class="book-kicker">{practice.concept}</p><h2>{practice.title}</h2><p>{practice.question}</p><div class="practice-meta"><span>{acts.map(act => `Act ${act.roman}`).join(' · ')}</span><span>Chapters {practice.chapters.join(', ')}</span></div><small>About {practice.minutes} minutes →</small></div></a></li>;
+        })}
+      </ol>
+    </section>
     <section class="book-section"><h2>Your notes remain optional.</h2><p>Use the page, paper, or only your attention. If you write here, you may save a note in this browser or download it. Exercise answers are not sent to a server.</p><a class="book-link" href="/explore">Return to the book →</a></section>
   </main>
   <SiteFooter />
 </BaseLayout>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('#practice-filter');
+  const select = document.querySelector<HTMLSelectElement>('#practice-act');
+  const count = document.querySelector<HTMLElement>('#practice-count');
+  const entries = [...document.querySelectorAll<HTMLElement>('[data-practice]')];
+  const allowed = new Set(['i', 'ii', 'iii']);
+  if (form && select && count) {
+    function apply(updateUrl = true) {
+      const act = allowed.has(select!.value) ? select!.value : '';
+      let visible = 0;
+      for (const entry of entries) {
+        const matches = !act || (entry.dataset.acts ?? '').split(' ').includes(act);
+        entry.hidden = !matches;
+        if (matches) visible++;
+      }
+      count!.textContent = `${visible} ${visible === 1 ? 'exercise' : 'exercises'}`;
+      if (updateUrl) {
+        const url = new URL(location.href);
+        if (act) url.searchParams.set('act', act);
+        else url.searchParams.delete('act');
+        history.pushState(null, '', url);
+      }
+    }
+    function restore() {
+      const act = new URLSearchParams(location.search).get('act') ?? '';
+      select!.value = allowed.has(act) ? act : '';
+      apply(false);
+    }
+    restore();
+    form.hidden = false;
+    document.querySelector<HTMLElement>('.practice-filter__fallback')?.setAttribute('hidden', '');
+    form.addEventListener('change', () => apply());
+    form.addEventListener('reset', () => {
+      select!.value = '';
+      apply();
+    });
+    window.addEventListener('popstate', restore);
+  }
+</script>
+
+<style>
+  .practice-directory { margin-top: var(--space-14); }
+  .practice-directory__heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--space-3) var(--space-8); margin-bottom: var(--space-5); }
+  .practice-directory__heading h2 { font: 380 var(--text-2xl)/1.2 var(--font-display); }
+  .practice-directory__heading p { color: var(--color-ink-muted); font-size: var(--text-sm); }
+  .practice-filter { display: flex; flex-wrap: wrap; align-items: end; gap: var(--space-3) var(--space-5); padding: var(--space-4) var(--space-5); margin-bottom: var(--space-6); border-block: 1px solid var(--color-rule-soft); background: color-mix(in srgb, var(--color-surface) 72%, transparent); }
+  .practice-filter label { display: grid; gap: var(--space-2); min-width: min(100%, 25rem); color: var(--color-ink-soft); font: 500 var(--text-sm)/1.4 var(--font-ui); }
+  .practice-filter select { min-width: 0; max-width: 100%; min-height: var(--control-height); padding: .7rem .8rem; border: 1px solid var(--color-rule); border-radius: var(--radius-sm); color: var(--color-ink); background: var(--color-field); font: 400 1rem/1.4 var(--font-ui); }
+  .practice-filter p { margin-left: auto; color: var(--color-ink-muted); font: var(--text-sm)/1.5 var(--font-ui); }
+  .practice-filter button { min-height: 44px; padding: var(--space-2) var(--space-3); border: 0; border-radius: var(--radius-sm); background: transparent; color: var(--color-ink); cursor: pointer; font: 500 var(--text-sm)/1.4 var(--font-ui); text-decoration: underline; text-underline-offset: .25em; }
+  .practice-filter button:hover { background: var(--color-surface-raised); }
+  .practice-filter__fallback { margin-bottom: var(--space-6); }
+  .practice-directory .book-act h2 { font: 380 var(--text-2xl)/1.2 var(--font-display); text-wrap: balance; }
+  .practice-meta { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); margin-top: var(--space-4); color: var(--color-ink-soft); font: .8125rem/1.5 var(--font-ui); }
+  .practice-meta span + span::before { content: '·'; margin-right: var(--space-4); color: var(--color-ink-muted); }
+  [hidden] { display: none !important; }
+  @media (max-width: 44rem) {
+    .practice-directory { margin-top: var(--space-10); }
+    .practice-directory__heading { margin-bottom: var(--space-4); }
+    .practice-filter { align-items: stretch; padding-inline: 0; background: none; }
+    .practice-filter label { width: 100%; }
+    .practice-filter p { margin-left: 0; }
+  }
+</style>

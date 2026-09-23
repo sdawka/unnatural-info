@@ -15,27 +15,31 @@
         "src/components/ResumeReading.astro",
         "src/styles/tokens.css",
         "src/styles/global.css",
-        "src/styles/book.css"
+        "src/styles/book.css",
+        "src/styles/metal.css",
+        "src/lib/metal-reflections.ts"
       ],
       "fingerprints": {
-        ".superdesign/design-system.md": "993f99cac830770098d153ededae01debee7bb8fd277f2f592041271ce29b4ce",
-        "src/pages/index.astro": "3bc3490a186f77f0881611382ea3aa656bd44bffe9d0c0a7bd4475b3a49ceaf2",
-        "src/layouts/BaseLayout.astro": "bb3fb893bfb94d125cd18ce2b8131b0c86f8d325bf708d901358c1bb1b050b52",
-        "src/components/SiteHeader.astro": "aa9acfe11e436e3bdf3e05efb128735161f3919466fa3009f57ccc050bba8d8e",
+        ".superdesign/design-system.md": "2a033556c64f07dd42db4035bc3ee070f20659b27e5ac0f57b2e0053d334ec63",
+        "src/pages/index.astro": "c7c5f57b16cdadbb26bd7a9fff153d279d30a2f53047efc632e866bc9375f4fe",
+        "src/layouts/BaseLayout.astro": "d06332169f2e31ebb17ea3986b2a1f7ea71853bb874f41987c01be20a2c7f326",
+        "src/components/SiteHeader.astro": "ce8cd07f7a3c8a8d66093cb86eb28bd351f9520884958822fd1eef5b7aaf627b",
         "src/components/SiteFooter.astro": "4c3ad6ffb883c253f9fd78b1041998140befa546978bbd1bf4d3b0aa2125f399",
         "src/components/ResumeReading.astro": "e63607be84484bc52d7d0e3ba75de30f8364452c06d23d25f758099c784c8793",
-        "src/styles/tokens.css": "ae5813627c4623325c28f78be9389d65e51ae1cda6e41f78ce4d55550644f547",
-        "src/styles/global.css": "5dbea0201828d9772e1f2310d1e445fb0faee546e356d4039a33eb99b0899a37",
-        "src/styles/book.css": "c758f7fdf6d0c49664f5459fe5b81297db34a4eb245b1d3538de548a892754f5"
+        "src/styles/tokens.css": "fdca6edb821900bf4d5f0874dc04ff48eb276379de4c396ddb369ab3083b315f",
+        "src/styles/global.css": "e88ab099e7e2aae253e60d9b0f99b9a5f1c11b51a6a2cbbb72faca60e94bb09a",
+        "src/styles/book.css": "f3222e27900271b78df43f2c62a7c9b286b39f1ef0f4553d42d55d9e987ec4fc",
+        "src/styles/metal.css": "dfd95dd13b023b183dfb91db1bf85c68b45df64ee9cd76533b2e9156104aca7f",
+        "src/lib/metal-reflections.ts": "9b31be96e9aadcd7c63640bd7c6d4fc4bfb8e6593204f02d0e35eec34837e5b0"
       },
       "drafts": {
         "0457d58b-06a3-4564-8269-ac09994c5c17": {
           "title": "UNNATURAL \u2014 liquid mirror reading",
           "visualDirection": "Black metallic liquid mirror interactions, editorial reading",
-          "currentVersion": 2
+          "currentVersion": 4
         }
       },
-      "updatedAt": "2026-09-23T12:43:40.906200+00:00"
+      "updatedAt": "2026-09-23T14:05:36.806494+00:00"
     }
   }
 }
