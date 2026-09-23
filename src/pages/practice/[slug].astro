@@ -1,0 +1,90 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import PracticeWorkbench from '../../components/PracticeWorkbench';
+import { PRACTICES, ROUTES, gardenOutcome } from '../../lib/practices';
+import '../../styles/book.css';
+export function getStaticPaths() { return PRACTICES.map(practice => ({ params: { slug: practice.slug }, props: { practice } })); }
+const { practice } = Astro.props;
+const chapters = (await getCollection('chapters', ({ data }) => !data.draft)).filter(c => (c.data.chapterNumber != null && practice.chapters.includes(c.data.chapterNumber)) || practice.framing?.includes(c.id)).sort((a, b) => a.data.order - b.data.order);
+const gardenBaseline = gardenOutcome('open', 'volunteer', 'few', 'normal');
+const gardenRota = gardenOutcome('open', 'shared', 'few', 'normal');
+---
+<BaseLayout title={practice.title} description={practice.question} cinematic>
+  <SiteHeader />
+  <main class="book-page" id="main-content">
+    <p class="book-kicker"><a href="/practice">Small experiments</a> · About {practice.minutes} minutes</p>
+    <h1 class="book-title">{practice.title}</h1>
+    <p class="book-lead">{practice.question}</p>
+    <p class="book-copy">{practice.scene}</p>
+    <PracticeWorkbench practice={practice} client:load />
+    <noscript>
+      <style is:inline>.practice-workbench { display: none; }</style>
+      <div class="book-aside book-paper">
+        <p>The interactive controls need JavaScript. You can still use this version on paper. Nothing needs to be submitted.</p>
+        {practice.slug === 'maps' && <>
+          <h2>Three routes, before the missing detail</h2>
+          <table><caption>Invented routes to the same dinner</caption><thead><tr><th>Route</th><th>Minutes</th><th>Cost</th></tr></thead><tbody>{ROUTES.map(route => <tr><th scope="row">{route.name}</th><td>{route.minutes}</td><td>${route.cost}</td></tr>)}</tbody></table>
+          <p><strong>Before opening the detail:</strong> choose the route you would recommend, then write who it might not serve well.</p>
+          <details><summary>Open the omitted detail after writing</summary>
+            <p>Footbridge has {ROUTES.find(route => route.name === 'Footbridge')?.steps} steps. Bus and pavement and Park path have no steps. A wheelchair, heavy trolley, fatigue, or an injured knee can change which route is usable.</p>
+            <p>Traffic, distance to the bus stop, service reliability, weather, and safety are not represented. Ask what the map was useful for and what it hid.</p>
+          </details>
+        </>}
+        {practice.slug === 'garden' && <>
+          <h2>One invented season</h2>
+          <p>Start with all ten households having access, volunteer maintenance, four organizers changing rules, and ordinary rainfall. Compare it with the same garden using a shared rota; leave access, decision-making, and weather unchanged.</p>
+          <table><caption>Invented outcomes from the same transparent model</caption><thead><tr><th>Outcome</th><th>Volunteer work</th><th>Shared rota</th></tr></thead><tbody>
+            <tr><th scope="row">Harvest units</th><td>{gardenBaseline.harvest}</td><td>{gardenRota.harvest}</td></tr>
+            <tr><th scope="row">Work and meeting hours</th><td>{gardenBaseline.hours}</td><td>{gardenRota.hours}</td></tr>
+            <tr><th scope="row">Households without access</th><td>{gardenBaseline.excluded}</td><td>{gardenRota.excluded}</td></tr>
+            <tr><th scope="row">Households without a vote</th><td>{gardenBaseline.unheard}</td><td>{gardenRota.unheard}</td></tr>
+          </tbody></table>
+          <details><summary>Open the model assumptions</summary>
+            <p>Water is {gardenBaseline.water} units, demand is {gardenBaseline.demand}, and meetings take {gardenBaseline.coordination} hour. Maintenance takes {gardenBaseline.maintenance} hours with volunteers or {gardenRota.maintenance} with a rota. Harvest is 0.6 × the smaller of water and demand, plus 3 × maintenance hours, minus 2 × meeting hours, rounded down.</p>
+            <p>This deliberately simple model treats rainfall and access as pressure on a shared resource. It gives a shared rota more maintenance capacity, gives organizers a smaller meeting burden than universal decision-making, and treats coordination as a cost in its harvest estimate.</p>
+            <p>This deliberately gives shared work a harvest benefit and participation a time cost. Trust, ownership, unequal ability to contribute, and the distribution of food are absent. A higher harvest cannot settle what is fair.</p>
+          </details>
+          <p>On paper: who carries the added work? What would make the rota challengeable? What does this small model leave out?</p>
+        </>}
+        {practice.slug === 'experiment' && <>
+          <h2>An invented comparison</h2>
+          <p><strong>Before looking:</strong> write what you predict if salt, flour, and temperature all change together. Then consider what you would need to change to learn about salt alone.</p>
+          <details><summary>Open three invented rounds of ratings</summary>
+            <table><caption>Taste ratings out of ten</caption><thead><tr><th>Round</th><th>Original recipe</th><th>All three changes</th><th>Salt only</th></tr></thead><tbody>
+              <tr><th scope="row">1</th><td>5</td><td>7</td><td>6</td></tr><tr><th scope="row">2</th><td>6</td><td>7</td><td>5</td></tr><tr><th scope="row">3</th><td>5</td><td>8</td><td>6</td></tr>
+            </tbody></table>
+            <p>The all-change recipe did better here, but the result cannot identify salt, flour, temperature, or their combination as the cause. The salt-only differences go both ways; three rounds do not establish a reliable effect.</p>
+          </details>
+          <p>Write one conclusion the table supports, one rival explanation, and one low-stakes comparison you could make yourself.</p>
+        </>}
+        {practice.slug === 'disagreement' && <>
+          <h2>Before the other piece of the story</h2>
+          <p>Write your first explanation of “Must be nice to have that much free time.” Then write another explanation that could fit the same words.</p>
+          <details><summary>Open a possible missing context after writing</summary>
+            <p>In this imagined scene, the friend has been covering someone else’s shifts and caring for a parent. They have not told you. They may still owe you a kinder reply.</p>
+            <p>This is one possible explanation, not a diagnosis of a real person. Write what it changes, what it does not change, and one sincere question you could ask.</p>
+          </details>
+        </>}
+        {practice.slug === 'modes' && <p>Consider five possible responses: investigate, try a small act, attend without solving, rest, or ask for support. Choose one and consider when another might fit better.</p>}
+        {practice.slug === 'labels' && <p>Try describing the person as lazy, overloaded, or uninterested. Each is a hypothesis. For each label, ask what evidence you have and what you would need to know.</p>}
+        {['maps', 'garden', 'experiment', 'disagreement'].includes(practice.slug) ? null : <ol>{practice.fields.map(field => <li>{field.label}</li>)}</ol>}
+      </div>
+    </noscript>
+    <section class="book-section">
+      <h2>Follow the question into the book.</h2>
+      <ul>{chapters.map(chapter => <li><a href={`/chapters/${chapter.id}`}>{chapter.data.chapterNumber ? `${chapter.data.chapterNumber}. ` : ''}{chapter.data.title}</a></li>)}</ul>
+      {practice.source && <p class="book-small" style="margin-top: 1.5rem">A source behind the idea: <a href={practice.source.url}>{practice.source.title}</a>. This particular exercise has not been validated as a measure of personal change.</p>}
+    </section>
+  </main>
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+  .book-paper h2 { font: 380 var(--text-xl)/1.2 var(--font-display); margin: var(--space-6) 0 var(--space-3); }
+  .book-paper table { width: 100%; border-collapse: collapse; margin: var(--space-4) 0; font-size: var(--text-sm); }
+  .book-paper caption { text-align: left; color: var(--color-ink-muted); margin-bottom: var(--space-2); }
+  .book-paper th, .book-paper td { padding: .55rem .35rem; text-align: left; border-bottom: 1px solid var(--color-rule-soft); }
+</style>

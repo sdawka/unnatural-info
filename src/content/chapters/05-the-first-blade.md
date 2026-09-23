@@ -1,75 +1,41 @@
 ---
 title: "The First Blade: The Catastrophic Invention of Edges"
-subtitle: "Me and World"
+subtitle: "Me and world"
 act: initd
-actTitle: "init.d"
+actTitle: "How We Make Sense of Things"
 chapterNumber: 5
 order: 5
-summary: "Finite beings cannot meet reality whole. The universe is fractal and chaotic: infinite detail at every scale, bottomless in time, inexhaustible by any measurement. Distinction is how a living thing boots up inside that excess. The first cut: me and world. Agency and exposure are born together."
-themes: ["boundary", "self", "non-self", "inside", "outside", "organism", "fractal", "finitude"]
+summary: "A finite creature cannot take in everything at once. It finds a workable edge between itself and what presses on it: an edge that permits action, leaves it vulnerable, and is always more porous than it first appears."
+themes: ["boundary", "self", "world", "organism", "finitude"]
 status: draft
 draft: false
 furtherReading:
-  - author: "George Spencer-Brown"
-    title: "Laws of Form"
-    year: 1969
-    note: "The act of drawing a distinction is the primordial act. We cannot make an indication without drawing a distinction first."
   - author: "Maturana & Varela"
     title: "Autopoiesis and Cognition"
     year: 1980
-    note: "Living systems produce the very boundary that defines them: identity and edge are co-constituted, not pre-given."
-  - author: "Merleau-Ponty"
-    title: "Phenomenology of Perception"
-    year: 1945
-    note: "The body schema enacts a pre-reflective self/not-self boundary; phantom limb cases show the cut is operational, not anatomical."
-  - author: "Jakob von Uexkull"
-    title: "A Foray Into the Worlds of Animals and Humans"
+    note: "A living system maintains itself through ongoing interaction with its surroundings; its boundary is an achievement, not a wall."
+  - author: "Jakob von Uexküll"
+    title: "A Foray into the Worlds of Animals and Humans"
     year: 1934
-    note: "Each organism's Umwelt is a distinct informational carving of reality; the cut is species-specific and task-specific."
+    note: "Different creatures inhabit different usable worlds because their senses and tasks select different features."
   - author: "Polly Matzinger"
     title: "The Danger Model: A Renewed Sense of Self"
     year: 2002
-    note: "Paradigm-shifting immunology: the immune boundary responds to damage signals, not mere foreignness. The cut is enacted, not fixed."
-  - author: "Aristotle"
-    title: "Categories"
-    year: -350
-    note: "The first systematic account of what kinds of things there are: the philosophical origin of the edge-drawing project."
-  - author: "Achille Varzi"
-    title: "Parts and Places"
-    year: 1999
-    note: "When do boundaries exist, and for whom? Fiat versus bona fide boundaries: the metaphysical backbone of what the chapter describes as catastrophic."
+    note: "Immune response cannot be reduced to a simple self-versus-foreign rule; damage and context also matter."
 ---
 
-Start from the problem the blade is solving. Finite beings cannot meet reality whole. Not as a moral failure. As a structural condition.
+You wake in an unfamiliar room and, for one soft second, do not know where your body ends in the dark. Then your foot finds the floor. The room becomes outside; your cold toes become inside. A boundary has returned before you have had a thought about it.
 
-The universe is fractal. Pick any object, a leaf, a cell, a thought, and you can keep dissecting: organ to tissue to cell to organelle to molecule to atom to subatomic to whatever the next particle accelerator uncovers. You can also keep zooming out: body to ecosystem to planet to galaxy to supercluster, bounded only by how far our telescopes can see into light that started before we did. Between those horizons, at every scale, there is more detail than any observer can hold. The universe is also chaotic: small differences in initial conditions explode into unpredictable trajectories, and you can run time in either direction forever and never finish the accounting. The information content of any finite region of spacetime, for any finite observer, is effectively infinite.
+This is not a grand philosophical achievement. It is a practical one. A creature has limited time, attention, and senses. It cannot take in every sound in the building, every cell in its skin, every consequence of its next movement. It selects. It treats some changes as happening *to it*, some as happening *around it*, and some as worth acting on. The first blade is the name for that usable edge: me and world.
 
-No organism can meet all of that. No brain can, no instrument can, no civilisation can. To be finite is to be selectively blind, selectively deaf, selectively numb, nose-blind, taste-blind, and mute. Every channel of contact is narrowed to a sliver: the visual band you see, the frequencies you hear, the textures you feel, the molecules you smell and taste, the interior weather you register in your own body, the position of your own limbs. The same is true for the subtler senses, for feeling-tones, for other minds, for the passage of time. To be finite is to drop almost everything and keep almost nothing, and then to live inside the keepings. Distinction is the name for how a living thing decides, moment by moment, what to keep.
+The world does not need to be literally infinite, fractal, or chaotic for this to be necessary. We need only notice that it contains far more detail than any one organism can use at a moment. A leaf can be seen as shade, food, a species, tissue, molecules, or a place for a caterpillar to hide. Each description may be useful; none exhausts the leaf. Finite creatures make their lives by keeping a small amount in view and letting the rest recede.
 
-On a Unix machine, when the box first powers on, almost nothing exists yet. There is hardware, there is a kernel, and then there is one process whose only job is to start every other process. It is, with admirable lack of poetry, called *init*. Everything you ever do on that machine is downstream of it. The systems folder where it lives, on older systems, was called `init.d`.
+Biology offers real boundaries, though they are not the clean walls our metaphors promise. A cell membrane controls traffic while continually exchanging material. Skin marks a body while sweat, breath, touch, microbes, food, and care cross it all day. Even immunity is more complicated than a permanent passport check: the familiar self/non-self picture has been challenged by accounts that emphasize damage, context, and tolerance as well as foreignness. The lesson is modest. A boundary can be real and necessary without being final.
 
-The mind does something analogous. Before there is a self with opinions, before there is a world to have opinions about, there is a process so primitive it barely looks like one: an organism quietly drawing a line between *me* and *not-me*. That line is the first blade. Everything else in this act (every model, every value, every category, every institution) boots from it.
+The same is true in ordinary life. A person who says, “I cannot take that on,” may be protecting time, health, or a fragile promise to someone else. A person who says it too quickly may be making a wall where a request for help was possible. Neither more boundary nor less boundary is automatically wiser. The question is what the edge is doing, for whom, and at what cost.
 
-The cut is catastrophic in the cheerful sense the word originally meant: a turning, a downward fall, a thing-that-changes-everything. Before the blade, the world is hungry, undifferentiated pressure. After it, there is something here that things happen *to*.
+There is a fair objection here. Perhaps “self” is already too large a word. A newborn, a bacterium, an immune system, and an adult making a difficult promise do not share one settled kind of inner life. Agreed. The blade is not a claim about consciousness, souls, or the sequence in which a mind develops. It is a functional lens: living systems maintain some distinction between conditions to preserve and conditions to meet. Human selves make that distinction narratable, arguable, and sometimes beautifully inconvenient.
 
-## Key moves
+Try the map exercise at [Map and territory](/practice/maps). Draw the route you take tomorrow, then mark what your route leaves out: stairs, cost, a person you might meet, the place you avoid after dark. The omissions are not mistakes. They are the price of a usable map.
 
-- Distinction is the bootstrap process of mind. *init.d* names it on purpose: the first process from which all later processes load.
-- The first blade carves *self* from *non-self*: a boundary, not yet a personality.
-- The boundary is partly biological (membrane, skin, immune recognition) and partly informational (an organism that "treats this here as me").
-- Once the cut exists, agency and exposure are both born at the same moment: there is something that can act, and something that can be acted upon.
-- The blade is invented anew in every developing organism, and, dimly, in every moment of waking up.
-- The cut is partial and wrong-in-detail. The boundary leaks, shifts, and is constantly renegotiated. The frame is "first useful approximation," not "discovered fact."
-
-## Where this touches lived life
-
-- Boundary problems in adult life (codependence, enmeshment, dissociation) are negotiations of the first blade still happening, decades on.
-- Meditative reports of "self dissolving" describe what it feels like when the first cut briefly relaxes. The fact that this is reportable at all is interesting.
-- Grief often involves the discovery that a person you had treated as part of *me* was, in some operational sense, exactly that.
-
-## What we're not claiming
-
-- Not that the init.d analogy is a model of brain startup. It is a frame for the order of dependencies, not a neuroscience claim.
-- Not that the self/non-self boundary is real in any final sense. It is a working cut, useful and revisable.
-- Not that more boundary is always better. The cost of the cut is its own chapter.
-
+Once there is an edge, there can be a view from it. That view does not deliver the world whole; it delivers a working picture.

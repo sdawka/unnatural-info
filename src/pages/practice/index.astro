@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import { PRACTICES } from '../../lib/practices';
+import '../../styles/book.css';
+---
+<BaseLayout title="Small experiments" description="Ten optional exercises in noticing, questioning, and trying. Bring a moment of your own, or begin with an imagined one." cinematic>
+  <SiteHeader />
+  <main class="book-page" id="main-content">
+    <p class="book-kicker">At the edge of the page</p>
+    <h1 class="book-title">Try a different way of looking.</h1>
+    <p class="book-lead">A silence. A label. A plan that never leaves your head. Something small is enough to begin.</p>
+    <p class="book-copy">These optional exercises accompany the book. Use an imagined example or a moment from your own life. There is no score for agreeing, and nothing to complete before you are allowed to move on.</p>
+    <ol class="book-acts">{PRACTICES.map((practice, index) => <li><a href={`/practice/${practice.slug}`} class="book-act" style="--act-color: var(--color-act-ii)"><span class="book-act__num" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><div><h2 style="font: 380 var(--text-2xl)/1.2 var(--font-display)">{practice.title}</h2><p>{practice.question}</p><small>About {practice.minutes} minutes →</small></div></a></li>)}</ol>
+    <section class="book-section"><h2>Something you can return to.</h2><p>Your notes are yours. You can choose to save a note in this browser or download it. Personal answers from these exercises are not sent to a server.</p><a class="book-link" href="/explore">Return to the book →</a></section>
+  </main>
+  <SiteFooter />
+</BaseLayout>

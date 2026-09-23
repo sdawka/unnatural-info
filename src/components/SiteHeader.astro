@@ -1,255 +1,35 @@
 ---
 const current = Astro.url.pathname;
-const isActive = (prefix: string) => current === prefix || current.startsWith(prefix);
+const isActive = (prefix: string) => current === prefix || current.startsWith(prefix + '/');
+const isBook = current === '/explore' || current.startsWith('/acts/') || current.startsWith('/chapters/');
 ---
 
-<header class="sh" data-site-header>
+<header class="sh">
   <div class="sh__bar">
     <a href="/" class="sh__logo" aria-label="UNNATURAL — home">
-      <span class="sh__logo-mark" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </span>
+      <span class="sh__logo-mark" aria-hidden="true"><span></span><span></span><span></span></span>
       <span class="sh__logo-text">UNNATURAL</span>
     </a>
-
     <nav class="sh__nav" aria-label="Main navigation">
-      <a href="/acts/volo-ergo-sum" class:list={["sh__act", "sh__act--i", isActive('/acts/volo-ergo-sum') && 'is-active']}>
-        <span class="sh__act-num" aria-hidden="true">I</span>
-        <span class="sh__act-name">Volo Ergo Sum</span>
-      </a>
-      <a href="/acts/initd" class:list={["sh__act", "sh__act--ii", isActive('/acts/initd') && 'is-active']}>
-        <span class="sh__act-num" aria-hidden="true">II</span>
-        <span class="sh__act-name">init.d</span>
-      </a>
-      <a href="/acts/mmm" class:list={["sh__act", "sh__act--iii", isActive('/acts/mmm') && 'is-active']}>
-        <span class="sh__act-num" aria-hidden="true">III</span>
-        <span class="sh__act-name">MMM</span>
-      </a>
-      <span class="sh__sep" aria-hidden="true">·</span>
-      <a href="/wiki/" class:list={["sh__meta", isActive('/wiki') && 'is-active']}>Wiki</a>
-      <a href="/reading" class:list={["sh__meta", isActive('/reading') && 'is-active']}>Reading</a>
+      <a href="/explore" class:list={["sh__link", isBook && 'is-active']}>The book</a>
+      <a href="/practice" class:list={["sh__link", isActive('/practice') && 'is-active']}>Practice</a>
+      <a href="/reading" class:list={["sh__link", isActive('/reading') && 'is-active']}>Reading</a>
     </nav>
   </div>
 </header>
 
-<script is:inline>
-  (() => {
-    const el = document.querySelector('[data-site-header]');
-    if (!el) return;
-    let last = 0;
-    let pending = false;
-    const onScroll = () => {
-      const y = window.scrollY || 0;
-      if (y > 24) el.classList.add('is-shrunk'); else el.classList.remove('is-shrunk');
-      if (y > last + 4 && y > 180) el.classList.add('is-hidden');
-      else if (y < last - 4) el.classList.remove('is-hidden');
-      last = y;
-      pending = false;
-    };
-    window.addEventListener('scroll', () => {
-      if (!pending) { pending = true; requestAnimationFrame(onScroll); }
-    }, { passive: true });
-  })();
-</script>
-
 <style>
-  .sh {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    padding-top: var(--safe-top);
-    background: color-mix(in srgb, var(--color-ground) 86%, transparent);
-    backdrop-filter: blur(10px) saturate(120%);
-    -webkit-backdrop-filter: blur(10px) saturate(120%);
-    border-bottom: 1px solid transparent;
-    transition: transform var(--dur-med) var(--ease-out),
-                border-color var(--dur-med) var(--ease-out),
-                padding var(--dur-med) var(--ease-out);
-  }
-
-  .sh.is-shrunk {
-    border-bottom-color: var(--color-rule-soft);
-  }
-
-  .sh.is-hidden {
-    transform: translateY(-102%);
-  }
-
-  .sh__bar {
-    max-width: var(--page-max);
-    margin: 0 auto;
-    padding: var(--space-4) var(--safe-right) var(--space-4) var(--safe-left);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-5);
-    transition: padding var(--dur-med) var(--ease-out);
-  }
-
-  .sh.is-shrunk .sh__bar {
-    padding-top: var(--space-2);
-    padding-bottom: var(--space-2);
-  }
-
-  /* Logo */
-  .sh__logo {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-3);
-    flex-shrink: 0;
-    text-decoration: none;
-    color: var(--color-ink);
-  }
-
-  .sh__logo-mark {
-    display: inline-flex;
-    flex-direction: column;
-    gap: 3px;
-    padding: 2px 0;
-  }
-
-  .sh__logo-mark span {
-    display: block;
-    height: 2px;
-    background: var(--color-ink);
-    border-radius: 1px;
-    transition: width var(--dur-slow) var(--ease-out), opacity var(--dur-med) var(--ease-out);
-  }
-
-  .sh__logo-mark span:nth-child(1) { width: 20px; opacity: 1; }
-  .sh__logo-mark span:nth-child(2) { width: 14px; opacity: 0.5; }
-  .sh__logo-mark span:nth-child(3) { width: 8px;  opacity: 0.22; }
-
-  .sh__logo:hover .sh__logo-mark span:nth-child(1) { width: 8px;  opacity: 0.22; }
-  .sh__logo:hover .sh__logo-mark span:nth-child(2) { width: 14px; opacity: 0.5; }
-  .sh__logo:hover .sh__logo-mark span:nth-child(3) { width: 20px; opacity: 1; }
-
-  .sh__logo-text {
-    font-family: var(--font-display);
-    font-variation-settings: 'opsz' 18, 'wght' 600, 'SOFT' 20;
-    font-size: 1.0625rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-  }
-
-  /* Nav */
-  .sh__nav {
-    display: flex;
-    align-items: center;
-    gap: var(--space-5);
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-
-  .sh__act {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 0.45em;
-    font-family: var(--font-display);
-    font-variation-settings: 'opsz' 18, 'wght' 380, 'SOFT' 30;
-    font-size: 1rem;
-    font-style: italic;
-    color: var(--color-ink-soft);
-    text-decoration: none;
-    transition: color var(--dur-fast) var(--ease-out);
-    position: relative;
-    line-height: 1;
-  }
-
-  .sh__act-num {
-    font-family: var(--font-mono);
-    font-variation-settings: 'wght' 500;
-    font-style: normal;
-    font-size: 0.7em;
-    letter-spacing: 0.08em;
-    padding: 0.15em 0.35em;
-    border: 1px solid currentColor;
-    color: inherit;
-    min-width: 2.25em;
-    text-align: center;
-  }
-
-  .sh__act--i       { color: var(--color-act-i); }
-  .sh__act--ii      { color: var(--color-act-ii); }
-  .sh__act--iii     { color: var(--color-act-iii); }
-
-  .sh__act.is-active .sh__act-num {
-    background: currentColor;
-  }
-  .sh__act.is-active .sh__act-num::after {
-    content: '';
-  }
-
-  .sh__act.is-active {
-    color: var(--color-ink);
-  }
-
-  .sh__act:hover {
-    opacity: 0.85;
-  }
-
-  .sh__sep {
-    color: var(--color-ink-faint);
-  }
-
-  .sh__meta {
-    font-family: var(--font-mono);
-    font-variation-settings: 'wght' 420;
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-ink-muted);
-    text-decoration: none;
-    padding: 0.3em 0;
-    border-bottom: 1px solid transparent;
-    transition: color var(--dur-fast), border-color var(--dur-fast);
-  }
-
-  .sh__meta:hover,
-  .sh__meta.is-active {
-    color: var(--color-ink);
-    border-bottom-color: var(--color-ink);
-  }
-
-  /* Mobile: two-row layout, hide act names, keep numerals */
-  @media (max-width: 44rem) {
-    .sh__bar {
-      flex-direction: column;
-      align-items: stretch;
-      gap: var(--space-3);
-      padding: var(--space-3) var(--safe-right) var(--space-3) var(--safe-left);
-    }
-    .sh.is-shrunk .sh__bar {
-      padding-top: var(--space-2);
-      padding-bottom: var(--space-2);
-    }
-    .sh__nav {
-      justify-content: space-between;
-      width: 100%;
-      gap: var(--space-3);
-    }
-    .sh__act-name {
-      display: none;
-    }
-    .sh__act {
-      font-size: 0.85rem;
-    }
-    .sh__sep {
-      display: none;
-    }
-    .sh__logo {
-      gap: var(--space-2);
-    }
-    .sh__logo-text {
-      letter-spacing: 0.12em;
-    }
-    .sh.is-shrunk .sh__logo-mark {
-      display: none;
-    }
-  }
-
-  /* Even narrower: keep the brand small, compact numerals */
-  @media (max-width: 22rem) {
-    .sh__meta { font-size: 0.68rem; }
-  }
+  .sh { position: sticky; top: 0; z-index: 50; padding-top: var(--safe-top); background: color-mix(in srgb, var(--color-ground) 90%, transparent); backdrop-filter: blur(10px) saturate(120%); -webkit-backdrop-filter: blur(10px) saturate(120%); border-bottom: 1px solid var(--color-rule-soft); }
+  .sh__bar { max-width: var(--page-max); margin: 0 auto; padding: var(--space-3) var(--safe-right) var(--space-3) var(--safe-left); display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); }
+  .sh__logo { display: inline-flex; align-items: center; gap: var(--space-3); flex-shrink: 0; text-decoration: none; color: var(--color-ink); }
+  .sh__logo-mark { display: inline-flex; flex-direction: column; gap: 3px; padding: 2px 0; }
+  .sh__logo-mark span { display: block; height: 2px; border-radius: 1px; background: var(--color-ink); }
+  .sh__logo-mark span:nth-child(1) { width: 20px; }
+  .sh__logo-mark span:nth-child(2) { width: 14px; opacity: .5; }
+  .sh__logo-mark span:nth-child(3) { width: 8px; opacity: .22; }
+  .sh__logo-text { font-family: var(--font-display); font-variation-settings: 'opsz' 18, 'wght' 600, 'SOFT' 20; font-size: 1.0625rem; letter-spacing: .14em; text-transform: uppercase; }
+  .sh__nav { display: flex; align-items: center; gap: var(--space-5); }
+  .sh__link { font-family: var(--font-mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--color-ink-muted); text-decoration: none; border-bottom: 1px solid transparent; padding: .3em 0; }
+  .sh__link:hover, .sh__link.is-active { color: var(--color-ink); border-bottom-color: currentColor; }
+  @media (max-width: 34rem) { .sh__bar { gap: var(--space-3); } .sh__logo-mark { display: none; } .sh__logo-text { font-size: .9rem; letter-spacing: .1em; } .sh__nav { gap: var(--space-3); } .sh__link { font-size: .68rem; letter-spacing: .06em; } }
 </style>

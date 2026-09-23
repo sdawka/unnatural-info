@@ -3,7 +3,7 @@ title: "Use the Blade, Build the World"
 subtitle: "Final ethical note"
 act: epilogue
 order: 99
-summary: "We cannot avoid willing, cannot avoid cutting, cannot avoid manifesting. The question is: what kind of world, self, and shared reality shall we help bring forth? The blade, the map, and the garden together."
+summary: "A return to the starting problem: use distinctions carefully, act with others in view, and keep revising when the world answers back."
 themes: ["ethics", "responsibility", "world-making", "conclusion"]
 status: draft
 draft: false
@@ -11,59 +11,27 @@ furtherReading:
   - author: "Hannah Arendt"
     title: "The Human Condition"
     year: 1958
-    note: "Natality, promising, and forgiving: the ethics of irreversible action in a plural world; every act sets off unpredictable chains and that is the risk we take."
-  - author: "Iris Murdoch"
-    title: "The Sovereignty of Good"
-    year: 1970
-    note: "The primary moral task is accurate perception. Use the blade means cutting through self-deception; build the world means attending to what is actually there."
-  - author: "Albert Camus"
-    title: "The Myth of Sisyphus"
-    year: 1942
-    note: "Revolt against the absurd: the act of world-making is its own meaning, not a means to meaning. One must imagine Sisyphus happy."
-  - author: "Ruth Chang"
-    title: "Incommensurability, Incomparability, and Practical Reason"
-    year: 1997
-    note: "Hard choices are constitutive: by committing, we create reasons and make ourselves. The absence of a determinate best option is an invitation to self-authorship."
-  - author: "Emmanuel Levinas"
-    title: "Ethics as First Philosophy"
-    year: 1984
-    note: "Infinite responsibility to the face of the Other precedes ontology and epistemology; the world being built is always with and for others."
-  - author: "Derek Parfit"
-    title: "Reasons and Persons"
-    year: 1984
-    note: "Future selves are distinct persons who deserve consideration. The small acts that accumulate across a life are owed to someone who is not quite you."
+    note: "A study of action, plurality, promising, and the unpredictable chains that begin when people bring something new into a shared world."
   - author: "Simone de Beauvoir"
     title: "The Ethics of Ambiguity"
     year: 1947
-    note: "Freedom is not a private achievement. Use the blade well means using it toward a world where the blade is available to all."
-  - author: "Ernest Becker"
-    title: "The Denial of Death"
-    year: 1973
-    note: "The heroic project: we build worlds because we know we will die. Every act of world-making is simultaneously a refusal of meaninglessness and a wager against finitude."
+    note: "Freedom is shared and unfinished; a useful challenge to treating a good life as a private optimization project."
+  - author: "Iris Murdoch"
+    title: "The Sovereignty of Good"
+    year: 1970
+    note: "A case for moral attention: seeing another person more accurately can be an ethical act before it becomes a plan."
 ---
 
-If we have done this honestly, the book has not handed you a worldview to wear. It has handed you a small set of instruments (at least three blades, a duality, a loop), and the unsettling news that you are already using them. The only question is whether you use them on purpose.
+Return to the dinner invitation. Perhaps your friend replied. Perhaps they did not. Perhaps the evening happened and was lovely, or awkward, or cancelled because someone was ill. The exercise was never a trick for producing the preferred ending. It was practice in keeping an event, a story, a wish, and an unknown from collapsing into one another.
 
-You cannot avoid willing. You cannot avoid cutting. You cannot avoid manifesting. To live is to do all three, every hour, in things small enough to be invisible until they aren't. The choice is to be or not to be — and the choice is toward *the world, the self, and the shared reality we are already building.*
+That is what the book's instruments are for. A distinction is a blade: it gives a shape to something you need to handle. A map is a promise about what matters for a particular journey. A model is a guess that can meet resistance. A practice is a way of letting an idea touch the day.
 
-## Key moves
+Every blade leaves something out. This does not make distinctions useless; it makes them answerable. Ask what the cut helps you see, what it hides, who has to live with the omission, and who can change the category later. A label that helps coordinate care may become cruel when it is treated as a person's essence. A schedule can make a meal possible while quietly assigning all the work to one person.
 
-- The framework is descriptive *and* implicating: once you see the loop, you cannot honestly claim not to be running it.
-- Every act of life is a will, a cut, and a manifestation. The ethical question is what you are bringing forth, not whether you are bringing anything forth.
-- Use the blade carefully: knowing your cuts are partial is what keeps them from hardening into ideology.
-- Build the world deliberately: small manifestations accumulate into the only world that is going to exist.
-- The garden, the map, and the blade together: tend what is alive, hold the model lightly, cut where it serves.
-- Orient toward the greater good, not because it is decreed, but because the loop runs better, longer, in more lives, when it does.
+Every manifestation has consequences beyond intention. A kind message can still arrive at the wrong time. A rule can solve one problem and create another. A garden survives through maintenance, access, repair, and arguments about how its shared resources should be used. Good adaptation does not automatically become moral goodness. Consent, fairness, preventable harm, and whose future choices remain open need their own reasons.
 
-## Where this touches lived life
+The book has offered a functional account of will, a set of useful distinctions, and three overlapping ways to respond: observe and test, find your bearings and make, attend and make room. They are lenses. They are not a ladder of human worth, a clinical diagnosis, or a guarantee that every problem yields to better thinking. Sometimes the right response is rest, care, a limit, outside help, repair, or accepting a loss that cannot be reversed.
 
-- Most days, the ethical question is not "what is right" but "what am I about to manifest, and is that what I meant."
-- Communities and families are gardens that someone is tending. If no one is tending, that is also a choice.
-- Living well is a craft, not an achievement. The craft is the daily, deliberate use of the instruments this book has tried to name.
+Before you leave, return to a small situation from the beginning. Write what happened, what you believed, what another person might have been carrying, and what the frame still cannot explain. Then choose one of three honest outcomes: keep a practice, revise a claim, or put the book down for now. A framework that cannot survive your disagreement has become another thingification.
 
-## What we're not claiming
-
-- Not that any single answer to "what kind of world" is the correct one. The book gives you the instruments; the answers are yours to live and revise.
-- Not that intention is enough. The loop has to actually turn. Wishing is not manifesting.
-- Not that the work is finished. This frame will be wrong about something important. Find out what; revise; pass it on.
-
+We cannot avoid orienting, distinguishing, and bringing things forth. We can decide to do those activities with more attention to evidence, more room for other people, and more willingness to repair. The world will answer back. Let the answer change what you do.

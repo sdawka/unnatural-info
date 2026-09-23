@@ -1,77 +1,41 @@
 ---
-title: "The Information / Physical Duality (Both Are Real, Which Is Inconvenient)"
-subtitle: "Two coupled domains, one loop"
+title: "The Information / Physical Duality"
+subtitle: "Patterns that move bodies"
 act: initd
-actTitle: "init.d"
+actTitle: "How We Make Sense of Things"
 chapterNumber: 10
 order: 10
-summary: "Human life is lived at the interface between the physical and informational worlds. Beliefs, distinctions, models, meanings, identities, norms, institutions. Not merely in the head, and not purely physical. Informational structures with physical consequences."
-themes: ["information", "physical", "duality", "causation", "belief", "institution"]
+summary: "Information is physically carried pattern, representation, and organized practice. It can coordinate bodies and institutions without becoming a second substance, and its practical force does not guarantee that its content is true."
+themes: ["information", "physical", "representation", "institutions", "causation", "meaning"]
 status: draft
 draft: false
 furtherReading:
-  - author: "Norbert Wiener"
-    title: "Cybernetics"
-    year: 1948
-    note: "Information is information, not matter or energy. The irreducibility of the informational domain announced at the founding of cybernetics."
   - author: "Claude Shannon"
     title: "A Mathematical Theory of Communication"
     year: 1948
-    note: "Information defined structurally and independently of physical substrate or semantic content: the same information can live in electrons, neurons, or ink."
-  - author: "Gregory Bateson"
-    title: "Form, Substance and Difference"
-    year: 1970
-    note: "A difference that makes a difference. Organism-relative information: a difference only counts for a system it matters to."
-  - author: "John Archibald Wheeler"
-    title: "Information, Physics, Quantum: The Search for Links"
-    year: 1989
-    note: "It from Bit: every physical entity derives its existence from answers to yes-or-no questions. The most radical statement of informational primacy."
+    note: "A foundational account of signals and transmission; it deliberately does not settle what a message means or whether it is true."
   - author: "Terrence Deacon"
     title: "Incomplete Nature"
     year: 2011
-    note: "The causal power of information comes from constraints (absences), not from physical properties. The most philosophically rigorous recent argument."
-  - author: "Luciano Floridi"
-    title: "The Philosophy of Information"
-    year: 2011
-    note: "Informational structural realism: a bridge from Shannon's syntax to meaningful semantic information as a full research programme."
-  - author: "Howard Pattee & Joanna Raczaszek-Leonardi"
-    title: "Laws, Language and Life"
-    year: 2012
-    note: "The epistemic cut: where physical substrate and symbolic control separate. The most precise technical account of how information and matter interface."
-  - author: "Robert Rosen"
-    title: "Life Itself"
-    year: 1991
-    note: "Life as anticipatory system: the informational loop that distinguishes living from non-living matter runs on models of the future, not just responses to the past."
+    note: "An ambitious attempt to explain how organisms and signs carry aboutness without treating meaning as magic."
+  - author: "John Searle"
+    title: "The Construction of Social Reality"
+    year: 1995
+    note: "Shared status rules help explain how records and declarations organize practical powers."
 ---
 
-Two stories compete for the role of fundamental. In one, the world is made of stuff (atoms, fields, energy) and everything else is decoration. In the other, the world is made of pattern (meaning, relation, structure) and the stuff is just where the pattern happens to be running. Both stories are partly right and entirely insufficient on their own.
+A marriage certificate can fit in a drawer. If it is torn up, the paper weighs almost nothing. Yet the arrangement it records can alter taxes, housing, hospital access, inheritance, a family’s daily rhythms, and the ache of a separation. A few marks on paper are not the whole cause of any of that. They help coordinate people and institutions that can act.
 
-A finite human life is lived at the seam between these two. You are matter, and you are a story matter has been telling for some time about itself. Pretending one of them away is a popular sport in academic departments and a poor strategy for living.
+This is the information/physical duality. The physical world includes bodies, paper, servers, rooms, food, weather, and nervous systems. Information is pattern carried in those things: a message, a map, a password, a promise, a measurement, a rule people know how to follow. The two cannot be cleanly pried apart. No information arrives without a carrier or a practice for interpreting it. No carrier alone tells us what its marks mean.
 
-This is the chapter the prologue was pointing at. A child asks *what are we?* and the short answer is: the kind of natural being that learned to work in pure information, to hold models, meanings, norms, institutions that are not reducible to the mass on your bones, and then learned to loop those back through the physical world that made you. The loop is the thing. It is how a thought builds a city. It is how a diagram rearranges a life. It is why we call the whole business *unnatural*: not anti-natural, but natural that folded.
+Information is not a ghostly substance. A recipe can be printed, remembered, texted, or handed down by demonstration while retaining a recognizable pattern. It changes a meal only when someone reads it, gathers ingredients, turns on heat, adjusts to what happens, and eats. The same is true on larger scales. A law changes traffic through signs, police, courts, habits, complaints, and drivers deciding what to do at a red light.
 
-## Key moves
+This makes informational things powerful, but power is not truth. A false rumor can cause a real panic. An accurate weather forecast can be ignored. A conspiracy theory can organize donations, votes, and violence while being false about the world. “It has effects” is evidence that a representation is part of a causal situation; it is not evidence that its content is correct.
 
-- The physical world is real: it has mass, momentum, conserved quantities, and it does not care whether you noticed.
-- The informational world is also real: beliefs, distinctions, models, meanings, identities, norms, institutions exist and do work.
-- Information is not "merely physical" in the sense of being reducible-in-practice to its substrate. The same information can run on different substrates and still do the same job.
-- Physical and informational layers are *coupled*: changes on one side propagate to the other, often loudly. A belief moves a body; a body change shifts a belief.
-- Treating either side as primary causes characteristic blindness. Pure materialists are confused by why anyone fights for symbols. Pure idealists are confused by why people get hungry.
-- The right move is not "which is real" but "what is happening at the interface, and which side am I currently underweighting."
+The duality also protects against two familiar mistakes. If we talk only about material conditions, we can miss why a flag, slur, diagnosis, debt, or promise changes someone’s options. If we talk only about stories, we can miss hunger, exhaustion, rent, disability, and force. The useful question is usually concrete: what material supports carry this pattern, who interprets it, what permissions does it create, and who pays when it fails?
 
-## A note on the spiritual layer
+There is a fair worry that “information” is becoming a suitcase word for everything important. It can be. A symbol, a gene sequence, a legal rule, and a memory do not operate in the same way. This chapter offers a family resemblance, not a universal mechanism. Later chapters must keep naming the actual carrier, practice, and consequence instead of invoking information as an explanation.
 
-Some patterns in the informational world are stable across cultures, persistent across centuries, and physically consequential without anyone fully understanding why they bind. Sacredness, ritual, archetype, egregore, the felt sense that a place or object "carries" something: these are not nothing. They behave like weather: describable in their effects, predictable to a point, not yet reducible to particle-level accounts. Treating them as informational structures with physical shadows lets us take them seriously without either mystifying them or dismissing them. We will return to this in the wisdom-traditions chapter.
+Take a household promise and trace it for one day: where was it spoken or recorded, who remembered it, what action did it coordinate, what happens if one person cannot keep it? The exercise makes the interface visible without making it mystical.
 
-## Where this touches lived life
-
-- Money is informational; the suffering caused by losing it is physical. The interface is what your nervous system is reacting to.
-- Marriage is, technically, a paragraph that two people and a state agreed to share. Its end can wreck a body for a year. The informational layer pulls on the physical one with great force.
-- Loneliness is not a physical fact. It is an informational one (a model of being unseen) that produces measurable physiological effects.
-
-## What we're not claiming
-
-- Not that information is "spooky" or non-physical in some metaphysical sense. It runs on substrates. We just don't reduce it to them.
-- Not that we have a complete theory of how the two layers couple. We have descriptions, regularities, and many open questions.
-- Not that calling something "informational" makes it less serious. The informational layer is where most of what hurts and most of what matters lives.
-
+Patterns and their carriers can help us act. They can also simplify until a target replaces the life it was meant to serve.

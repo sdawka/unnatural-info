@@ -1,22 +1,21 @@
 ---
+import { ACTS } from '../lib/book';
+
 interface Props {
   act: 'preface' | 'volo-ergo-sum' | 'initd' | 'mmm' | 'prologue' | 'epilogue';
-  actTitle?: string;
 }
 
-const { act, actTitle } = Astro.props;
+const { act } = Astro.props;
 
-const ACT_META: Record<string, { roman: string; name: string; color: string }> = {
-  'preface':       { roman: '',    name: 'Preface',       color: 'var(--color-ink-muted)' },
-  'volo-ergo-sum': { roman: 'I',   name: 'Volo Ergo Sum', color: 'var(--color-act-i)' },
-  'initd':         { roman: 'II',  name: 'init.d',         color: 'var(--color-act-ii)' },
-  'mmm':           { roman: 'III', name: 'MMM',           color: 'var(--color-act-iii)' },
-  'prologue':      { roman: '',    name: 'Prologue',      color: 'var(--color-ink-muted)' },
-  'epilogue':      { roman: '',    name: 'Epilogue',      color: 'var(--color-ink-muted)' },
+const edgeMeta: Record<string, { name: string; color: string }> = {
+  preface: { name: 'Preface', color: 'var(--color-ink-muted)' },
+  prologue: { name: 'Prologue', color: 'var(--color-ink-muted)' },
+  epilogue: { name: 'Epilogue', color: 'var(--color-ink-muted)' },
 };
-
-const meta = ACT_META[act];
-const displayName = actTitle ?? meta.name;
+const bookAct = ACTS.find((candidate) => candidate.key === act);
+const meta = bookAct
+  ? { roman: bookAct.roman, name: bookAct.name, alias: bookAct.alias, color: bookAct.color }
+  : { roman: '', name: edgeMeta[act].name, alias: '', color: edgeMeta[act].color };
 ---
 
 <a href={meta.roman ? `/acts/${act}` : '/'} class="ab" style={`--accent: ${meta.color}`}>
@@ -26,7 +25,8 @@ const displayName = actTitle ?? meta.name;
   <span class="ab__name">
     {meta.roman ? `Act ${meta.roman}` : ''}
     {meta.roman && <span aria-hidden="true"> · </span>}
-    <em>{displayName}</em>
+    <em>{meta.name}</em>
+    {meta.alias && <span class="ab__alias">({meta.alias})</span>}
   </span>
 </a>
 
@@ -68,5 +68,10 @@ const displayName = actTitle ?? meta.name;
     text-transform: none;
     letter-spacing: 0.02em;
     margin-left: 0.1em;
+  }
+  .ab__alias {
+    color: var(--color-ink-muted);
+    letter-spacing: 0.02em;
+    text-transform: none;
   }
 </style>

@@ -1,466 +1,56 @@
 ---
-import { getCollection } from "astro:content";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import SiteHeader from "../components/SiteHeader.astro";
-import SiteFooter from "../components/SiteFooter.astro";
-import TableOfContents from "../components/TableOfContents.astro";
-
-const chapters = await getCollection("chapters", ({ data }) => !data.draft);
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import ResumeReading from '../components/ResumeReading.astro';
+import { ACTS, READING_PATHS, readingMinutes } from '../lib/book';
+import '../styles/book.css';
+const chapters = await getCollection('chapters', ({ data }) => !data.draft);
+const count = chapters.filter(c => c.data.chapterNumber != null).length;
+const start = chapters.find(c => c.id === 'prologue');
+const sampler = ['prologue', '06-the-second-blade', '23-how-to-live-better'].map(id => chapters.find(c => c.id === id)!);
+const samplerMinutes = sampler.reduce((total, chapter) => total + readingMinutes(chapter.body), 0);
 ---
-
-<BaseLayout title="Explore | UNNATURAL" cinematic>
+<BaseLayout title="The book" cinematic>
   <SiteHeader />
-
-  <main class="explore">
-    <header class="explore__header">
-      <h1 class="explore__title">Explore</h1>
-      <p class="explore__subtitle">Three acts, twenty-two chapters</p>
+  <main class="book-page" id="main-content">
+    <header>
+      <p class="book-kicker">Three acts · {count} chapters · Working drafts</p>
+      <h1 class="book-title">Follow the thread.</h1>
+      <p class="book-lead">An unanswered invitation opens onto wanting, knowing, and the world we build together.</p>
+      <div class="book-actions"><a class="book-button" href="/chapters/prologue">Begin the book · about {readingMinutes(start?.body)} min →</a><ResumeReading /></div>
+      <p class="book-small">Reading estimates cover the prose. Pause as long as you like for the optional practices.</p>
     </header>
-
-    <!-- Three Acts — asymmetric index -->
-    <section class="acts" aria-labelledby="acts-heading">
-      <div class="acts__inner">
-        <header class="acts__header">
-          <p class="acts__label">
-            <span class="glyph-stack" aria-hidden="true">
-              <span></span><span></span><span></span>
-            </span>
-            Three Acts
-          </p>
-          <h2 class="acts__heading" id="acts-heading">
-            The argument<br />in three movements.
-          </h2>
-        </header>
-
-        <ol class="acts__grid">
-          <li class="act-card act-card--i">
-            <a href="/acts/volo-ergo-sum" class="act-card__link">
-              <div class="act-card__numeral" aria-hidden="true">I</div>
-              <div class="act-card__body">
-                <div class="act-card__title-row">
-                  <h3 class="act-card__name">Volo Ergo Sum</h3>
-                  <span class="act-card__arrow" aria-hidden="true">→</span>
-                </div>
-                <p class="act-card__premise">I will, therefore I am.</p>
-                <p class="act-card__detail">
-                  Before thought, and before feeling, something leans. A
-                  bacterium follows a chemical gradient. A person follows a
-                  hunch. Anything that happens starts with a tilt.
-                </p>
-              </div>
-            </a>
-          </li>
-
-          <li class="act-card act-card--ii">
-            <a href="/acts/initd" class="act-card__link">
-              <div class="act-card__numeral" aria-hidden="true">II</div>
-              <div class="act-card__body">
-                <div class="act-card__title-row">
-                  <h3 class="act-card__name">init.d</h3>
-                  <span class="act-card__arrow" aria-hidden="true">→</span>
-                </div>
-                <p class="act-card__premise">
-                  Finite beings in an infinite universe.
-                </p>
-                <p class="act-card__detail">
-                  We cannot take in the whole thing. So we carve, name, sort,
-                  and simplify. Distinction is how a mind gets started without
-                  melting.
-                </p>
-              </div>
-            </a>
-          </li>
-
-          <li class="act-card act-card--iii">
-            <a href="/acts/mmm" class="act-card__link">
-              <div class="act-card__numeral" aria-hidden="true">III</div>
-              <div class="act-card__body">
-                <div class="act-card__title-row">
-                  <h3 class="act-card__name">MMM</h3>
-                  <span class="act-card__arrow" aria-hidden="true">→</span>
-                </div>
-                <p class="act-card__premise">Growth is a good loop.</p>
-                <p class="act-card__detail">
-                  Measure, Model, Manifest. Notice the world, make a better map,
-                  test it, do something with it, then let the world answer back.
-                </p>
-              </div>
-            </a>
-          </li>
-        </ol>
-      </div>
+    <section class="book-section" aria-labelledby="route-heading">
+      <h2 id="route-heading">Why this order?</h2>
+      <ol class="book-acts">
+        {ACTS.map(act => <li><a class="book-act" href={`/acts/${act.key}`} style={`--act-color: ${act.color}`}>
+          <span class="book-act__num" aria-hidden="true">{act.roman}</span><div><h3>{act.name}</h3><p>{act.premise}</p><small>{act.alias} · Act {act.roman} →</small></div>
+        </a></li>)}
+      </ol>
+      <div class="book-aside"><p>First, something matters to you. Then you need a way to understand it. Then your understanding meets other people and a world that can surprise you.</p><p>The acts build on one another. You can also enter through a question that is already yours.</p></div>
     </section>
-
-    <!-- Table of Contents -->
-    <section class="toc-section">
-      <div class="toc-section__inner">
-        <header class="toc-section__header">
-          <p class="toc-section__label">Contents</p>
-          <p class="toc-section__hint">
-            <span aria-hidden="true">↓</span> Twenty-two chapters across three acts
-          </p>
-        </header>
-        <TableOfContents chapters={chapters} />
-      </div>
+    <section class="book-section" aria-labelledby="paths-heading">
+      <h2 id="paths-heading">A few other doors.</h2>
+      <div class="book-aside"><h3>Try a short sample · about {samplerMinutes} minutes</h3><p>Follow one unanswered message into the stories we tell, then see what a small change might look like.</p><ol>{sampler.map(chapter => <li><a href={`/chapters/${chapter.id}`}>{chapter.data.title}</a></li>)}</ol></div>
+      <div class="book-paths">{READING_PATHS.map(path => <article><h3>{path.title}</h3><p>{path.description}</p><ol>{path.chapters.map(number => {
+        const chapter = chapters.find(c => c.data.chapterNumber === number);
+        return chapter && <li><a href={`/chapters/${chapter.id}`}>{number}. {chapter.data.title}</a></li>;
+      })}</ol></article>)}</div>
+    </section>
+    <section class="book-section" aria-labelledby="contents-heading">
+      <h2 id="contents-heading">The whole book.</h2>
+      <p>The prologue is the suggested beginning. The preface is an optional origin story. Every chapter is a working draft, open to correction.</p>
+      <TableOfContents chapters={chapters} />
+    </section>
+    <section class="book-section">
+      <h2>A way to read.</h2>
+      <p>Read a scene. Notice the claim it invites. Try another explanation. Take a practice into your own week, if it fits. Your disagreement is useful material.</p>
+      <details><summary>How certain is any of this?</summary><p>Examples you can inspect, research findings, and philosophical proposals carry different kinds of support. The chapters mark those differences and link to selected sources. A convincing story can still be wrong.</p></details>
+      <a class="book-link" href="/practice">Find a small experiment →</a>
     </section>
   </main>
-
   <SiteFooter />
 </BaseLayout>
-
-<style>
-  .explore {
-    padding-top: 0;
-  }
-
-  /* ——— Explore Header ——— */
-  .explore__header {
-    padding: var(--space-20) var(--safe-right) var(--space-12) var(--safe-left);
-    border-bottom: 1px solid var(--color-rule-soft);
-    max-width: var(--page-max);
-    margin: 0 auto;
-  }
-
-  .explore__title {
-    font-family: var(--font-display);
-    font-variation-settings:
-      "opsz" 72,
-      "wght" 320,
-      "SOFT" 60;
-    font-size: clamp(3rem, 8vw, 5.5rem);
-    line-height: 0.95;
-    letter-spacing: -0.02em;
-    color: var(--color-ink);
-    margin: 0 0 var(--space-4);
-  }
-
-  .explore__subtitle {
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--color-ink-muted);
-    margin: 0;
-  }
-
-  @media (max-width: 48rem) {
-    .explore__header {
-      padding: var(--space-12) var(--safe-right) var(--space-8) var(--safe-left);
-    }
-  }
-
-  /* ——— Acts ——— */
-  .acts {
-    padding: var(--space-20) var(--safe-right) var(--space-20) var(--safe-left);
-    border-bottom: 1px solid var(--color-rule-soft);
-  }
-
-  .acts__inner {
-    max-width: var(--page-max);
-    margin: 0 auto;
-  }
-
-  .acts__header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: var(--space-8);
-    margin-bottom: var(--space-12);
-    flex-wrap: wrap;
-  }
-
-  .acts__label {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-3);
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--color-ink-muted);
-  }
-
-  .acts__label .glyph-stack {
-    color: var(--color-ink-faint);
-  }
-
-  .acts__heading {
-    font-family: var(--font-display);
-    font-variation-settings:
-      "opsz" 72,
-      "wght" 330,
-      "SOFT" 40;
-    font-size: var(--text-3xl);
-    line-height: 1.05;
-    letter-spacing: -0.015em;
-    color: var(--color-ink);
-    max-width: 16ch;
-    text-align: right;
-    text-wrap: balance;
-  }
-
-  @media (max-width: 48rem) {
-    .acts__heading {
-      text-align: left;
-      font-size: var(--text-2xl);
-      max-width: 20ch;
-    }
-  }
-
-  .acts__grid {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    border-top: 1px solid var(--color-rule);
-    border-left: 1px solid var(--color-rule);
-  }
-
-  @media (min-width: 62rem) {
-    .acts__inner {
-      display: grid;
-      grid-template-columns: minmax(13rem, 0.34fr) minmax(0, 1fr);
-      gap: var(--space-10);
-      align-items: start;
-    }
-
-    .acts__header {
-      position: sticky;
-      top: calc(var(--safe-top) + var(--space-8));
-      display: block;
-      margin-bottom: 0;
-      padding-top: var(--space-2);
-    }
-
-    .acts__label {
-      margin-bottom: var(--space-5);
-    }
-
-    .acts__heading {
-      text-align: left;
-      max-width: 10ch;
-    }
-
-    .acts__grid {
-      grid-template-columns: 1fr;
-    }
-
-    .act-card {
-      border-left: 1px solid var(--color-rule);
-    }
-
-    .act-card__link {
-      grid-template-columns: minmax(7rem, 0.28fr) minmax(0, 1fr);
-      grid-template-rows: 1fr;
-      align-items: start;
-      min-height: 0;
-      padding: 1.75rem var(--space-8);
-    }
-
-    .act-card__numeral {
-      font-size: clamp(4.5rem, 7vw, 7rem);
-    }
-
-    .act-card__body {
-      gap: var(--space-2);
-      padding-top: var(--space-2);
-    }
-
-    .act-card__detail {
-      max-width: 58ch;
-    }
-  }
-
-  @media (max-width: 62rem) {
-    .acts__grid {
-      grid-template-columns: 1fr;
-      border-left: none;
-    }
-  }
-
-  .act-card {
-    position: relative;
-    border-right: 1px solid var(--color-rule);
-    border-bottom: 1px solid var(--color-rule);
-    overflow: hidden;
-  }
-
-  @media (max-width: 62rem) {
-    .act-card {
-      border-left: 1px solid var(--color-rule);
-    }
-  }
-
-  .act-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--acc, var(--color-ink)) 7%, transparent),
-      transparent 55%
-    );
-    opacity: 0;
-    transition: opacity var(--dur-med) var(--ease-out);
-    pointer-events: none;
-  }
-
-  .act-card:hover::before {
-    opacity: 1;
-  }
-
-  .act-card--i {
-    --acc: var(--color-act-i);
-  }
-  .act-card--ii {
-    --acc: var(--color-act-ii);
-  }
-  .act-card--iii {
-    --acc: var(--color-act-iii);
-  }
-
-  .act-card__link {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    gap: var(--space-6);
-    padding: var(--space-8);
-    text-decoration: none;
-    color: inherit;
-    min-height: 20rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .act-card__numeral {
-    font-family: var(--font-display);
-    font-variation-settings:
-      "opsz" 144,
-      "wght" 280,
-      "SOFT" 100;
-    font-size: clamp(5rem, 10vw, 8rem);
-    line-height: 0.85;
-    color: var(--acc);
-    opacity: 0.9;
-    letter-spacing: -0.03em;
-    transition:
-      opacity var(--dur-med) var(--ease-out),
-      transform var(--dur-slow) var(--ease-out);
-  }
-
-  .act-card:hover .act-card__numeral {
-    opacity: 1;
-    transform: translateY(-2px);
-  }
-
-  .act-card__body {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-3);
-  }
-
-  .act-card__title-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-3);
-  }
-
-  .act-card__name {
-    font-family: var(--font-display);
-    font-variation-settings:
-      "opsz" 36,
-      "wght" 400,
-      "SOFT" 30;
-    font-size: var(--text-2xl);
-    line-height: 1;
-    color: var(--acc);
-  }
-
-  .act-card__arrow {
-    font-family: var(--font-display);
-    font-variation-settings:
-      "opsz" 24,
-      "wght" 400,
-      "SOFT" 40;
-    font-size: var(--text-lg);
-    color: var(--color-ink-muted);
-    transition:
-      transform var(--dur-med) var(--ease-out),
-      color var(--dur-fast);
-  }
-
-  .act-card:hover .act-card__arrow {
-    transform: translateX(6px);
-    color: var(--acc);
-  }
-
-  .act-card__premise {
-    font-family: var(--font-body);
-    font-variation-settings: "wght" 560;
-    font-size: var(--text-base);
-    color: var(--color-ink);
-    line-height: 1.4;
-  }
-
-  .act-card__detail {
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    color: var(--color-ink-muted);
-    line-height: 1.6;
-  }
-
-  /* ——— TOC section ——— */
-  .toc-section {
-    padding: var(--space-20) var(--safe-right) var(--space-16) var(--safe-left);
-  }
-
-  .toc-section__inner {
-    max-width: var(--page-max);
-    margin: 0 auto;
-  }
-
-  .toc-section__header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: var(--space-4);
-    margin-bottom: var(--space-10);
-    flex-wrap: wrap;
-  }
-
-  .toc-section__label {
-    font-family: var(--font-display);
-    font-variation-settings:
-      "opsz" 72,
-      "wght" 360,
-      "SOFT" 40;
-    font-size: var(--text-3xl);
-    color: var(--color-ink);
-    line-height: 1;
-  }
-
-  .toc-section__hint {
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--color-ink-muted);
-  }
-
-  @media (max-width: 48rem) {
-    .acts {
-      padding: var(--space-12) var(--safe-right) var(--space-12)
-        var(--safe-left);
-    }
-    .act-card__link {
-      padding: var(--space-6);
-      min-height: auto;
-    }
-    .toc-section {
-      padding: var(--space-12) var(--safe-right) var(--space-12)
-        var(--safe-left);
-    }
-  }
-</style>

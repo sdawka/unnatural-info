@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+const chapters = await getCollection('chapters', ({ data }) => !data.draft);
+const links = Object.fromEntries(chapters.map(c => [c.id, c.data.title]));
+---
+<a class="book-link" href="/chapters/prologue" hidden data-resume-reading data-chapters={JSON.stringify(links)}>Continue reading</a>
+<script>
+  for (const link of document.querySelectorAll<HTMLAnchorElement>('[data-resume-reading]')) {
+    try {
+      const slug = localStorage.getItem('unnatural:last-chapter');
+      const chapters: Record<string, string> = JSON.parse(link.dataset.chapters || '{}');
+      if (slug && Object.hasOwn(chapters, slug)) {
+        link.href = `/chapters/${encodeURIComponent(slug)}`;
+        link.textContent = `Continue: ${chapters[slug]}`;
+        link.hidden = false;
+      }
+    } catch { /* Reading remains available when browser storage is disabled. */ }
+  }
+</script>

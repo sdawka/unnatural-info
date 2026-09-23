@@ -1,71 +1,50 @@
 ---
-title: "The Most Objective We Can Be (Which Is, Admittedly, Not Very)"
-subtitle: "The epistemic conclusion"
+title: "The Most Objective We Can Be"
+subtitle: "Evidence, correction, and whose account is heard"
 act: mmm
-actTitle: "MMM"
+actTitle: "How We Learn, Create, and Change"
 chapterNumber: 24
 order: 24
-summary: "Truth for beings like us is not omniscience. It is disciplined approximation under finitude. Objectivity means honouring reality, marking uncertainty, distinguishing levels, tracking consequences, comparing models honestly, staying revisable. A compass, not a throne."
-themes: ["objectivity", "truth", "uncertainty", "epistemology", "humility", "revisability"]
+summary: "Objectivity is a disciplined, social practice of separating observation from story, testing alternatives, marking uncertainty, correcting error, and attending to whose testimony the process excludes."
+themes: ["objectivity", "evidence", "uncertainty", "epistemic-justice", "revision"]
 status: draft
 draft: false
 furtherReading:
-  - author: "Donna Haraway"
-    title: "Situated Knowledges"
-    year: 1988
-    note: "The god trick of the view from nowhere: embodied objectivity via acknowledged partiality is not relativism but the only route to genuine connection."
-  - author: "Thomas Nagel"
-    title: "The View from Nowhere"
-    year: 1986
-    note: "Objectivity as an ideal that can never be fully achieved. Nagel and Haraway are not opposites but two sides of the same honest position."
-  - author: "Heather Douglas"
-    title: "Science, Policy, and the Value-Free Ideal"
-    year: 2009
-    note: "Values play a legitimate indirect role in scientific reasoning; her seven senses of objectivity provide the most useful taxonomy for the chapter's argument."
+  - author: "Miranda Fricker"
+    title: "Epistemic Injustice"
+    year: 2007
+    note: "Examines harms that occur when prejudice reduces a speaker's credibility or when shared concepts fail to make experience intelligible."
   - author: "Helen Longino"
     title: "Science as Social Knowledge"
     year: 1990
-    note: "Objectivity is a property of communities of inquiry, not individual scientists. Disciplined approximation requires the right social infrastructure."
-  - author: "Charles Sanders Peirce"
-    title: "The Fixation of Belief"
-    year: 1877
-    note: "Objectivity as a disposition: the commitment to following evidence against one's own prior beliefs, and the community that makes this stable over time."
-  - author: "Open Science Collaboration"
-    title: "Estimating the Reproducibility of Psychological Science"
-    year: 2015
-    note: "The replication crisis is not an argument for relativism. It is the sharpest empirical demonstration that objectivity requires tracking consequences."
-  - author: "William James"
-    title: "Pragmatism"
-    year: 1907
-    note: "Truth is what it is good for us to believe: not relativism but a different criterion for when disciplined approximation counts as knowledge."
-  - author: "John Dewey"
-    title: "The Quest for Certainty"
-    year: 1929
-    note: "The philosophical disease is seeking absolute foundations; the cure is treating inquiry as an ongoing activity in the world rather than a transcendent achievement."
+    note: "Develops an account of objectivity through critical interaction under social conditions that allow challenge."
 ---
 
-After eighteen chapters of sharpening blades and turning loops, it would be a poor joke to end with a claim of certainty. We don't have one. We never did. Truth, for beings like us, is not the view from nowhere. It is the best we can manage from here, with the instruments we have, while admitting that the instruments could be better.
+Return to the unanswered dinner invitation.
 
-This is not a defeat. A compass that knows it is a compass is more useful than a throne that thinks it is the world.
+The observation was small: no reply had arrived by Tuesday. The first story was large: *They do not want to come.* Other accounts fit the evidence: illness, overload, a lost message, uncertainty, avoidance, or a deliberate refusal. Wanting connection made one interpretation feel especially vivid. None of this made the silence unreal.
 
-## Key moves
+Then new evidence arrived. The invitation had gone to an old address.
 
-- Objectivity, as a finite-being practice, is not omniscience but discipline: honour reality, mark your uncertainty, distinguish levels, track consequences, compare models honestly, stay revisable.
-- Honouring reality means letting it overrule your model when they disagree, even when the model was beautiful.
-- Marking uncertainty is the hardest of the disciplines because it requires knowing not just what you think but how confident you are entitled to be.
-- Distinguishing levels (physical, informational, biological, social, symbolic) keeps you from confusing a question on one layer with an answer on another.
-- Tracking consequences extends the loop in time: a model is judged not only by its prediction but by what it does to those who use it.
-- Comparing models honestly means letting the rival have its best case, not its worst caricature.
-- Revisability is the meta-discipline that keeps the others alive. A frame that cannot be revised is no longer doing the work of a frame.
+The lesson is not that charitable explanations always win. Sometimes silence is refusal. It is that objectivity begins when we separate what happened, what we inferred, what else could explain it, and what would change our confidence. Reality exists independently of our account; access to it is partial, mediated, and corrigible.
 
-## Where this touches lived life
+A notebook can make the discipline visible:
 
-- Most public arguments are between two people both refusing the discipline of marked uncertainty. Practising it personally costs little and changes how you listen.
-- "I was wrong about X" is one of the most informationally valuable sentences a human can produce, and one of the most undersupplied.
-- The maturity of a community is roughly measurable by how often its members revise out loud.
+- **Observation:** no response appeared in the account I checked.
+- **Story:** the guest rejected me.
+- **Unknowns:** receipt, circumstances, intention.
+- **Confidence:** moderate that no reply appeared; low about motive.
+- **Test:** check the address or ask without smuggling in an accusation.
+- **Revision:** the delivery explanation now has direct support.
 
-## What we're not claiming
+That is Learning. Creating provided the question that contacted the world. Becoming held open the possibility that the first story was incomplete. The modes help, but objectivity requires more than a well-run personal loop.
 
-- Not that all views are equally valid. Some models survive contact with reality better than others, and that asymmetry is the whole game.
-- Not that disciplined approximation gets us to truth eventually. It gets us to *less wrong*, which is what is actually on offer.
-- Not that humility is the same as paralysis. The point is to act anyway, while knowing you might be acting from a model that needs to change tomorrow.
+Whose report is heard matters. Imagine a junior worker repeatedly warning that the garden valve cannot be reached from a wheelchair. The committee records the problem only when a senior member repeats it. The eventual measurement may be accurate, yet the process has distributed credibility unjustly. Miranda Fricker calls attention to epistemic injustice: people can be wronged as knowers when prejudice discounts their testimony, or when shared language is inadequate to express an experience.
+
+So objectivity is not just many views averaged together. It needs evidence, meaningful challenge, relevant expertise, and conditions in which affected people can contest the frame. Consensus can be manufactured by exclusion. Dissent can be mistaken. The work is to examine how a claim earned its standing.
+
+Nor does truth exhaust judgment. Accurate knowledge can be used cruelly. A system can predict behavior while violating consent. Our earlier ethical commitments—care, preventable harm, fairness, participation, and future choice—do not follow automatically from better evidence. They guide what we investigate and what we do with what we learn.
+
+Try reopening one confident claim from your week. Write the strongest rival account, one observation that favors each, and one question that could discriminate between them. Name whose testimony is missing. Then revise your confidence, even if the revision is only from certainty to a sharper uncertainty.
+
+The aim is not a view from nowhere. It is an accountable view from here: explicit about position, answerable to evidence, open to correction, and aware that the invitation to speak has not always reached everyone.

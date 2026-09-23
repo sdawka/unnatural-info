@@ -1,79 +1,41 @@
 ---
 title: "The Third Blade: Good, Bad, and the Trouble with Both"
-subtitle: "Valence enters"
+subtitle: "What matters arrives already shaded"
 act: initd
-actTitle: "init.d"
+actTitle: "How We Make Sense of Things"
 chapterNumber: 7
 order: 7
-summary: "Good and bad as operative distinction. Affect as guidance. Value before morality. Preference as proto-ethics. Pleasure, pain, and significance. The original navigation system."
-themes: ["value", "good", "bad", "valence", "affect", "ethics", "preference"]
+summary: "Living creatures do not merely register a world; they meet it as inviting, painful, relieving, threatening, or important. This practical orientation is not yet morality, and it can be trained, captured, or wrong."
+themes: ["value", "valence", "affect", "ethics", "preference", "care"]
 status: draft
 draft: false
 furtherReading:
-  - author: "Antonio Damasio"
-    title: "Descartes' Error"
-    year: 1994
-    note: "Somatic markers as rapid pre-cognitive valence signals: patients who lose them retain logic but cannot decide."
-  - author: "Jaak Panksepp"
-    title: "Affective Neuroscience"
-    year: 1998
-    note: "Seven primary emotional command systems in subcortical structures homologous across all mammals. Valence comes first, cortex follows."
   - author: "Kent Berridge"
     title: "Dissecting Components of Reward: Liking, Wanting, and Learning"
     year: 2009
-    note: "Wanting (dopamine) and liking (opioid systems) are dissociable. Good is not one blade but at minimum two."
-  - author: "Evan Thompson"
-    title: "Mind in Life"
-    year: 2007
-    note: "Bacterial chemotaxis as proto-valuation: sense-making is continuous from the simplest life up through human consciousness."
-  - author: "Joseph LeDoux"
-    title: "The Emotional Brain"
-    year: 1996
-    note: "The amygdala's low road: the body is assigned a valence before consciousness catches up. Navigation precedes reflection."
-  - author: "Jesse Prinz"
-    title: "Gut Reactions"
-    year: 2004
-    note: "Embodied appraisals: emotions are perceptions of bodily states that simultaneously constitute evaluations of what matters."
-  - author: "Nietzsche"
-    title: "On the Genealogy of Morality"
-    year: 1887
-    note: "Values have histories and serve interests; tracing the blade of good/bad back to who wielded it and why it was sharpened that way."
-  - author: "Max Scheler"
-    title: "Formalism in Ethics and Non-Formal Ethics of Values"
-    year: 1916
-    note: "Values are felt and perceived before they are judged: a phenomenology of the value-sensing apparatus that precedes any explicit ethics."
+    note: "Wanting, enjoyment, and learning can come apart; a strong urge is not proof that something will satisfy."
+  - author: "Martha Nussbaum"
+    title: "Upheavals of Thought"
+    year: 2001
+    note: "An account of emotions as appraisals of what matters, open to criticism and education."
   - author: "Philippa Foot"
     title: "Natural Goodness"
     year: 2001
-    note: "Goodness for a living thing is not a projection onto neutral matter but a biological reality: the third blade has a natural history."
-  - author: "Alasdair MacIntyre"
-    title: "After Virtue"
-    year: 1981
-    note: "We lost the context (tradition, telos) that made value-talk coherent. The trouble with good and bad is partly a historical wound."
+    note: "A challenge to the idea that moral goodness follows straightforwardly from what helps an organism flourish."
 ---
 
-The third blade is the one that makes everything personal. Once a creature has separated itself from the world (blade one) and built a model of it (blade two), it does something that nothing inanimate ever bothers to do: it sorts what it perceives into *toward* and *away*. Good and bad. Yes and no. Get more of this; do not, under any circumstances, get more of that.
+You taste milk that has turned. Before you form a sentence, your face has made one. Pull away. Do not swallow. The world has arrived with a direction attached.
 
-This is not yet morality. Morality is what happens centuries later when many creatures argue about whose third blade was better calibrated. The third blade itself is older, dumber, and surprisingly hard to argue with. A snail flinching from salt is using it. So are you, when you decide a song is good.
+This is the third blade: the difference between what draws us closer and what sends us back. Pleasure and pain, comfort and alarm, attraction and aversion are part of how animals navigate. For this book, call that broad field *valence*: the way something lands as better, worse, safer, costly, welcome, or threatening for a creature in a situation.
 
-## Key moves
+It is tempting to make this sound cleaner than it is. An urge is not a verdict. Berridge’s distinction between wanting and liking helps here. You can reach for another episode, cigarette, or handful of chips with real force and enjoy it less than you expected. You can dread calling a friend and feel better after doing it. The first signal is information about your current orientation; it is not an order from the universe.
 
-- Value is not added on top of perception; it is built into perception from very early on. The world arrives already shaded.
-- Affect (pleasure, pain, attraction, repulsion, comfort, dread) is the original navigation system. It tells the organism which way to lean, before any thinking happens.
-- "Good" and "bad" begin as operative distinctions, not metaphysical ones: useful labels for what to approach or avoid, given who and where you are.
-- Preference is proto-ethics. Long before there are rules, there are leans, and the leans cohere into characters.
-- Significance is a third axis on top of good/bad: some things matter, regardless of whether they are pleasant.
-- Morality is a later, social compression of many third blades trying to coexist. It is downstream of valence, not upstream.
+Nor does practical fit settle morality. A wolf hunting well, a company extracting efficiently, and a person winning an argument may each be adapting to something. None is thereby fair, kind, or consent-based. Moral judgment requires further reasons: who bears the harm, whether a choice is free, what promises exist, whether people have a voice. The third blade gives us a beginning for ethics because it tells us that things matter. It cannot finish ethics by itself.
 
-## Where this touches lived life
+That is why value so often becomes a quarrel. Two people can look at the same dinner plan and meet different stakes: one wants ease, one wants to be recognized, one needs a quiet room, one cannot afford the restaurant. “Good” is not simply painted onto the menu. It emerges from needs, histories, available options, and sometimes obligations to people not at the table.
 
-- "I don't know what I want" is rarely true. Usually you know. The discomfort is that what you want conflicts with another thing you want, and the third blade is busy with both.
-- Aesthetic taste is the third blade running on small data: you knew within two seconds, and the rest was justification.
-- People with damaged affective signaling (depression, certain brain injuries) find decisions exhausting because the third blade has stopped doing its job.
+A fair challenge is that some values seem to outrun feeling altogether. Justice may require a person to defend someone they dislike; grief may make a painful act the loving one. Exactly. Significance is not identical with pleasure. The person who sits through an uncomfortable apology is responding to a value that cannot be reduced to immediate comfort. Feeling can alert us to what is at stake; reflection and conversation can still revise the response.
 
-## What we're not claiming
+Try [What pulls you?](/practice/wants). Separate an urge, expected enjoyment, obligation, fear, and a value you endorse. The point is not to obey the “true” item. It is to see that a single “I want” may be a crowded room.
 
-- Not that whatever feels good is good. The third blade is often miscalibrated, captured, or hijacked.
-- Not that morality is "just" affect. It is built on affect, but it requires conversation between many affects.
-- Not that we know how affect is generated. We can describe its function with some confidence and its mechanism with much less.
-
+As these orientations become shared, they harden into familiar oppositions: us and them, clean and dirty, success and failure. The next pages ask what happens when cuts begin to multiply.

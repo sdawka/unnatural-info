@@ -1,70 +1,41 @@
 ---
 title: "From Subjectivity to Something That Will Have to Do"
-subtitle: "How a world appears that is more than private feeling"
+subtitle: "How private views become shared knowledge"
 act: volo-ergo-sum
 actTitle: "Volo Ergo Sum"
 chapterNumber: 4
 order: 4
-summary: "We take objectivity for granted, but what we actually have is heavily-aligned subjectivity: many private reports that mostly agree where it matters. Capital-T Truth is the asymptote we point at. The shared world is maintained by minds pumping signals to each other, and decays when they stop."
-themes: ["objectivity", "intersubjectivity", "shared reality", "coordination", "constraint"]
+summary: "We meet the world from particular places, then build more reliable shared accounts through evidence, correction, communication, and attention to whose reports are heard."
+themes: ["objectivity", "intersubjectivity", "shared reality", "coordination", "testimony"]
 status: draft
 draft: false
 furtherReading:
   - author: "Thomas Nagel"
     title: "The View from Nowhere"
     year: 1986
-    note: "Objectivity is a hard-won partial achievement, not a god's-eye view, and the attempt to approximate it is what science is."
+    note: "A clear account of objectivity as an ideal that grows by stepping back from a particular point of view without escaping all points of view."
   - author: "Hannah Arendt"
     title: "The Human Condition"
     year: 1958
-    note: "Plurality: reality is guaranteed not by a common nature but by many distinct people being concerned with the same object."
-  - author: "Donald Davidson"
-    title: "Subjective, Intersubjective, Objective"
-    year: 2001
-    note: "Triangulation: objective truth requires two agents responding to shared causes in the world. Objectivity emerges from intersubjectivity."
-  - author: "Wilfrid Sellars"
-    title: "Empiricism and the Philosophy of Mind"
-    year: 1956
-    note: "The myth of the given: perception is already conceptually structured. Nothing in experience is incorrigibly given as a foundation."
-  - author: "John Searle"
-    title: "The Construction of Social Reality"
-    year: 1995
-    note: "Institutional facts via collective intentionality. Objectivity is constructed but not arbitrary; it requires ongoing collective recognition."
-  - author: "Michael Tomasello"
-    title: "The Cultural Origins of Human Cognition"
-    year: 1999
-    note: "Empirical: objectivity is developmentally downstream of shared intentionality, not prior to it."
+    note: "Plurality and a common world: many distinct people can be concerned with the same durable things."
+  - author: "Miranda Fricker"
+    title: "Epistemic Injustice"
+    year: 2007
+    note: "A necessary complication: shared knowledge can be distorted when a person's testimony is discounted or when a group lacks the concepts needed to describe its experience."
 ---
 
-You are stuck inside your own head. So is everyone else. This is, on first look, a disaster for the entire project of knowing anything. It would be, if minds did not keep bumping into each other and into the same stubborn furniture.
+You and a friend carry a table up a narrow staircase. You disagree about whether it will fit. Both of you have a view from somewhere: one person is at the bottom, one at the turn, both tired, each seeing a different angle. The staircase does not become imaginary because your reports differ. It also does not tell either of you, by itself, which maneuver will work. You need more looking, a shared description, and a test.
 
-Notice how casually the word *objectivity* gets thrown around. People say "objectively speaking" the way they say "the weather," as if there were a neutral layer they were reporting back from. Most of ordinary talk assumes a settled, shared, view-from-nowhere sitting underneath the conversation, quietly doing the work of guaranteeing that "the table" means the same table to both of us. That assumption is load-bearing, and almost nobody checks it.
+That is the modest beginning of objectivity. We do not start with a view from nowhere. We start with bodies, histories, interests, and limited attention. We can still make accounts less dependent on one person's position by comparing reports, checking them against stubborn things, recording what happened, and inviting correction. Thomas Nagel's [account of objectivity](https://search.worldcat.org/title/view-from-nowhere/oclc/12899337) is useful here as an ideal of stepping back from a particular view without pretending to escape all views.
 
-What we actually have is not that. What we have is, at best, *heavily-aligned subjectivity*: a densely-packed braid of private reports that mostly agree where it matters. Your table and my table are not the same object in some god's-eye ledger; they are two compatible subjective renderings that line up well enough for us to set down cups without argument. Call it *shared subjectivity*. It is not a view from nowhere. It is many views from somewhere, cross-checked until the disagreements become small enough to ignore.
+Call the result **shared knowledge** rather than pretending it is a perfect mirror. “The table is too wide for this turn” can be tested by measuring, trying a different angle, or noticing that it passed when carried another way. The claim may be wrong, but it is answerable to something beyond the speaker's confidence. A mountain remains when people stop describing it. A shared route, rule, or diagnosis may change when communication and evidence change.
 
-"Objectivity," in the strong sense, is the capital-T *Truth* we are all trying to get to. It is the asymptote, the regulative ideal, the thing the braid points toward even though the braid is not itself the thing. We never quite land on it. We get closer by pumping our reports at each other and watching what survives. The shared world is stable in the way a standing wave is stable: it might remain so if minds do not keep pumping to each other, but actually, no: let the pumping slow and the pattern blurs, let it stop and the pattern is gone.
+This distinction matters because consensus is not truth. Many people can repeat a false story, especially when social pressure rewards agreement. Conversely, a person can notice something real before a group has the language or willingness to hear it. Miranda Fricker's [work on epistemic injustice](https://academic.oup.com/book/32817) names two failures: a speaker may receive less credibility because of prejudice, or a community may lack the shared concepts needed to make an experience intelligible. “Many reports agree” is therefore not enough. We must ask who was invited to report, who was believed, and what the available categories made impossible to say.
 
-What we call "objectivity" in everyday life, then, is not that ideal. It is what survives when many minds, wanting differently from different positions, repeatedly fail to make reality go their way at the same points. The mountain is real because everyone's path keeps detouring around it.
+Communication is still essential. A private impression cannot become a usable public claim without some way to describe it and some other person willing to examine it. The shared world is not created from nothing by agreement; it is maintained through repeated contact with people and things. A workplace can keep calling a target “success,” but exhausted workers, missed details, and unequal rewards may eventually expose what the label concealed.
 
-## Key moves
+Trust helps this work, but trust is not surrender. It is a willingness to let another person's report enter your picture while keeping a route for checking and repair. In a disagreement, ask: What did each of us observe? What interpretation did we add? What could a third person check? What evidence would change our confidence? These questions do not remove perspective. They make perspective visible enough to compare.
 
-- Pure subjectivity is real but lonely; it cannot, by itself, make a world.
-- Repeated contact with constraint (gravity, hunger, other people) reveals patterns that were not optional, no matter how strongly anyone wanted otherwise.
-- Coordination is the second great filter: if many of us must act together, our private maps must converge enough to not crash.
-- *Intersubjectivity* is what we actually have. It is messier than objectivity and stronger than subjectivity, and it is enough.
-- Stable objects, facts, and norms are residues of this convergence: durable patterns that survived many wantings and many positions.
-- Capital-T Truth is the *asymptote*. Shared subjectivity is what we walk on while we point toward it.
-- Many observers, different maps, same mountain. The maps disagree on the trail. The mountain is conspicuously the same height.
+Try the [notebook practice](/practice/notebook) with a recent disagreement. Record the event in observable language, your first account, another plausible account, and the unknowns. Then use the [disagreement practice](/practice/disagreement) to write one sincere question for the other person. If the other account reveals a constraint you missed, update the story. If it does not, disagreement may remain—and may still be honest.
 
-## Where this touches lived life
-
-- Disagreement is not always a sign that one of you is wrong. Sometimes it is a sign you are climbing the same mountain from opposite sides.
-- Trust is the practical machinery by which subjectivities knit into something usable. When trust breaks, intersubjectivity breaks, and the world stops feeling shared.
-- Most "is this real or is it just me" questions are actually "has anyone else hit this wall." The answer, usually, is yes.
-- When a community stops talking (stops pumping), its shared reality thins. This is not a metaphor. It is the mechanism.
-
-## What we're not claiming
-
-- Not that consensus equals truth. Many minds can be wrong together for a long time.
-- Not that there is no fact of the matter beneath intersubjective agreement. There often is. We just rarely access it *directly*.
-- Not that we have a final account of how subjectivity becomes shared world. The mechanism is partly described and partly still open.
+Objectivity, then, is disciplined approximation under conditions of plurality. It includes evidence, correction, and a wider hearing of testimony. It is stronger than “my perspective” and humbler than a god's-eye view. The next act asks what happens when finite beings have to carve a manageable world out of everything they could notice.

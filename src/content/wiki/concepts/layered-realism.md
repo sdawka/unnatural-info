@@ -42,7 +42,7 @@ The book treats abstract objects with deliberate agnosticism: they belong in the
 
 States that are real as experience: pain, desire, emotion, perception, the felt sense of meaning. These are perspective-bound — they are what it is like from somewhere — but not therefore unreal. The failure mode in both directions: eliminating the subjective as "mere feeling" (losing the very layer where motivation, suffering, and meaning exist) or treating the subjective as the only real layer (solipsism, and the loss of shared constraint).
 
-The book's position is that subjectivity is irreducibly first-personal and irreducibly causally real. The somatic marker hypothesis (Damasio) is the scientific expression of this: the felt signal is structurally necessary for decision-making, not an epiphenomenal report on processes that would happen anyway.
+The book's position is that subjectivity is first-personal and should not be dismissed as unreal. Damasio's somatic-marker work supports a narrower claim: bodily signals can contribute to decision-making. It does not settle every question about experience or causation.
 
 ## Marr's levels as a parallel framework
 
@@ -63,7 +63,7 @@ David Marr's three levels of analysis — the computational problem, the represe
 - [[Foundational Dualities]] — layered realism is related to but distinct from the duality taxonomy; it organises kinds of being rather than kinds of cut
 - [[The MMM Loop]] — Marr's levels are the representational theory underlying the Model phase of the loop
 - [[Cost of Distinction]] — the failure modes of each layer — treating social facts as natural, or abstract as concrete — are instances of the cost of the blade
-- [[Objectivity]] — the objectivity practices of Ch. 22 are the methodological expression of layered realism: use the right tool for the right layer
+- [[Objectivity]] — the objectivity practices of Ch. 24 are the methodological expression of layered realism: use the right tool for the right question
 
 ## Open questions
 

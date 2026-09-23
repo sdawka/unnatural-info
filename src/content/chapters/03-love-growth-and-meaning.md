@@ -1,75 +1,45 @@
 ---
 title: "Love, Growth, and Meaning (Which Are, It Turns Out, Related)"
-subtitle: "Deep consequences of being orienting creatures"
+subtitle: "What wanting becomes with time and other people"
 act: volo-ergo-sum
 actTitle: "Volo Ergo Sum"
 chapterNumber: 3
 order: 3
-summary: "Love as mutual orientation. Growth as expanded capacity. Meaning as durable alignment between will, world, and becoming. Why emptiness often means misaligned willing, not mere lack of pleasure."
-themes: ["love", "growth", "meaning", "orientation", "emptiness", "purpose"]
+summary: "Love, growth, and meaning often meet in sustained care, but none reduces neatly to the others. A good life can include enjoyment, duty, rest, limits, and loss."
+themes: ["love", "growth", "meaning", "orientation", "care", "purpose"]
 status: draft
 draft: false
 furtherReading:
   - author: "Martin Buber"
     title: "I and Thou"
     year: 1923
-    note: "Love as mutual orientation enacted between beings: not a feeling one has but a mode of relating one enacts together."
+    note: "A philosophical account of meeting another person as a someone rather than treating them only as an object of use."
   - author: "Iris Murdoch"
     title: "The Sovereignty of Good"
     year: 1970
-    note: "Love as just and loving attention, the method of all virtues; attention leads to growth leads to meaning."
+    note: "A case for loving attention as a moral practice: learning to see another person less through the lens of our own wishes."
+  - author: "Susan Wolf"
+    title: "Meaning in Life and Why It Matters"
+    year: 2010
+    note: "A useful challenge to the idea that meaning is only personal desire; she connects meaningfulness with active engagement in worthwhile projects."
   - author: "Harry Frankfurt"
     title: "The Importance of What We Care About"
     year: 1988
-    note: "Caring integrates the self across time; love is the paradigm case of what it means to be a person with a volitional essence."
-  - author: "Viktor Frankl"
-    title: "Man's Search for Meaning"
-    year: 1946
-    note: "Will to meaning as the primary motivational force; emptiness is the existential vacuum produced by misaligned willing."
-  - author: "Aristotle"
-    title: "Nicomachean Ethics, Books VIII-IX"
-    year: -350
-    note: "Philia, eudaimonia, and growth through shared virtuous activity: love, meaning, and growth unified in one account from the start."
-  - author: "Deci & Ryan"
-    title: "Self-Determination Theory"
-    year: 1985
-    note: "Empirical: autonomy, competence, and relatedness are universal psychological needs; growth is indexed to their alignment."
-  - author: "Martha Nussbaum"
-    title: "Upheavals of Thought"
-    year: 2001
-    note: "Emotions as intelligent responses to value: love as a form of practical reasoning that constitutes rather than merely expresses the self."
-  - author: "Simone de Beauvoir"
-    title: "The Ethics of Ambiguity"
-    year: 1947
-    note: "Freedom requires others to be free. Love and growth are not private achievements but ethical stakes in a shared world."
-  - author: "Ernest Becker"
-    title: "The Denial of Death"
-    year: 1973
-    note: "Immortality projects as the primary human meaning-making strategy: love, heroism, and creative work as attempts to transcend biological finitude; meaning is not just durable wanting but wanting pressed against the fact of death."
+    note: "An account of how caring helps organize a life over time, while leaving open which objects of care deserve endorsement."
 ---
 
-If you take wanting seriously as the floor of life, three things that usually get separate chapters in different books turn out to be the same thing showing different faces. Love is what wanting looks like when it lines up with something else's wanting. Growth is what wanting looks like when it learns to do more. Meaning is what wanting looks like when it holds together over time.
+You keep a promise to bring soup to someone who is ill. The promise costs an evening. It is not especially fun, and it does not make you more impressive. Still, on the way home, the effort feels connected to the kind of relationship you want to have.
 
-Whenever a tradition has tried to talk about a good life without a theory of want, it has had to smuggle one in through the back door, usually wearing a robe.
+This is one place where love, growth, and meaning touch. They should not be collapsed into one thing. Love can involve pleasure, obligation, attention, vulnerability, and conflict. Growth can mean greater skill, but it can also mean learning a limit or becoming less willing to harm someone. Meaning can be a felt coherence, a worthwhile commitment, or a life made intelligible by what it cares about. The overlap is real; the identities are a proposal, not a discovery.
 
-## Key moves
+Love, in the sense used here, is not merely a feeling inside one person. It is a way of attending to another being whose good is not identical with your convenience. Martin Buber's “I–Thou” gives one influential vocabulary for this, while Iris Murdoch emphasizes the moral work of seeing another person more accurately. Both complicate a simple formula of “our wants line up.” Sometimes love means making room for a want you do not share. Sometimes it means refusing a request because the request would cause harm.
 
-- Love is mutual orientation: two (or more) wills lining up enough that each becomes part of the other's good.
-- Growth is expanded capacity to want, perceive, and act. Not "becoming bigger" but becoming able to handle more.
-- Meaning is durable alignment between what you will, what the world allows, and what you are becoming.
-- The three are linked: love expands what you can want for, growth expands what you can want toward, meaning is the felt sense that the expansion is real.
-- Emptiness is rarely the absence of pleasure. More often it is misaligned willing: you got what you thought you wanted and noticed, too late, that you were aiming at the wrong thing.
-- "Purpose" is not handed down from above. It is a stable pattern of wanting that survives contact with reality.
+Growth is not a moral scoreboard. A person can become more capable and use that capability badly. A company can learn to extract more value while making its workers less secure. A child can grow by discovering that an adult's promise was unreliable. Here, growth means an expanded or altered capacity to perceive, care, decide, and act. Whether that change is good requires separate questions about its effects and its costs.
 
-## Where this touches lived life
+Meaning also resists a single test. Susan Wolf argues in [*Meaning in Life and Why It Matters*](https://www.its.caltech.edu/~squartz/Wolf%20-%202007%20-%20Meaning%20in%20Life%20and%20Why%20It%20Matters.pdf) that meaningfulness involves active engagement with projects or objects of worth, which gives a useful alternative to the idea that meaning is simply whatever a person wants intensely. Caring for a relative, keeping a garden alive, making music, doing paid work, or resting with friends may all matter, but they do not need to become a ladder of achievement. A life can contain meaning in maintenance and pleasure, in grief and unfinished work, not only in expansion.
 
-- A relationship that "should be working" but feels dead is usually two people whose wills stopped lining up; the love did not vanish, the orientation drifted.
-- Burnout is rarely lack of energy. It is wanting that has lost its line of sight to anything you actually care about.
-- The question "what is the meaning of my life" almost always answers better as "what am I currently leaning toward, and is that lean still mine."
+This helps with emptiness without diagnosing it. Sometimes a person is bored because an activity no longer expresses what they care about. Sometimes they are exhausted, grieving, lonely, ill, or living under conditions that leave too little room to choose. “Misaligned wanting” is one possible description, not a universal explanation. Before searching for a better inner model, check the body's needs and the surrounding circumstances.
 
-## What we're not claiming
+Try the [wants practice](/practice/wants) with one commitment you are carrying. Separate immediate urge, enjoyment, obligation, fear, and chosen value. Then ask a second question: what person, activity, or condition is this commitment answerable to? You may decide to continue, renegotiate, rest, or let it go. The useful result is a clearer account, not a requirement to endure.
 
-- Not that love is reducible to coordinated wanting. The claim is that coordinated wanting is one of its load-bearing parts.
-- Not that growth is always good. Runaway complexity is a real failure mode and we will return to it.
-- Not that meaning is delivered. Meaning has to be made, repeatedly, and the making is its own kind of work.
-
+Meaning is not delivered from above, but neither is it manufactured by isolated preference alone. It grows in the meeting between attention, worthwhile things, other people, and the limits of a world we did not choose. To live together, we need more than private alignment. We need ways to check whether our accounts of the world can survive contact with one another and with what resists us.

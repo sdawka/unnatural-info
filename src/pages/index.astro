@@ -1,386 +1,73 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-
-const questions = [
-  "Have you ever wondered what you are?",
-  "What is the thing that wonders?",
-  "What are you, really?",
-];
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import ResumeReading from '../components/ResumeReading.astro';
+import { ACTS, BOOK_DESCRIPTION } from '../lib/book';
+import '../styles/book.css';
 ---
-
-<BaseLayout title="UNNATURAL" cinematic>
-  <main class="landing" id="landing">
-    <div class="landing__content">
-      <!-- Slide 1: Question + Progress -->
-      <div class="landing__slide" id="slide-question">
-        <p class="landing__question" id="question"></p>
-        <div class="landing__progress" id="progress">
-          <div class="landing__progress-fill"></div>
+<BaseLayout title="UNNATURAL" description={BOOK_DESCRIPTION} cinematic>
+  <SiteHeader />
+  <main class="book-page" id="main-content">
+    <section class="opening" aria-labelledby="opening-title">
+      <div>
+        <p class="book-kicker">An online book · Philosophy in ordinary life</p>
+        <h1 class="book-title" id="opening-title">A message.<br />No reply.<br /><em>A whole world.</em></h1>
+        <p class="book-lead">The screen hasn't changed. Your explanation has changed three times.</p>
+        <div class="book-actions">
+          <a class="book-button" href="/chapters/prologue">Begin with the silence →</a>
+          <a class="book-link" href="/explore">See the book</a>
         </div>
+        <ResumeReading />
       </div>
-
-      <!-- Slide 2: Title + Because + Enter (all animations happen here) -->
-      <div class="landing__slide" id="slide-reveal">
-        <p class="landing__question-echo" id="question-echo"></p>
-        <div class="landing__title" id="title">
-          <div class="landing__word-group">
-            <span class="landing__word">UNNATURAL</span>
-            <p class="landing__because" id="because-1">
-              Because you have free admin access to the information realm.
-            </p>
-          </div>
-          <div class="landing__word-group">
-            <span class="landing__word">INFORMATION</span>
-            <p class="landing__because" id="because-2">
-              Because the part that can know itself lives in pattern in substrate.
-            </p>
-          </div>
-        </div>
-        <a href="/explore" class="landing__enter" id="enter">ENTER</a>
+      <aside class="invitation" aria-label="An imagined invitation">
+        <p class="book-kicker">Friday, 6:04 pm</p>
+        <blockquote>“Dinner at mine next week?”</blockquote>
+        <p class="invitation__silence" aria-hidden="true">· &nbsp; · &nbsp; ·</p>
+        <p>Busy. Annoyed. Never liked you.<br />Or perhaps the phone is in another room.</p>
+        <details>
+          <summary>What do you actually know?</summary>
+          <p>An invitation was sent. A reply has not arrived. The rest may be possible. It is still a story.</p>
+          <a class="book-link" href="/practice/notebook">Try this with a moment of your own →</a>
+        </details>
+      </aside>
+    </section>
+    <section class="book-section" aria-labelledby="book-about">
+      <p class="book-kicker">The familiar, made strange</p>
+      <h2 id="book-about">How much of your world<br />did you quietly help make?</h2>
+      <div class="book-copy">
+        <p>UNNATURAL follows that question from a private wish to a shared world. We meet a label that sticks, a plan that fails, a meal that becomes something nobody quite intended.</p>
+        <p>Along the way, you can practise noticing what moves you, questioning the accounts you live by, and choosing what to do with them. Some questions lead to an experiment. Some ask you to stay a little longer.</p>
+        <p>No philosophy background needed. This is a book in progress, with short working drafts and optional exercises. You are welcome to argue with it.</p>
       </div>
-    </div>
+    </section>
+    <section class="book-section" aria-labelledby="journey-title">
+      <h2 id="journey-title">One question opens another.</h2>
+      <ol class="book-acts">
+        {ACTS.map(act => <li><a class="book-act" href={`/acts/${act.key}`} style={`--act-color: ${act.color}`}>
+          <span class="book-act__num" aria-hidden="true">{act.roman}</span>
+          <div><h3>{act.name}</h3><p>{act.premise}</p><small>Enter Act {act.roman} →</small></div>
+        </a></li>)}
+      </ol>
+    </section>
+    <section class="book-section">
+      <h2>You can start with something small.</h2>
+      <p>A disagreement, a description of yourself, or a choice you keep putting off. Bring one along. See whether it looks different by the time you leave.</p>
+      <div class="book-actions"><a class="book-button" href="/chapters/prologue">Start reading →</a><a class="book-link" href="/practice">Explore the exercises</a></div>
+    </section>
   </main>
-
-  <script define:vars={{ questions }}>
-    const question = questions[Math.floor(Math.random() * questions.length)];
-    document.getElementById('question').textContent = question;
-    document.getElementById('question-echo').textContent = question.toUpperCase();
-  </script>
+  <SiteFooter />
 </BaseLayout>
-
 <style>
-  .landing {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--space-8);
-    overflow: hidden;
-  }
-
-  .landing__content {
-    text-align: center;
-    max-width: 40rem;
-    position: relative;
-  }
-
-  /* Slides */
-  .landing__slide {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    view-transition-name: slide;
-  }
-
-  .landing__slide.active {
-    display: flex;
-  }
-
-  /* Question - elegant italic with subtle warmth */
-  .landing__question {
-    font-family: var(--font-display);
-    font-variation-settings: "opsz" 48, "wght" 320, "SOFT" 80;
-    font-style: italic;
-    font-size: clamp(1.5rem, 5vw, 2.25rem);
-    color: var(--color-ink);
-    margin: 0 0 var(--space-10);
-    text-shadow: 0 0 40px rgba(232, 232, 232, 0.15);
-  }
-
-  .landing__progress {
-    width: 160px;
-    height: 2px;
-    background: var(--color-rule);
-    overflow: hidden;
-  }
-
-  .landing__progress-fill {
-    height: 100%;
-    width: 0;
-    background: var(--color-ink-faint);
-    animation: fillProgress 2.5s linear forwards;
-  }
-
-  /* Echo question */
-  .landing__question-echo {
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    font-weight: 350;
-    letter-spacing: 0.3em;
-    color: var(--color-ink-ghost);
-    margin: 0 0 var(--space-12);
-    min-height: 1.2em;
-    text-shadow: 0 0 20px rgba(232, 232, 232, 0.08);
-    opacity: 0;
-    transition: opacity 1200ms linear;
-  }
-
-  .landing__question-echo.visible {
-    opacity: 1;
-  }
-
-  /* Title container - gap animates for separation */
-  .landing__title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.15rem;
-    transition: gap 1400ms linear;
-  }
-
-  .landing__title.separated {
-    gap: var(--space-12);
-  }
-
-  .landing__word-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 1200ms linear;
-  }
-
-  .landing__word-group.visible {
-    opacity: 1;
-  }
-
-  .landing__word {
-    font-family: var(--font-display);
-    font-variation-settings: "opsz" 144, "wght" 280, "SOFT" 20;
-    font-size: clamp(2.8rem, 14vw, 4.5rem);
-    letter-spacing: var(--title-tracking, 0.32em);
-    color: var(--color-ink);
-    line-height: 1;
-    text-shadow:
-      0 0 30px rgba(232, 232, 232, 0.25),
-      0 0 60px rgba(232, 232, 232, 0.15),
-      0 0 100px rgba(232, 232, 232, 0.08);
-  }
-
-  /* Differentiate the two words */
-  .landing__word-group:first-child .landing__word {
-    font-variation-settings: "opsz" 144, "wght" 260, "SOFT" 10;
-  }
-
-  .landing__word-group:last-child .landing__word {
-    font-variation-settings: "opsz" 144, "wght" 300, "SOFT" 30;
-    letter-spacing: 0.28em;
-  }
-
-  .landing__because {
-    font-family: var(--font-body);
-    font-style: italic;
-    font-size: clamp(0.8rem, 2.5vw, 1rem);
-    font-weight: 400;
-    color: var(--color-ink-muted);
-    letter-spacing: 0.01em;
-    margin: var(--space-4) 0 0 0;
-    max-width: 32rem;
-    line-height: 1.6;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 1200ms linear,
-                transform 1200ms linear,
-                text-shadow 1200ms linear;
-  }
-
-  .landing__because.visible {
-    opacity: 1;
-    transform: translateY(0);
-    text-shadow: 0 0 30px rgba(232, 232, 232, 0.1);
-  }
-
-  .landing__enter {
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.4em;
-    color: var(--color-ink-faint);
-    text-decoration: none;
-    margin-top: var(--space-16);
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 1100ms linear,
-                transform 1100ms linear,
-                color var(--dur-fast);
-  }
-
-  .landing__enter.visible {
-    opacity: 1;
-    transform: translateY(0);
-    text-shadow: 0 0 20px rgba(232, 232, 232, 0.12);
-  }
-
-  .landing__enter:hover {
-    color: var(--color-ink);
-    text-shadow: 0 0 30px rgba(232, 232, 232, 0.25);
-  }
-
-  @keyframes fillProgress {
-    to { width: 100%; }
-  }
-
-  /* View Transition for slide change */
-  ::view-transition-old(slide) {
-    animation: fade-out 1400ms linear forwards;
-  }
-
-  ::view-transition-new(slide) {
-    animation: fade-in 1400ms linear forwards;
-  }
-
-  @keyframes fade-out {
-    0% { opacity: 1; transform: translateY(0); }
-    100% { opacity: 0; transform: translateY(-12px); }
-  }
-
-  @keyframes fade-in {
-    0% { opacity: 0; transform: translateY(12px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-
-  ::view-transition-group(slide) {
-    animation-duration: 1400ms;
-    animation-timing-function: linear;
-  }
-
-  ::view-transition-image-pair(slide) {
-    isolation: isolate;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    ::view-transition-old(slide),
-    ::view-transition-new(slide) {
-      animation: none;
-    }
-  }
-
-  /* Mobile adjustments */
-  @media (max-width: 640px) {
-    .landing {
-      padding: var(--space-6);
-    }
-
-    .landing__question-echo {
-      letter-spacing: 0.15em;
-      font-size: 0.5rem;
-      margin-bottom: var(--space-8);
-    }
-
-    .landing__title.separated {
-      gap: var(--space-8);
-    }
-
-    .landing__word {
-      letter-spacing: 0.12em;
-    }
-
-    .landing__word-group:last-child .landing__word {
-      letter-spacing: 0.1em;
-    }
-
-    .landing__because {
-      font-size: 0.75rem;
-      padding: 0 var(--space-2);
-    }
-
-    .landing__enter {
-      margin-top: var(--space-10);
-      letter-spacing: 0.25em;
-    }
-  }
+  .opening { display: grid; grid-template-columns: 1.35fr 1fr; gap: var(--space-12); align-items: center; padding: var(--space-8) 0 var(--space-12); }
+  .opening .book-title { font-size: clamp(3.3rem, 7vw, 6rem); }
+  .opening em { color: var(--color-act-i); font-weight: inherit; }
+  .opening .book-lead { max-width: 28ch; font-size: var(--text-lg); }
+  .invitation { border-top: 1px solid var(--color-rule); border-bottom: 1px solid var(--color-rule); padding: var(--space-8) 0; transform: rotate(-1deg); }
+  .invitation blockquote { font: 350 clamp(1.6rem, 3vw, 2.2rem)/1.35 var(--font-display); }
+  .invitation > p:not(.book-kicker) { color: var(--color-ink-muted); font-size: var(--text-base); }
+  .invitation__silence { margin: var(--space-8) 0; }
+  .invitation details { font-size: var(--text-sm); }
+  .invitation summary { color: var(--color-act-ii); }
+  @media (max-width: 48rem) { .opening { grid-template-columns: 1fr; gap: var(--space-10); padding-top: 0; } .invitation { max-width: 30rem; transform: none; } }
 </style>
-
-<script>
-  const slideQuestion = document.getElementById('slide-question');
-  const slideReveal = document.getElementById('slide-reveal');
-  const questionEcho = document.getElementById('question-echo');
-  const title = document.getElementById('title');
-  const wordGroups = document.querySelectorAll('.landing__word-group');
-  const because1 = document.getElementById('because-1');
-  const because2 = document.getElementById('because-2');
-  const enter = document.getElementById('enter');
-
-  let stage = 0; // 0 = question, 1 = animating, 2 = complete
-
-  slideQuestion.classList.add('active');
-
-  async function transitionToReveal() {
-    if (stage !== 0) return;
-    stage = 1;
-
-    // View transition to reveal slide
-    if (document.startViewTransition) {
-      await document.startViewTransition(() => {
-        slideQuestion.classList.remove('active');
-        slideReveal.classList.add('active');
-      }).finished;
-    } else {
-      slideQuestion.classList.remove('active');
-      slideReveal.classList.add('active');
-    }
-
-    // Sequence the reveal animations
-    // 1. Echo question + word groups fade in
-    questionEcho.classList.add('visible');
-    wordGroups.forEach(g => g.classList.add('visible'));
-
-    // 2. After words visible, separate them
-    setTimeout(() => {
-      title.classList.add('separated');
-    }, 1000);
-
-    // 3. First because
-    setTimeout(() => {
-      because1.classList.add('visible');
-    }, 2200);
-
-    // 4. Second because
-    setTimeout(() => {
-      because2.classList.add('visible');
-    }, 3200);
-
-    // 5. Enter
-    setTimeout(() => {
-      enter.classList.add('visible');
-      stage = 2; // Animation complete
-    }, 4200);
-  }
-
-  function skipToEnd() {
-    if (stage === 2) {
-      // Already complete - navigate to explore
-      window.location.href = '/explore';
-      return;
-    }
-
-    if (stage === 1) {
-      // Animation in progress - skip to end and navigate
-      window.location.href = '/explore';
-      return;
-    }
-
-    // Stage 0 - skip animation, show final state, then navigate on next click
-    stage = 2;
-    slideQuestion.classList.remove('active');
-    slideReveal.classList.add('active');
-    questionEcho.classList.add('visible');
-    wordGroups.forEach(g => g.classList.add('visible'));
-    title.classList.add('separated');
-    because1.classList.add('visible');
-    because2.classList.add('visible');
-    enter.classList.add('visible');
-  }
-
-  // Auto-advance after progress (2.5s)
-  setTimeout(transitionToReveal, 2500);
-
-  // Click or key to skip/navigate
-  document.addEventListener('click', (e) => {
-    // Don't intercept the ENTER link click
-    if (e.target.closest('.landing__enter')) return;
-    skipToEnd();
-  });
-
-  document.addEventListener('keydown', skipToEnd);
-</script>

@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { ACTS, draftLabel, readingMinutes } from '../lib/book';
 
 interface Props {
   chapters: CollectionEntry<'chapters'>[];
@@ -10,16 +11,15 @@ const { chapters } = Astro.props;
 const sorted = [...chapters].sort((a, b) => a.data.order - b.data.order);
 
 const GROUPS = [
-  { key: 'prologue',       label: 'Prologue',             roman: '',    color: 'var(--color-ink-muted)', cls: 'prologue' },
-  { key: 'volo-ergo-sum',  label: 'Volo Ergo Sum',        roman: 'I',   color: 'var(--color-act-i)',      cls: 'i' },
-  { key: 'initd',          label: 'init.d',                roman: 'II',  color: 'var(--color-act-ii)',     cls: 'ii' },
-  { key: 'mmm',            label: 'MMM',                  roman: 'III', color: 'var(--color-act-iii)',    cls: 'iii' },
-  { key: 'epilogue',       label: 'Epilogue',             roman: '',    color: 'var(--color-ink-muted)', cls: 'epilogue' },
+  { key: 'preface', label: 'Preface', alias: '', roman: '', cls: 'preface' },
+  { key: 'prologue', label: 'Prologue', alias: '', roman: '', cls: 'prologue' },
+  ...ACTS.map(({ key, name, alias, roman, cls }) => ({ key, label: name, alias, roman, cls })),
+  { key: 'epilogue', label: 'Epilogue', alias: '', roman: '', cls: 'epilogue' },
 ] as const;
 ---
 
 <nav class="toc" aria-label="Table of contents">
-  {GROUPS.map(({ key, label, roman, cls }) => {
+  {GROUPS.map(({ key, label, alias, roman, cls }) => {
     const group = sorted.filter((c) => c.data.act === key);
     if (group.length === 0) return null;
     const hasRoman = Boolean(roman);
@@ -31,6 +31,7 @@ const GROUPS = [
               <span class="toc__roman" aria-hidden="true">{roman}</span>
             )}
             <span class="toc__group-label">{label}</span>
+            {alias && <span class="toc__group-alias">({alias})</span>}
             <span class="toc__count" aria-hidden="true">{String(group.length).padStart(2, '0')}</span>
           </div>
           <span class="toc__summary-chev" aria-hidden="true">↓</span>
@@ -48,6 +49,7 @@ const GROUPS = [
                 {chapter.data.subtitle && (
                   <span class="toc__subtitle">{chapter.data.subtitle}</span>
                 )}
+                <span class="toc__meta">{draftLabel(chapter.data.status)} · {readingMinutes(chapter.body)} min read</span>
               </a>
             </li>
           ))}
@@ -72,6 +74,7 @@ const GROUPS = [
   .toc__group--ii       { --toc-color: var(--color-act-ii); }
   .toc__group--iii      { --toc-color: var(--color-act-iii); }
   .toc__group--prologue,
+  .toc__group--preface,
   .toc__group--epilogue { --toc-color: var(--color-ink-muted); }
 
   .toc__summary {
@@ -115,6 +118,12 @@ const GROUPS = [
     font-size: var(--text-xl);
     color: var(--toc-color);
     letter-spacing: -0.005em;
+  }
+  .toc__group-alias {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--color-ink-muted);
+    letter-spacing: 0.04em;
   }
 
   .toc__count {
@@ -197,6 +206,14 @@ const GROUPS = [
     font-style: italic;
     color: var(--color-ink-muted);
     line-height: 1.4;
+  }
+  .toc__meta {
+    grid-column: 2;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+    color: var(--color-ink-faint);
+    text-transform: uppercase;
   }
 
   @media (min-width: 62rem) {

@@ -1,75 +1,49 @@
 ---
-title: "How to Live Better, Given Everything"
-subtitle: "The framework applied"
+title: "A Better Tuesday, Perhaps"
+subtitle: "One change, its limits, and a return"
 act: mmm
-actTitle: "MMM"
+actTitle: "How We Learn, Create, and Change"
 chapterNumber: 23
 order: 23
-summary: "Self-esteem, trust, relationships, exercise, money, meaning. Each examined through the three-act lens. Act I: what do I want and fear? Act II: what model of self am I trapped in? Act III: what measurements, models, and manifestations would actually help?"
-themes: ["self-esteem", "trust", "relationships", "money", "meaning", "application"]
+summary: "A complete ordinary case turns the framework into a bounded experiment. It includes material constraints, help, rest, an if-then plan, a stopping rule, and a later review rather than promising a universal route to living well."
+themes: ["practice", "implementation", "material-conditions", "care", "revision"]
 status: draft
 draft: false
 furtherReading:
-  - author: "Daniel Kahneman"
-    title: "Thinking, Fast and Slow"
-    year: 2011
-    note: "System 1 as the background model-layer: the chapter's project is making automatic, invisible models legible to the slower, deliberate mind."
-  - author: "Hayes, Strosahl & Wilson"
-    title: "Acceptance and Commitment Therapy"
-    year: 2012
-    note: "Six ACT processes map cleanly onto Measure/Model/Manifest; psychological flexibility is the operational version of living the MMM loop. Over 1,200 RCTs."
-  - author: "Viktor Frankl"
-    title: "Man's Search for Meaning"
-    year: 1946
-    note: "Logotherapy: meaning as the primary motivational force; the existential vacuum (emptiness) is the pathology the MMM framework is designed to address."
-  - author: "Epictetus"
-    title: "Enchiridion"
-    year: 135
-    note: "The dichotomy of control: what lies in our judgments and what does not. Prohairesis (the rational choice-faculty) is the Model-revision faculty applied to emotional response."
-  - author: "Irvin Yalom"
-    title: "Existential Psychotherapy"
-    year: 1980
-    note: "Four ultimate concerns (death, freedom, isolation, meaninglessness): defective background models around each generate specific, recognisable pathologies."
-  - author: "Carl Rogers"
-    title: "The Necessary and Sufficient Conditions of Therapeutic Personality Change"
-    year: 1957
-    note: "Unconditional positive regard creates a relational scaffold in which the client's Measure step can function without distortion; trust enables accurate sensing."
-  - author: "Santideva"
-    title: "Bodhicaryavatara (The Way of the Bodhisattva)"
-    year: 700
-    note: "Patient attention to others' suffering as the foundation of how to live; the capability approach has roots here, before economics formalised it."
-  - author: "Martha Nussbaum"
-    title: "The Fragility of Goodness"
-    year: 1986
-    note: "Vulnerability as a condition for flourishing, not a defect: what it means to live well under genuine uncertainty rather than in spite of it."
-  - author: "Amartya Sen"
-    title: "Development as Freedom"
-    year: 1999
-    note: "Capabilities rather than utility: what matters is what people are able to do and be. The framework applied at civilisational scale."
+  - author: "Peter M. Gollwitzer and Paschal Sheeran"
+    title: "Implementation Intentions and Goal Achievement"
+    year: 2006
+    note: "Reviews evidence that cue-linked plans can support goal pursuit in many studied settings, with variable effects."
+  - author: "Matthew A. Killingsworth, Daniel Kahneman, and Barbara Mellers"
+    title: "Income and Emotional Well-Being: A Conflict Resolved"
+    year: 2023
+    note: "Finds a complex association between income and reported well-being; it does not support the slogan that money simply stops mattering."
 ---
 
-A theory that does not change a Tuesday is decoration. This chapter is the part where we stop describing the loop and start using it on the things people actually wake up worrying about: self-esteem, trust, relationships, exercise, money, meaning. Each one, taken through the three acts, looks different than it does on the cover of a self-help book: usually less dramatic, often more tractable.
+Imagine Maya, who keeps missing dinner with her housemate. At first she calls it a discipline problem. She opens her laptop at five, answers “one last message,” and looks up at eight.
 
-The pattern is the same every time. Act I: what is being wanted, and what is being feared into not-wanting? Act II: what self-model and world-model are running in the background? Act III: what measurement, model, or manifestation is missing?
+Learning begins with a week of modest observation. The late nights cluster on days when her supervisor sends requests near closing. Her story—*I have no self-control*—fits some facts but omits the workplace expectation and her fear that refusing will affect her hours.
 
-## Key moves
+Creating turns the problem into a small attempt. Maya cannot redesign her job alone. She can ask her supervisor which late requests are truly urgent, speak with coworkers about the pattern, and set one cue: *If a non-urgent request arrives after 5:30, I will record it for tomorrow and send the agreed reply.* She and her housemate choose two dinners rather than demanding perfection. They set a review date one week away.
 
-- *Self-esteem* is not a feeling to be earned but a self-model that survives contact with what you actually do. Update by manifesting things you respect and measuring honestly afterwards.
-- *Trust* is intersubjective MMM: two people slowly building a shared model of one another by repeatedly measuring each other's small manifestations.
-- *Relationships* live or die at the measurement stage. Most failures are not "we stopped loving" but "we stopped looking." Re-measurement is usually the cheapest intervention.
-- *Exercise* is one of the most reliable manifestations available because the feedback loop is short and the measurements are honest. Pick a thing; measure it; the model updates itself.
-- *Money* is an institution-grade thingification. Better living with money is almost always better modelling (what is it for, on what timescale, with whom) rather than more of it.
-- *Meaning* is the loop running on a long enough timescale that you can feel it accumulating. When meaning is missing, the loop has either narrowed to one domain or gone fully inward.
-- The general move: when stuck, ask which of the three is starving. Almost always one of them is, and almost always the others can't compensate.
+Becoming matters too. One evening Maya notices that she is exhausted and orders food rather than converting dinner into another performance. On another, she listens when her housemate says the issue is not the meal but uncertainty. The answer becomes a short message when plans change. No revelation occurs. The week becomes slightly more livable.
 
-## Where this touches lived life
+At review, the plan has worked twice and failed once when the supervisor marked everything urgent. That result supports neither “the method works” nor “Maya failed.” It suggests a new question about authority and staffing. The next response may require collective action, formal protection, a different schedule, or eventually another job. Inner reframing cannot make an unsafe or exploitative setting healthy.
 
-- A weekly thirty-minute "what am I actually doing and why" measurement, written down, shifts more than most therapy modalities, because it forces the loop to turn at all.
-- Most "communication problems" in couples are measurement problems. Once both people are looking at the same thing, the conversation becomes possible.
-- Career suffering, in mid-life, is overwhelmingly stalled-loop suffering. The fix is rarely a new job; it is a turn of the loop on the question of what work is for.
+Money deserves the same seriousness. Someone choosing among affordable pleasures may benefit from examining what purchases are for. Someone unable to cover food, housing, care, or transport may chiefly need money and structural support. Research relating income and well-being is more complicated than the slogan that money stops mattering, and an association across people does not predict one person's life. Material sufficiency is not a modeling error.
 
-## What we're not claiming
+Use the framework where it fits:
 
-- Not that this is a substitute for clinical care. Some forms of suffering require help that no framework provides.
-- Not that the loop "fixes" everything. Some things in life are not problems to be solved; they are conditions to be lived with attention.
-- Not that the worked examples here exhaust the framework. They are five doors into a house with many rooms.
+1. Choose one small change, not an identity.
+2. Name the cue: *If this happens...*
+3. Name a manageable response: *...then I will do this.*
+4. Add a limit or stopping rule.
+5. Predict what you expect and name another plausible explanation.
+6. Choose a date to return.
+7. At review, record what happened, what remains unknown, and whether the problem needs information, action, receptivity, rest, repair, outside help, or acceptance of loss.
+
+This is an experiment, not a treatment. Reflection may help some ordinary stuckness. Clinical suffering can require professional care; danger can require protection; loneliness may require other people rather than better private technique. There are losses no plan repairs.
+
+Living better is also not continuous improvement. It includes maintaining a body, keeping company, doing invisible work fairly, enjoying what is enough, and allowing an evening to end.
+
+One chapter remains. It asks how to tell whether our revised account deserves more confidence—and whether everyone affected had a fair chance to speak.

@@ -1,69 +1,41 @@
 ---
-title: "MMM as the Lived Experience of Growth"
-subtitle: "The central synthesis"
+title: "Loops That Learn—and Loops That Don't"
+subtitle: "Revision without the upward spiral"
 act: mmm
-actTitle: "MMM"
+actTitle: "How We Learn, Create, and Change"
 chapterNumber: 18
 order: 18
-summary: "Growth feels like better measurement, richer models, more effective manifestation, whether an organism evolves, a child learns language, a person masters a skill, a couple learns trust, or a civilisation builds science. This loop is the most meta process we can observe: the same shape re-appears every time someone tries to describe what agency or intelligence even is, including in Dupoux, LeCun, and Malik's recent three-system architecture for autonomous learning."
-themes: ["growth", "learning", "MMM", "recursion", "complexity", "synthesis", "agency", "meta"]
+summary: "Learning, creating, and becoming often feed one another, but repetition can improve, preserve, worsen, or merely change a situation. The framework is a comparison across experiences, not one mechanism running everywhere."
+themes: ["mmm", "feedback", "failure", "growth", "revision"]
 status: draft
 draft: false
 furtherReading:
-  - author: "David Kolb"
-    title: "Experiential Learning"
-    year: 1984
-    note: "Four-stage cycle (Experience to Reflection to Conceptualisation to Experimentation): MMM at pedagogical scale, drawing on Dewey, Piaget, and Lewin."
-  - author: "Argyris & Schon"
-    title: "Organizational Learning"
-    year: 1978
-    note: "Single-loop vs double-loop learning: optimising within a model vs replacing the model itself. Organizations systematically resist the second."
-  - author: "John Boyd"
-    title: "Destruction and Creation"
-    year: 1976
-    note: "OODA loop: Orient (the Model step) is where the real competitive advantage lives; speed through the loop beats better sensors or stronger action."
-  - author: "Gregory Bateson"
-    title: "Steps to an Ecology of Mind"
-    year: 1972
-    note: "Learning I/II/III hierarchy: Learning III is radical recontextualization, rare, difficult, and often accompanied by the dissolution of self."
-  - author: "Jean Piaget"
-    title: "The Psychology of Intelligence"
-    year: 1950
-    note: "Assimilation and accommodation: the organism fits experience to existing schema, or changes the schema to fit. Equilibration drives development."
-  - author: "Lev Vygotsky"
-    title: "Thought and Language"
-    year: 1934
-    note: "Zone of proximal development: the MMM loop is most generative not at mastered skills or impossible tasks but at the edge of current competence."
-  - author: "Emmanuel Dupoux, Yann LeCun & Jitendra Malik"
-    title: "Why AI systems don't learn and what to do about it: Lessons on autonomous learning from cognitive science"
-    year: 2026
-    note: "Proposes a three-system architecture for autonomous intelligence: System A (observation learning), System B (active-behavior learning), and System M (meta-control that switches between them). A structural echo of Measure, Model, Manifest: the same three-layer shape reappearing from a different discipline. Independent convergence, not influence."
+  - author: "W. Ross Ashby"
+    title: "An Introduction to Cybernetics"
+    year: 1956
+    note: "A foundational account of regulation and feedback, useful for comparing rather than identifying different adaptive processes."
+  - author: "John Dewey"
+    title: "Experience and Education"
+    year: 1938
+    note: "Argues that experiences can enable or obstruct later experience; experience alone does not guarantee growth."
 ---
 
-Three chapters ago we split the loop into pieces because that is how books work. From the inside, it is one motion. You notice something. The noticing rearranges what you think is going on. The rearrangement makes you do something slightly different. The slightly different thing teaches you what to notice next. Repeat.
+The second attempt at dinner is worse.
 
-This is what learning feels like. Also: what evolution looks like, if you film it for a few million years. Also: what a relationship is, when it is alive. The loop is not a metaphor borrowed from one domain and stretched over others. It is the same shape, running on different substrates, at very different speeds.
+After the salty soup, the cook decides that precision is everything. Every ingredient is weighed. Nobody is allowed to improvise. The food improves, perhaps, but the kitchen becomes tense and the friend who used to bring a surprise dish stops offering. Feedback has occurred. A lesson has been learned. The result is still a loss.
 
-That is why we call it the most meta process we can observe. Every time someone tries to write down what it takes to be an agent, in biology, in psychology, in AI, a three-layer structure keeps falling out of the attempt. In 2026, Dupoux, LeCun, and Malik described autonomous intelligence as the interplay of *observation learning* (a system that learns by watching), *active-behavior learning* (a system that learns by doing), and *meta-control* (a faculty that chooses between them). Different vocabulary, same shape: sense the world, model the world by acting on it, manage the whole process one level up. This book will not argue the match is exact. It is structural, not detailed. The point is that when the shape keeps recurring across independent attempts to describe agency, it is probably tracking something real about what being an agent requires.
+Loops do not always spiral upward. Repetition can sharpen a skill, entrench a fear, preserve a relationship, exhaust a resource, or simply make a different mistake.
 
-## Key moves
+The three modes often feed one another. Observation changes an explanation; an attempt reveals a constraint; quiet attention notices a possibility the plan excluded. From inside, this may feel less like three machines than a conversation: *What is happening? What can I try? What am I not allowing myself to see?* The distinctions help us enter that conversation, but they do not establish one universal mechanism beneath it.
 
-- Growth, from the inside, is the felt experience of the MMM loop turning: better measurement, richer models, more effective manifestation.
-- The same loop runs in an organism evolving, a child learning a language, an adult mastering a skill, a couple learning trust, a civilisation building science.
-- Each turn of the loop is a small spiral, not a circle: you do not return to the same place; you return slightly higher up, holding a slightly larger world.
-- Growth, in this sense, is *growth in complexity*: not "more stuff" but "more capacity to handle structured difference."
-- The loop can stall at any of its three points. Stalled measurement: you stop noticing. Stalled modelling: you keep noticing the same thing. Stalled manifesting: you keep modelling without acting.
-- Most felt suffering, when not from acute physical cause, is a stalled loop. Movement returns when the missing move is identified.
+Compare three cases. A child learning a word changes behavior within one lifetime. A population of insects changes over generations as inherited variations meet selection and chance. A committee revises a rule after complaints. All involve difference and change. Yet their mechanisms, units, timescales, and standards of success differ. Calling each a loop can orient attention; it cannot replace the particular explanation.
 
-## Where this touches lived life
+This matters because attractive patterns invite counterfeit proof. If an artificial-intelligence paper divides learning into observation, active behavior, and meta-control, its three-part structure may be interesting beside MMM. It does not independently validate Measure, Model, Manipulate; Map, Move, Make; or Marvel, Meander, Manifest. The parts do different work. A resemblance is a prompt for comparison, not a scientific result smuggled into the book.
 
-- Boredom is rarely lack of stimulation. It is usually a loop that has nothing new to measure, because attention has narrowed.
-- Mid-life crises tend to be old self-models that the world has outgrown. The fix is a new turn of the loop, not a sports car.
-- Skill plateaus break when one of the three moves gets sharper. Coaches who help most are usually upgrading the measurement, not the effort.
+Growth also needs a narrower name. Sometimes it means more skill or a wider range of responses. Sometimes living well means maintaining what is already valuable: taking medication, watering a plant, keeping a promise, resting. Sometimes capacity diminishes and life remains meaningful. Someone adapting to chronic illness may be learning limits rather than climbing beyond them.
 
-## What we're not claiming
+When a pattern repeats painfully, MMM can offer questions, not a diagnosis. What changed in the observations? Which explanation became protected? What action kept reproducing the same consequence? What was never given room? But suffering may also arise from bereavement, illness, violence, poverty, discrimination, overwork, or causes no personal framework can settle. Reflection can accompany care and collective change; it does not outrank them.
 
-- Not that the loop is the only thing happening. There are processes (grief, gestation, healing) where the loop is present but not central.
-- Not that more loops per minute is better. Some loops should turn slowly. Some should be allowed to rest.
-- Not that we have a complete account of *why* the loop runs at all. The conditions under which it starts and stops are still partly open.
+Return to one recent attempt that went poorly. Identify an observation, the story attached to it, an action, and what followed. Then write one alternative explanation and one condition outside your control. The aim is not to discover the correct mode by introspection. It is to make the next claim smaller and the next response more answerable to reality.
 
+Our attempts leave traces: recipes, habits, tools, schedules, rules. The next question is what those traces remember—and what they forget.

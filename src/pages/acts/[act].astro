@@ -3,41 +3,14 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
-
-const ACT_DATA = {
-  'volo-ergo-sum': {
-    roman: 'I',
-    name: 'Volo Ergo Sum',
-    tagline: 'I will, therefore I am.',
-    premise: 'Before thought, before feeling, something leans. A bacterium follows sugar. A person follows a hunch. The whole stack starts with a tilt.',
-    color: 'var(--color-act-i)',
-    cls: 'i',
-  },
-  'initd': {
-    roman: 'II',
-    name: 'init.d',
-    tagline: 'Finite beings in an infinite universe.',
-    premise: 'Finite beings cannot take in the whole thing. We carve, name, sort, and simplify. Distinction is how a mind gets started without melting.',
-    color: 'var(--color-act-ii)',
-    cls: 'ii',
-  },
-  'mmm': {
-    roman: 'III',
-    name: 'MMM',
-    tagline: 'Growth is a good loop.',
-    premise: 'Measure, Model, Manifest. Notice the world, make a better map, do something with it, then let the world answer back.',
-    color: 'var(--color-act-iii)',
-    cls: 'iii',
-  },
-} as const;
+import { ACTS, draftLabel, readingMinutes } from '../../lib/book';
 
 export function getStaticPaths() {
-  const ACT_DATA_KEYS = ['volo-ergo-sum', 'initd', 'mmm'] as const;
-  return ACT_DATA_KEYS.map((act) => ({ params: { act } }));
+  return ACTS.map(({ key }) => ({ params: { act: key } }));
 }
 
-const { act } = Astro.params as { act: keyof typeof ACT_DATA };
-const actData = ACT_DATA[act];
+const act = Astro.params.act ?? 'volo-ergo-sum';
+const actData = ACTS.find(({ key }) => key === act)!;
 
 const allChapters = await getCollection('chapters', ({ data }) => !data.draft);
 const actChapters = allChapters
@@ -47,7 +20,7 @@ const actChapters = allChapters
 
 <BaseLayout title={actData.name} description={actData.premise} cinematic>
   <SiteHeader />
-  <main class={`ap ap--${actData.cls}`} style={`--acc: ${actData.color}`}>
+  <main id="main-content" class={`ap ap--${actData.cls}`} style={`--acc: ${actData.color}`}>
 
     <!-- Watermark numeral — fixed to viewport, atmospheric -->
     <span class="ap__watermark" aria-hidden="true">{actData.roman}</span>
@@ -67,6 +40,7 @@ const actChapters = allChapters
           <span class="ap__numeral" aria-hidden="true">{actData.roman}</span>
           <div class="ap__title-block">
             <h1 class="ap__name">{actData.name}</h1>
+            <p class="ap__alias">Also known as <em>{actData.alias}</em></p>
             <p class="ap__tagline">{actData.tagline}</p>
           </div>
         </div>
@@ -99,6 +73,7 @@ const actChapters = allChapters
                   {chapter.data.subtitle && (
                     <span class="chl__subtitle">{chapter.data.subtitle}</span>
                   )}
+                  <span class="chl__meta">{draftLabel(chapter.data.status)} · {readingMinutes(chapter.body)} min read</span>
                 </span>
                 <span class="chl__arrow" aria-hidden="true">→</span>
               </a>
@@ -219,6 +194,19 @@ const actChapters = allChapters
     letter-spacing: -0.015em;
     color: var(--color-ink);
     text-wrap: balance;
+  }
+  .ap__alias {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    color: var(--color-ink-muted);
+    text-transform: uppercase;
+  }
+  .ap__alias em {
+    font-family: var(--font-display);
+    font-size: 1.1em;
+    font-style: italic;
+    text-transform: none;
   }
 
   @media (min-width: 48rem) {
@@ -371,6 +359,13 @@ const actChapters = allChapters
     font-style: italic;
     color: var(--color-ink-muted);
     line-height: 1.4;
+  }
+  .chl__meta {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
   }
 
   .chl__arrow {

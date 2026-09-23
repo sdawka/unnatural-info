@@ -1,79 +1,41 @@
 ---
-title: "Thingification, or How Fog Becomes a Tax Code"
-subtitle: "Where the continuous becomes usable"
+title: "Thingification"
+subtitle: "How a useful label starts acting like furniture"
 act: initd
-actTitle: "init.d"
+actTitle: "How We Make Sense of Things"
 chapterNumber: 9
 order: 9
-summary: "Object formation, naming, categorisation, abstraction, identities, social roles, institution-making. Money and law as stabilised informational things. This chapter bridges metaphysics to daily life."
-themes: ["thingification", "objects", "categories", "abstraction", "institutions", "language"]
+summary: "We make followable things from a moving world: objects, roles, diagnoses, money, laws, and institutions. These classifications enable coordination and can reshape the people and places they describe."
+themes: ["thingification", "reification", "categories", "institutions", "identity", "social reality"]
 status: draft
 draft: false
 furtherReading:
+  - author: "Ian Hacking"
+    title: "Making Up People"
+    year: 1986
+    note: "Classifications of people can alter how people understand and act, changing the category in return."
   - author: "John Searle"
     title: "The Construction of Social Reality"
     year: 1995
-    note: "X counts as Y in context C: the mechanism by which collective declarations create institutional things with genuine causal power."
-  - author: "Alfred North Whitehead"
-    title: "Science and the Modern World"
-    year: 1925
-    note: "The fallacy of misplaced concreteness: mistaking an abstraction for the concrete reality from which it was abstracted."
-  - author: "Gyorgy Lukacs"
-    title: "History and Class Consciousness"
-    year: 1923
-    note: "Reification (Verdinglichung): dynamic human relations harden into thing-like objects and forget they were ever relations."
-  - author: "Eleanor Rosch"
-    title: "Principles of Categorization"
-    year: 1978
-    note: "Empirical: categories are prototype-structured with graded membership, not defined by necessary and sufficient conditions."
-  - author: "Hofstadter & Sander"
-    title: "Surfaces and Essences"
-    year: 2013
-    note: "Categories as frozen analogies: fog becomes tax code via the crystallisation of once-active comparisons into habitual classifications."
-  - author: "Wittgenstein"
-    title: "Philosophical Investigations"
-    year: 1953
-    note: "Family resemblance: no single property is shared by all members of a natural category, a philosophical result Rosch later confirmed empirically."
-  - author: "Berger & Luckmann"
-    title: "The Social Construction of Reality"
-    year: 1966
-    note: "The foundational sociology of how shared thingifications become taken-for-granted reality: habitualisation, institutionalisation, legitimation."
-  - author: "Bowker & Star"
-    title: "Sorting Things Out"
-    year: 1999
-    note: "Classification systems as moral and political acts. The lived cost of being placed in the wrong category is distributed unequally."
+    note: "An account of how shared rules create institutional facts such as money and offices."
   - author: "James C. Scott"
     title: "Seeing Like a State"
     year: 1998
-    note: "State simplification of complex reality produces both power and catastrophic failure. Legibility is a blade that cuts back."
-  - author: "David Graeber"
-    title: "The Utopia of Rules"
-    year: 2015
-    note: "Bureaucracy as crystallised thingification: how fog becomes not just a tax code but a structural instrument of control."
+    note: "Large institutions gain coordination through simplified categories, often at a human cost."
 ---
 
-Reality, considered honestly, is a fog. It is continuous, smeared, partly overlapping with itself, and refuses to come pre-packaged. *Things* are something we do to it. We name a region of fog, decide it has edges, give it a noun, and proceed to act as if the noun were the territory. This is *thingification*, and it is how a continuous world becomes a usable one.
+At the clinic, a person hears a name for the trouble they have been living with. The name may feel like a handrail: there are other people, there may be treatment, there is a form to fill in that makes the next step possible. It may also begin to follow them around, explaining too much.
 
-It is also how fog ends up writing tax codes.
+That is thingification. We take a shifting spread of events and treat it as one followable thing. A chair is a useful thingification of wood, joints, weight, function, and a place in a room. A “meeting” gathers people, time, agenda, expectation, and a video link into something we can attend or cancel. Names let us return to a pattern, reason about it, share it with strangers, and build plans around it.
 
-## Key moves
+The accomplishment is easy to underestimate. Without things, a grocery list would be a lyrical disaster. Without categories, a pharmacy could not coordinate medicine; without roles, a group dinner would never learn who bought the ice. Money, laws, corporations, marriages, and nations are not rocks. They are organized practices, records, expectations, and permissions. They are real in the way a queue is real: change the shared rule, and bodies immediately move differently.
 
-- Object formation is a working cut: deciding "this region of stuff coheres enough to be treated as one thing."
-- Naming is a force-multiplier. Once a thing has a name, it can be referred to, reasoned about, and traded, even by people who have never met it.
-- Categories are second-order things: thingifications of thingifications. Useful, dangerous, addictive.
-- Identities and social roles are thingifications applied to people, with the same benefits (legibility, coordination) and the same costs (oversimplification, capture).
-- Institutions (money, law, corporations, marriages, nations) are *very stable* informational things with very real physical consequences. They don't exist in the way rocks do, and they don't *not* exist either.
-- The continuous-to-discrete move is the bridge from metaphysics to daily life. Most of how a society works is downstream of how aggressively it has thingified.
+But classifications do more than describe. They can enter the lives they classify. A teenager called “gifted” may begin to avoid work that risks looking ordinary. A person called “difficult” may receive less patience and become more guarded. Hacking called this a looping effect: the label helps shape conduct, and the conduct then appears to confirm the label. This does not make diagnoses or identities fake. It makes their use consequential.
 
-## Where this touches lived life
+Consider a community garden. A plot number, a work rota, and a rule about water turn open ground into a shared project. They may make access possible. They may also quietly favor people with flexible work hours, money for tools, or confidence in meetings. The important question is not “Is the garden really a thing?” It plainly organizes real labor and food. The question is which arrangements it holds still, and who is asked to adjust themselves to them.
 
-- "I am a [job title]" is thingification working on you. It is also why losing the job hurts in a way that exceeds the loss of income.
-- A diagnosis can be a relief because it thingifies a fog you had been living inside. It can also be a trap if the thing-name starts doing more work than it earns.
-- Money is the most successful thingification in history. It runs the world, and it is, on inspection, made of nothing but agreement.
+There is a fair counterargument. Some things are not mere convenient cuts. A tree continues growing when no one has named it, and an illness can damage a body despite a bad diagnosis. Yes. Thingification does not claim that reality depends on our labels. It names the additional work labels do: making a part of reality portable through thought and social life.
 
-## What we're not claiming
+Try the [Shared garden](/practice/garden). Change one rule about access, work, or water and watch which needs become easier to meet and which become harder. A rule is never only a sentence.
 
-- Not that things are illusions. They are real *as* informational structures with physical consequences.
-- Not that all thingification is bad. We could not function without it. The claim is that it costs something, and we should see the cost.
-- Not that the continuous "underlying reality" is more true than the discrete one. Both are real. We get into how, in the next chapter.
-
+The garden rule is words on a page, yet it changes who carries water and who eats. How can a pattern of marks make a physical difference?

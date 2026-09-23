@@ -31,6 +31,45 @@ const firstShelf = [
   { author: "de Beauvoir", title: "The Ethics of Ambiguity", year: "1947" },
 ];
 
+const startingPoints = [
+  {
+    question: "How do I separate what happened from the story I added?",
+    source: "Notebook method — William James, Essays in Radical Empiricism",
+    purpose: "Begin with experience while keeping interpretation revisable.",
+    url: "https://plato.stanford.edu/entries/james/",
+  },
+  {
+    question: "Whose report is being ignored?",
+    source: "Miranda Fricker, Epistemic Injustice",
+    purpose: "See how credibility and missing concepts shape shared knowledge.",
+    url: "https://academic.oup.com/book/32817",
+  },
+  {
+    question: "How can people share a resource without one person controlling it?",
+    source: "Elinor Ostrom, Governing the Commons",
+    purpose: "Study rules, monitoring, conflict, and revision in shared institutions.",
+    url: "https://www.aeaweb.org/articles?id=10.1257/aer.100.3.641",
+  },
+  {
+    question: "How do I test an idea and remember what I learned?",
+    source: "Roediger & Karpicke, Test-Enhanced Learning",
+    purpose: "Use retrieval and delayed return as a concrete learning practice.",
+    url: "https://www.psychologicalscience.org/journals/psychological-science/j.1467-9280.2006.01693.x/",
+  },
+  {
+    question: "How can a small intention survive an ordinary day?",
+    source: "Gollwitzer & Sheeran, Implementation Intentions",
+    purpose: "Turn a chosen cue into a bounded if–then plan without promising success.",
+    url: "https://www.socmot.uni-konstanz.de/publications/implementation-intentions-and-goal-achievement-meta-analysis-effects-and-processes",
+  },
+  {
+    question: "Can philosophy become a repeated practice?",
+    source: "Pierre Hadot, Philosophy as a Way of Life",
+    purpose: "Read ancient philosophy as exercises that change attention and conduct.",
+    url: "https://www.wiley-vch.de/en/areas-interest/humanities-social-sciences/philosophy-as-a-way-of-life-978-0-631-18033-3",
+  },
+];
+
 const sections = [
   {
     id: "reference",
@@ -47,7 +86,7 @@ const sections = [
   },
   {
     id: "act-i",
-    label: "Act I — Volo Ergo Sum",
+    label: "Act I — What moves us",
     note: "Want, lean, motivation, care, direction, love, growth, meaning, subjectivity, and the possibility of moving from private orientation to shared reality.",
     subsections: [
       {
@@ -125,7 +164,7 @@ const sections = [
   },
   {
     id: "act-ii",
-    label: "Act II — init.d",
+    label: "Act II — How we make sense of things",
     note: "Carving, edges, maps, categories, good/bad, dualities, thingification, and the information/physical seam.",
     subsections: [
       {
@@ -211,11 +250,11 @@ const sections = [
   },
   {
     id: "act-iii",
-    label: "Act III — MMM",
+    label: "Act III — How we learn, create, and change",
     note: "Measurement theory, scientific modeling, cybernetics, predictive processing, active inference, autopoiesis, enactivism, complexity, and learning theory.",
     subsections: [
       {
-        label: "Measure",
+        label: "Learning: observe, explain, test",
         items: [
           "SEP: Measurement in Science",
           "Campbell, Stevens, Fechner — classical measurement / psychophysics",
@@ -229,7 +268,7 @@ const sections = [
         ],
       },
       {
-        label: "Model",
+        label: "Models and explanations",
         items: [
           "George Box — All models are wrong…",
           "Herbert Simon — The Sciences of the Artificial",
@@ -243,7 +282,7 @@ const sections = [
         ],
       },
       {
-        label: "Manifest",
+        label: "Creating: find your bearings, try, make",
         items: [
           "John Dewey — Experience and Nature; Human Nature and Conduct; Art as Experience",
           "Donald Schön — The Reflective Practitioner",
@@ -457,7 +496,7 @@ const sections = [
   cinematic
 >
   <SiteHeader />
-  <main class="reading-page">
+  <main id="main-content" class="reading-page">
     <div class="reading-page__container">
 
       <header class="reading-header">
@@ -469,6 +508,22 @@ const sections = [
           breadth with spine.
         </p>
       </header>
+
+      <section class="starting-points" aria-labelledby="starting-points-heading">
+        <h2 class="shelf-section__heading" id="starting-points-heading">Start with one question</h2>
+        <p class="shelf-section__note">
+          Pick a question that is alive for you. Each source is a doorway, not a required reading order.
+        </p>
+        <div class="starting-points__grid">
+          {startingPoints.map((point) => (
+            <article class="starting-point">
+              <h3 class="starting-point__question">{point.question}</h3>
+              <a class="starting-point__source" href={point.url} rel="noopener">{point.source} ↗</a>
+              <p class="starting-point__purpose">{point.purpose}</p>
+            </article>
+          ))}
+        </div>
+      </section>
 
       <section class="shelf-section">
         <h2 class="shelf-section__heading">A first shelf</h2>
@@ -532,6 +587,44 @@ const sections = [
   .reading-page__container {
     max-width: var(--page-max);
     margin: 0 auto;
+  }
+
+  .starting-points {
+    margin: var(--space-12) 0 var(--space-16);
+    padding: var(--space-8) 0;
+    border-top: 1px solid var(--color-rule);
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .starting-points__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: var(--space-4);
+  }
+
+  .starting-point {
+    padding: var(--space-5);
+    border: 1px solid var(--color-rule-soft);
+  }
+
+  .starting-point__question {
+    margin: 0 0 var(--space-3);
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    line-height: 1.15;
+    font-weight: 400;
+  }
+
+  .starting-point__source {
+    color: var(--color-ink);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+  }
+
+  .starting-point__purpose {
+    margin: var(--space-3) 0 0;
+    color: var(--color-ink-muted);
+    line-height: 1.5;
   }
 
   /* Header */

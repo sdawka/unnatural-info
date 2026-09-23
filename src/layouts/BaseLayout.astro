@@ -7,13 +7,14 @@ interface Props {
 
 const {
   title,
-  description = 'An unscientific empirical theory of everything. A framework for how life moves, divides, knows, and grows.',
+  description = BOOK_DESCRIPTION,
   cinematic = false,
 } = Astro.props;
 
 const pageTitle = title === 'UNNATURAL' ? 'UNNATURAL' : `${title} — UNNATURAL`;
 
 import '../styles/global.css';
+import { BOOK_DESCRIPTION } from '../lib/book';
 ---
 
 <!doctype html>
@@ -33,6 +34,12 @@ import '../styles/global.css';
     <link rel="icon" href="/favicon.ico" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <slot />
   </body>
 </html>
+
+<style>
+  .skip-link { position: fixed; top: .5rem; left: .5rem; z-index: 1000; padding: .7rem 1rem; background: var(--color-ink); color: var(--color-ground); transform: translateY(-200%); }
+  .skip-link:focus { transform: translateY(0); }
+</style>

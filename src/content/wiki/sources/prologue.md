@@ -1,21 +1,19 @@
 # Source: prologue.md
 
-> Establishes the "unscientific empirical" method and three structural commitments that govern the whole book.
+> Establishes the book's practical method: separate event, interpretation, wish, and unknown; use evidence where available; keep the frame revisable.
 
 **Original file**: `/src/content/chapters/prologue.md`
 **Act**: Prologue | **Order**: 0
 
-## Key contributions to the wiki
+## Key contributions
 
-- Coined term: *unscientific empirical* — the book's governing epistemic stance
-- Three commitments: mark what we observe, mark what we interpret, mark what we don't know
-- Three-act structure announced: Volo Ergo Sum / init.d / MMM
-- Frame is a tool, judged by whether it helps you see and act more clearly
+- An unanswered dinner invitation demonstrates observation, story, desire, and uncertainty.
+- The three acts are What moves us; How we make sense of things; How we learn, create, and change.
+- A chapter should give the reader something to look at, look for, or do.
+- Lived experience can test how a situation appears; it does not establish a universal biological history by itself.
 
 ## Pages this source informs
 
-- [[Prologue (Act)]] — primary source
-- [[Objectivity]] — the method is the book's own practiced objectivity
-
----
-*Ingested: 2026-04-16*
+- [[Prologue (Act)]] — opening method
+- [[Objectivity]] — evidence, correction, and testimony
+- [[Act 1 — What moves us]] — the first route through the book
