@@ -20,11 +20,11 @@ furtherReading:
     note: "Argues that meaning can arise through active engagement with projects and relationships whose worth is not exhausted by desire satisfaction."
 ---
 
-After dinner, you walk around the block. Nothing is solved. The person who did not reply remains silent. A porch light catches rain on a spiderweb. For perhaps ten seconds, you look without deciding what the sight is for.
+After dinner, you walk around the block. Nothing is solved. A porch light catches rain on a spiderweb. For perhaps ten seconds, you look without deciding what the sight is for.
 
 That interval does not need to become a breakthrough to earn its place.
 
-**Marvel** means attending before immediate use. It may be wonder, but it can also be quiet notice: the worn glaze on a cup, the sound of a tired friend's voice, the fact that you have stopped tasting your food. Attention does not guarantee insight or moral improvement. It can simply return texture to something flattened by habit.
+**Marvel** means attending before immediate use. It may be wonder, but it can also be quiet notice: the worn glaze on a cup, the sound of a tired person’s voice, the fact that you have stopped tasting your food. Attention does not guarantee insight or moral improvement. It can simply return texture to something flattened by habit.
 
 **Meander** means exploring without a fixed route. You follow a question, try a melody, take a street you do not know. Wandering can discover a direction that a plan would exclude. It can also waste time or become avoidance. The difference is not always visible from inside, which is why Becoming needs the other modes and sometimes an honest companion.
 

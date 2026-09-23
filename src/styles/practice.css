@@ -40,4 +40,15 @@
 .practice-status { min-height: 1.5em; margin: var(--space-4) 0; }
 .practice-workbench details { margin-top: var(--space-5); font-size: var(--text-sm); }
 .practice-workbench details[open] > summary { margin-bottom: var(--space-4); }
+.practice-pass { padding: var(--space-5); border-left: 2px solid var(--color-act-iii); background: var(--color-ground-tint); margin-bottom: var(--space-5); }
+.practice-pass h3 { font: 450 var(--text-lg)/1.4 var(--font-display); margin-bottom: var(--space-4); }
+.practice-pass ol { padding-left: 1.2em; }
+.practice-pass li + li { margin-top: .8em; }
+.practice-instruction { font: 400 var(--text-2xl)/1.4 var(--font-display); padding: var(--space-6); border: 1px solid var(--color-rule); margin: var(--space-6) 0; }
+.practice-instruction--type { font: 400 var(--text-lg)/1.6 var(--font-mono); }
+.practice-legacy { padding: var(--space-5); border: 1px solid var(--color-rule); margin-bottom: var(--space-6); }
+.practice-legacy h2 { font: 400 var(--text-xl)/1.3 var(--font-display); margin: var(--space-5) 0; }
+.practice-legacy dl > div { margin: var(--space-4) 0; }
+.practice-legacy dt { font-weight: 600; }
+.practice-legacy dd { white-space: pre-wrap; overflow-wrap: anywhere; margin: .5rem 0 0; }
 @media (max-width: 38rem) { .practice-controls { grid-template-columns: 1fr; } }

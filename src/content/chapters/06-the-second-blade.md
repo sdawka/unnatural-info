@@ -24,9 +24,11 @@ furtherReading:
     note: "A provocative account of selves as self-referential patterns rather than hidden inner objects."
 ---
 
-The unanswered dinner invitation has been quiet for three days. That is an observation. “They are angry with me” is a story built around it. “I should send another message” is an action proposed by the story. All three may be understandable. Only the first is already in hand.
+Hold a hot cup. Heat is present in your hand; “hot water was poured here recently” is a claim about what happened before. The cup could contain cold water warmed by the outside, or no water at all. The sensation gives you a useful clue, but it cannot settle the contents by itself.
 
-This is the second blade: world and world-model. We do not walk through raw reality carrying all its detail. We use expectations, memories, labels, hunches, diagrams, and explanations. They make action possible. They also let us walk directly into a misunderstanding with the confidence of someone following directions.
+That little gap is the second blade: world and world-model. We do not walk through raw reality carrying all its detail. We use expectations, memories, labels, hunches, diagrams, and explanations. They make action possible. They also let us walk directly into a misunderstanding with the confidence of someone following directions.
+
+The careful habit is to keep the observation and the claim close enough to compare. “The cup feels hot” reports an experience. “The water is hot” reports a likely state of the contents. “It was just poured” adds a history. Each may be reasonable; they are not interchangeable.
 
 Calling a model a map is helpful because maps are openly selective. A subway map distorts distance to make connections legible. A weather forecast compresses thousands of measurements into an umbrella decision. A person’s picture of a friend might preserve what matters most and miss the pressure they are under this week. The world does not become unreal because our pictures are incomplete. A representation can exist, do work, and still misdescribe what it represents.
 
@@ -36,7 +38,7 @@ The map can become stranger still when it depicts the mapmaker. A navigation app
 
 DNA is a gentler and more limited analogy. It carries heritable instructions and participates in building the organisms that copy it. But it is not a sufficient blueprint for a body. Genes work only in cells, developmental processes, environments, and histories that help determine what the instructions do. A recipe cannot bake a cake without ingredients, heat, tools, and someone responding when the oven runs hot. That dependence does not make genetic information unreal; it makes the map-territory relation more reciprocal than a blueprint suggests.
 
-There is also a fair worry about this chapter’s language. If everyone has “their own map,” does that mean every account is equally good? No. Some maps get people lost, hurt, or unable to explain their failures. The unanswered invitation may turn out to mean illness, overload, annoyance, or a dead phone. A good next move is neither blind certainty nor infinite hesitation. It is a small, respectful test: “Thinking of you. No need to reply quickly; are we still on for dinner?”
+There is also a fair worry about this chapter’s language. If everyone has “their own map,” does that mean every account is equally good? No. Some maps get people lost, hurt, or unable to explain their failures. A useful next move is neither blind certainty nor infinite hesitation. It is a small test that could distinguish the live possibilities: check the contents of the cup, compare the forecast with the rain, or ask which detail would make the account fail.
 
 Use [Notebook](/practice/notebook) to separate an event, your first story about it, what you do not know, and how confident you are. The gap is not a defect in thought. It is where correction can enter.
 

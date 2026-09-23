@@ -36,6 +36,6 @@ Social dualities are particularly combustible because they organize belonging. â
 
 There is a fair objection: if every distinction is softened, do we lose the nerve to judge? No. Soft edges do not require mushy judgment. They require reasons proportionate to the consequence. If we are deciding who gets a scarce resource, which rule applies, or whether someone has caused harm, the question becomes more urgent, not less: what exactly are we grouping together, and what would show that the grouping fails?
 
-Use [Labels and their edges](/practice/labels). Take one label from a disagreement, write the behavior it is meant to name, then list two alternative labels and the evidence each would need. The exercise does not dissolve the disagreement. It makes its blade visible.
+Try [The cup changes jobs](/practice/labels). Keep the same chipped cup in view while calling it a utensil, a keepsake, and shop stock. Notice which action each description makes sensible. Then ask what happens when a person becomes a category on a form. The cut has begun doing work.
 
 Once cuts become repeatable, shareable, and named, they acquire an odd stability. They begin to look like things.

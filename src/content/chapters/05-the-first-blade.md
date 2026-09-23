@@ -36,6 +36,6 @@ The same is true in ordinary life. A person who says, “I cannot take that on,�
 
 There is a fair objection here. Perhaps “self” is already too large a word. A newborn, a bacterium, an immune system, and an adult making a difficult promise do not share one settled kind of inner life. Agreed. The blade is not a claim about consciousness, souls, or the sequence in which a mind develops. It is a functional lens: living systems maintain some distinction between conditions to preserve and conditions to meet. Human selves make that distinction narratable, arguable, and sometimes beautifully inconvenient.
 
-Try the map exercise at [Map and territory](/practice/maps). Draw the route you take tomorrow, then mark what your route leaves out: stairs, cost, a person you might meet, the place you avoid after dark. The omissions are not mistakes. They are the price of a usable map.
+Try [Where do you end?](/practice/edges). Consider a breath, a sip of water, and a cup in your hand. Being inside your skin, helping your activity continue, and being something you call “me” are different tests. Draw one useful boundary and notice what keeps crossing it. A border can do its job without declaring independence from the world.
 
 Once there is an edge, there can be a view from it. That view does not deliver the world whole; it delivers a working picture.

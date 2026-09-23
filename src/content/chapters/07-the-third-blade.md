@@ -36,6 +36,6 @@ That is why value so often becomes a quarrel. Two people can look at the same di
 
 A fair challenge is that some values seem to outrun feeling altogether. Justice may require a person to defend someone they dislike; grief may make a painful act the loving one. Exactly. Significance is not identical with pleasure. The person who sits through an uncomfortable apology is responding to a value that cannot be reduced to immediate comfort. Feeling can alert us to what is at stake; reflection and conversation can still revise the response.
 
-Try [What pulls you?](/practice/wants). Separate an urge, expected enjoyment, obligation, fear, and a value you endorse. The point is not to obey the “true” item. It is to see that a single “I want” may be a crowded room.
+Try [Before the explanation arrives](/practice/wants). Separate the pull, the feeling, the reason you give, the enjoyment that follows, and whether you would choose it again. An obligation or a fear may show up among those reasons. A single “I want” can turn out to be a crowded room.
 
 As these orientations become shared, they harden into familiar oppositions: us and them, clean and dirty, success and failure. The next pages ask what happens when cuts begin to multiply.

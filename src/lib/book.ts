@@ -1,7 +1,7 @@
 export const ACTS = [
-  { key: 'volo-ergo-sum', roman: 'I', name: 'What moves us', alias: 'Volo Ergo Sum', tagline: 'You can want two things at once.', premise: 'An invitation, a hesitation, a wish to belong. Begin with the pulls that make a day matter, and the trouble of sharing it with other people.', color: 'var(--color-act-i)', cls: 'i' },
-  { key: 'initd', roman: 'II', name: 'How we make sense of things', alias: 'init.d', tagline: 'The story arrives before the reply.', premise: 'A silence becomes a rejection. A person becomes a label. Explore the boundaries and shortcuts that make a world understandable, and what they leave outside.', color: 'var(--color-act-ii)', cls: 'ii' },
-  { key: 'mmm', roman: 'III', name: 'How we learn, create, and change', alias: 'MMM', tagline: 'The plan meets the people.', premise: 'Test a recipe, make a meal, leave room for a surprise. Try three overlapping modes of engagement, then ask what is worth changing and what deserves care.', color: 'var(--color-act-iii)', cls: 'iii' },
+  { key: 'volo-ergo-sum', roman: 'I', name: 'What moves us', alias: 'Volo Ergo Sum', tagline: 'You can want two things at once.', premise: 'Begin with the pulls that make a day matter: desire, obligation, habit, and the trouble of sharing a life with other people.', color: 'var(--color-act-i)', cls: 'i' },
+  { key: 'initd', roman: 'II', name: 'How we make sense of things', alias: 'init.d', tagline: 'The story arrives before the evidence.', premise: 'A person becomes a label. A hunch becomes a fact. Explore the shortcuts that make a world understandable, and what they leave outside.', color: 'var(--color-act-ii)', cls: 'ii' },
+  { key: 'mmm', roman: 'III', name: 'How we learn, create, and change', alias: 'MMM', tagline: 'The plan meets the world.', premise: 'Try, notice, revise, and leave room for surprise. Three overlapping modes of engagement meet the question of what deserves care.', color: 'var(--color-act-iii)', cls: 'iii' },
 ] as const;
 
 export const BOOK_DESCRIPTION = 'An online philosophical journey through wanting, knowing, and living together. Ordinary scenes, open questions, and small experiments. No philosophy background needed.';
@@ -17,7 +17,7 @@ export function draftLabel(status: string) {
 }
 
 export const READING_PATHS = [
-  { title: 'An argument that keeps happening', description: 'Different wants, a shared event, and the stories between them.', chapters: [2, 4, 6, 24] },
-  { title: 'A label that has become too small', description: 'Where a description helps, where it hardens, and how to loosen it.', chapters: [3, 9, 11, 23] },
-  { title: 'A plan that never leaves your head', description: 'Learning, making, and finding room for what you cannot arrange.', chapters: [13, 15, 17, 23] },
+  { title: 'I keep doing things I do not really want', description: 'Start with automatic action, then follow habit, attention, and choice into the wider book.', chapters: [1, 2, 6, 24] },
+  { title: 'Everything gets done, but what for?', description: 'Look at maintenance, meaning, and the difference between a life that functions and one that feels inhabited.', chapters: [3, 5, 16, 23] },
+  { title: 'I am trying to work it out, but life interrupts', description: 'Begin with a body that has needs, then track how uncertainty and other people change the plan.', chapters: [13, 15, 17, 24] },
 ] as const;

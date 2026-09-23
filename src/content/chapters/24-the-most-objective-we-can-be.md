@@ -20,22 +20,18 @@ furtherReading:
     note: "Develops an account of objectivity through critical interaction under social conditions that allow challenge."
 ---
 
-Return to the unanswered dinner invitation.
+Someone says the garden valve cannot be reached from a wheelchair. The committee records “no complaint” because its minutes contain no such report. When a senior member repeats the concern, it becomes an item for inspection. The valve is physically present; the access claim is also real. A record can omit a fact without disproving it.
 
-The observation was small: no reply had arrived by Tuesday. The first story was large: *They do not want to come.* Other accounts fit the evidence: illness, overload, a lost message, uncertainty, avoidance, or a deliberate refusal. Wanting connection made one interpretation feel especially vivid. None of this made the silence unreal.
-
-Then new evidence arrived. The invitation had gone to an old address.
-
-The lesson is not that charitable explanations always win. Sometimes silence is refusal. It is that objectivity begins when we separate what happened, what we inferred, what else could explain it, and what would change our confidence. Reality exists independently of our account; access to it is partial, mediated, and corrigible.
+This is where objectivity gets tangible. Separate what happened, what you inferred, what else could explain it, and what would change your confidence. Reality exists independently of our account; access to it is partial, mediated, and corrigible. A shared test might measure the reach, ask the affected person to try the route, inspect the written record, and revise the design when those sources disagree.
 
 A notebook can make the discipline visible:
 
-- **Observation:** no response appeared in the account I checked.
-- **Story:** the guest rejected me.
-- **Unknowns:** receipt, circumstances, intention.
-- **Confidence:** moderate that no reply appeared; low about motive.
-- **Test:** check the address or ask without smuggling in an accusation.
-- **Revision:** the delivery explanation now has direct support.
+- **Observation:** the valve is 1.4 metres from the path and the handle requires a twist.
+- **Story:** the arrangement is usable because nobody logged a complaint.
+- **Unknowns:** who tried it, what access the route permits, and whose report was discounted.
+- **Confidence:** high about the measured distance; low about whether the design works for everyone.
+- **Test:** ask affected people to use the route and compare their reports with the measurement.
+- **Revision:** change the design or the claim when those tests conflict with the plan.
 
 That is Learning. Creating provided the question that contacted the world. Becoming held open the possibility that the first story was incomplete. The modes help, but objectivity requires more than a well-run personal loop.
 
@@ -47,4 +43,4 @@ Nor does truth exhaust judgment. Accurate knowledge can be used cruelly. A syste
 
 Try reopening one confident claim from your week. Write the strongest rival account, one observation that favors each, and one question that could discriminate between them. Name whose testimony is missing. Then revise your confidence, even if the revision is only from certainty to a sharper uncertainty.
 
-The aim is not a view from nowhere. It is an accountable view from here: explicit about position, answerable to evidence, open to correction, and aware that the invitation to speak has not always reached everyone.
+The aim is not a view from nowhere. It is an accountable view from here: explicit about position, answerable to evidence, open to correction, and attentive to who was able to speak and be heard.

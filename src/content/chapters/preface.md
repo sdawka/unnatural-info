@@ -20,7 +20,7 @@ furtherReading:
 
 The phone lights up while you are washing a cup. A name appears. There is no message, only a notification that turns out to be an old reminder. For a second, the name was enough to change the room. The cup was still in your hand, but your attention had gone somewhere else.
 
-This is the book's optional origin story. You can begin with the unanswered invitation in the prologue and return here when you want to ask how a world becomes full of things that matter.
+This is the book's optional origin story. You can begin with ordinary wanting and wondering in the prologue, and return here when you want to ask how a world becomes full of things that matter.
 
 That small event contains a long history. A pattern in electricity became a signal. The signal became a name. The name became a person who matters to you. None of this required the universe to carry a message addressed to you. It required a living creature able to notice a difference and organize its next move around it.
 

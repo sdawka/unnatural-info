@@ -2,10 +2,10 @@
 title: "Love, Growth, and Meaning (Which Are, It Turns Out, Related)"
 subtitle: "What wanting becomes with time and other people"
 act: volo-ergo-sum
-actTitle: "Volo Ergo Sum"
+actTitle: "What Moves Us"
 chapterNumber: 3
 order: 3
-summary: "Love, growth, and meaning often meet in sustained care, but none reduces neatly to the others. A good life can include enjoyment, duty, rest, limits, and loss."
+summary: "Love, growth, and meaning often meet in sustained care and maintenance, though none reduces neatly to the others. A good life can include enjoyment, duty, rest, limits, and loss."
 themes: ["love", "growth", "meaning", "orientation", "care", "purpose"]
 status: draft
 draft: false
@@ -28,18 +28,20 @@ furtherReading:
     note: "An account of how caring helps organize a life over time, while leaving open which objects of care deserve endorsement."
 ---
 
-You keep a promise to bring soup to someone who is ill. The promise costs an evening. It is not especially fun, and it does not make you more impressive. Still, on the way home, the effort feels connected to the kind of relationship you want to have.
+The bin is full, the towel is damp, and the plant has once again adopted the expression of a Victorian orphan. None of this is glamorous. Still, somebody takes out the bin, hangs the towel, waters the plant, and remembers there is food in the fridge that will become compost if left to develop a second career.
 
-This is one place where love, growth, and meaning touch. They should not be collapsed into one thing. Love can involve pleasure, obligation, attention, vulnerability, and conflict. Growth can mean greater skill, but it can also mean learning a limit or becoming less willing to harm someone. Meaning can be a felt coherence, a worthwhile commitment, or a life made intelligible by what it cares about. The overlap is real; the identities are a proposal, not a discovery.
+That is a better place to begin with love, growth, and meaning than a dramatic declaration. The three often meet in the work that lets another person, a shared home, a body, or a small living thing continue. They are not the same thing. But they keep borrowing one another's tools.
 
-Love, in the sense used here, is not merely a feeling inside one person. It is a way of attending to another being whose good is not identical with your convenience. Martin Buber's “I–Thou” gives one influential vocabulary for this, while Iris Murdoch emphasizes the moral work of seeing another person more accurately. Both complicate a simple formula of “our wants line up.” Sometimes love means making room for a want you do not share. Sometimes it means refusing a request because the request would cause harm.
+**Love** is what care looks like when another being's good is allowed to matter beyond your convenience. It may include pleasure and longing, but it also includes attention: seeing what is actually needed rather than merely enjoying your own picture of the person. Martin Buber and Iris Murdoch offer different vocabularies for this. Both resist the idea that love is simply two preferences lining up. Sometimes it means making room for a want you do not share. Sometimes it means refusing a request that would do harm.
 
-Growth is not a moral scoreboard. A person can become more capable and use that capability badly. A company can learn to extract more value while making its workers less secure. A child can grow by discovering that an adult's promise was unreliable. Here, growth means an expanded or altered capacity to perceive, care, decide, and act. Whether that change is good requires separate questions about its effects and its costs.
+**Growth** is what care looks like when capacity changes. You learn how to cook one reliable meal, apologize without rehearsing a defense, notice a limit sooner, or make a room easier for another person to use. Greater capacity is not automatically moral. A company can become more effective at extracting value. A person can learn a sharper way to wound. Growth names a change in what can be perceived, cared for, decided, or done; whether it is good requires questions about cost and effect.
 
-Meaning also resists a single test. Susan Wolf argues in [*Meaning in Life and Why It Matters*](https://www.its.caltech.edu/~squartz/Wolf%20-%202007%20-%20Meaning%20in%20Life%20and%20Why%20It%20Matters.pdf) that meaningfulness involves active engagement with projects or objects of worth, which gives a useful alternative to the idea that meaning is simply whatever a person wants intensely. Caring for a relative, keeping a garden alive, making music, doing paid work, or resting with friends may all matter, but they do not need to become a ladder of achievement. A life can contain meaning in maintenance and pleasure, in grief and unfinished work, not only in expansion.
+**Meaning** is what care can feel like when it holds a life together over time. It is not a medal awarded for busyness. Susan Wolf's account of meaningfulness as active engagement with worthwhile things offers one useful guide, but there is no tidy meter. Caring for a relative, maintaining a garden, making music, paid work, pleasure, friendship, grief, and rest can all matter. A life need not resemble a ladder to count as a life.
 
-This helps with emptiness without diagnosing it. Sometimes a person is bored because an activity no longer expresses what they care about. Sometimes they are exhausted, grieving, lonely, ill, or living under conditions that leave too little room to choose. “Misaligned wanting” is one possible description, not a universal explanation. Before searching for a better inner model, check the body's needs and the surrounding circumstances.
+The triad is memorable because it names a real overlap: love widens who and what can count in your concern; growth alters what you can do with that concern; meaning is one way a pattern of concern becomes inhabitable across time. It is not a formula. Love can exhaust you. Growth can involve loss. Meaning can disappear for a while when a body is ill, a job is precarious, or the available choices are cruelly narrow. None of those conditions proves a private failure of orientation.
 
-Try the [wants practice](/practice/wants) with one commitment you are carrying. Separate immediate urge, enjoyment, obligation, fear, and chosen value. Then ask a second question: what person, activity, or condition is this commitment answerable to? You may decide to continue, renegotiate, rest, or let it go. The useful result is a clearer account, not a requirement to endure.
+This matters when life feels oddly empty even though everything is getting done. The problem may be a commitment that no longer fits what you care about. It may also be loneliness, burnout, grief, pain, lack of sleep, or too little room to choose. Before demanding a grand purpose, check the maintenance conditions. The nervous system is not obliged to produce a philosophy while underfed and overdue on rest.
 
-Meaning is not delivered from above, but neither is it manufactured by isolated preference alone. It grows in the meeting between attention, worthwhile things, other people, and the limits of a world we did not choose. To live together, we need more than private alignment. We need ways to check whether our accounts of the world can survive contact with one another and with what resists us.
+Try [Make room for one ordinary thing](/practice/one-week). Choose a small place to eat, rest, or put something you use. Notice whom the arrangement serves and what keeps it usable. Keeping one worthwhile thing possible can be a serious answer to the question of meaning. It need not become an achievement large enough to put on a wall.
+
+Once our care reaches beyond private preference, we need a way to ask whether our accounts of the world can survive other people's experience and the stubborn things we share.

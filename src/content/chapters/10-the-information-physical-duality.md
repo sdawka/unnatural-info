@@ -36,6 +36,6 @@ The duality also protects against two familiar mistakes. If we talk only about m
 
 There is a fair worry that “information” is becoming a suitcase word for everything important. It can be. A symbol, a gene sequence, a legal rule, and a memory do not operate in the same way. This chapter offers a family resemblance, not a universal mechanism. Later chapters must keep naming the actual carrier, practice, and consequence instead of invoking information as an explanation.
 
-Take a household promise and trace it for one day: where was it spoken or recorded, who remembered it, what action did it coordinate, what happens if one person cannot keep it? The exercise makes the interface visible without making it mystical.
+Try [A few marks move your hand](/practice/patterns). Follow a tiny drawing instruction, change its presentation, then change what it says. Trace the physical chain from screen to interpretation to hand to paper. The marks do not move the pen by themselves. Neither are they irrelevant to where it goes. You can trace a household promise in the same way: who hears it, remembers it, and does something because of it?
 
 Patterns and their carriers can help us act. They can also simplify until a target replaces the life it was meant to serve.

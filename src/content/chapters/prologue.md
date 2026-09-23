@@ -1,10 +1,10 @@
 ---
 title: "On Attempting to Explain Everything (Again)"
-subtitle: "An unanswered invitation, and the stories that arrive first"
+subtitle: "A body, a world, and the pictures between them"
 act: prologue
 order: 0
-summary: "A missed reply introduces the book's method: separate what happened from the story it invited, then test a useful frame without mistaking it for the final truth."
-themes: ["epistemology", "method", "empiricism", "framework"]
+summary: "Ordinary maintenance opens onto a larger question: how natural creatures make information, then use it to alter the material world that made them. The book offers a revisable frame for noticing that loop."
+themes: ["epistemology", "method", "embodiment", "information", "framework"]
 status: draft
 draft: false
 furtherReading:
@@ -22,31 +22,20 @@ furtherReading:
     note: "A rigorous example of describing embodied experience without treating first-person reports as infallible."
 ---
 
-You invite a friend to dinner. An hour passes. Then two. The message remains unanswered.
+Life does not always make sense, even when it should. You can explain why each part of the day is necessary and still wonder what the whole thing is for. You have eaten, replied, paid, tidied, arranged the small machinery that allows tomorrow to happen. Tomorrow will require much the same arrangements.
 
-What do you know? Your phone shows silence. What do you tell yourself? They are annoyed, bored, or quietly withdrawing. What do you want? Connection, reassurance, an answer you can act on. The silence is evidence. The rejection story is an interpretation. The wish is real too, but it is not evidence that the story is true.
+This is not a scandal. Bodies are busy things. They keep temperature within a narrow range, look for food and shelter, avoid pain, seek company, learn routines, and sometimes keep reaching after the reason for reaching has wandered off. A person is not a tidy little captain standing above all this. Thought is one of the things a living body does while trying to continue.
 
-This book begins in that gap. It is an attempt to understand what moves us, how we make sense of things, and how we can respond with more care. It is also an attempt to explain everything, which is an embarrassing ambition if taken literally. No short online book can finish that job. The honest promise is smaller: you will get a set of distinctions to try on ordinary situations, and repeated chances to notice where those distinctions clarify something or fail.
+But the body does something stranger as well. It makes pictures: marks on paper, remembered routes, recipes, promises, warnings, stories about what happened and what should happen next. Some pictures are private for a moment. Others get copied into calendars, building plans, laws, shopping lists, software, and family habits. Then they return to matter. A recipe changes a cupboard. A diagram changes a bridge. A sentence changes where somebody goes on Tuesday.
 
-The working frame has three movements. **What moves us** starts with wanting, feeling, care, difference, and the problem of several lives sharing one world. **How we make sense of things** asks how finite creatures draw boundaries, build maps, name things, and pay for the simplifications those tools require. **How we learn, create, and change** follows people as they try to understand a problem, make a small change, or stay open to what they cannot force. Later chapters give these recurring activities shorter names: Learning, Creating, and Becoming, with the family nickname MMM. They are a proposed organization of experience, not a newly discovered law of nature.
+That return trip is the book's large, slightly embarrassing question: what are we, that a natural creature can make information and use it to reshape the physical world that made it? **Unnatural** is the name used here for that oddness. It does not mean outside nature, above nature, or in a quarrel with rocks. It means that nature has produced beings able to make representations, pass them around, and let them reorganize what happens next.
 
-The book uses “will” as a functional word for orientation: a system leaning toward some conditions and away from others. That is not a claim that a bacterium has a human inner life, or that this settles consciousness. It is a way to compare a hungry person, a moving animal, and a cell without pretending they are identical.
+There is a long history of people trying to explain everything. It has not gone flawlessly. This book is not a final theory, and it does not get a ceremonial exemption from correction because it has a broad view. It offers a set of lenses for ordinary life and asks whether they help: what moves us, how we make a manageable world out of more than we can take in, and how we learn, create, and change without mistaking a useful picture for the whole place.
 
-The method is empirical in a plain sense. Start with something you can notice. Say which part is observation, which part is interpretation, and which part remains unknown. Bring in research when research can answer the question. Treat a philosophical frame as a tool that may be useful without being established by the fact that it feels elegant. A reader's experience can challenge a claim about how a situation appears; it cannot, by itself, prove a universal biological history.
+The first movement, **What moves us**, begins with orientation: pulls, feelings, cares, and the trouble that begins when several lives want different things in one shared room. **How we make sense of things** examines the cuts and maps that make action possible, along with what they leave out. **How we learn, create, and change** follows three overlapping ways of responding: Learning, Creating, and Becoming. Their family nickname is MMM. They are descriptions to try, not a ladder of human worth or a new law of the universe.
 
-Try it now with the unanswered message. Write four lines:
+The method is plain, although not always easy. Start with something that can be noticed. Separate what happened from the story supplied by habit or hope. Mark what remains unknown. Use research where research can answer the question; do not use a good feeling as proof of biology, history, or someone else's inner life. A frame can be useful and still be wrong in places. In fact, that is the only sort a finite creature is likely to get.
 
-- What happened?
-- What story did I add?
-- What else could explain it?
-- How confident am I, and what would change my mind?
+Try a small version now. Notice the next automatic reach: for a snack, a tab, a task, a message, the kettle. What did the body do? What feeling or need might be involved? What explanation did you immediately give it? What would you need to know before treating that explanation as fact? [Before the explanation arrives](/practice/wants) makes room to inspect one such moment. A margin works too.
 
-You can use the [notebook practice](/practice/notebook), or write in the margin and keep going. You can also stop here, rest, or return another day; reflection is not another task you owe the book. The point is not to become detached from your friend. The point is to give care more than one route to act.
-
-Suppose you try it. Your first note says, “They do not want to see me.” A second possibility is that they are overwhelmed. What you want is time together; an immediate answer is only one way of feeling sure of it. You decide to leave the evening open and send one gentle follow-up tomorrow. That leaves your friend room to decline and gives you a stopping point instead of an afternoon of checking.
-
-They reply the next day: work has been difficult, and could you meet for a walk instead? You accept. In the notebook you narrow the original claim: the delay did not establish rejection. You have learned something about this exchange, not proved that every silence means overload. If they still had not replied, you could make another plan while leaving their reason unknown. Sometimes progress is an ordinary evening rescued from a story you could not yet support.
-
-The book will keep returning to this discipline in different forms. Wanting makes the unanswered message matter. Difference appears when two people bring different needs to the same evening. A map of the dinner can help us plan, while hiding who is doing the work. A small test can teach us something, while a result can still have several explanations. At the end, the frame itself comes back under examination.
-
-Agreement with the book is not progress. If a chapter gives you something to look at, look for, or do—and makes its own limits visible—it has done its job. Begin with what moves you.
+You may discover that you wanted tea. This is allowed. We begin where life is already happening. Even our most ordinary actions contain assumptions about what matters and what we are. For a moment, see if you can catch one before it becomes obvious again.

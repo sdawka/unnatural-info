@@ -2,10 +2,10 @@
 title: "Before Thought, There Is Want"
 subtitle: "Thought, feeling, and orientation"
 act: volo-ergo-sum
-actTitle: "Volo Ergo Sum"
+actTitle: "What Moves Us"
 chapterNumber: 1
 order: 1
-summary: "Wanting is the book's functional lens for orientation: a way to notice what pulls a living system before asking whether that system thinks or feels as we do."
+summary: "Before we explain a choice, some pull has often already begun. Wanting is a functional lens for noticing orientation without treating every urge as wisdom or every living system as a human mind."
 themes: ["will", "want", "feelings", "affect", "motivation", "orientation"]
 status: draft
 draft: false
@@ -24,18 +24,20 @@ furtherReading:
     note: "An enactive account of cognition as something living bodies do in relation to their environments."
 ---
 
-You open the cupboard, see the last piece of bread, and reach for it. Then you remember the person you live with wanted it for breakfast. Nothing about the reach was a syllogism. Your body had already begun; thought arrived with a question: do I still want this enough to take it?
+Your hand is already on the phone before you have decided to pick it up. There is a small disappointment when nothing new is there. Then comes the explanation: a break, a habit, research, a deserved minute. The explanation may be perfectly respectable. It has also arrived after the hand.
 
-That little pause gives us three different things to keep apart. There is an orientation toward the bread. There may be a pleasant or unpleasant feeling. There is a reflective choice about what to do. In ordinary life they arrive tangled together, so it is tempting to say that thought causes the action. Often thought is a later layer, explaining, checking, or redirecting a movement that began as a pull.
+It helps to separate a few things that ordinarily arrive in one unruly bundle. There is the **pull**: the movement toward the screen. There may be a **feeling**: boredom, anticipation, unease, comfort. There is an **explanation**: why this seems sensible or necessary. And there is **endorsement**: whether, after noticing all that, you want to continue.
 
-Antonio Damasio's [somatic-marker work](https://pubmed.ncbi.nlm.nih.gov/8941953/) gives one reason to take the bodily layer seriously. In studies of people with damage affecting emotional signalling, reasoning can remain articulate while choosing becomes strangely difficult. A person may compare options indefinitely because the bodily marks that normally make one option matter more are no longer doing their usual work. This supports a specific claim: feeling and bodily regulation can contribute to decision-making. It does not show that every feeling is wise, or that thought is merely decoration.
+None of these cancels the others. An urge can be vivid without being a command. A reason can be good without being the first thing that moved you. You might enjoy something you later decide not to do; you might keep a difficult appointment that brings no immediate pleasure. Much of adult life consists of these layers trying to borrow one another's coats.
 
-Go lower, but change the question. A bacterium moves toward some chemical conditions and away from others. We can describe this orientation from the outside. We should not infer from it that the bacterium feels hunger, has a point of view, or makes a conscious choice. In this book, **will** is a functional word for the pattern of leaning: a system is organized so that some changes count as favorable to its continued activity and others as unfavorable. It is a deliberately modest use of an old, grand word.
+Antonio Damasio's [somatic-marker work](https://pubmed.ncbi.nlm.nih.gov/8941953/) gives one reason to take the bodily layer seriously. In studies of people with damage affecting emotional signalling, articulate reasoning can remain while choosing becomes unusually difficult. Bodily and emotional signals can help make one option matter more than another. That is a specific, useful claim. It does not make feeling infallible, and it does not reduce thought to decorative aftercare.
 
-“Volo ergo sum”—I will, therefore I am—is therefore a starting lens, not a proof about the nature of consciousness. It lets us ask what a creature is organized to approach, avoid, preserve, or change before we ask what it can say about itself. A hungry person, a dog following a scent, and a cell crossing a chemical gradient are not versions of one mind. They are different systems with different capacities, connected by a question about orientation.
+Go lower, but change the question. A bacterium moves toward some chemical conditions and away from others. We can describe that orientation from the outside. We should not infer that it feels hunger, has a private point of view, or deliberates over lunch. In this book, **will** is a functional word for the lean: a system is organized so that some changes support its activity and others disrupt it. It is a modest use of an old word with a cape.
 
-The lens also changes how we read our own stuckness. Suppose you keep scrolling long after the pleasure has gone. One part of you may want the next surprising thing; another may want rest; a third may want relief from an uncomfortable thought. “What do I think I should do?” is useful, but so is “What pull is already organizing my next move?” Wanting and liking can come apart. Wanting and endorsing can come apart too. A desire is information about your situation, not an instruction from your deepest self.
+“Volo ergo sum”—I will, therefore I am—is a starting lens, not a conclusion about consciousness. It asks what a creature is organized to approach, avoid, preserve, or change before asking what it can say about itself. A hungry person, a dog following a scent, and a cell crossing a chemical gradient are not versions of one mind. They are different kinds of systems that can all be described, carefully, as oriented.
 
-Try the [wants practice](/practice/wants) with a low-stakes choice. Name the urge, the expected enjoyment, the obligation, the fear, and the value you would choose on reflection. Leave any category blank that does not fit. The aim is not to discover a hidden authentic desire. It is to give competing motives enough room to become distinguishable.
+The lens is most useful close to home. Suppose you keep scrolling after the pleasure has gone. Perhaps you want the next surprising thing. Perhaps you want rest but have not arranged it. Perhaps an uncomfortable thought is waiting in the quiet. These are possibilities, not diagnoses. The question “What should I do?” remains important. Beside it, try: “What pull has already begun?”
 
-Once several beings orient from different places, a shared world becomes difficult. The next question is not whether wanting exists, but what happens when its directions meet.
+Use [Before the explanation arrives](/practice/wants) with one ordinary reach. Name the immediate pull, the feeling, the reason you give, and the enjoyment that follows. Then ask whether you would choose it again. Leave a field blank if it does not fit. Several motives may become visible; none acquires authority simply by being noticed.
+
+Once several beings are leaning from different places, life gets more interesting. The next question is what happens when those directions meet at the same window, stove, table, or patch of world.

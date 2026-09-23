@@ -63,7 +63,7 @@ const practices = practicesForChapter(chapterNumber, chapter.id);
           <summary>Pause before you turn the page</summary>
           <p>Look away from the text. How would you explain its main idea using a different example? Where might it fail? Then look back and see what you missed.</p>
         </details>
-        {practices.length > 0 && <><h2 id="practice-heading">Take the question with you.</h2><ul>{practices.map(practice => <li><a href={`/practice/${practice.slug}`}>{practice.title} <span>→</span></a><small>About {practice.minutes} minutes</small></li>)}</ul></>}
+        {practices.length > 0 && <><h2 id="practice-heading">Try the idea.</h2><ul>{practices.map(practice => <li><a href={`/practice/${practice.slug}`}>{practice.title} <span>→</span></a><small>{practice.concept} · About {practice.minutes} minutes</small></li>)}</ul></>}
         <p>Your last chapter is remembered in this browser when storage is available. Personal exercise notes are saved only when you choose.</p>
       </section>
 

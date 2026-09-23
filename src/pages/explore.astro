@@ -10,7 +10,7 @@ import '../styles/book.css';
 const chapters = await getCollection('chapters', ({ data }) => !data.draft);
 const count = chapters.filter(c => c.data.chapterNumber != null).length;
 const start = chapters.find(c => c.id === 'prologue');
-const sampler = ['prologue', '06-the-second-blade', '23-how-to-live-better'].map(id => chapters.find(c => c.id === id)!);
+const sampler = ['prologue', '01-before-thought-there-is-want', '13-the-three-cycles'].map(id => chapters.find(c => c.id === id)!);
 const samplerMinutes = sampler.reduce((total, chapter) => total + readingMinutes(chapter.body), 0);
 ---
 <BaseLayout title="The book" cinematic>
@@ -19,7 +19,7 @@ const samplerMinutes = sampler.reduce((total, chapter) => total + readingMinutes
     <header>
       <p class="book-kicker">Three acts · {count} chapters · Working drafts</p>
       <h1 class="book-title">Follow the thread.</h1>
-      <p class="book-lead">An unanswered invitation opens onto wanting, knowing, and the world we build together.</p>
+      <p class="book-lead">Life doesn’t always make sense. Even when it should. This book follows that trouble through wanting, knowing, and living with other people.</p>
       <div class="book-actions"><a class="book-button" href="/chapters/prologue">Begin the book · about {readingMinutes(start?.body)} min →</a><ResumeReading /></div>
       <p class="book-small">Reading estimates cover the prose. Pause as long as you like for the optional practices.</p>
     </header>
@@ -34,7 +34,7 @@ const samplerMinutes = sampler.reduce((total, chapter) => total + readingMinutes
     </section>
     <section class="book-section" aria-labelledby="paths-heading">
       <h2 id="paths-heading">A few other doors.</h2>
-      <div class="book-aside"><h3>Try a short sample · about {samplerMinutes} minutes</h3><p>Follow one unanswered message into the stories we tell, then see what a small change might look like.</p><ol>{sampler.map(chapter => <li><a href={`/chapters/${chapter.id}`}>{chapter.data.title}</a></li>)}</ol></div>
+      <div class="book-aside"><h3>Try a short sample · about {samplerMinutes} minutes</h3><p>Move from a want, to a body with limits, to the question of what makes a life hang together.</p><ol>{sampler.map(chapter => <li><a href={`/chapters/${chapter.id}`}>{chapter.data.title}</a></li>)}</ol></div>
       <div class="book-paths">{READING_PATHS.map(path => <article><h3>{path.title}</h3><p>{path.description}</p><ol>{path.chapters.map(number => {
         const chapter = chapters.find(c => c.data.chapterNumber === number);
         return chapter && <li><a href={`/chapters/${chapter.id}`}>{number}. {chapter.data.title}</a></li>;

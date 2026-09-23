@@ -20,7 +20,7 @@ The Becoming mode asks what deserves attention and what might emerge. You attend
 
 The modes can nest and interrupt one another. A cook tests a recipe while making dinner. A person planning an apology may need to stop gathering evidence and listen. Someone caring for a dying plant may need maintenance, acceptance, and grief rather than a more elaborate model. There is no fixed order and no claim that “Becoming” is a higher stage than Learning.
 
-Use the [modes practice](/practice/modes) to choose a response, then ask what would make you choose differently. Rest, care, limits, material support, and asking for help are available responses too.
+Use [One sheet, three kinds of doing](/practice/modes) to test an explanation, make a small object, and follow an unplanned shape with the same material. Notice how the purpose and the meaning of a result change. Rest, care, limits, material support, and asking for help remain available responses outside this comparison.
 
 ## What the concept does not establish
 
