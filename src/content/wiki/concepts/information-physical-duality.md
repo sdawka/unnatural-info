@@ -6,6 +6,8 @@ This vocabulary distinguishes levels without splitting reality into two substanc
 
 The content of a representation can be wrong. A model's physical existence does not make its claims true. Ask what carries the pattern, who interprets it, what practice sustains it, and what evidence could correct it.
 
+[A few marks move your hand](/practice/patterns) begins with a drawing instruction, then offers a bus timetable as a larger case. The route from marks to a journey includes drivers, vehicles, roads, passengers, and the people who maintain the schedule. Chapter 19 follows such dependence into public infrastructure; chapter 20 asks what changes when communication technologies let patterns travel much further.
+
 Claims about ritual, sacredness, or archetype belong to particular traditions and experiences. The wiki does not turn them into spooky information objects or assert that an unseen spiritual layer causes behavior. Chapter 22 compares named practices in their own terms before offering any structural analogy.
 
 ## Connections

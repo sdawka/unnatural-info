@@ -1,47 +1,53 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import ResumeReading from '../components/ResumeReading.astro';
-import { ACTS, BOOK_DESCRIPTION } from '../lib/book';
+import { ACTS, BOOK_DESCRIPTION, READING_PATHS } from '../lib/book';
 import '../styles/book.css';
+const chapters = await getCollection('chapters', ({ data }) => !data.draft);
+const paths = READING_PATHS.map(path => {
+  const entry = chapters.find(chapter => chapter.data.chapterNumber === path.chapters[0]);
+  if (!entry) throw new Error(`Missing entry chapter for reading path: ${path.id}`);
+  return { ...path, entry };
+});
 ---
 <BaseLayout title="UNNATURAL" description={BOOK_DESCRIPTION} cinematic>
   <SiteHeader />
   <main class="book-page" id="main-content">
-    <section class="opening" aria-labelledby="opening-title">
-      <div>
-        <p class="book-kicker">An online book · Philosophy for the rest of us</p>
-        <h1 class="book-title" id="opening-title">Life doesn’t always make sense.<br /><em>Even when it should.</em></h1>
-        <p class="book-lead">You can understand the parts and still be puzzled by the whole. Including the part doing the understanding.</p>
-        <p class="opening__promise">A journey into what moves us, how we make sense of things, and what it means to be part of the world we’re trying to understand.</p>
-        <div class="book-actions"><a class="book-button" href="/chapters/prologue">Begin the book →</a><a class="book-link" href="/explore">See what’s inside</a></div>
-        <ResumeReading />
+    <header class="opening" aria-labelledby="opening-title">
+      <p class="book-kicker">An online book · Philosophy for the rest of us</p>
+      <h1 class="book-title" id="opening-title">Life doesn’t always make sense.<br /><em>Even when it should.</em></h1>
+      <p class="book-lead">A journey through what moves us, how we know, and how our ideas shape the world. From a private thought to a public rule, a living body to a civilization.</p>
+      <div class="book-actions"><a class="book-button" href="/chapters/prologue">Begin the book →</a><a class="book-link" href="/explore">See what’s inside</a></div>
+      <ResumeReading />
+    </header>
+    <section class="recognitions" aria-labelledby="recognition-heading">
+      <h2 id="recognition-heading">Which of these feels familiar?</h2>
+      <p class="book-small">Open one that catches you. More than one is allowed.</p>
+      <div class="recognitions__grid">
+        {paths.map(path => <details id={`opening-${path.id}`}>
+          <summary>{path.title}</summary>
+          <div class="recognitions__body">
+            <p>{path.scene}</p>
+            <p>{path.question}</p>
+            <div class="recognitions__links">
+              <a class="book-link" href={`/chapters/${path.entry.id}`}>Begin with Chapter {path.entry.data.chapterNumber} →</a>
+              <a class="book-link" href={`/explore#path-${path.id}`}>Follow this thread →</a>
+            </div>
+          </div>
+        </details>)}
       </div>
-      <section class="recognitions" aria-labelledby="recognition-heading">
-        <h2 id="recognition-heading">Which of these feels familiar?</h2>
-        <p class="book-small">Open one that catches you. More than one is allowed.</p>
-        <details>
-          <summary>I keep doing things I don’t really want to do.</summary>
-          <div class="recognitions__body"><p>Your hand opens the phone. There was no particular plan to look at it. There is a plan to put it down, although apparently that belongs to a different department.</p><p>We tend to picture a person deciding, then acting. Watch one ordinary reach. How much of the decision can you actually find?</p><a class="book-link" href="/chapters/01-before-thought-there-is-want">Begin with wanting · Chapter 1 →</a></div>
-        </details>
-        <details>
-          <summary>Everything is getting done. I’m not sure what it’s all for.</summary>
-          <div class="recognitions__body"><p>You make the meal, wash the cup, clear a space. Tomorrow, most of this will need doing again.</p><p>We give plenty of attention to getting somewhere. A life also consists of feeding things, keeping things going, and being there. What makes any of it worth doing?</p><a class="book-link" href="/chapters/03-love-growth-and-meaning">Begin with what matters · Chapter 3 →</a></div>
-        </details>
-        <details>
-          <summary>I try to work it all out. Life keeps interrupting.</summary>
-          <div class="recognitions__body"><p>You sit down to decide what sort of life to live. The body would like lunch. It has submitted this proposal before.</p><p>A plan is a picture of living. Living includes the body, the room, the people, and whatever your picture left out. How do we think, act, and leave some room for that?</p><a class="book-link" href="/chapters/13-the-three-cycles">Begin with how we meet things · Chapter 13 →</a></div>
-        </details>
-      </section>
     </section>
     <section class="book-section" aria-labelledby="book-about">
       <p class="book-kicker">Why “unnatural”?</p>
       <h2 id="book-about">Nature has started<br />making plans.</h2>
       <div class="book-copy">
         <p>We are made of the same world as everything else. Somehow we also make pictures of it: a shopping list, an idea of who we are, a rule about who owns the land.</p>
-        <p>Then those pictures get to work. The list becomes a meal. The rule becomes a fence. A description of yourself starts deciding what you will try.</p>
-        <p>This book follows that curious arrangement from wanting, through the distinctions we make, into the lives and worlds we build. There is a great deal to wonder about before anyone needs a grand theory. We will probably attempt one anyway.</p>
+        <p>Then those pictures get to work. A recipe becomes a meal. A drawing becomes a bridge. A rule becomes a fence. People born long after the rule was written find themselves living on one side of it.</p>
+        <p>This book follows that curious arrangement from wanting, through the distinctions we make, into the cultures, tools, and institutions we build. It asks what we can know, what is worth changing, and how a creature that belongs to nature comes to feel outside it.</p>
+        <p>There is a great deal to wonder about before anyone needs a grand theory. We will probably attempt one anyway.</p>
         <p>No philosophy background needed. The chapters use ordinary examples, room for disagreement, and small experiments with the ideas themselves. It is a book in progress. So, with rather less paperwork, are we.</p>
       </div>
     </section>
@@ -51,27 +57,32 @@ import '../styles/book.css';
     </section>
     <section class="book-section">
       <h2>Put an idea within reach.</h2>
-      <p>Notice a want before explaining it. Try a map that leaves something out. Follow a few marks on a screen until they have moved your hand. Each exercise starts with a particular question from the book.</p>
+      <p>Notice a want before explaining it. Follow a timetable from marks on paper to people moving through a city. Change a rule and inspect what it makes possible. Each exercise starts with a particular question from the book.</p>
       <div class="book-actions"><a class="book-button" href="/chapters/prologue">Start reading →</a><a class="book-link" href="/practice">Try an idea →</a></div>
     </section>
   </main>
   <SiteFooter />
 </BaseLayout>
 <style>
-  .opening { display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-12); align-items: start; padding: var(--space-6) 0 var(--space-12); }
-  .opening .book-title { font-size: clamp(2.8rem, 5.5vw, 4.8rem); max-width: 15ch; }
+  .opening { padding-bottom: var(--space-8); }
+  .opening .book-title { font-size: clamp(2.5rem, 5vw, 4rem); max-width: 24ch; }
   .opening em { color: var(--color-act-i); font-weight: inherit; }
-  .opening .book-lead { max-width: 34ch; font-size: var(--text-lg); }
-  .opening__promise { max-width: 43ch; color: var(--color-ink-muted); font-size: var(--text-base); }
-  .recognitions { padding-top: .25rem; }
+  .opening .book-lead { max-width: 64ch; font-size: var(--text-lg); margin: var(--space-5) 0; }
+  .opening .book-actions { margin: var(--space-5) 0 0; }
   .recognitions h2 { font: 380 var(--text-xl)/1.3 var(--font-display); margin-bottom: var(--space-3); }
-  .recognitions details { border-top: 1px solid var(--color-rule); margin: 0; }
-  .recognitions > p { margin-bottom: var(--space-6); }
-  .recognitions details:last-child { border-bottom: 1px solid var(--color-rule); }
+  .recognitions > p { margin-bottom: var(--space-5); }
+  .recognitions__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--space-10); align-items: start; }
+  .recognitions details { border-top: 1px solid var(--color-rule); margin: 0; min-width: 0; }
   .recognitions summary { padding: var(--space-5) 0; font: 380 var(--text-xl)/1.35 var(--font-display); }
-  .recognitions details[open] > summary { margin-bottom: 0; color: var(--color-act-ii); }
+  .recognitions summary:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 4px; }
+  .recognitions details[open] > summary { margin-bottom: 0; }
   .recognitions__body { padding-bottom: var(--space-6); font-size: var(--text-base); color: var(--color-ink-muted); }
   .recognitions__body p + p { margin-top: 1em; }
-  .recognitions__body a { display: inline-block; font-size: var(--text-sm); margin-top: var(--space-5); }
-  @media (max-width: 48rem) { .opening { grid-template-columns: 1fr; gap: var(--space-8); padding-top: 0; } .opening .book-title { max-width: 17ch; } }
+  .recognitions__links { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-6); margin-top: var(--space-5); font-size: var(--text-sm); }
+  @media (max-width: 48rem) {
+    .opening .book-title { max-width: 24ch; }
+    .opening .book-lead { font-size: var(--text-base); }
+    .recognitions__grid { grid-template-columns: 1fr; }
+    .recognitions summary { font-size: var(--text-lg); }
+  }
 </style>

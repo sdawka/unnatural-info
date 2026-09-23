@@ -10,8 +10,16 @@ import '../styles/book.css';
 const chapters = await getCollection('chapters', ({ data }) => !data.draft);
 const count = chapters.filter(c => c.data.chapterNumber != null).length;
 const start = chapters.find(c => c.id === 'prologue');
-const sampler = ['prologue', '01-before-thought-there-is-want', '13-the-three-cycles'].map(id => chapters.find(c => c.id === id)!);
+const sampler = ['prologue', '10-the-information-physical-duality', '20-how-we-change-the-world'].map(id => chapters.find(c => c.id === id)!);
 const samplerMinutes = sampler.reduce((total, chapter) => total + readingMinutes(chapter.body), 0);
+const paths = READING_PATHS.map(path => ({
+  ...path,
+  entries: path.chapters.map(number => {
+    const chapter = chapters.find(c => c.data.chapterNumber === number);
+    if (!chapter) throw new Error(`Missing chapter ${number} in reading path: ${path.id}`);
+    return chapter;
+  }),
+}));
 ---
 <BaseLayout title="The book" cinematic>
   <SiteHeader />
@@ -19,7 +27,7 @@ const samplerMinutes = sampler.reduce((total, chapter) => total + readingMinutes
     <header>
       <p class="book-kicker">Three acts · {count} chapters · Working drafts</p>
       <h1 class="book-title">Follow the thread.</h1>
-      <p class="book-lead">Life doesn’t always make sense. Even when it should. This book follows that trouble through wanting, knowing, and living with other people.</p>
+      <p class="book-lead">Life doesn’t always make sense. Even when it should. Follow that question through wanting, knowledge, culture, society, technology, and the living world we belong to.</p>
       <div class="book-actions"><a class="book-button" href="/chapters/prologue">Begin the book · about {readingMinutes(start?.body)} min →</a><ResumeReading /></div>
       <p class="book-small">Reading estimates cover the prose. Pause as long as you like for the optional practices.</p>
     </header>
@@ -30,15 +38,12 @@ const samplerMinutes = sampler.reduce((total, chapter) => total + readingMinutes
           <span class="book-act__num" aria-hidden="true">{act.roman}</span><div><h3>{act.name}</h3><p>{act.premise}</p><small>{act.alias} · Act {act.roman} →</small></div>
         </a></li>)}
       </ol>
-      <div class="book-aside"><p>First, something matters to you. Then you need a way to understand it. Then your understanding meets other people and a world that can surprise you.</p><p>The acts build on one another. You can also enter through a question that is already yours.</p></div>
+      <div class="book-aside"><p>Something matters to a living being. Distinctions make a world possible to understand and act in. Shared descriptions become knowledge, tools, and institutions, which change the conditions of living. Each act follows the consequences of the one before it.</p><p>The acts build on one another. You can also enter through a question that is already yours.</p></div>
     </section>
     <section class="book-section" aria-labelledby="paths-heading">
       <h2 id="paths-heading">A few other doors.</h2>
-      <div class="book-aside"><h3>Try a short sample · about {samplerMinutes} minutes</h3><p>Move from a want, to a body with limits, to the question of what makes a life hang together.</p><ol>{sampler.map(chapter => <li><a href={`/chapters/${chapter.id}`}>{chapter.data.title}</a></li>)}</ol></div>
-      <div class="book-paths">{READING_PATHS.map(path => <article><h3>{path.title}</h3><p>{path.description}</p><ol>{path.chapters.map(number => {
-        const chapter = chapters.find(c => c.data.chapterNumber === number);
-        return chapter && <li><a href={`/chapters/${chapter.id}`}>{number}. {chapter.data.title}</a></li>;
-      })}</ol></article>)}</div>
+      <div class="book-aside"><h3>Try a short sample · about {samplerMinutes} minutes</h3><p>Begin with the book’s question, see how information changes the physical world, then ask what makes collective change worth making.</p><ol>{sampler.map(chapter => <li><a href={`/chapters/${chapter.id}`}>{chapter.data.title}</a></li>)}</ol></div>
+      <div class="book-paths">{paths.map(path => <article id={`path-${path.id}`} aria-labelledby={`path-title-${path.id}`}><h3 id={`path-title-${path.id}`}>{path.title}</h3><p>{path.description}</p><ol>{path.entries.map(chapter => <li><a href={`/chapters/${chapter.id}`}>{chapter.data.chapterNumber}. {chapter.data.title}</a></li>)}</ol></article>)}</div>
     </section>
     <section class="book-section" aria-labelledby="contents-heading">
       <h2 id="contents-heading">The whole book.</h2>

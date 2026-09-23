@@ -6,6 +6,8 @@ Chapters 13–18 call three overlapping modes MMM: Learning (observe, explain, t
 
 Existing traditions help sharpen the comparison. Retrieval practice gives one concrete learning action; implementation intentions can turn a chosen cue into a small plan. Neither source proves the larger framework, and neither guarantees that a plan succeeds.
 
+The same question about improvement reaches beyond an individual. Chapter 20 follows printing and the Internet: increased reach opens possibilities, while people still have to judge purposes, costs, and who can repair the arrangements. Chapter 21 develops symbolic culture as a way living beings preserve and share capacities across generations. Dependence on people and material support continues at every scale.
+
 ## Questions
 
 - What capacity changed, and who benefits or pays?

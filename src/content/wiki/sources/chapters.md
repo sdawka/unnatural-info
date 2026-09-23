@@ -34,9 +34,9 @@ This page maps the current book files to the archive. It contains a preface, pro
 16. [Becoming](/chapters/16-cycle-3-marvel-meander-manifest)
 17. [The Cycles in Relation](/chapters/17-the-cycles-in-relation)
 18. [MMM as Lived Experience](/chapters/18-mmm-as-lived-experience)
-19. [Applied Knowledge](/chapters/19-applied-knowledge)
-20. [How We Change the World](/chapters/20-how-we-change-the-world)
-21. [MMM Across Life Itself](/chapters/21-mmm-across-life-itself)
+19. [What Knowledge Needs to Stay Alive](/chapters/19-applied-knowledge): gardens, public infrastructure, and the work that keeps knowledge usable.
+20. [Changing a World We Share](/chapters/20-how-we-change-the-world): printing, the Internet, and the difference between capability and ethical progress.
+21. [How Far Does the Pattern Travel?](/chapters/21-mmm-across-life-itself): biological dependence and symbolic culture, with their mechanisms kept distinct.
 22. [What the Mystics Were Tracking](/chapters/22-what-the-mystics-were-tracking)
 23. [How to Live Better](/chapters/23-how-to-live-better)
 24. [The Most Objective We Can Be](/chapters/24-the-most-objective-we-can-be)

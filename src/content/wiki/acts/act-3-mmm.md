@@ -14,6 +14,8 @@ Act 3 asks what oriented beings do with the distinctions they have made. It does
 
 Chapters 12–24 move from knowledge to experimentation, social artifacts, world-changing, life, contemplative practice, daily problems, and objectivity. The comparisons to cybernetics, learning theory, pragmatism, and wisdom traditions are analogies and working tools. Similar three-part descriptions in other fields do not independently validate the whole framework.
 
+The scale widens through the act. Chapter 19 moves from a garden to an imagined public water network, where records, pipes, skilled work, and authority must keep meeting. Chapter 20 examines printing and the Internet as collective changes whose reach does not settle their goodness. Chapter 21 follows biological dependence into symbolic culture: a language, tool, song, or warning can make something available beyond a single lifetime, through mechanisms distinct from biological evolution.
+
 ## Chapters
 
 | # | Title | Core question |
@@ -25,9 +27,9 @@ Chapters 12–24 move from knowledge to experimentation, social artifacts, world
 | 16 | Becoming: Marvel, Meander, Manifest | What deserves attention before action? |
 | 17 | The Cycles in Relation | When should I switch modes, rest, or ask for help? |
 | 18 | MMM as the Lived Experience of Growth | What changes when a practice returns feedback? |
-| 19 | Applied Knowledge | How do tools and institutions become part of the next situation? |
-| 20 | How We Change the World | Who participates, pays, repairs, and revises? |
-| 21 | MMM Across Life Itself | Where does the analogy help, and where does it stop? |
+| 19 | What Knowledge Needs to Stay Alive | What keeps knowledge usable in tools, public infrastructure, and institutions? |
+| 20 | Changing a World We Share | How does greater capability differ from ethical progress? |
+| 21 | How Far Does the Pattern Travel? | How does symbolic culture extend living capacities, and through which distinct mechanisms? |
 | 22 | What the Mystics Were Tracking | What do named practices do in their own traditions? |
 | 23 | How to Live Better, Given Everything | What small response fits this problem and its limits? |
 | 24 | The Most Objective We Can Be | How should evidence and consequences change confidence? |

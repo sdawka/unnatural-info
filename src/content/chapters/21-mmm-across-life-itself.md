@@ -5,7 +5,7 @@ act: mmm
 actTitle: "How We Learn, Create, and Change"
 chapterNumber: 21
 order: 21
-summary: "Cells, animals, people, populations, and institutions all respond to difference, but not through one proven MMM mechanism. Careful comparison preserves both continuity and important differences."
+summary: "Living systems, people, populations, and institutions meet change through distinct mechanisms. Biological dependence and symbolic culture connect them without making MMM a universal proof."
 themes: ["life", "adaptation", "evolution", "analogy", "agency"]
 status: draft
 draft: false
@@ -28,9 +28,13 @@ Bacterial chemotaxis involves molecular receptors, signaling pathways, and chang
 
 MMM can compare features of these cases. Measurement resembles sensitivity to difference. Mapping resembles orientation in an environment. Manifestation resembles the way conditions can support forms no single participant designed. But the comparison does not show that a cell marvels, that evolution models, or that a civilization is literally one agent. Shared vocabulary is a viewing instrument, not a newly discovered engine of life.
 
-This restraint makes continuity more interesting. Human symbolic practices really do extend biological capacities. We can record a drought, teach someone we will never meet, or coordinate a response across generations. The extension also magnifies error. A false rumor can be stored, copied, and optimized. An institution can become highly capable at achieving a harmful goal. More memory and coordination produce reach, not virtue.
+This restraint makes continuity more interesting. People remain biological creatures: hungry, vulnerable to weather and infection, dependent on care, limited by attention, and able to learn through bodies acting in places. Symbolic culture gives those capacities an unusual reach. A warning can outlive its writer. A tool can contain the accumulated skill of people who made it. A child can inherit a language, a measurement system, a song, a building method, or a cautionary tale without beginning from bare sensation. This is not an escape from dependence. It is one way dependent creatures help one another continue.
 
-Nor does life climb toward complexity as a general destination. Evolution branches. Lineages simplify, persist, proliferate, or disappear. Individuals learn and forget. Societies preserve techniques and lose them. “Higher” smuggles a verdict into a description.
+These are also different ways for something to endure. A person remembers how to make soup; a library holds recipes beyond any one person's memory; an institution keeps a practice available through records, roles, material arrangements, and people teaching one another. Each opens possibilities the other cannot supply alone. When knowledge crosses a generation, it still needs someone to read, practice, question, and sometimes change it.
+
+Culture can improve a shared response without making it virtuous by default. A town can keep flood knowledge in maps, drills, trained crews, and stories told at the right time of year. It can also preserve a false rumor, a cruel hierarchy, or a procedure nobody is allowed to question. More memory and coordination produce reach. What they should serve remains an ethical and political question.
+
+Nor does life climb toward complexity as a general destination. Evolution branches. Lineages simplify, persist, proliferate, or disappear. Individuals learn and forget. Societies preserve techniques and lose them. “Higher” smuggles a verdict into a description. What deserves celebration may be resilience, beauty, liberation, care, or something else we must argue about together.
 
 Return to the garden committee. If an organizer calls its hierarchy “natural,” the comparison has skipped a question: who should get a say here? A resemblance to a living system cannot decide that for the households carrying the watering cans.
 

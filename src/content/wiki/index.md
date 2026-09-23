@@ -6,10 +6,10 @@ The wiki is the book's working archive: concepts, sources, themes, and open ques
 
 | Page | Summary |
 |------|---------|
-| [Prologue](acts/prologue.md) | A missed reply introduces the method: separate events, stories, wishes, and unknowns, then keep revising. |
+| [Prologue](acts/prologue.md) | An ordinary reach opens onto natural beings whose knowledge, technologies, and institutions change a shared world. |
 | [Act 1 — What moves us](acts/act-1-volo-ergo-sum.md) | Wanting as a functional lens for orientation, followed by difference, care, meaning, and shared knowledge. |
 | [Act 2 — How we make sense of things](acts/act-2-initd.md) | Boundaries, maps, values, categories, and the costs of simplifying a world no finite observer can take in at once. |
-| [Act 3 — How we learn, create, and change](acts/act-3-mmm.md) | Three overlapping modes: observe/explain/test; find your bearings/try/make; attend/explore/make room. |
+| [Act 3 — How we learn, create, and change](acts/act-3-mmm.md) | Learning, creating, and becoming through ordinary life, public infrastructure, technology, symbolic culture, and collective change. |
 | [Epilogue](acts/epilogue.md) | Use distinctions carefully, keep other people in view, and let consequences revise the frame. |
 
 ## Concepts
@@ -47,4 +47,4 @@ The wiki is the book's working archive: concepts, sources, themes, and open ques
 | [Schema](schema.md) | Wiki conventions and structure. |
 | [Log](log.md) | Historical ingest and revision notes; older entries are retained as history. |
 
-*Last reconciled: 2026-09-22. The archive describes a 24-chapter book plus preface, prologue, and epilogue.*
+*Last reconciled: 2026-09-23. The archive describes a 24-chapter book plus preface, prologue, and epilogue.*
