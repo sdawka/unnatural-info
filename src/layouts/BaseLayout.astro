@@ -18,10 +18,21 @@ import { BOOK_DESCRIPTION } from '../lib/book';
 ---
 
 <!doctype html>
-<html lang="en" class:list={[{ cinematic }]}>
+<html lang="en" data-theme="dark" data-reader-size="regular" class:list={[{ cinematic }]}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <script is:inline>
+      (() => {
+        try {
+          const theme = localStorage.getItem('unnatural:appearance');
+          const size = localStorage.getItem('unnatural:reader-size');
+          if (theme === 'dark' || theme === 'light' || theme === 'system') document.documentElement.dataset.theme = theme;
+          if (size === 'regular' || size === 'larger' || size === 'largest') document.documentElement.dataset.readerSize = size;
+        } catch { /* Dark, regular reading remains available. */ }
+      })();
+    </script>
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
@@ -40,6 +51,6 @@ import { BOOK_DESCRIPTION } from '../lib/book';
 </html>
 
 <style>
-  .skip-link { position: fixed; top: .5rem; left: .5rem; z-index: 1000; padding: .7rem 1rem; background: var(--color-ink); color: var(--color-ground); transform: translateY(-200%); }
+  .skip-link { position: fixed; top: .5rem; left: .5rem; z-index: 1000; min-height: var(--control-height); padding: .7rem 1rem; background: var(--color-ink); color: var(--color-ground); border-radius: var(--radius-sm); transform: translateY(-200%); font-family: var(--font-ui); }
   .skip-link:focus { transform: translateY(0); }
 </style>

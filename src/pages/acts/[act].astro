@@ -308,6 +308,8 @@ const actChapters = allChapters
     position: relative;
   }
 
+  .chl__link:focus-visible { outline: 2px solid var(--color-focus, var(--color-ink)); outline-offset: 4px; }
+
   .chl__link::before {
     content: '';
     position: absolute;
@@ -409,5 +411,9 @@ const actChapters = allChapters
     .chl__link:hover {
       padding-left: var(--space-3);
     }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .chl__link, .chl__link::before, .chl__arrow, .chl__title { transition: none; }
   }
 </style>

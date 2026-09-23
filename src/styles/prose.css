@@ -4,11 +4,12 @@
   max-width: var(--prose-width);
   font-family: var(--font-body);
   font-variation-settings: 'opsz' 12, 'wght' 420;
-  font-size: var(--text-base);
+  font-size: var(--reader-text, var(--text-base));
   line-height: var(--lh-body);
   color: var(--color-ink);
   hyphens: auto;
   -webkit-hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 /* ——— Headings ——— */
@@ -122,6 +123,8 @@
   border-bottom-color: transparent;
 }
 
+.prose a:focus-visible { border-bottom-color: transparent; background-size: 100% 1px; }
+
 /* ——— Blockquote ——— */
 .prose blockquote {
   border-left: 3px solid var(--color-ink-faint);
@@ -231,3 +234,18 @@
   orphans: 2;
   widows: 2;
 }
+
+.prose :where(h1, h2, h3, h4) { overflow-wrap: anywhere; }
+
+.prose details {
+  margin: var(--space-6) 0;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+.prose details > summary { min-height: var(--control-height); display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-4); font: 600 .875rem/1.35 var(--font-ui); }
+.prose details > summary::before { content: '+'; color: var(--color-ink-muted); }
+.prose details > summary { list-style: none; }
+.prose details > summary::-webkit-details-marker { display: none; }
+.prose details[open] > summary::before { content: '−'; }
+.prose details > :not(summary) { margin-inline: var(--space-4); }

@@ -1,0 +1,38 @@
+<fieldset class="rc metal-surface" data-reader-controls hidden>
+  <legend>Text size</legend>
+  <label><input type="radio" name="reader-size" value="regular" /> <span>Regular</span></label>
+  <label><input type="radio" name="reader-size" value="larger" /> <span>Larger</span></label>
+  <label><input type="radio" name="reader-size" value="largest" /> <span>Largest</span></label>
+</fieldset>
+
+<script>
+  const controls = document.querySelector<HTMLFieldSetElement>('[data-reader-controls]');
+  if (controls) {
+    const current = document.documentElement.dataset.readerSize ?? 'regular';
+    const selected = controls.querySelector<HTMLInputElement>(`input[value="${current}"]`)
+      ?? controls.querySelector<HTMLInputElement>('input[value="regular"]');
+    if (selected) selected.checked = true;
+    controls.hidden = false;
+    controls.addEventListener('change', (event) => {
+      const input = event.target as HTMLInputElement;
+      if (!input.matches('input[type="radio"]')) return;
+      const value = input.value;
+      if (value !== 'regular' && value !== 'larger' && value !== 'largest') return;
+      document.documentElement.dataset.readerSize = value;
+      try { localStorage.setItem('unnatural:reader-size', value); } catch { /* This page still updates. */ }
+    });
+  }
+</script>
+
+<style>
+  .rc { width: fit-content; display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-1); margin-top: var(--space-5); padding: var(--space-1); border-radius: var(--radius-sm); box-shadow: none; font-family: var(--font-ui); }
+  .rc[hidden] { display: none; }
+  .rc legend { float: left; padding: 0 var(--space-2); color: var(--color-ink-muted); font-size: .8125rem; }
+  .rc label { position: relative; min-height: 44px; display: inline-flex; align-items: center; }
+  .rc input { position: absolute; inset: 0; opacity: 0; }
+  .rc span { min-height: 44px; display: inline-flex; align-items: center; padding: 0 var(--space-3); border-radius: 4px; color: var(--color-ink-muted); font-size: .8125rem; font-weight: 600; }
+  .rc input:checked + span { color: var(--color-on-metal); background: linear-gradient(135deg, var(--color-metal-high), var(--color-metal-mid) 52%, var(--color-metal-low)); }
+  .rc input:focus-visible + span { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+  @media (forced-colors: active) { .rc input:checked + span { outline: 2px solid Highlight; outline-offset: -3px; } .rc input:focus-visible + span { outline: 2px dashed Highlight; outline-offset: 2px; } }
+  @media (max-width: 30rem) { .rc { width: 100%; } .rc legend { width: 100%; padding: var(--space-2) var(--space-2) 0; } .rc label { flex: 1; } .rc span { width: 100%; justify-content: center; padding-inline: var(--space-2); } }
+</style>

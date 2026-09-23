@@ -49,13 +49,16 @@ const entries = [...catalog].sort((a, b) => a.author.localeCompare(b.author, 'en
             </select>
           </label>
         </div>
+        <details class="reference-topics" id="reference-topics" open>
+          <summary>Browse by category <span id="reference-topic-count">All topics</span></summary>
         <fieldset class="reference-categories" aria-describedby="category-help">
-          <legend>Categories</legend>
+          <legend class="visually-hidden">Categories</legend>
           <p id="category-help">Choose any that interest you. Results can match any selected category.</p>
           <div class="reference-categories__options">
             {REFERENCE_CATEGORIES.map(category => <label><input type="checkbox" name="tag" value={category.id} aria-controls="reference-list" /><span>{category.label}</span></label>)}
           </div>
         </fieldset>
+        </details>
         <div class="reference-filters__footer">
           <p id="reference-count" role="status" aria-live="polite">{entries.length} references</p>
           <button type="reset">Clear filters</button>
@@ -69,8 +72,8 @@ const entries = [...catalog].sort((a, b) => a.author.localeCompare(b.author, 'en
       <ul class="reference-list" id="reference-list">
         {entries.map(reference => <li class="reference" id={`ref-${reference.id}`} data-reference data-search={reference.search} data-tags={reference.tags.join(' ')} data-chapters={reference.chapters.join(' ')} data-origins={reference.origins.join(' ')}>
           <article aria-labelledby={`title-${reference.id}`}>
-            <p class="reference__author">{reference.author}{reference.year != null && <span class="reference__year"> · {typeof reference.year === 'number' && reference.year < 0 ? `${Math.abs(reference.year)} BCE` : reference.year}</span>}</p>
             <h3 id={`title-${reference.id}`}><a href={`/reading#ref-${reference.id}`}>{reference.title}<span class="visually-hidden"> — link to this reference</span></a></h3>
+            <p class="reference__author">{reference.author}{reference.year != null && <span class="reference__year"> · {typeof reference.year === 'number' && reference.year < 0 ? `${Math.abs(reference.year)} BCE` : reference.year}</span>}</p>
             <ul class="reference__tags" aria-label="Topics">{reference.tags.map(tag => <li>{categoryLabel.get(tag)}</li>)}</ul>
             <p class="reference__influence"><span>{reference.origins.includes('chapter') ? 'Place in the book’s development' : reference.kind === 'reading-lead' ? 'Reading lead · why explore it' : 'Further reading · connection to the book'}</span>{reference.influence}</p>
             {reference.related.length > 0 && <p class="reference__chapters"><span>In the book:</span> {reference.related.map(chapter => <a href={`/chapters/${chapter.id}`} aria-label={chapter.data.chapterNumber ? `Chapter ${chapter.data.chapterNumber}: ${chapter.data.title}` : chapter.data.title} title={chapter.data.title}>{chapter.data.chapterNumber ? `Chapter ${chapter.data.chapterNumber}` : chapter.id === 'preface' ? 'Preface' : chapter.id === 'prologue' ? 'Prologue' : 'Epilogue'}</a>)}</p>}
@@ -93,6 +96,8 @@ const entries = [...catalog].sort((a, b) => a.author.localeCompare(b.author, 'en
   if (form && query && chapter && origin && count && empty) {
     const checkboxes = [...form.querySelectorAll<HTMLInputElement>('input[name="tag"]')];
     const chapterIds = [...chapter.options].map(option => option.value);
+    const topics = document.querySelector<HTMLDetailsElement>('#reference-topics');
+    const topicCount = document.querySelector<HTMLElement>('#reference-topic-count');
     const references = [...document.querySelectorAll<HTMLElement>('[data-reference]')].map(element => ({
       element,
       search: element.dataset.search ?? '',
@@ -109,6 +114,7 @@ const entries = [...catalog].sort((a, b) => a.author.localeCompare(b.author, 'en
         if (matches) visible++;
       }
       count!.textContent = `${visible} of ${references.length} references`;
+      if (topicCount) topicCount.textContent = filters.categories.length ? `${filters.categories.length} selected` : 'All topics';
       empty!.hidden = visible !== 0;
       if (updateUrl) history.replaceState(null, '', writeReferenceFilters(new URL(location.href), filters));
     }
@@ -121,6 +127,7 @@ const entries = [...catalog].sort((a, b) => a.author.localeCompare(b.author, 'en
       apply(false);
     }
     restoreFromUrl();
+    if (topics && matchMedia('(max-width: 48rem)').matches) topics.open = checkboxes.some(input => input.checked);
     form.hidden = false;
     const fallback = document.querySelector<HTMLElement>('#reference-fallback');
     if (fallback) fallback.hidden = true;
@@ -139,40 +146,49 @@ const entries = [...catalog].sort((a, b) => a.author.localeCompare(b.author, 'en
 </script>
 
 <style>
-  .reading__header { max-width: 48rem; margin-bottom: var(--space-10); }
-  .reading .book-title { max-width: 20ch; }
+  .reading__header { max-width: 50rem; margin-bottom: var(--space-12); }
+  .reading .book-title { max-width: 19ch; }
   .reading__intro { color: var(--color-ink-muted); max-width: 62ch; margin-top: var(--space-4); }
   .reference-browser > h2 { font: 380 var(--text-2xl)/1.2 var(--font-display); margin-bottom: var(--space-5); }
-  .reference-filters { border-top: 1px solid var(--color-rule); border-bottom: 1px solid var(--color-rule); padding: var(--space-6) 0; margin-bottom: var(--space-8); }
-  .reference-filters__fields { display: grid; grid-template-columns: 1.2fr 1fr .8fr; gap: var(--space-6); }
-  .reference-filters__fields label { display: grid; gap: var(--space-2); font-size: var(--text-sm); min-width: 0; }
-  .reference-filters input[type="search"], .reference-filters select { display: block; width: 100%; min-width: 0; padding: .7rem .8rem; background: var(--color-ground-tint); color: var(--color-ink); border: 1px solid var(--color-rule); border-radius: 0; font: inherit; font-size: 1rem; }
-  .reference-categories { border: 0; padding: 0; margin: var(--space-5) 0 0; min-width: 0; }
-  .reference-categories legend { font-size: var(--text-sm); }
-  .reference-categories > p { color: var(--color-ink-muted); font-size: var(--text-sm); margin: var(--space-1) 0 var(--space-3); }
-  .reference-categories__options { display: flex; flex-wrap: wrap; gap: var(--space-3); }
-  .reference-categories__options label { display: inline-flex; align-items: center; gap: .5rem; padding: .5rem .7rem; border: 1px solid var(--color-rule); font-size: var(--text-sm); cursor: pointer; }
-  .reference-categories__options label:has(input:checked) { color: var(--color-ink); border-color: var(--color-ink-muted); background: var(--color-ground-warm); }
+  .reference-filters { padding: var(--space-6); border: 1px solid var(--color-rule); border-radius: var(--radius-lg); background: var(--color-surface); box-shadow: var(--shadow-panel); margin-bottom: var(--space-10); }
+  .reference-filters__fields { display: grid; grid-template-columns: 1.2fr 1fr .8fr; gap: var(--space-5); }
+  .reference-filters__fields label { display: grid; align-content: start; gap: var(--space-2); font: 500 var(--text-sm)/1.5 var(--font-ui); min-width: 0; color: var(--color-ink-soft); }
+  .reference-filters input[type="search"], .reference-filters select { display: block; width: 100%; min-width: 0; min-height: var(--control-height); padding: .75rem; background: var(--color-field); color: var(--color-ink); border: 1px solid var(--color-rule); border-radius: var(--radius-sm); font: 400 1rem/1.5 var(--font-ui); transition: border-color var(--dur-fast), box-shadow var(--dur-fast); }
+  .reference-filters input::placeholder { color: var(--color-ink-muted); }
+  .reference-filters :is(input[type="search"], select):hover { border-color: var(--color-ink-muted); }
+  .reference-topics { margin-top: var(--space-5); border-block: 1px solid var(--color-rule-soft); }
+  .reference-topics summary { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); min-height: var(--control-height); padding-block: var(--space-3); font: 500 var(--text-sm)/1.5 var(--font-ui); cursor: pointer; list-style: none; }
+  .reference-topics summary::-webkit-details-marker { display: none; }
+  .reference-topics summary > span { margin-left: auto; color: var(--color-ink-muted); font-size: .8125rem; font-weight: 400; }
+  .reference-topics summary::after { content: '+'; width: 1.25rem; text-align: center; color: var(--color-ink-soft); }
+  .reference-topics[open] summary::after { content: '−'; }
+  .reference-categories { border: 0; padding: 0 0 var(--space-5); min-width: 0; }
+  .reference-categories > p { color: var(--color-ink-muted); font: var(--text-sm)/1.6 var(--font-ui); margin-bottom: var(--space-4); max-width: 60ch; }
+  .reference-categories__options { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+  .reference-categories__options label { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 44px; padding: var(--space-2) var(--space-4); border: 1px solid var(--color-rule); border-radius: var(--radius-pill); font: 400 .8125rem/1.5 var(--font-ui); cursor: pointer; transition: background var(--dur-fast), border-color var(--dur-fast), color var(--dur-fast); }
+  .reference-categories__options label:hover { border-color: var(--color-ink-muted); background: var(--color-surface-raised); }
+  .reference-categories__options label:has(input:checked) { color: var(--color-ground); border-color: var(--color-ink); background: var(--color-ink); }
   .reference-categories input { accent-color: var(--color-ink); width: 1rem; height: 1rem; flex: 0 0 auto; }
-  .reference-filters__footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-5); font-size: var(--text-sm); color: var(--color-ink-muted); }
-  .reference-filters button, .reference-empty button { border: 0; padding: .3rem 0; color: var(--color-ink); background: none; text-decoration: underline; text-underline-offset: .2em; cursor: pointer; font: inherit; }
-  .reference-filters :is(input, select, button):focus-visible, .reference-empty button:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 4px; }
-  .reference-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-10); list-style: none; padding: 0; }
-  .reference { min-width: 0; border-top: 1px solid var(--color-rule); padding-top: var(--space-5); scroll-margin-top: var(--space-8); overflow-wrap: anywhere; }
-  .reference:target { outline: 1px solid var(--color-ink-muted); outline-offset: var(--space-3); }
-  .reference__author { font-size: var(--text-sm); color: var(--color-ink-soft); margin-bottom: var(--space-2); }
-  .reference__year { color: var(--color-ink-muted); }
-  .reference h3 { font: 380 var(--text-xl)/1.3 var(--font-display); }
+  .reference-categories__options label:has(input:focus-visible) { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+  .reference-filters__footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-3); margin-top: var(--space-3); font: var(--text-sm)/1.5 var(--font-ui); color: var(--color-ink-muted); }
+  .reference-filters button, .reference-empty button { border: 0; min-height: 44px; padding: var(--space-2); color: var(--color-ink); border-radius: var(--radius-sm); background: none; text-decoration: underline; text-underline-offset: .25em; cursor: pointer; font: inherit; }
+  .reference-filters button:hover { background: var(--color-surface-raised); }
+  .reference-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--space-12); row-gap: var(--space-10); list-style: none; padding: 0; }
+  .reference { min-width: 0; border-top: 1px solid var(--color-rule); padding-top: var(--space-6); scroll-margin-top: calc(var(--header-height, 6rem) + var(--space-6)); overflow-wrap: anywhere; }
+  .reference:target { outline: 2px solid var(--color-ink-muted); outline-offset: var(--space-3); border-radius: var(--radius-sm); }
+  .reference h3 { font: 380 var(--text-xl)/1.3 var(--font-display); text-wrap: balance; }
   .reference h3 a:hover { text-decoration: underline; text-underline-offset: .2em; }
-  .reference__tags { display: flex; flex-wrap: wrap; gap: .4rem .7rem; list-style: none; padding: 0; margin: var(--space-3) 0 var(--space-4); font: .7rem/1.6 var(--font-mono); color: var(--color-ink-muted); }
-  .reference__tags li { border-bottom: 1px solid var(--color-rule); }
+  .reference__author { font: 400 var(--text-sm)/1.6 var(--font-ui); color: var(--color-ink-soft); margin-top: var(--space-2); }
+  .reference__year { color: var(--color-ink-muted); }
+  .reference__tags { display: flex; flex-wrap: wrap; gap: var(--space-2); list-style: none; padding: 0; margin: var(--space-4) 0; font: .8125rem/1.5 var(--font-ui); color: var(--color-ink-muted); }
+  .reference__tags li { border: 1px solid var(--color-rule-soft); padding: var(--space-1) var(--space-3); border-radius: var(--radius-pill); }
   .reference__influence { font-size: var(--text-base); color: var(--color-ink-soft); }
-  .reference__influence > span { display: block; color: var(--color-ink-muted); font: .67rem/1.5 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; margin-bottom: var(--space-2); }
-  .reference__chapters { display: flex; flex-wrap: wrap; gap: .4rem .8rem; margin-top: var(--space-4); font-size: var(--text-sm); }
+  .reference__influence > span { display: block; color: var(--color-ink-muted); font: 500 .8125rem/1.5 var(--font-ui); margin-bottom: var(--space-2); }
+  .reference__chapters { display: flex; flex-wrap: wrap; align-items: center; column-gap: var(--space-3); margin-top: var(--space-4); font: .8125rem/1.5 var(--font-ui); }
   .reference__chapters > span { color: var(--color-ink-muted); }
-  .reference__chapters a { text-decoration: underline; text-underline-offset: .2em; }
+  .reference__chapters a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: .25em; }
   .reference-empty { padding: var(--space-6) 0 var(--space-10); }
   .reference-empty h3 { font: 380 var(--text-xl)/1.3 var(--font-display); margin-bottom: var(--space-3); }
   [hidden] { display: none !important; }
-  @media (max-width: 48rem) { .reference-filters__fields, .reference-list { grid-template-columns: 1fr; } }
+  @media (max-width: 48rem) { .reference-filters__fields, .reference-list { grid-template-columns: 1fr; } .reference-filters { padding: var(--space-4); border-radius: var(--radius-md); } .reading__header { margin-bottom: var(--space-8); } }
 </style>

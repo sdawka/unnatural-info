@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 const chapters = await getCollection('chapters', ({ data }) => !data.draft);
 const links = Object.fromEntries(chapters.map(c => [c.id, c.data.title]));
 ---
-<a class="book-link" href="/chapters/prologue" hidden data-resume-reading data-chapters={JSON.stringify(links)}>Continue reading</a>
+<a class="book-resume book-link" href="/chapters/prologue" hidden data-resume-reading data-chapters={JSON.stringify(links)}>Continue reading</a>
 <script>
   for (const link of document.querySelectorAll<HTMLAnchorElement>('[data-resume-reading]')) {
     try {

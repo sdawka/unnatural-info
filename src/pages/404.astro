@@ -27,7 +27,7 @@ import SiteFooter from '../components/SiteFooter.astro';
 
 <style>
   .not-found {
-    padding: var(--space-24) var(--space-6);
+    padding: clamp(var(--space-12), 12vw, var(--space-24)) var(--safe-right) clamp(var(--space-12), 12vw, var(--space-24)) var(--safe-left);
     min-height: 60vh;
     display: flex;
     align-items: center;
@@ -51,7 +51,7 @@ import SiteFooter from '../components/SiteFooter.astro';
 
   .not-found__heading {
     font-family: var(--font-display);
-    font-size: var(--text-4xl);
+    font-size: clamp(2.25rem, 8vw, var(--text-4xl));
     font-weight: 300;
     color: var(--color-ink);
     line-height: 1.1;
@@ -76,6 +76,13 @@ import SiteFooter from '../components/SiteFooter.astro';
   }
 
   .not-found__home {
+    min-height: var(--control-height, 48px);
+    padding: .8rem 1rem;
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-sm, 6px);
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
     font-family: var(--font-mono);
     font-size: var(--text-xs);
     text-transform: uppercase;
@@ -87,6 +94,9 @@ import SiteFooter from '../components/SiteFooter.astro';
   }
 
   .not-found__home:hover {
-    text-decoration: underline;
+    border-color: var(--color-ink);
+    background: var(--color-surface, var(--color-ground-tint));
   }
+
+  .not-found__home:focus-visible { outline: 2px solid var(--color-focus, var(--color-ink)); outline-offset: 3px; }
 </style>

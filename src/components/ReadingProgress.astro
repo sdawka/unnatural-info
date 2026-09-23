@@ -13,20 +13,21 @@ const COLOR: Record<string, string> = {
 const color = COLOR[act] ?? 'var(--color-ink)';
 ---
 
-<div class="rp" data-reading-progress style={`--rp-color: ${color}`}>
+<div class="rp" data-reading-progress style={`--rp-color: ${color}`} aria-hidden="true">
   <div class="rp__bar" data-rp-bar></div>
 </div>
 
-<script is:inline>
+<script>
   (() => {
-    const bar = document.querySelector('[data-rp-bar]');
-    if (!bar) return;
+    const bar = document.querySelector<HTMLElement>('[data-rp-bar]');
+    const region = document.querySelector('[data-reading-region]');
+    if (!bar || !region) return;
     let ticking = false;
     const update = () => {
-      const doc = document.documentElement;
-      const scrolled = window.scrollY;
-      const height = (doc.scrollHeight - doc.clientHeight) || 1;
-      const pct = Math.max(0, Math.min(100, (scrolled / height) * 100));
+      const rect = region.getBoundingClientRect();
+      const top = rect.top + window.scrollY;
+      const end = top + rect.height - Math.min(window.innerHeight * .65, 520);
+      const pct = Math.max(0, Math.min(100, ((window.scrollY - top + 96) / Math.max(1, end - top)) * 100));
       bar.style.transform = `scaleX(${pct / 100})`;
       ticking = false;
     };

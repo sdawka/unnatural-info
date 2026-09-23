@@ -1,26 +1,30 @@
-.book-page { max-width: var(--page-max); margin: auto; padding: var(--space-16) var(--safe-right) var(--space-8) var(--safe-left); }
+.book-page { max-width: var(--page-max); margin: auto; padding: clamp(var(--space-10), 7vw, var(--space-16)) var(--safe-right) var(--space-8) var(--safe-left); }
 .book-kicker { font: 0.72rem/1.5 var(--font-mono); letter-spacing: .13em; text-transform: uppercase; color: var(--color-ink-muted); margin-bottom: var(--space-5); }
 .book-title { font: 350 clamp(2.5rem, 6vw, 5rem)/1.04 var(--font-display); letter-spacing: -.035em; max-width: 16ch; text-wrap: balance; }
 .book-lead { font-size: var(--text-xl); max-width: 45ch; line-height: 1.5; color: var(--color-ink-soft); margin: var(--space-6) 0; }
 .book-copy { max-width: 62ch; color: var(--color-ink-muted); }
 .book-copy p + p { margin-top: 1em; }
 .book-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem 1.8rem; margin: var(--space-8) 0; }
-.book-button { display: inline-block; padding: .8rem 1.2rem; background: var(--color-ink); color: var(--color-ground); text-decoration: none; border: 1px solid var(--color-ink); font: 500 .88rem/1.4 var(--font-mono); }
-.book-button:hover { background: var(--color-ground); color: var(--color-ink); }
+.book-button { position: relative; isolation: isolate; display: inline-flex; align-items: center; justify-content: center; min-height: var(--control-height, 48px); overflow: hidden; padding: .75rem 1.2rem; border: 1px solid var(--color-ink); border-radius: var(--radius-sm, 6px); background: linear-gradient(135deg, var(--color-metal-high, #fff) 0%, var(--color-metal-mid, #ced1d3) 42%, var(--color-metal-low, #78848e) 100%); color: var(--color-on-metal, #0c0e10); text-decoration: none; font: 600 .82rem/1.4 var(--font-ui, var(--font-mono)); }
+.book-button::after, .book-act::after, .book-paths article::after { content: ''; position: absolute; z-index: 2; inset: -30% auto -30% -20%; width: 18%; transform: translateX(-180%) skewX(-18deg); background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--color-metal-high, #fff) 72%, transparent), transparent); opacity: .7; pointer-events: none; }
+.book-button:hover::after, .book-button:focus-visible::after, .book-act:hover::after, .book-act:focus-visible::after, .book-paths article:focus-within::after { animation: book-metal-sweep var(--dur-slow, 560ms) var(--ease-out, cubic-bezier(.2,.7,.2,1)) both; }
+.book-button:hover { color: var(--color-on-metal, #0c0e10); filter: brightness(1.04); }
+.book-resume { display: inline-flex; align-items: center; min-height: var(--control-height, 48px); padding-inline: .25rem; font-family: var(--font-ui, var(--font-mono)); }
+.book-resume[hidden] { display: none; }
 .book-link { color: var(--color-ink); text-underline-offset: .25em; }
 .book-section { margin-top: var(--space-20); padding-top: var(--space-8); border-top: 1px solid var(--color-rule); }
 .book-section > h2 { font: 360 var(--text-3xl)/1.15 var(--font-display); margin-bottom: var(--space-5); }
 .book-section > p { max-width: 62ch; margin-bottom: var(--space-6); color: var(--color-ink-muted); }
 .book-acts { list-style: none; padding: 0; }
 .book-acts li { border-bottom: 1px solid var(--color-rule-soft); }
-.book-act { display: grid; grid-template-columns: 3rem 1fr; gap: var(--space-5); padding: var(--space-8) 0; text-decoration: none; color: inherit; }
+.book-act { position: relative; isolation: isolate; display: grid; grid-template-columns: 3rem 1fr; gap: var(--space-5); padding: var(--space-8) 0; text-decoration: none; color: inherit; overflow: hidden; }
 .book-act__num { font: 350 2.5rem/1 var(--font-display); color: var(--act-color); }
 .book-act h3 { font: 380 var(--text-2xl)/1.15 var(--font-display); }
 .book-act p { max-width: 57ch; margin-top: var(--space-3); color: var(--color-ink-muted); }
 .book-act small { display: inline-block; margin-top: var(--space-4); color: var(--act-color); }
 .book-act:hover h3 { text-decoration: underline; text-underline-offset: .2em; }
-.book-paths { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-10); }
-.book-paths article { min-width: 0; scroll-margin-top: var(--space-8); }
+.book-paths { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--color-rule-soft); border: 1px solid var(--color-rule-soft); }
+.book-paths article { position: relative; min-width: 0; scroll-margin-top: var(--space-8); padding: var(--space-6); background: var(--color-surface, var(--color-ground)); overflow: hidden; }
 .book-paths article:target { outline: 1px solid var(--color-rule); outline-offset: var(--space-3); }
 .book-paths h3 { font: 380 var(--text-xl)/1.25 var(--font-display); margin-bottom: var(--space-3); }
 .book-paths p { color: var(--color-ink-muted); font-size: var(--text-sm); margin-bottom: var(--space-3); }
@@ -30,7 +34,20 @@
 .book-aside p + p { margin-top: .7em; }
 .book-small { font-size: var(--text-sm); color: var(--color-ink-muted); }
 .book-page details { margin: var(--space-5) 0; }
-.book-page summary { cursor: pointer; text-underline-offset: .25em; }
+.book-page summary { cursor: pointer; text-underline-offset: .25em; min-height: var(--control-height, 48px); display: flex; align-items: center; }
+.book-page summary:focus-visible { outline: 2px solid var(--color-focus, var(--color-ink)); outline-offset: 3px; }
 .book-page details[open] > summary { margin-bottom: var(--space-4); }
 .book-page details > p { max-width: 62ch; margin-bottom: var(--space-4); }
-@media (max-width: 44rem) { .book-page { padding-top: var(--space-10); } .book-paths { grid-template-columns: 1fr; } .book-act { grid-template-columns: 2rem 1fr; gap: var(--space-4); } }
+.book-paths article:target { box-shadow: inset 0 0 0 1px var(--color-ink); }
+@keyframes book-metal-sweep { from { transform: translateX(-180%) skewX(-18deg); } to { transform: translateX(760%) skewX(-18deg); } }
+@media (max-width: 44rem) {
+  .book-page { padding-top: var(--space-10); }
+  .book-paths { grid-template-columns: 1fr; }
+  .book-paths article { padding: var(--space-5); }
+  .book-act { grid-template-columns: 2rem 1fr; gap: var(--space-4); padding: var(--space-6) 0; }
+  .book-actions { align-items: stretch; }
+  .book-actions .book-button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .book-button:hover::after, .book-button:focus-visible::after, .book-act:hover::after, .book-act:focus-visible::after, .book-paths article:focus-within::after { animation: none; }
+}

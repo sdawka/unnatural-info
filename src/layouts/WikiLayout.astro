@@ -110,6 +110,7 @@ const updated = entry.data.updated;
     letter-spacing: 0.12em;
     color: var(--color-ink-muted);
     margin-bottom: var(--space-8);
+    overflow-wrap: anywhere;
   }
 
   .wp__crumb {
@@ -119,6 +120,7 @@ const updated = entry.data.updated;
     color: var(--color-wiki);
     text-decoration: none;
     transition: color var(--dur-fast);
+    min-height: 44px;
   }
 
   .wp__crumb:hover { color: var(--color-ink); }
@@ -218,7 +220,11 @@ const updated = entry.data.updated;
     color: var(--color-wiki);
   }
   .wp__body :global(table) {
+    display: block;
     width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     border-collapse: collapse;
     margin: var(--space-5) 0;
     font-size: var(--text-sm);
@@ -257,6 +263,7 @@ const updated = entry.data.updated;
     color: var(--color-wiki);
     text-decoration: none;
     transition: transform var(--dur-med) var(--ease-out), color var(--dur-fast);
+    min-height: 48px;
   }
 
   .wp__back:hover {

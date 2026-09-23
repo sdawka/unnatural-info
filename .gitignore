@@ -26,3 +26,7 @@ pnpm-debug.log*
 
 # raw source dumps (not wiki-compiled artifacts)
 dump/
+
+# Regenerable visual design context and rendered exports
+.superdesign/init/
+.superdesign/tmp/

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "targets": {
+    "/": {
+      "targetKind": "existing-ui",
+      "projectId": "91ef2958-eecf-4b3b-9fcb-3dbc29125857",
+      "activeDraftId": "0457d58b-06a3-4564-8269-ac09994c5c17",
+      "designSystemPath": ".superdesign/design-system.md",
+      "contextFiles": [
+        ".superdesign/design-system.md",
+        "src/pages/index.astro",
+        "src/layouts/BaseLayout.astro",
+        "src/components/SiteHeader.astro",
+        "src/components/SiteFooter.astro",
+        "src/components/ResumeReading.astro",
+        "src/styles/tokens.css",
+        "src/styles/global.css",
+        "src/styles/book.css"
+      ],
+      "fingerprints": {
+        ".superdesign/design-system.md": "993f99cac830770098d153ededae01debee7bb8fd277f2f592041271ce29b4ce",
+        "src/pages/index.astro": "3bc3490a186f77f0881611382ea3aa656bd44bffe9d0c0a7bd4475b3a49ceaf2",
+        "src/layouts/BaseLayout.astro": "bb3fb893bfb94d125cd18ce2b8131b0c86f8d325bf708d901358c1bb1b050b52",
+        "src/components/SiteHeader.astro": "aa9acfe11e436e3bdf3e05efb128735161f3919466fa3009f57ccc050bba8d8e",
+        "src/components/SiteFooter.astro": "4c3ad6ffb883c253f9fd78b1041998140befa546978bbd1bf4d3b0aa2125f399",
+        "src/components/ResumeReading.astro": "e63607be84484bc52d7d0e3ba75de30f8364452c06d23d25f758099c784c8793",
+        "src/styles/tokens.css": "ae5813627c4623325c28f78be9389d65e51ae1cda6e41f78ce4d55550644f547",
+        "src/styles/global.css": "5dbea0201828d9772e1f2310d1e445fb0faee546e356d4039a33eb99b0899a37",
+        "src/styles/book.css": "c758f7fdf6d0c49664f5459fe5b81297db34a4eb245b1d3538de548a892754f5"
+      },
+      "drafts": {
+        "0457d58b-06a3-4564-8269-ac09994c5c17": {
+          "title": "UNNATURAL \u2014 liquid mirror reading",
+          "visualDirection": "Black metallic liquid mirror interactions, editorial reading",
+          "currentVersion": 2
+        }
+      },
+      "updatedAt": "2026-09-23T12:43:40.906200+00:00"
+    }
+  }
+}

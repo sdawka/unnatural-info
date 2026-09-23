@@ -2,10 +2,12 @@ import React, { useEffect, useMemo, useState, type FormEvent } from "react";
 import { useAgent } from "agents/react";
 import { useAgentChat } from "@cloudflare/ai-chat/react";
 import type { UIMessage } from "ai";
+import "../styles/analysis.css";
 
 const AGENT_URL =
   (typeof import.meta !== "undefined" &&
-    (import.meta as unknown as { env?: Record<string, string> }).env?.PUBLIC_AGENT_URL) ||
+    (import.meta as unknown as { env?: Record<string, string> }).env
+      ?.PUBLIC_AGENT_URL) ||
   "https://unnatural-agent.dawka.workers.dev";
 
 interface SessionUser {
@@ -46,7 +48,10 @@ function messageText(msg: UIMessage): string {
   const parts = msg.parts ?? [];
   return parts
     .map((p) => {
-      if (p.type === "text" && typeof (p as { text?: unknown }).text === "string") {
+      if (
+        p.type === "text" &&
+        typeof (p as { text?: unknown }).text === "string"
+      ) {
         return (p as { text: string }).text;
       }
       return "";
@@ -131,12 +136,15 @@ function SignIn({ onSent }: { onSent: () => void }) {
     setSending(true);
     setError(null);
     try {
-      const res = await fetch(`${AGENT_URL}/api/auth/magic-link/send-magic-link`, {
-        method: "POST",
-        credentials: "include",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, callbackURL: window.location.href }),
-      });
+      const res = await fetch(
+        `${AGENT_URL}/api/auth/magic-link/send-magic-link`,
+        {
+          method: "POST",
+          credentials: "include",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, callbackURL: window.location.href }),
+        },
+      );
       if (!res.ok) {
         const body = await res.text();
         throw new Error(`Request failed (${res.status}): ${body}`);
@@ -151,30 +159,34 @@ function SignIn({ onSent }: { onSent: () => void }) {
   };
 
   return (
-    <div style={styles.panel}>
-      <h2 style={styles.h2}>Sign in to analyze</h2>
-      <p style={styles.muted}>
+    <div className="analysis-panel">
+      <h1 className="analysis-title">Sign in to analyze</h1>
+      <p className="analysis-muted">
         Enter your email - we'll send a magic link. No password.
       </p>
       {sent ? (
-        <p style={styles.success}>
+        <p className="analysis-success">
           Check your inbox for a sign-in link, then return to this page.
         </p>
       ) : (
-        <form onSubmit={submit} style={styles.form}>
+        <form onSubmit={submit} className="analysis-form">
           <input
             type="email"
             required
             placeholder="you@example.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            style={styles.input}
+            className="analysis-input"
             disabled={sending}
           />
-          <button type="submit" disabled={sending || !email} style={styles.button}>
+          <button
+            type="submit"
+            disabled={sending || !email}
+            className="analysis-send"
+          >
             {sending ? "Sending..." : "Send magic link"}
           </button>
-          {error && <p style={styles.error}>{error}</p>}
+          {error && <p className="analysis-error">{error}</p>}
         </form>
       )}
     </div>
@@ -206,7 +218,8 @@ function Chat({ user }: { user: SessionUser }) {
     () => findAnalysisDoc(messages as UIMessage[]),
     [messages],
   );
-  const isWorking = status === "streaming" || isStreaming || status === "submitted";
+  const isWorking =
+    status === "streaming" || isStreaming || status === "submitted";
 
   const submit = (e: FormEvent) => {
     e.preventDefault();
@@ -216,40 +229,45 @@ function Chat({ user }: { user: SessionUser }) {
   };
 
   return (
-    <div style={styles.chat}>
-      <header style={styles.chatHeader}>
+    <div className="analysis-shell">
+      <header className="analysis-header">
         <div>
-          <h1 style={styles.h1}>Analyze</h1>
-          <p style={styles.muted}>Signed in as {user.email}</p>
+          <h1 className="analysis-title">Analyze</h1>
+          <p className="analysis-muted">Signed in as {user.email}</p>
         </div>
       </header>
 
-      <div style={styles.messages} aria-live="polite">
+      <div className="analysis-messages" aria-live="polite">
         {messages.length === 0 && (
-          <p style={styles.muted}>
-            Describe something you want to understand - a concept, a situation, or
-            a skill. The agent will apply the unnatural framework.
+          <p className="analysis-muted">
+            Describe something you want to understand - a concept, a situation,
+            or a skill. The agent will apply the unnatural framework.
           </p>
         )}
         {(messages as UIMessage[]).map((m) => (
           <Message key={m.id} message={m} />
         ))}
-        {isWorking && <p style={styles.analyzing}>Analyzing...</p>}
-        {error && <p style={styles.error}>{error.message}</p>}
+        {isWorking && <p className="analysis-muted">Analyzing...</p>}
+        {error && <p className="analysis-error">{error.message}</p>}
       </div>
 
       {analysisDoc && <AnalysisDocument markdown={analysisDoc} />}
 
-      <form onSubmit={submit} style={styles.inputRow}>
-        <input
-          type="text"
+      <form onSubmit={submit} className="analysis-form">
+        <textarea
           placeholder="What do you want to analyze?"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           disabled={isWorking}
-          style={styles.input}
+          rows={3}
+          aria-label="What do you want to analyze?"
+          className="analysis-input analysis-composer"
         />
-        <button type="submit" disabled={isWorking || !input.trim()} style={styles.button}>
+        <button
+          type="submit"
+          disabled={isWorking || !input.trim()}
+          className="analysis-send"
+        >
           Send
         </button>
       </form>
@@ -261,10 +279,12 @@ function Message({ message }: { message: UIMessage }) {
   const text = messageText(message);
   const isUser = message.role === "user";
   return (
-    <div style={{ ...styles.message, ...(isUser ? styles.userMsg : styles.assistantMsg) }}>
-      <div style={styles.role}>{isUser ? "you" : "agent"}</div>
+    <div
+      className={`analysis-message ${isUser ? "analysis-message--user" : "analysis-message--assistant"}`}
+    >
+      <div className="analysis-role">{isUser ? "you" : "agent"}</div>
       <div
-        style={styles.msgBody}
+        className="analysis-body"
         dangerouslySetInnerHTML={{ __html: renderMarkdown(text || " ") }}
       />
     </div>
@@ -273,10 +293,10 @@ function Message({ message }: { message: UIMessage }) {
 
 function AnalysisDocument({ markdown }: { markdown: string }) {
   return (
-    <section style={styles.analysisDoc} aria-label="Analysis document">
-      <div style={styles.analysisHeader}>Analysis Document</div>
+    <section className="analysis-document" aria-label="Analysis document">
+      <div className="analysis-document__header">Analysis Document</div>
       <div
-        style={styles.analysisBody}
+        className="analysis-body"
         dangerouslySetInnerHTML={{ __html: renderMarkdown(markdown) }}
       />
     </section>
@@ -316,8 +336,8 @@ export function AnalysisAgent() {
 
   if (auth.status === "loading") {
     return (
-      <div style={styles.panel}>
-        <p style={styles.muted}>Checking session...</p>
+      <div className="analysis-panel">
+        <p className="analysis-muted">Checking session...</p>
       </div>
     );
   }
@@ -328,96 +348,3 @@ export function AnalysisAgent() {
 
   return <Chat user={auth.user} />;
 }
-
-// ---------------------------------------------------------------------------
-// Minimal inline styles - Astro has no Tailwind configured here.
-// ---------------------------------------------------------------------------
-
-const styles: Record<string, React.CSSProperties> = {
-  panel: {
-    border: "1px solid #ddd",
-    padding: "1.5rem",
-    borderRadius: "4px",
-    maxWidth: "520px",
-    margin: "3rem auto",
-  },
-  h1: { fontSize: "1.75rem", fontWeight: 400, margin: 0 },
-  h2: { fontSize: "1.25rem", fontWeight: 500, marginBottom: "0.5rem" },
-  muted: { color: "#666", fontSize: "0.95rem", lineHeight: 1.5 },
-  success: { color: "#0a6", marginTop: "1rem" },
-  error: { color: "#c33", marginTop: "0.5rem" },
-  form: { display: "flex", flexDirection: "column", gap: "0.75rem", marginTop: "1rem" },
-  input: {
-    padding: "0.6rem 0.75rem",
-    border: "1px solid #ccc",
-    borderRadius: "4px",
-    fontSize: "1rem",
-    fontFamily: "inherit",
-    width: "100%",
-  },
-  button: {
-    padding: "0.6rem 1rem",
-    border: "1px solid #111",
-    background: "#111",
-    color: "#fff",
-    borderRadius: "4px",
-    fontSize: "1rem",
-    cursor: "pointer",
-  },
-  chat: { display: "flex", flexDirection: "column", gap: "1rem" },
-  chatHeader: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "flex-end",
-    borderBottom: "1px solid #eee",
-    paddingBottom: "1rem",
-  },
-  messages: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "0.75rem",
-    minHeight: "200px",
-  },
-  message: {
-    padding: "0.75rem 1rem",
-    borderRadius: "4px",
-    border: "1px solid #eee",
-  },
-  userMsg: { background: "#f7f7f7" },
-  assistantMsg: { background: "#fff" },
-  role: {
-    fontSize: "0.7rem",
-    textTransform: "uppercase",
-    letterSpacing: "0.08em",
-    color: "#888",
-    marginBottom: "0.25rem",
-  },
-  msgBody: { fontSize: "1rem", lineHeight: 1.6 },
-  analyzing: {
-    fontStyle: "italic",
-    color: "#888",
-    padding: "0.5rem 0",
-  },
-  inputRow: {
-    display: "flex",
-    gap: "0.5rem",
-    borderTop: "1px solid #eee",
-    paddingTop: "1rem",
-  },
-  analysisDoc: {
-    marginTop: "1.5rem",
-    padding: "1.5rem",
-    border: "2px solid #111",
-    borderRadius: "4px",
-    background: "#fafafa",
-  },
-  analysisHeader: {
-    fontFamily: "ui-monospace, monospace",
-    fontSize: "0.75rem",
-    textTransform: "uppercase",
-    letterSpacing: "0.12em",
-    color: "#666",
-    marginBottom: "1rem",
-  },
-  analysisBody: { fontSize: "1rem", lineHeight: 1.7 },
-};

@@ -32,9 +32,9 @@ const GROUPS = [
             )}
             <span class="toc__group-label">{label}</span>
             {alias && <span class="toc__group-alias">({alias})</span>}
-            <span class="toc__count" aria-hidden="true">{String(group.length).padStart(2, '0')}</span>
+            <span class="toc__count">{String(group.length).padStart(2, '0')} chapters</span>
           </div>
-          <span class="toc__summary-chev" aria-hidden="true">↓</span>
+          <span class="toc__summary-chev" aria-hidden="true">+</span>
         </summary>
         <ol class="toc__list">
           {group.map((chapter) => (
@@ -92,6 +92,7 @@ const GROUPS = [
   .toc__summary::-webkit-details-marker { display: none; }
 
   .toc__summary:hover { border-bottom-color: var(--color-ink); }
+  .toc__summary:focus-visible { outline: 2px solid var(--color-focus, var(--color-ink)); outline-offset: 3px; }
 
   .toc__summary-left {
     display: flex;
@@ -141,7 +142,7 @@ const GROUPS = [
   }
 
   .toc__group[open] .toc__summary-chev {
-    transform: rotate(180deg);
+    transform: rotate(45deg);
   }
 
   .toc__list {

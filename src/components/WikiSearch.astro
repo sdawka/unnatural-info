@@ -52,6 +52,7 @@ const groups = Array.from(groupsMap.entries())
       aria-label="Search wiki entries"
       autocomplete="off"
     />
+    <button type="button" class="ws__clear" id="wiki-search-clear" aria-label="Clear wiki search" hidden>×</button>
     <kbd class="ws__kbd" aria-hidden="true">/</kbd>
   </label>
 
@@ -85,8 +86,9 @@ const groups = Array.from(groupsMap.entries())
   const input = document.getElementById('wiki-search-input') as HTMLInputElement | null;
   const list = document.getElementById('wiki-search-list');
   const empty = document.getElementById('wiki-search-empty');
+  const clear = document.getElementById('wiki-search-clear') as HTMLButtonElement | null;
 
-  if (input && list && empty) {
+  if (input && list && empty && clear) {
     // "/" focuses the search like a shortcut
     document.addEventListener('keydown', (e) => {
       if (e.key === '/' && document.activeElement !== input) {
@@ -116,9 +118,15 @@ const groups = Array.from(groupsMap.entries())
         if (groupVisible > 0) anyVisible = true;
       });
       empty.hidden = anyVisible;
+      clear.hidden = !query;
     };
 
     input.addEventListener('input', update);
+    clear.addEventListener('click', () => {
+      input.value = '';
+      update();
+      input.focus();
+    });
   }
 </script>
 
@@ -131,11 +139,14 @@ const groups = Array.from(groupsMap.entries())
 
   /* Search bar */
   .ws__search {
+    position: relative;
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr auto auto;
     align-items: center;
     gap: var(--space-3);
-    padding: var(--space-3) var(--space-4);
+    min-height: var(--control-height, 48px);
+    padding: var(--space-2) var(--space-3) var(--space-2) var(--space-4);
+    border-radius: var(--radius-sm, 6px);
     border: 1px solid var(--color-rule);
     background: color-mix(in srgb, var(--color-ground-tint) 40%, transparent);
     max-width: 32rem;
@@ -161,6 +172,8 @@ const groups = Array.from(groupsMap.entries())
     color: var(--color-ink);
     outline: none;
     width: 100%;
+    min-width: 0;
+    min-height: 2.5rem;
   }
 
   .ws__input::placeholder {
@@ -178,6 +191,18 @@ const groups = Array.from(groupsMap.entries())
     border-radius: 2px;
     line-height: 1;
   }
+
+  .ws__clear {
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm, 6px);
+    color: var(--color-ink-muted);
+    font: 1.25rem/1 var(--font-ui, var(--font-mono));
+  }
+
+  .ws__clear:hover { color: var(--color-ink); border-color: var(--color-rule); }
+  .ws__clear:focus-visible { outline: 2px solid var(--color-focus, var(--color-ink)); outline-offset: 2px; }
 
   /* Groups */
   .ws__groups {
@@ -236,10 +261,13 @@ const groups = Array.from(groupsMap.entries())
     align-items: baseline;
     justify-content: space-between;
     gap: var(--space-3);
+    min-height: var(--control-height, 48px);
     padding: var(--space-3) 0;
     text-decoration: none;
     transition: padding-left var(--dur-med) var(--ease-out);
   }
+
+  .ws__link:focus-visible { outline: 2px solid var(--color-focus, var(--color-ink)); outline-offset: 3px; }
 
   .ws__link:hover {
     padding-left: var(--space-3);
@@ -278,5 +306,9 @@ const groups = Array.from(groupsMap.entries())
     font-style: italic;
     color: var(--color-ink-muted);
     padding: var(--space-6) 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ws__link, .ws__title, .ws__arrow, .ws__search { transition: none; }
   }
 </style>
